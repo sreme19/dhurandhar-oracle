@@ -1,0 +1,633 @@
+{
+  "operative": "ajay_sanyal",
+  "turning_point": "article-370-abrogation",
+  "state_vector": {
+    "cover_integrity": 10.0,
+    "trust_capital": 9.8,
+    "intelligence_depth": 10.0,
+    "network_strength": 9.5,
+    "exposure_risk": 1.5
+  },
+  "available_actions": [
+    "manage_isi_retaliation_intelligence_post_370",
+    "map_isi_kashmir_doctrine_reconstruction_effort",
+    "identify_trf_formation_and_early_commanders",
+    "monitor_pakistan_diplomatic_escalation_un_oic",
+    "assess_china_backing_for_pakistan_at_unsc"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "manage_isi_retaliation_intelligence_post_370",
+      "map_isi_kashmir_doctrine_reconstruction_effort",
+      "identify_trf_formation_and_early_commanders",
+      "monitor_pakistan_diplomatic_escalation_un_oic",
+      "assess_china_backing_for_pakistan_at_unsc",
+      "isi_retaliation_attack_detected_prevented",
+      "trf_identified_early_leadership_known",
+      "isi_doctrine_rebuilt_new_proxy_operational",
+      "pakistan_isolated_unsc_china_veto_fails",
+      "china_backs_pakistan_unsc_india_isolated"
+    ],
+    "edges": [
+      {
+        "cause": "manage_isi_retaliation_intelligence_post_370",
+        "effect": "isi_retaliation_attack_detected_prevented",
+        "strength": 0.8,
+        "known_confounders": [
+          "isi_operational_speed"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "identify_trf_formation_and_early_commanders",
+        "effect": "trf_identified_early_leadership_known",
+        "strength": 0.75,
+        "known_confounders": [
+          "trf_compartmentalisation"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "identify_trf_formation_and_early_commanders",
+        "effect": "isi_doctrine_rebuilt_new_proxy_operational",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "map_isi_kashmir_doctrine_reconstruction_effort",
+        "effect": "isi_doctrine_rebuilt_new_proxy_operational",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "monitor_pakistan_diplomatic_escalation_un_oic",
+        "effect": "pakistan_isolated_unsc_china_veto_fails",
+        "strength": 0.7,
+        "known_confounders": [
+          "china_voting_decision"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "assess_china_backing_for_pakistan_at_unsc",
+        "effect": "china_backs_pakistan_unsc_india_isolated",
+        "strength": 0.35,
+        "known_confounders": [
+          "china_economic_interests_india"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_post_370_doctrine_rebuild",
+      "objective": "Rebuild Kashmir narrative post-370 abrogation; create new proxy (TRF) to maintain FATF deniability; mount retaliatory attack to demonstrate continued capability; lobby OIC and UN for international pressure on India",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "j&k_security_grid_post_lockdown",
+        "trf_cadre_availability",
+        "un_diplomatic_channels",
+        "china_support_signals"
+      ],
+      "observable_actions": [
+        "announce_trf_formation_october_2019",
+        "conduct_first_trf_attack_november_2019",
+        "raise_kashmir_issue_at_oic_islamabad",
+        "coordinate_china_unsc_closed_consultation",
+        "infiltrate_additional_militants_loc_post_370"
+      ],
+      "hidden_states": [
+        "rebuilding_doctrine",
+        "planning_retaliation",
+        "recruiting_trf_cadres",
+        "diplomatic_isolation_attempt"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "china_pla_unsc_diplomatic",
+      "objective": "Support Pakistan's UNSC position without overtly siding against India; use J&K issue as leverage in India-China bilateral; maintain CPEC investment security",
+      "capability": 9.5,
+      "trigger_threshold": 9.0,
+      "information_set": [
+        "cpec_investment_amounts",
+        "india_china_trade_data",
+        "unsc_procedural_rules",
+        "pakistan_request_for_closed_consultation"
+      ],
+      "observable_actions": [
+        "request_unsc_closed_consultation_on_kashmir",
+        "issue_statement_of_concern",
+        "avoid_formal_unsc_resolution",
+        "signal_cpec_investment_security_requirement"
+      ],
+      "hidden_states": [
+        "diplomatically_supporting_pakistan",
+        "hedging_india_relationship",
+        "procedural_support_only",
+        "ready_to_veto"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.7,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "narendra_modi",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "post_370_diplomatic_support"
+    },
+    {
+      "source": "pakistan",
+      "target": "china",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "unsc_kashmir_consultation"
+    },
+    {
+      "source": "pakistan",
+      "target": "oic",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "kashmir_islamophobia_narrative"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_retaliation_window_monitor",
+      "name": "Monitor for ISI retaliatory attack planning in the 90-day window post-370 abrogation \u2014 J&K or mainland target",
+      "optimistic_days": 7,
+      "most_likely_days": 30,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "trf_formation_track",
+        "isi_doctrine_rebuild_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "trf_formation_track",
+      "name": "Identify and track the formation of TRF (The Resistance Front) \u2014 new ISI proxy created October 2019 post-370",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_retaliation_window_monitor"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "isi_doctrine_rebuild_map",
+      "name": "Map ISI's Kashmir doctrine reconstruction \u2014 new narrative, new proxies, new FATF-compliant operational cover",
+      "optimistic_days": 60,
+      "most_likely_days": 120,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "trf_formation_track"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "unsc_china_lobby_assess",
+      "name": "Assess China's lobbying at UNSC for Pakistan's position \u2014 will China veto any future UNSC resolution on J&K",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_retaliation_window_monitor"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "trf_founding_commanders",
+      "name": "Identities of TRF founding commanders and ISI handlers \u2014 early disruption window before TRF becomes operational",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.95,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "identify_trf_formation_and_early_commanders"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "isi_retaliation_attack_target",
+      "name": "Specific target ISI is planning to strike in J&K or mainland India in post-370 retaliation window",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "manage_isi_retaliation_intelligence_post_370"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "china_unsc_veto_intention",
+      "name": "Whether China will support a formal UNSC resolution on J&K or limit itself to closed consultation",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.82,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "assess_china_backing_for_pakistan_at_unsc"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "isi_planning_immediate_retaliation_attack_90_day_window": 0.65,
+    "isi_rebuilding_doctrine_delayed_retaliation_6_months_plus": 0.25,
+    "pakistan_pursuing_diplomatic_not_military_retaliation": 0.08,
+    "isi_paralysed_no_immediate_retaliation_capacity": 0.02
+  },
+  "turning_point_description": "August 5, 2019. Home Minister Amit Shah announces in Parliament the revocation of Article 370 (J&K's special constitutional status) and Article 35A via Presidential Order, simultaneously introducing the J&K Reorganisation Bill bifurcating the state into two Union Territories: J&K (with legislature) and Ladakh (without). The operation was planned in total secrecy \u2014 35,000 additional troops deployed to J&K in preceding days under the cover of 'Amarnath Yatra security', communication lines cut on August 4 night, political leaders pre-emptively detained including two former CMs (Omar Abdullah, Mehbooba Mufti). NSA Ajay Sanyal is the architect of the intelligence dimension: ensuring the operation remains undiscovered until execution and that ISI cannot mount a pre-emptive attack to derail it. The turning point: the operation is complete \u2014 but Sanyal must now manage the intelligence fallout: ISI's Kashmir doctrine has been rendered structurally obsolete, and Pakistan's strategic response will be its most dangerous.",
+  "real_world_correlation": {
+    "event_date": "August 5, 2019",
+    "real_event": "Article 370 abrogated via Presidential Order; J&K Reorganisation Act 2019 passed by both houses. J&K bifurcated: J&K UT (with legislature, effective Oct 31 2019) and Ladakh UT (without legislature). 35,000+ additional troops deployed from July 25 onward. Communication lockdown (internet, mobile, landline) began August 4 midnight \u2014 the longest internet shutdown in a democracy. Pre-emptive detention of Omar Abdullah, Mehbooba Mufti, Farooq Abdullah (preventive detention under PSA). Total troop presence in J&K: 700,000 at peak.",
+    "intelligence_operation_secrecy": "The operation's intelligence dimension was extraordinary: Cabinet level knowledge was restricted to fewer than 10 officials. NSA Doval visited J&K personally on August 4. The cover story ('Amarnath Yatra security') absorbed the additional troops without triggering ISI alarm. Pakistan's ISI had no forewarning \u2014 its reaction post-announcement was reactive and disorganised.",
+    "isi_doctrine_obsolescence": "Article 370 was central to ISI's Kashmir narrative \u2014 the argument that J&K was 'unfinished partition business', a disputed territory, not fully integrated into India. Its abrogation removed the constitutional ambiguity ISI exploited internationally. Pakistan's ability to argue J&K's disputed status at the UN, FATF, and OIC was structurally damaged. ISI had to rebuild its entire Kashmir narrative from scratch.",
+    "pakistan_response": "Pakistan downgraded diplomatic relations, suspended trade, expelled Indian High Commissioner, halted Samjhauta Express. Pakistan raised the issue at the UN Security Council (UNSC) \u2014 China requested a closed-door consultation (not a formal UNSC meeting) in August 2019. No UNSC resolution was adopted. Pakistan's isolation was near-total.",
+    "post_370_militant_response": "ISI's response to Article 370 abrogation was the creation/empowerment of TRF (The Resistance Front) in October 2019 \u2014 a 'locally branded' proxy to maintain FATF deniability while continuing operations. The first TRF attack was November 2019. The Pahalgam massacre (April 2025) was TRF's most lethal operation \u2014 demonstrating that ISI adapted its doctrine within weeks of the abrogation.",
+    "sanyal_doval_role": "NSA Doval personally briefed foreign envoys in the hours after the announcement. He made the strategic calculation that the window between the announcement and ISI's ability to mount a major retaliatory attack was narrow \u2014 and that the international community would accept a fait accompli if presented with a fait accompli."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "isi_post_370_doctrine_rebuild",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "china_pla_unsc_diplomatic",
+        {
+          "capability": 9.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "narendra_modi",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "india",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "us_trump_administration",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "pakistan",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "china",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "oic",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "ajay_sanyal",
+        "narendra_modi",
+        {
+          "weight": 0.98,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "india",
+        "us_trump_administration",
+        {
+          "weight": 0.75,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "pakistan",
+        "china",
+        {
+          "weight": 0.85,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "pakistan",
+        "oic",
+        {
+          "weight": 0.7,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "isi_post_370_doctrine_rebuild": 0.0,
+      "china_pla_unsc_diplomatic": 0.0,
+      "ajay_sanyal": 0.0,
+      "narendra_modi": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0,
+      "oic": 0.0
+    },
+    "eigenvector": {
+      "isi_post_370_doctrine_rebuild": 0.0,
+      "china_pla_unsc_diplomatic": 0.0,
+      "ajay_sanyal": 0.0,
+      "narendra_modi": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0,
+      "oic": 0.0
+    },
+    "clustering": {
+      "isi_post_370_doctrine_rebuild": 0.0,
+      "china_pla_unsc_diplomatic": 0.0,
+      "ajay_sanyal": 0.0,
+      "narendra_modi": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0,
+      "oic": 0.0
+    },
+    "communities": [
+      [
+        "china",
+        "oic",
+        "pakistan"
+      ],
+      [
+        "ajay_sanyal",
+        "narendra_modi"
+      ],
+      [
+        "india",
+        "us_trump_administration"
+      ],
+      [
+        "isi_post_370_doctrine_rebuild"
+      ],
+      [
+        "china_pla_unsc_diplomatic"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "china_pla_unsc_diplomatic",
+      "score": 4.75,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "isi_post_370_doctrine_rebuild",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "china": 0.8500000000000001,
+      "narendra_modi": 0.98
+    },
+    "defection_incentives": {
+      "china": -1.1102230246251565e-16,
+      "narendra_modi": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Identities of TRF founding commanders and ISI handlers \u2014 early disruption window before TRF becomes operational",
+        "voi_bits": 1.2429,
+        "priority_rank": 1,
+        "effort_required": 8.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.5) outweighs VoI (1.24 bits)"
+      },
+      {
+        "intelligence_target": "Specific target ISI is planning to strike in J&K or mainland India in post-370 retaliation window",
+        "voi_bits": 1.2822,
+        "priority_rank": 2,
+        "effort_required": 9.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.0) outweighs VoI (1.28 bits)"
+      },
+      {
+        "intelligence_target": "Whether China will support a formal UNSC resolution on J&K or limit itself to closed consultation",
+        "voi_bits": 1.0728,
+        "priority_rank": 3,
+        "effort_required": 9.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.5) outweighs VoI (1.07 bits)"
+      }
+    ],
+    "top_target": "Identities of TRF founding commanders and ISI handlers \u2014 early disruption window before TRF becomes operational",
+    "total_entropy_bits": 1.3084
+  },
+  "stackelberg": {
+    "leader_action": "monitor_pakistan_diplomatic_escalation_un_oic",
+    "operative_best_response": "monitor_pakistan_diplomatic_escalation_un_oic",
+    "follower_best_response": "china_pla_unsc_diplomatic: manage_isi_retaliation_intelligence_post_370",
+    "equilibrium_payoff_indian": 0.5419,
+    "equilibrium_payoff_adversary": 0.4581,
+    "commitment_value": 0.1015
+  },
+  "pomdp": {
+    "belief_state": {
+      "isi_planning_immediate_retaliation_attack_90_day_window": 0.65,
+      "isi_rebuilding_doctrine_delayed_retaliation_6_months_plus": 0.25,
+      "pakistan_pursuing_diplomatic_not_military_retaliation": 0.08,
+      "isi_paralysed_no_immediate_retaliation_capacity": 0.02
+    },
+    "optimal_action": "monitor_pakistan_diplomatic_escalation_un_oic",
+    "belief_state_value": 1.953,
+    "policy": {
+      "605d0f34a0": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "8bcdfa1f05": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "06161331f0": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "d9173d148b": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "7677dcfe5f": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "2e68845e83": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "712635094c": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "e7808589e5": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "963cfda8d6": "monitor_pakistan_diplomatic_escalation_un_oic",
+      "33d07c0854": "monitor_pakistan_diplomatic_escalation_un_oic"
+    },
+    "cover_integrity_prob": 1.0,
+    "mission_success_prob": 0.5,
+    "action_values": {
+      "manage_isi_retaliation_intelligence_post_370": 1.555,
+      "map_isi_kashmir_doctrine_reconstruction_effort": 1.755,
+      "identify_trf_formation_and_early_commanders": 1.555,
+      "monitor_pakistan_diplomatic_escalation_un_oic": 1.953,
+      "assess_china_backing_for_pakistan_at_unsc": 1.755
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "trf_formation_track",
+      "isi_doctrine_rebuild_map"
+    ],
+    "total_duration_days": 185.0,
+    "optimal_duration_days": 111.0,
+    "days_saved": 74.0,
+    "bottleneck_task": "isi_doctrine_rebuild_map",
+    "slack_tasks": [
+      [
+        "unsc_china_lobby_assess",
+        152.66666666666666
+      ],
+      [
+        "isi_retaliation_window_monitor",
+        148.83333333333334
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "isi_retaliation_window_monitor",
+        "trf_formation_track"
+      ],
+      [
+        "isi_retaliation_window_monitor",
+        "isi_doctrine_rebuild_map"
+      ],
+      [
+        "unsc_china_lobby_assess",
+        "isi_retaliation_window_monitor"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "monitor_pakistan_diplomatic_escalation_un_oic",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "monitor_pakistan_diplomatic_escalation_un_oic \u2192 pakistan_isolated_unsc_china_veto_fails  (p=0.70)"
+  },
+  "simulation_optimal": {
+    "action": "monitor_pakistan_diplomatic_escalation_un_oic",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "monitor_pakistan_diplomatic_escalation_un_oic \u2192 pakistan_isolated_unsc_china_veto_fails  (p=0.70)"
+  },
+  "narrative": "OPERATIVE: AJAY_SANYAL\nTURNING POINT: article-370-abrogation\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  monitor_pakistan_diplomatic_escalation_un_oic  (V(b) = 1.95)\n  Mission success prob: 50.0%\n  Cover integrity prob: 100.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 185d  \u2192  Optimal: 111d  (save 74d)\n  Bottleneck: isi_doctrine_rebuild_map\n  Critical path: trf_formation_track \u2192 isi_doctrine_rebuild_map\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Identities of TRF founding commanders and ISI handlers \u2014 early disruption window before TRF becomes operational  VoI=1.24bits\n  #2 Specific target ISI is planning to strike in J&K or mainland India in post-370 retaliation window  VoI=1.28bits\n  #3 Whether China will support a formal UNSC resolution on J&K or limit itself to closed consultation  VoI=1.07bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: monitor_pakistan_diplomatic_escalation_un_oic\n  Operative best response: monitor_pakistan_diplomatic_escalation_un_oic\n  Adversary counter: china_pla_unsc_diplomatic: manage_isi_retaliation_intelligence_post_370\n  Commitment value: +0.10\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (monitor_pakistan_diplomatic_escalation_un_oic):  P(success)=100.0%\n  Optimal action (monitor_pakistan_diplomatic_escalation_un_oic): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film3_act3'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['isi_post_370_doctrine_rebuild', 'china_pla_unsc_diplomatic'])",
+    "adversary_node: multi-adversary Stackelberg over ['isi_post_370_doctrine_rebuild', 'china_pla_unsc_diplomatic']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

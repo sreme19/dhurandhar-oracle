@@ -1,0 +1,616 @@
+{
+  "operative": "rizwan_shah",
+  "turning_point": "uri-attack-surgical-decision",
+  "state_vector": {
+    "cover_integrity": 8.5,
+    "trust_capital": 6.0,
+    "intelligence_depth": 6.5,
+    "network_strength": 7.0,
+    "exposure_risk": 3.0
+  },
+  "available_actions": [
+    "reveal_launchpad_intelligence_enable_surgical_option",
+    "hold_intelligence_protect_cover_continue_long_op",
+    "provide_partial_intelligence_via_dead_drop_no_cover_risk",
+    "assess_jem_followon_attack_timeline",
+    "map_isi_escalation_intent_post_uri"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "reveal_launchpad_intelligence_enable_surgical_option",
+      "hold_intelligence_protect_cover_continue_long_op",
+      "provide_partial_intelligence_via_dead_drop_no_cover_risk",
+      "assess_jem_followon_attack_timeline",
+      "map_isi_escalation_intent_post_uri",
+      "surgical_strike_executed_successfully",
+      "cover_blown_rizwan_exfiltrated",
+      "isi_escalation_continues_unchecked",
+      "followon_attack_prevented",
+      "long_operation_yields_deeper_intelligence"
+    ],
+    "edges": [
+      {
+        "cause": "reveal_launchpad_intelligence_enable_surgical_option",
+        "effect": "surgical_strike_executed_successfully",
+        "strength": 0.88,
+        "known_confounders": [
+          "military_execution_quality"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "reveal_launchpad_intelligence_enable_surgical_option",
+        "effect": "cover_blown_rizwan_exfiltrated",
+        "strength": 0.7,
+        "known_confounders": [
+          "isi_source_tracing"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "hold_intelligence_protect_cover_continue_long_op",
+        "effect": "long_operation_yields_deeper_intelligence",
+        "strength": 0.75,
+        "known_confounders": [
+          "cover_degradation_over_time"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "hold_intelligence_protect_cover_continue_long_op",
+        "effect": "isi_escalation_continues_unchecked",
+        "strength": 0.55,
+        "known_confounders": [
+          "other_intelligence_sources"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "provide_partial_intelligence_via_dead_drop_no_cover_risk",
+        "effect": "surgical_strike_executed_successfully",
+        "strength": 0.55,
+        "known_confounders": [
+          "intelligence_completeness"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "assess_jem_followon_attack_timeline",
+        "effect": "followon_attack_prevented",
+        "strength": 0.7,
+        "known_confounders": [
+          "jem_operational_security"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "map_isi_escalation_intent_post_uri",
+        "effect": "isi_escalation_continues_unchecked",
+        "strength": 0.3,
+        "known_confounders": [
+          "isi_reaction_to_surgical_strike"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "jem_isi_planning_cell",
+      "objective": "Exploit post-Uri political paralysis window; plan follow-on attacks; test India's response threshold; deny ISI involvement through fedayeen elimination",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "india_military_posture",
+        "isi_communication_intercepts",
+        "indian_political_reaction"
+      ],
+      "observable_actions": [
+        "activate_followon_launchpads",
+        "increase_infiltration_across_loc",
+        "isi_media_denial_operations",
+        "reinforce_remaining_launchpads_preemptively"
+      ],
+      "hidden_states": [
+        "escalating",
+        "holding",
+        "retreating_from_launchpads",
+        "preparing_followon"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.58,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_strategic_command",
+      "objective": "Maintain plausible deniability on Uri; calibrate Indian response to determine threshold for future operations; protect launchpad infrastructure if military response imminent",
+      "capability": 9.5,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "indian_military_mobilisation",
+        "political_signals_new_delhi",
+        "international_diplomatic_pressure"
+      ],
+      "observable_actions": [
+        "deny_uri_involvement_officially",
+        "alert_launchpad_commanders_to_disperse",
+        "activate_diplomatic_channels_to_prevent_indian_strike",
+        "prepare_retaliation_options_if_india_strikes"
+      ],
+      "hidden_states": [
+        "calculating",
+        "dispersing",
+        "signalling_restraint",
+        "preparing_retaliation"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_obama_administration",
+      "strength": 0.65,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "military_action_notification"
+    },
+    {
+      "source": "isi",
+      "target": "jem",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "launchpad_intelligence_package",
+      "name": "Compile and transmit actionable intelligence package on 7 JeM/LeT launchpads in PoK for surgical strike targeting",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 10,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_escalation_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.75
+    },
+    {
+      "id": "isi_escalation_assess",
+      "name": "Assess ISI intent \u2014 is Uri a one-off escalation or the opening of a sustained pressure campaign pre-ceasefire?",
+      "optimistic_days": 5,
+      "most_likely_days": 10,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "launchpad_intelligence_package"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "followon_attack_intercept",
+      "name": "Detect and intercept any JeM follow-on attack planned within the 10-day political response window",
+      "optimistic_days": 1,
+      "most_likely_days": 5,
+      "pessimistic_days": 10,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_escalation_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "cover_exfil_plan",
+      "name": "Prepare exfiltration route if launchpad intelligence is revealed and cover is blown post-strike",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [
+        "launchpad_intelligence_package"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "jem_launchpad_locations_7",
+      "name": "Confirmed GPS coordinates and occupancy of 7 JeM/LeT infiltration launchpads in PoK \u2014 actionable for surgical targeting",
+      "current_entropy": 1.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "reveal_launchpad_intelligence_enable_surgical_option",
+        "provide_partial_intelligence_via_dead_drop_no_cover_risk"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "isi_followon_attack_timeline",
+      "name": "Whether ISI-JeM has a follow-on attack planned within the 10-day political response window",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.92,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "assess_jem_followon_attack_timeline"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "isi_escalation_threshold",
+      "name": "Whether ISI will retaliate conventionally if India conducts surgical strikes across LOC",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.9,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "map_isi_escalation_intent_post_uri"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "isi_will_not_retaliate_conventionally_surgical_strike_safe": 0.55,
+    "isi_will_retaliate_limited_artillery_manageable": 0.3,
+    "isi_will_escalate_to_full_conventional_conflict": 0.1,
+    "isi_will_use_nuclear_signalling_as_deterrent": 0.05
+  },
+  "turning_point_description": "September 18, 2016. Four JeM fedayeen storm the 12 Infantry Brigade HQ at Uri, J&K, at 0530 hours. The camp houses double the normal complement due to a battalion changeover \u2014 19 Indian Army soldiers killed (initially 18, one more dies later), the deadliest attack on security forces in Kashmir in decades. The fedayeen wore Indian Army uniforms, used GPS devices, and carried Pakistani-origin food rations \u2014 a forensic link to JeM and ISI. NSA Ajay Sanyal convenes a crisis session; PM Modi gives a 10-day window for a military response option. Rizwan Shah, embedded near ISI-JeM planning circles, has partial intelligence on the launchpad locations used \u2014 but acting on it now risks blowing his cover. The turning point: does he reveal his intelligence to enable the surgical strike option, accepting the end of his current placement, or hold and continue building towards a longer operation?",
+  "real_world_correlation": {
+    "event_date": "September 18, 2016",
+    "real_event": "Uri attack: 4 JeM fedayeen in Indian Army uniforms attacked 12 Infantry Brigade HQ at Uri (LOC sector). 17 soldiers killed instantly (one more later); all 4 fedayeen killed. Fedayeen were found with GPS devices, Pakistani food rations (Karachi Bakery products), Pakistani medicines, and ISI-origin maps. Two Pakistani nationals from PoK were subsequently arrested as facilitators by BSF in the Uri sector.",
+    "intelligence_failures": "IDSA analysis noted the camp was especially vulnerable during changeover \u2014 double occupancy created a softer target profile. Intelligence did not detect the specific attack vector. The 2016 Pathankot attack (January) had already highlighted gaps. Uri came 8 months after Pathankot and 2 years after the Gurdaspur attack \u2014 a JeM pattern that should have been detected.",
+    "dgmo_evidence_briefing": "DGMO Lt Gen Ranbir Singh briefed the media post-surgical-strikes citing 'confirmed intelligence inputs' of imminent infiltration from the 7 launchpads struck. This suggests RAW/IB had launchpad-level intelligence prior to the strikes \u2014 the question the film addresses is how that intelligence was obtained and at what cost.",
+    "political_mandate_10_days": "PM Modi chaired Cabinet Committee on Security meeting on September 18 itself. The public statement 'blood of soldiers will not go waste' set a 10-day political clock. NSA Doval began coordinating military options immediately \u2014 the surgical strike happened September 28-29.",
+    "jem_modus_operandi": "Uri completed a pattern: Gurdaspur (July 2015), Pathankot (January 2016), Uri (September 2016) \u2014 all JeM, all fedayeen using Indian uniforms or security force vehicle covers. The pattern indicates ISI escalatory signalling, not autonomous JeM operations."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "jem_isi_planning_cell",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "isi_strategic_command",
+        {
+          "capability": 9.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rizwan_shah",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "india",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "us_obama_administration",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "isi",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "jem",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rizwan_shah",
+        "ajay_sanyal",
+        {
+          "weight": 0.9,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "india",
+        "us_obama_administration",
+        {
+          "weight": 0.65,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "isi",
+        "jem",
+        {
+          "weight": 0.88,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "jem_isi_planning_cell": 0.0,
+      "isi_strategic_command": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_obama_administration": 0.0,
+      "isi": 0.0,
+      "jem": 0.0
+    },
+    "eigenvector": {
+      "jem_isi_planning_cell": 0.0,
+      "isi_strategic_command": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_obama_administration": 0.0,
+      "isi": 0.0,
+      "jem": 0.0
+    },
+    "clustering": {
+      "jem_isi_planning_cell": 0.0,
+      "isi_strategic_command": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_obama_administration": 0.0,
+      "isi": 0.0,
+      "jem": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "rizwan_shah"
+      ],
+      [
+        "india",
+        "us_obama_administration"
+      ],
+      [
+        "isi",
+        "jem"
+      ],
+      [
+        "jem_isi_planning_cell"
+      ],
+      [
+        "isi_strategic_command"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "isi_strategic_command",
+      "score": 4.75,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "jem_isi_planning_cell",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.9,
+      "jem": 0.88
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0,
+      "jem": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Confirmed GPS coordinates and occupancy of 7 JeM/LeT infiltration launchpads in PoK \u2014 actionable for surgical targeting",
+        "voi_bits": 1.5283,
+        "priority_rank": 1,
+        "effort_required": 8.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.5) outweighs VoI (1.53 bits)"
+      },
+      {
+        "intelligence_target": "Whether ISI-JeM has a follow-on attack planned within the 10-day political response window",
+        "voi_bits": 1.4203,
+        "priority_rank": 2,
+        "effort_required": 8.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.0) outweighs VoI (1.42 bits)"
+      },
+      {
+        "intelligence_target": "Whether ISI will retaliate conventionally if India conducts surgical strikes across LOC",
+        "voi_bits": 1.3894,
+        "priority_rank": 3,
+        "effort_required": 9.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.5) outweighs VoI (1.39 bits)"
+      }
+    ],
+    "top_target": "Confirmed GPS coordinates and occupancy of 7 JeM/LeT infiltration launchpads in PoK \u2014 actionable for surgical targeting",
+    "total_entropy_bits": 1.5438
+  },
+  "stackelberg": {
+    "leader_action": "hold_intelligence_protect_cover_continue_long_op",
+    "operative_best_response": "hold_intelligence_protect_cover_continue_long_op",
+    "follower_best_response": "isi_strategic_command: assess_jem_followon_attack_timeline",
+    "equilibrium_payoff_indian": 0.5331,
+    "equilibrium_payoff_adversary": 0.4669,
+    "commitment_value": 0.0873
+  },
+  "pomdp": {
+    "belief_state": {
+      "isi_will_not_retaliate_conventionally_surgical_strike_safe": 0.55,
+      "isi_will_retaliate_limited_artillery_manageable": 0.3,
+      "isi_will_escalate_to_full_conventional_conflict": 0.1,
+      "isi_will_use_nuclear_signalling_as_deterrent": 0.05
+    },
+    "optimal_action": "hold_intelligence_protect_cover_continue_long_op",
+    "belief_state_value": 4.805,
+    "policy": {
+      "605d0f34a0": "hold_intelligence_protect_cover_continue_long_op",
+      "8bcdfa1f05": "hold_intelligence_protect_cover_continue_long_op",
+      "06161331f0": "hold_intelligence_protect_cover_continue_long_op",
+      "d9173d148b": "hold_intelligence_protect_cover_continue_long_op",
+      "7677dcfe5f": "hold_intelligence_protect_cover_continue_long_op",
+      "2e68845e83": "hold_intelligence_protect_cover_continue_long_op",
+      "712635094c": "hold_intelligence_protect_cover_continue_long_op",
+      "e7808589e5": "hold_intelligence_protect_cover_continue_long_op",
+      "963cfda8d6": "hold_intelligence_protect_cover_continue_long_op",
+      "33d07c0854": "hold_intelligence_protect_cover_continue_long_op"
+    },
+    "cover_integrity_prob": 1.0,
+    "mission_success_prob": 0.535,
+    "action_values": {
+      "reveal_launchpad_intelligence_enable_surgical_option": 4.411,
+      "hold_intelligence_protect_cover_continue_long_op": 4.805,
+      "provide_partial_intelligence_via_dead_drop_no_cover_risk": 4.411,
+      "assess_jem_followon_attack_timeline": 4.011,
+      "map_isi_escalation_intent_post_uri": 4.611
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "launchpad_intelligence_package",
+      "cover_exfil_plan"
+    ],
+    "total_duration_days": 14.3,
+    "optimal_duration_days": 8.6,
+    "days_saved": 5.7,
+    "bottleneck_task": "cover_exfil_plan",
+    "slack_tasks": [
+      [
+        "followon_attack_intercept",
+        9.166666666666664
+      ],
+      [
+        "isi_escalation_assess",
+        3.333333333333332
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "launchpad_intelligence_package",
+        "isi_escalation_assess"
+      ],
+      [
+        "followon_attack_intercept",
+        "isi_escalation_assess"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "hold_intelligence_protect_cover_continue_long_op",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "hold_intelligence_protect_cover_continue_long_op \u2192 long_operation_yields_deeper_intelligence  (p=0.75)"
+  },
+  "simulation_optimal": {
+    "action": "hold_intelligence_protect_cover_continue_long_op",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "hold_intelligence_protect_cover_continue_long_op \u2192 long_operation_yields_deeper_intelligence  (p=0.75)"
+  },
+  "narrative": "OPERATIVE: RIZWAN_SHAH\nTURNING POINT: uri-attack-surgical-decision\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  hold_intelligence_protect_cover_continue_long_op  (V(b) = 4.80)\n  Mission success prob: 53.5%\n  Cover integrity prob: 100.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 14d  \u2192  Optimal: 9d  (save 6d)\n  Bottleneck: cover_exfil_plan\n  Critical path: launchpad_intelligence_package \u2192 cover_exfil_plan\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Confirmed GPS coordinates and occupancy of 7 JeM/LeT infiltration launchpads in PoK \u2014 actionable for surgical targeting  VoI=1.53bits\n  #2 Whether ISI-JeM has a follow-on attack planned within the 10-day political response window  VoI=1.42bits\n  #3 Whether ISI will retaliate conventionally if India conducts surgical strikes across LOC  VoI=1.39bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: hold_intelligence_protect_cover_continue_long_op\n  Operative best response: hold_intelligence_protect_cover_continue_long_op\n  Adversary counter: isi_strategic_command: assess_jem_followon_attack_timeline\n  Commitment value: +0.09\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (hold_intelligence_protect_cover_continue_long_op):  P(success)=100.0%\n  Optimal action (hold_intelligence_protect_cover_continue_long_op): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film3_act1'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['jem_isi_planning_cell', 'isi_strategic_command'])",
+    "adversary_node: multi-adversary Stackelberg over ['jem_isi_planning_cell', 'isi_strategic_command']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

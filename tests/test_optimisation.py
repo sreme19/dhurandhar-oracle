@@ -277,13 +277,44 @@ def test_stackelberg_commitment_value_finite():
     assert math.isfinite(result.commitment_value)
 
 
-# ── TODO tests (to be implemented in P2) ──────────────────────────────────────
+# ── POMDP / PBVI tests ────────────────────────────────────────────────────────
 
-@pytest.mark.skip(reason="POMDP PBVI solver not yet implemented — P2")
+from dhurandhar_oracle.optimisation.pomdp import PBVISolver, build_pomdp
+from dhurandhar_oracle.schemas import CausalDAG
+
+
+def _make_pomdp_inputs():
+    actions = ["deepen_cover", "gather_intel", "trigger_early_exfil"]
+    dag = CausalDAG(nodes=["deepen_cover", "trust_increase", "trigger_early_exfil",
+                           "cover_blown"], edges=[])
+    sv = OperativeState(cover_integrity=8.0, trust_capital=5.0,
+                        intelligence_depth=4.0, network_strength=6.0,
+                        exposure_risk=3.0)
+    belief = {
+        "cover_intact_mission_early_adv_unaware":     0.6,
+        "cover_intact_mission_mid_adv_suspicious":    0.25,
+        "cover_suspected_mission_mid_adv_suspicious": 0.1,
+        "cover_blown_mission_stalled_adv_certain":    0.05,
+    }
+    return actions, dag, sv, belief
+
+
 def test_pomdp_optimal_action_in_actions():
-    pass
+    actions, dag, sv, belief = _make_pomdp_inputs()
+    model = build_pomdp(actions, dag, [], sv, belief)
+    solver = PBVISolver(model, n_belief_points=20, n_iterations=30)
+    solver.solve()
+    result = solver.extract_result(belief)
+    assert result.optimal_action in actions
 
 
-@pytest.mark.skip(reason="POMDP PBVI solver not yet implemented — P2")
 def test_pomdp_belief_state_value_finite():
-    pass
+    actions, dag, sv, belief = _make_pomdp_inputs()
+    model = build_pomdp(actions, dag, [], sv, belief)
+    solver = PBVISolver(model, n_belief_points=20, n_iterations=30)
+    solver.solve()
+    result = solver.extract_result(belief)
+    assert math.isfinite(result.belief_state_value)
+    assert 0.0 <= result.cover_integrity_prob <= 1.0
+    assert 0.0 <= result.mission_success_prob <= 1.0
+    assert set(result.action_values.keys()) == set(actions)

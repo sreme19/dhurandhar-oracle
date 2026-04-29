@@ -1,0 +1,535 @@
+{
+  "operative": "hamza",
+  "turning_point": "major-iqbal-tanker-final",
+  "state_vector": {
+    "cover_integrity": 1.5,
+    "trust_capital": 0.5,
+    "intelligence_depth": 9.5,
+    "network_strength": 4.5,
+    "exposure_risk": 9.8
+  },
+  "available_actions": [
+    "pursue_iqbal_to_shipping_yard_engage_direct",
+    "call_for_rizwan_backup_delay",
+    "rpg_tanker_remote_deny_escape",
+    "capture_iqbal_alive_extract",
+    "abort_iqbal_survives_mission_incomplete"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "pursue_iqbal_to_shipping_yard_engage_direct",
+      "call_for_rizwan_backup_delay",
+      "rpg_tanker_remote_deny_escape",
+      "capture_iqbal_alive_extract",
+      "abort_iqbal_survives_mission_incomplete",
+      "iqbal_killed_mission_complete",
+      "iqbal_captured_intelligence_value",
+      "hamza_wounded_captured_isi",
+      "iqbal_escapes_mission_failed",
+      "diplomatic_crisis_iqbal_capture"
+    ],
+    "edges": [
+      {
+        "cause": "pursue_iqbal_to_shipping_yard_engage_direct",
+        "effect": "iqbal_killed_mission_complete",
+        "strength": 0.75,
+        "known_confounders": [
+          "iqbal_combat_capability"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "pursue_iqbal_to_shipping_yard_engage_direct",
+        "effect": "hamza_wounded_captured_isi",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "rpg_tanker_remote_deny_escape",
+        "effect": "iqbal_killed_mission_complete",
+        "strength": 0.9,
+        "known_confounders": [
+          "tanker_proximity"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "rpg_tanker_remote_deny_escape",
+        "effect": "hamza_wounded_captured_isi",
+        "strength": 0.55,
+        "known_confounders": [
+          "blast_radius"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "capture_iqbal_alive_extract",
+        "effect": "iqbal_captured_intelligence_value",
+        "strength": 0.4,
+        "known_confounders": [
+          "iqbal_resistance",
+          "isi_response_time"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "capture_iqbal_alive_extract",
+        "effect": "diplomatic_crisis_iqbal_capture",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "capture_iqbal_alive_extract",
+        "effect": "hamza_wounded_captured_isi",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "call_for_rizwan_backup_delay",
+        "effect": "iqbal_escapes_mission_failed",
+        "strength": 0.55,
+        "known_confounders": [
+          "rizwan_availability"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "abort_iqbal_survives_mission_incomplete",
+        "effect": "iqbal_escapes_mission_failed",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "iqbal_killed_mission_complete",
+        "effect": "hamza_wounded_captured_isi",
+        "strength": 0.6,
+        "known_confounders": [
+          "isi_response_speed"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Survive; escape to ISI safe house; order Hamza's capture",
+      "capability": 9.0,
+      "trigger_threshold": 9.5,
+      "information_set": [
+        "shipping_yard_layout",
+        "isi_emergency_contacts"
+      ],
+      "observable_actions": [
+        "engage_in_direct_combat",
+        "use_shipping_containers_for_cover",
+        "attempt_tanker_vehicle_escape",
+        "call_isi_reinforcements",
+        "identify_hamza_for_capture_bounty"
+      ],
+      "hidden_states": [
+        "fighting",
+        "desperate",
+        "cornered"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_rapid_response",
+      "objective": "Secure shipping yard; capture Indian operative responsible for Iqbal's death",
+      "capability": 8.5,
+      "trigger_threshold": 8.0,
+      "information_set": [
+        "explosion_location",
+        "prior_madrassa_assault_intel",
+        "iqbal_tracking"
+      ],
+      "observable_actions": [
+        "cordon_shipping_yard",
+        "capture_wounded_operative",
+        "secure_iqbal_remains",
+        "launch_city_wide_search"
+      ],
+      "hidden_states": [
+        "responding",
+        "surrounding",
+        "capturing"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.95,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "rizwan_compromised_elsewhere"
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "iqbal_cornered",
+      "name": "Corner Major Iqbal at shipping yard \u2014 block escape routes",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 2,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.9
+    },
+    {
+      "id": "final_engagement",
+      "name": "Execute final engagement \u2014 Iqbal neutralised in tanker explosion",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [
+        "iqbal_cornered"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 1.0
+    },
+    {
+      "id": "post_engagement_survival",
+      "name": "Survive the post-engagement ISI response \u2014 delay capture as long as possible",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 7,
+      "dependencies": [
+        "final_engagement"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_next_chain_of_command",
+      "name": "Who inherits Iqbal's ISI operational role \u2014 successor identification",
+      "current_entropy": 4.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "capture_iqbal_alive_extract"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "cover_blown_mission_climax_iqbal_not_yet_dead": 0.45,
+    "cover_blown_mission_climax_iqbal_cornered": 0.35,
+    "cover_blown_iqbal_dead_isi_responding": 0.15,
+    "cover_blown_iqbal_escaping": 0.05
+  },
+  "turning_point_description": "The final confrontation. Major Iqbal has retreated to a Karachi shipping yard after the madrassa compound assault. Hamza pursues alone \u2014 Rizwan is compromised elsewhere. The shipping yard contains a kerosene tanker. Iqbal and Hamza engage in a final duel. Hamza destroys Iqbal's transport vehicle with an RPG. The confrontation ends in a tanker explosion that kills Major Iqbal. The mission's primary objective \u2014 eliminating the 26/11 ISI architect \u2014 is completed. But Hamza is exposed, wounded, and about to be captured by ISI forces responding to the explosion.",
+  "real_world_correlation": {
+    "iqbal_real_accountability": "The real 'Major Iqbal' \u2014 David Headley's identified ISI handler \u2014 has never been prosecuted. Pakistan has denied his existence as an active ISI officer. The film's tanker explosion death is the fictional accountability that reality has denied. The shipping yard setting evokes the real Karachi port infrastructure that D-Company and ISI have historically used for smuggling operations.",
+    "no_india_pak_extradition_treaty": "India and Pakistan have no extradition treaty. The only path to legal accountability for Major Iqbal is either a Pakistani prosecution (which Pakistan refuses) or extra-judicial elimination (which India officially denies conducting). The film makes explicit that the fictional Hamza chose the only path that was actually available \u2014 making the moral case that the absence of legal recourse created the ethical space for the operation.",
+    "kinetic_vs_capture_tradeoff": "The film's Iqbal dies rather than being captured \u2014 a storytelling choice consistent with real operational realities. Live captures of senior ISI officers in Pakistani territory would trigger a diplomatic crisis of the highest order. The film's kinetic resolution is operationally realistic even if legally unacknowledged.",
+    "personal_closure": "Hamza witnessed Iqbal celebrating 26/11 (in the turning point `26-11-celebration-revelation`) over a decade earlier. The tanker confrontation closes that circle \u2014 the personal grief and rage suppressed during the Film 1 celebration scene is finally released. The film frames this not as justice but as closure, acknowledging the difference."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "major_iqbal",
+        {
+          "capability": 9.0,
+          "is_adversary": true
+        }
+      ],
+      [
+        "isi_rapid_response",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "hamza",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "rizwan_shah",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "hamza",
+        "rizwan_shah",
+        {
+          "weight": 0.95,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "hamza",
+        "ajay_sanyal",
+        {
+          "weight": 0.9,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "major_iqbal": 0.0,
+      "isi_rapid_response": 0.0,
+      "hamza": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "eigenvector": {
+      "major_iqbal": 0.0,
+      "isi_rapid_response": 0.0,
+      "hamza": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "clustering": {
+      "major_iqbal": 0.0,
+      "isi_rapid_response": 0.0,
+      "hamza": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "hamza",
+        "rizwan_shah"
+      ],
+      [
+        "major_iqbal"
+      ],
+      [
+        "isi_rapid_response"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "major_iqbal",
+      "score": 4.5,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "isi_rapid_response",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.9
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Who inherits Iqbal's ISI operational role \u2014 successor identification",
+        "voi_bits": 1.4239,
+        "priority_rank": 1,
+        "effort_required": 9.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.5) outweighs VoI (1.42 bits)"
+      }
+    ],
+    "top_target": "Who inherits Iqbal's ISI operational role \u2014 successor identification",
+    "total_entropy_bits": 1.6751
+  },
+  "stackelberg": {
+    "leader_action": "pursue_iqbal_to_shipping_yard_engage_direct",
+    "operative_best_response": "pursue_iqbal_to_shipping_yard_engage_direct",
+    "follower_best_response": "major_iqbal: abort_iqbal_survives_mission_incomplete",
+    "equilibrium_payoff_indian": 0.5008,
+    "equilibrium_payoff_adversary": 0.4992,
+    "commitment_value": 0.0761
+  },
+  "pomdp": {
+    "belief_state": {
+      "cover_blown_mission_climax_iqbal_not_yet_dead": 0.45,
+      "cover_blown_mission_climax_iqbal_cornered": 0.35,
+      "cover_blown_iqbal_dead_isi_responding": 0.15,
+      "cover_blown_iqbal_escaping": 0.05
+    },
+    "optimal_action": "pursue_iqbal_to_shipping_yard_engage_direct",
+    "belief_state_value": -152.296,
+    "policy": {
+      "605d0f34a0": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "8bcdfa1f05": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "06161331f0": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "d9173d148b": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "7677dcfe5f": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "2e68845e83": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "712635094c": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "e7808589e5": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "963cfda8d6": "pursue_iqbal_to_shipping_yard_engage_direct",
+      "33d07c0854": "pursue_iqbal_to_shipping_yard_engage_direct"
+    },
+    "cover_integrity_prob": 0.0,
+    "mission_success_prob": 0.0,
+    "action_values": {
+      "pursue_iqbal_to_shipping_yard_engage_direct": -152.296,
+      "call_for_rizwan_backup_delay": -152.731,
+      "rpg_tanker_remote_deny_escape": -152.681,
+      "capture_iqbal_alive_extract": -154.781,
+      "abort_iqbal_survives_mission_incomplete": -152.681
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "iqbal_cornered",
+      "final_engagement",
+      "post_engagement_survival"
+    ],
+    "total_duration_days": 4.8,
+    "optimal_duration_days": 4.8,
+    "days_saved": 0.0,
+    "bottleneck_task": "post_engagement_survival",
+    "slack_tasks": [
+      [
+        "iqbal_cornered",
+        6.661338147750939e-16
+      ],
+      [
+        "final_engagement",
+        6.661338147750939e-16
+      ],
+      [
+        "post_engagement_survival",
+        4.440892098500626e-16
+      ]
+    ],
+    "parallelisation_opportunities": []
+  },
+  "simulation_actual": {
+    "action": "pursue_iqbal_to_shipping_yard_engage_direct",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "pursue_iqbal_to_shipping_yard_engage_direct \u2192 iqbal_killed_mission_complete  (p=0.75)"
+  },
+  "simulation_optimal": {
+    "action": "pursue_iqbal_to_shipping_yard_engage_direct",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "pursue_iqbal_to_shipping_yard_engage_direct \u2192 iqbal_killed_mission_complete  (p=0.75)"
+  },
+  "narrative": "OPERATIVE: HAMZA\nTURNING POINT: major-iqbal-tanker-final\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  pursue_iqbal_to_shipping_yard_engage_direct  (V(b) = -152.30)\n  Mission success prob: 0.0%\n  Cover integrity prob: 0.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 5d  \u2192  Optimal: 5d  (save 0d)\n  Bottleneck: post_engagement_survival\n  Critical path: iqbal_cornered \u2192 final_engagement \u2192 post_engagement_survival\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Who inherits Iqbal's ISI operational role \u2014 successor identification  VoI=1.42bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: pursue_iqbal_to_shipping_yard_engage_direct\n  Operative best response: pursue_iqbal_to_shipping_yard_engage_direct\n  Adversary counter: major_iqbal: abort_iqbal_survives_mission_incomplete\n  Commitment value: +0.08\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (pursue_iqbal_to_shipping_yard_engage_direct):  P(success)=100.0%\n  Optimal action (pursue_iqbal_to_shipping_yard_engage_direct): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['major_iqbal', 'isi_rapid_response'])",
+    "adversary_node: multi-adversary Stackelberg over ['major_iqbal', 'isi_rapid_response']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

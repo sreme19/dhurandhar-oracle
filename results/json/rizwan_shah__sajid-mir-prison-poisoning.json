@@ -1,0 +1,481 @@
+{
+  "operative": "rizwan_shah",
+  "turning_point": "sajid-mir-prison-poisoning",
+  "state_vector": {
+    "cover_integrity": 8.5,
+    "trust_capital": 6.0,
+    "intelligence_depth": 6.5,
+    "network_strength": 7.0,
+    "exposure_risk": 3.0
+  },
+  "available_actions": [
+    "investigate_isi_internal_order_confirm_or_deny",
+    "attempt_prison_contact_mir_before_death",
+    "confirm_mir_dead_pivot_to_next_target",
+    "pass_intelligence_to_india_advocate_diplomatic_protest",
+    "exploit_isi_internal_conflict_revealed_by_poisoning"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "investigate_isi_internal_order_confirm_or_deny",
+      "attempt_prison_contact_mir_before_death",
+      "confirm_mir_dead_pivot_to_next_target",
+      "pass_intelligence_to_india_advocate_diplomatic_protest",
+      "exploit_isi_internal_conflict_revealed_by_poisoning",
+      "isi_26_11_cleanup_confirmed",
+      "mir_accessible_intelligence_source",
+      "isi_fracture_exploitable",
+      "diplomatic_protest_filed_india",
+      "mir_dead_intelligence_lost"
+    ],
+    "edges": [
+      {
+        "cause": "investigate_isi_internal_order_confirm_or_deny",
+        "effect": "isi_26_11_cleanup_confirmed",
+        "strength": 0.65,
+        "known_confounders": [
+          "isi_operational_security"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "investigate_isi_internal_order_confirm_or_deny",
+        "effect": "isi_fracture_exploitable",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "attempt_prison_contact_mir_before_death",
+        "effect": "mir_accessible_intelligence_source",
+        "strength": 0.3,
+        "known_confounders": [
+          "jail_security",
+          "mir_willingness"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "confirm_mir_dead_pivot_to_next_target",
+        "effect": "mir_dead_intelligence_lost",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "pass_intelligence_to_india_advocate_diplomatic_protest",
+        "effect": "diplomatic_protest_filed_india",
+        "strength": 0.8,
+        "known_confounders": [
+          "india_pak_relations"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "exploit_isi_internal_conflict_revealed_by_poisoning",
+        "effect": "isi_fracture_exploitable",
+        "strength": 0.7,
+        "known_confounders": [
+          "fracture_depth"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_internal_cleanup_faction",
+      "objective": "Eliminate Sajid Mir before he becomes an Indian intelligence asset or further embarrasses ISI through trial testimony",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "mir_jail_communications",
+        "indian_intelligence_contact_attempts",
+        "isi_26_11_paper_trail"
+      ],
+      "observable_actions": [
+        "poison_prisoner",
+        "control_medical_treatment",
+        "suppress_investigation",
+        "control_media_narrative"
+      ],
+      "hidden_states": [
+        "covering_tracks",
+        "monitoring_investigation",
+        "neutralising_further_threats"
+      ],
+      "prospect_params": {
+        "lam": 3.2,
+        "gamma": 0.58,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rizwan_shah",
+      "target": "sushant_bansal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "poisoning_attribution",
+      "name": "Attribute Mir poisoning: ISI internal, Dhurandhar external, or factional LeT",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "mir_survival_assessment"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "mir_survival_assessment",
+      "name": "Assess whether Mir survives (intelligence value if yes: potential access via intermediary)",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "poisoning_attribution"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "isi_internal_fracture_map",
+      "name": "Map which ISI faction ordered poisoning \u2014 reflects internal 26/11 cleanup vs. new hardliner control",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "poisoning_attribution"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "mir_poisoning_author",
+      "name": "Identity of faction that ordered Sajid Mir's poisoning",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "investigate_isi_internal_order_confirm_or_deny"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "mir_testimony_content",
+      "name": "What Mir may have told Pakistani investigators or international monitors about ISI 26/11 involvement",
+      "current_entropy": 4.0,
+      "mission_relevance": 0.92,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "attempt_prison_contact_mir_before_death"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "isi_next_26_11_cleanup_target",
+      "name": "Which remaining 26/11 figures ISI may target to suppress evidence (Hafiz Saeed? Sajid Mir's co-conspirators?)",
+      "current_entropy": 3.8,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "isi_internal_fracture_map"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "isi_ordered_poisoning_cleanup": 0.5,
+    "let_hardliner_factional_poisoning": 0.2,
+    "accidental_prison_condition": 0.2,
+    "dhurandhar_operation_self_inflicted": 0.1
+  },
+  "turning_point_description": "December 2023. Sajid Mir \u2014 convicted in May 2023 to 15 years for terror financing, the first real conviction of a 26/11 handler \u2014 is found poisoned in Central Jail, Dera Ghazi Khan. He is airlifted on ventilator support. The poisoning is unclaimed. Rizwan Shah's mission: determine whether the poisoning is an ISI internal operation (silencing a witness who may have begun cooperating with Indian intelligence via back-channels), a Dhurandhar operation (eliminating a target before Mir could cut a deal), or a factional LeT killing. The answer determines how to respond and whether Mir's intelligence value is now accessible.",
+  "real_world_correlation": {
+    "event_date": "December 2023",
+    "real_status": "Sajid Mir was convicted by a Pakistani anti-terrorism court in May 2023 (sentenced 15 years for terror financing). In December 2023, he was reportedly poisoned in Central Jail, Dera Ghazi Khan, and airlifted on ventilator support. The poisoning was unclaimed. His current health status as of 2026 is not publicly confirmed.",
+    "significance": "Sajid Mir was the real-time coordinator of the 26/11 attacks \u2014 the voice on recordings coaching attackers in the Taj Hotel, Nariman House, and CST station. His conviction represented the first concrete Pakistan accountability for 26/11. His poisoning, if ISI-ordered, suggests ISI is cleaning house to prevent Mir from becoming an Indian intelligence witness. If Dhurandhar-ordered, it represents an operation that risked the rare accountability Pakistan had delivered.",
+    "india_interest": "Indian intelligence would have had strong interest in Mir remaining alive \u2014 a living, convicted 26/11 handler in Pakistan's custody, potentially accessible via back-channels, is more valuable as an intelligence source than a dead one. His death (if it occurs) would eliminate the only institutionally-acknowledged 26/11 planner in Pakistan's custody.",
+    "who_benefits": "ISI benefits from Mir's death \u2014 eliminates witness to internal coordination of 26/11. ISI's political cover benefits from Pakistan never having to extradite him. The LeT hardliners who view Mir's conviction as betrayal benefit. India does NOT benefit from his death \u2014 they want interrogation access."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "isi_internal_cleanup_faction",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rizwan_shah",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "sushant_bansal",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rizwan_shah",
+        "ajay_sanyal",
+        {
+          "weight": 0.9,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "rizwan_shah",
+        "sushant_bansal",
+        {
+          "weight": 0.8,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "isi_internal_cleanup_faction": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "sushant_bansal": 0.0
+    },
+    "eigenvector": {
+      "isi_internal_cleanup_faction": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "sushant_bansal": 0.0
+    },
+    "clustering": {
+      "isi_internal_cleanup_faction": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "sushant_bansal": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "rizwan_shah",
+        "sushant_bansal"
+      ],
+      [
+        "isi_internal_cleanup_faction"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "isi_internal_cleanup_faction",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.9000000000000001,
+      "sushant_bansal": 0.8
+    },
+    "defection_incentives": {
+      "ajay_sanyal": -1.1102230246251565e-16,
+      "sushant_bansal": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Which remaining 26/11 figures ISI may target to suppress evidence (Hafiz Saeed? Sajid Mir's co-conspirators?)",
+        "voi_bits": 1.4968,
+        "priority_rank": 1,
+        "effort_required": 8.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.0) outweighs VoI (1.50 bits)"
+      },
+      {
+        "intelligence_target": "Identity of faction that ordered Sajid Mir's poisoning",
+        "voi_bits": 1.5496,
+        "priority_rank": 2,
+        "effort_required": 8.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.5) outweighs VoI (1.55 bits)"
+      },
+      {
+        "intelligence_target": "What Mir may have told Pakistani investigators or international monitors about ISI 26/11 involvement",
+        "voi_bits": 1.6201,
+        "priority_rank": 3,
+        "effort_required": 9.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.0) outweighs VoI (1.62 bits)"
+      }
+    ],
+    "top_target": "Which remaining 26/11 figures ISI may target to suppress evidence (Hafiz Saeed? Sajid Mir's co-conspirators?)",
+    "total_entropy_bits": 1.761
+  },
+  "stackelberg": {
+    "leader_action": "confirm_mir_dead_pivot_to_next_target",
+    "operative_best_response": "confirm_mir_dead_pivot_to_next_target",
+    "follower_best_response": "exploit_isi_internal_conflict_revealed_by_poisoning",
+    "equilibrium_payoff_indian": 0.7152,
+    "equilibrium_payoff_adversary": 0.3421,
+    "commitment_value": 0.1716
+  },
+  "pomdp": {
+    "belief_state": {
+      "isi_ordered_poisoning_cleanup": 0.5000000000000001,
+      "let_hardliner_factional_poisoning": 0.20000000000000004,
+      "accidental_prison_condition": 0.20000000000000004,
+      "dhurandhar_operation_self_inflicted": 0.10000000000000002
+    },
+    "optimal_action": "confirm_mir_dead_pivot_to_next_target",
+    "belief_state_value": 5.929,
+    "policy": {
+      "605d0f34a0": "confirm_mir_dead_pivot_to_next_target",
+      "8bcdfa1f05": "confirm_mir_dead_pivot_to_next_target",
+      "06161331f0": "confirm_mir_dead_pivot_to_next_target",
+      "d9173d148b": "confirm_mir_dead_pivot_to_next_target",
+      "7677dcfe5f": "confirm_mir_dead_pivot_to_next_target",
+      "2e68845e83": "confirm_mir_dead_pivot_to_next_target",
+      "712635094c": "confirm_mir_dead_pivot_to_next_target",
+      "e7808589e5": "confirm_mir_dead_pivot_to_next_target",
+      "963cfda8d6": "confirm_mir_dead_pivot_to_next_target",
+      "33d07c0854": "confirm_mir_dead_pivot_to_next_target"
+    },
+    "cover_integrity_prob": 1.0,
+    "mission_success_prob": 0.5,
+    "action_values": {
+      "investigate_isi_internal_order_confirm_or_deny": 5.533,
+      "attempt_prison_contact_mir_before_death": 5.533,
+      "confirm_mir_dead_pivot_to_next_target": 5.929,
+      "pass_intelligence_to_india_advocate_diplomatic_protest": 5.333,
+      "exploit_isi_internal_conflict_revealed_by_poisoning": 5.533
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "poisoning_attribution",
+      "isi_internal_fracture_map"
+    ],
+    "total_duration_days": 90.2,
+    "optimal_duration_days": 82.7,
+    "days_saved": 7.5,
+    "bottleneck_task": "isi_internal_fracture_map",
+    "slack_tasks": [
+      [
+        "mir_survival_assessment",
+        82.66666666666667
+      ],
+      [
+        "poisoning_attribution",
+        3.552713678800501e-15
+      ],
+      [
+        "isi_internal_fracture_map",
+        3.552713678800501e-15
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "poisoning_attribution",
+        "mir_survival_assessment"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "confirm_mir_dead_pivot_to_next_target",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "confirm_mir_dead_pivot_to_next_target \u2192 mir_dead_intelligence_lost  (p=0.90)"
+  },
+  "simulation_optimal": {
+    "action": "confirm_mir_dead_pivot_to_next_target",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "confirm_mir_dead_pivot_to_next_target \u2192 mir_dead_intelligence_lost  (p=0.90)"
+  },
+  "narrative": "OPERATIVE: RIZWAN_SHAH\nTURNING POINT: sajid-mir-prison-poisoning\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  confirm_mir_dead_pivot_to_next_target  (V(b) = 5.93)\n  Mission success prob: 50.0%\n  Cover integrity prob: 100.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 90d  \u2192  Optimal: 83d  (save 8d)\n  Bottleneck: isi_internal_fracture_map\n  Critical path: poisoning_attribution \u2192 isi_internal_fracture_map\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Which remaining 26/11 figures ISI may target to suppress evidence (Hafiz Saeed? Sajid Mir's co-conspirators?)  VoI=1.50bits\n  #2 Identity of faction that ordered Sajid Mir's poisoning  VoI=1.55bits\n  #3 What Mir may have told Pakistani investigators or international monitors about ISI 26/11 involvement  VoI=1.62bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: confirm_mir_dead_pivot_to_next_target\n  Operative best response: confirm_mir_dead_pivot_to_next_target\n  Adversary counter: exploit_isi_internal_conflict_revealed_by_poisoning\n  Commitment value: +0.17\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (confirm_mir_dead_pivot_to_next_target):  P(success)=100.0%\n  Optimal action (confirm_mir_dead_pivot_to_next_target): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film3_act1'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['isi_internal_cleanup_faction'])",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

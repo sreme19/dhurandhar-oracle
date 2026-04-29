@@ -1,0 +1,633 @@
+{
+  "operative": "hamza",
+  "turning_point": "aalam-handler-contact",
+  "state_vector": {
+    "cover_integrity": 9.5,
+    "trust_capital": 1.5,
+    "intelligence_depth": 0.5,
+    "network_strength": 5.0,
+    "exposure_risk": 1.5
+  },
+  "available_actions": [
+    "accept_aalam_pace_build_slowly",
+    "push_for_faster_gang_access_risk_cover",
+    "request_delhi_reduce_pressure",
+    "establish_parallel_contact_outside_aalam",
+    "conduct_solo_surveillance_unsanctioned"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "accept_aalam_pace_build_slowly",
+      "push_for_faster_gang_access_risk_cover",
+      "request_delhi_reduce_pressure",
+      "establish_parallel_contact_outside_aalam",
+      "conduct_solo_surveillance_unsanctioned",
+      "deep_community_trust_built",
+      "gang_access_accelerated",
+      "aalam_compromise_risk",
+      "delhi_impatient_escalates",
+      "cover_stable",
+      "cover_suspected",
+      "handler_network_fragmented"
+    ],
+    "edges": [
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "deep_community_trust_built",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "cover_stable",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "delhi_impatient_escalates",
+        "strength": 0.6,
+        "known_confounders": [
+          "sanyal_patience"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "push_for_faster_gang_access_risk_cover",
+        "effect": "gang_access_accelerated",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "push_for_faster_gang_access_risk_cover",
+        "effect": "cover_suspected",
+        "strength": 0.4,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "request_delhi_reduce_pressure",
+        "effect": "cover_stable",
+        "strength": 0.7,
+        "known_confounders": [
+          "sanyal_response"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "request_delhi_reduce_pressure",
+        "effect": "delhi_impatient_escalates",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "establish_parallel_contact_outside_aalam",
+        "effect": "gang_access_accelerated",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "establish_parallel_contact_outside_aalam",
+        "effect": "aalam_compromise_risk",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "conduct_solo_surveillance_unsanctioned",
+        "effect": "gang_access_accelerated",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "conduct_solo_surveillance_unsanctioned",
+        "effect": "cover_suspected",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "aalam_compromise_risk",
+        "effect": "handler_network_fragmented",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "handler_network_fragmented",
+        "effect": "cover_suspected",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Identify and neutralise criminal elements in Lyari; LTF raids ongoing",
+      "capability": 7.0,
+      "trigger_threshold": 5.5,
+      "information_set": [
+        "ltf_informant_network",
+        "juice_shop_surveillance_flag"
+      ],
+      "observable_actions": [
+        "raid_lyari_businesses",
+        "interrogate_new_faces",
+        "cultivate_gang_informants",
+        "cordon_and_search"
+      ],
+      "hidden_states": [
+        "monitoring",
+        "neutral",
+        "investigating"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ks_bhullar",
+      "strength": 0.4,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "delhi_orders"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "establish_cover",
+      "name": "Establish Lyari cover identity (juice shop routine, community recognition)",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "aalam_comms_establish",
+      "name": "Establish secure handler comms protocol",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "peripheral_gang_contact",
+      "name": "First contact with PAC peripheral members",
+      "optimistic_days": 14,
+      "most_likely_days": 45,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "police_landscape_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.1
+    },
+    {
+      "id": "police_landscape_map",
+      "name": "Map LTF patrol patterns and informant density",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 45,
+      "dependencies": [],
+      "parallelizable_with": [
+        "peripheral_gang_contact"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.04
+    },
+    {
+      "id": "dakait_profile_build",
+      "name": "Construct full operational profile of Rehman Dakait (schedule, routes, paranoia triggers)",
+      "optimistic_days": 45,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "peripheral_gang_contact"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "isi_link_preliminary",
+      "name": "First evidence of ISI-PAC financial connection (preliminary only)",
+      "optimistic_days": 90,
+      "most_likely_days": 180,
+      "pessimistic_days": 365,
+      "dependencies": [
+        "dakait_profile_build"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "dakait_schedule",
+      "name": "Rehman Dakait's daily schedule and approach routes",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 6.5,
+      "access_actions": [
+        "peripheral_gang_contact",
+        "passive_surveillance"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "pac_internal_politics",
+      "name": "PAC internal faction dynamics (who is loyal vs. using Dakait)",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.7,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "push_for_faster_gang_access_risk_cover",
+        "accept_aalam_pace_build_slowly"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "aalam_handler_security",
+      "name": "Whether Aalam's cover as juice shop owner is secure",
+      "current_entropy": 1.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 2.0,
+      "access_actions": [
+        "accept_aalam_pace_build_slowly"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "cover_intact_aalam_secure_ltf_passive": 0.7,
+    "cover_intact_aalam_secure_ltf_monitoring": 0.2,
+    "cover_intact_aalam_flagged_ltf_monitoring": 0.07,
+    "cover_suspected_aalam_compromised": 0.03
+  },
+  "turning_point_description": "Hamza has spent three months as a juice shop waiter, building his Lyari identity. Mohammed Aalam (the juice shop owner and RAW-embedded field handler) now activates the first formal intelligence-passing protocol. This turning point captures the moment Hamza must decide how aggressively to push for gang access \u2014 Aalam is urging patience while Sanyal's handlers in Delhi are pressing for actionable product. The tension between tradecraft caution and operational urgency is the central decision.",
+  "real_world_correlation": {
+    "field_handler_model": "Real RAW deep-cover networks use a 'stay-behind' field handler embedded in the target country years before the operative arrives. The handler establishes the business cover, the neighbourhood credibility, and the dead-drop infrastructure that the operative inherits on arrival.",
+    "comms_protocol": "Burst transmission (encrypted short-wave or GSM) is the real-world equivalent. The juice shop setting mirrors documented RAW/ISI tradecraft: small retail businesses generate legitimate cash flow, explain irregular hours, and attract daily foot traffic that disguises contact meetings.",
+    "delhi_impatience_pattern": "Intelligence history is full of cases where handlers in the field advocate patience while headquarters demands product. The 1970s IC operations saw similar friction between field officers and Delhi. This friction is the source of many cover compromises.",
+    "handler_vulnerability": "The field handler is the operative's greatest operational vulnerability \u2014 if Aalam is identified, the entire network collapses. Real doctrine uses multiple cut-outs to prevent this single-point-of-failure."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "sp_choudhary_aslam",
+        {
+          "capability": 7.0,
+          "is_adversary": true
+        }
+      ],
+      [
+        "hamza",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "mohammed_aalam",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ks_bhullar",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "hamza",
+        "mohammed_aalam",
+        {
+          "weight": 0.85,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "hamza",
+        "ajay_sanyal",
+        {
+          "weight": 0.75,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "hamza",
+        "ks_bhullar",
+        {
+          "weight": 0.4,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "sp_choudhary_aslam": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "ks_bhullar": 0.0
+    },
+    "eigenvector": {
+      "sp_choudhary_aslam": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "ks_bhullar": 0.0
+    },
+    "clustering": {
+      "sp_choudhary_aslam": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "ks_bhullar": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "hamza",
+        "ks_bhullar",
+        "mohammed_aalam"
+      ],
+      [
+        "sp_choudhary_aslam"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "sp_choudhary_aslam",
+      "score": 3.5,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.75,
+      "mohammed_aalam": 0.8500000000000001
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0,
+      "mohammed_aalam": -1.1102230246251565e-16
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Whether Aalam's cover as juice shop owner is secure",
+        "voi_bits": 1.1204,
+        "priority_rank": 1,
+        "effort_required": 2.0,
+        "recommendation": "Medium priority \u2014 schedule after cover deepening"
+      },
+      {
+        "intelligence_target": "Rehman Dakait's daily schedule and approach routes",
+        "voi_bits": 1.0582,
+        "priority_rank": 2,
+        "effort_required": 6.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (6.5) outweighs VoI (1.06 bits)"
+      },
+      {
+        "intelligence_target": "PAC internal faction dynamics (who is loyal vs. using Dakait)",
+        "voi_bits": 0.8714,
+        "priority_rank": 3,
+        "effort_required": 7.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (7.0) outweighs VoI (0.87 bits)"
+      }
+    ],
+    "top_target": "Whether Aalam's cover as juice shop owner is secure",
+    "total_entropy_bits": 1.2449
+  },
+  "stackelberg": {
+    "leader_action": "request_delhi_reduce_pressure",
+    "operative_best_response": "request_delhi_reduce_pressure",
+    "follower_best_response": "conduct_solo_surveillance_unsanctioned",
+    "equilibrium_payoff_indian": 0.7152,
+    "equilibrium_payoff_adversary": 0.3421,
+    "commitment_value": 0.1716
+  },
+  "pomdp": {
+    "belief_state": {
+      "cover_intact_aalam_secure_ltf_passive": 0.7,
+      "cover_intact_aalam_secure_ltf_monitoring": 0.2,
+      "cover_intact_aalam_flagged_ltf_monitoring": 0.07,
+      "cover_suspected_aalam_compromised": 0.03
+    },
+    "optimal_action": "request_delhi_reduce_pressure",
+    "belief_state_value": 3.56,
+    "policy": {
+      "605d0f34a0": "request_delhi_reduce_pressure",
+      "8bcdfa1f05": "request_delhi_reduce_pressure",
+      "06161331f0": "request_delhi_reduce_pressure",
+      "d9173d148b": "request_delhi_reduce_pressure",
+      "7677dcfe5f": "request_delhi_reduce_pressure",
+      "2e68845e83": "request_delhi_reduce_pressure",
+      "712635094c": "request_delhi_reduce_pressure",
+      "e7808589e5": "request_delhi_reduce_pressure",
+      "963cfda8d6": "request_delhi_reduce_pressure",
+      "33d07c0854": "request_delhi_reduce_pressure"
+    },
+    "cover_integrity_prob": 0.985,
+    "mission_success_prob": 0.494,
+    "action_values": {
+      "accept_aalam_pace_build_slowly": 3.15,
+      "push_for_faster_gang_access_risk_cover": 3.21,
+      "request_delhi_reduce_pressure": 3.56,
+      "establish_parallel_contact_outside_aalam": 3.21,
+      "conduct_solo_surveillance_unsanctioned": 3.01
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "peripheral_gang_contact",
+      "dakait_profile_build",
+      "isi_link_preliminary"
+    ],
+    "total_duration_days": 340.7,
+    "optimal_duration_days": 318.0,
+    "days_saved": 22.7,
+    "bottleneck_task": "isi_link_preliminary",
+    "slack_tasks": [
+      [
+        "establish_cover",
+        339.6666666666667
+      ],
+      [
+        "aalam_comms_establish",
+        339.6666666666667
+      ],
+      [
+        "police_landscape_map",
+        318.0
+      ],
+      [
+        "peripheral_gang_contact",
+        7.105427357601002e-15
+      ],
+      [
+        "dakait_profile_build",
+        7.105427357601002e-15
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "peripheral_gang_contact",
+        "police_landscape_map"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "request_delhi_reduce_pressure",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "request_delhi_reduce_pressure \u2192 cover_stable  (p=0.70)"
+  },
+  "simulation_optimal": {
+    "action": "request_delhi_reduce_pressure",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "request_delhi_reduce_pressure \u2192 cover_stable  (p=0.70)"
+  },
+  "narrative": "OPERATIVE: HAMZA\nTURNING POINT: aalam-handler-contact\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  request_delhi_reduce_pressure  (V(b) = 3.56)\n  Mission success prob: 49.4%\n  Cover integrity prob: 98.5%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 341d  \u2192  Optimal: 318d  (save 23d)\n  Bottleneck: isi_link_preliminary\n  Critical path: peripheral_gang_contact \u2192 dakait_profile_build \u2192 isi_link_preliminary\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Whether Aalam's cover as juice shop owner is secure  VoI=1.12bits\n  #2 Rehman Dakait's daily schedule and approach routes  VoI=1.06bits\n  #3 PAC internal faction dynamics (who is loyal vs. using Dakait)  VoI=0.87bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: request_delhi_reduce_pressure\n  Operative best response: request_delhi_reduce_pressure\n  Adversary counter: conduct_solo_surveillance_unsanctioned\n  Commitment value: +0.17\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (request_delhi_reduce_pressure):  P(success)=100.0%\n  Optimal action (request_delhi_reduce_pressure): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film1_act1'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['sp_choudhary_aslam'])",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}
