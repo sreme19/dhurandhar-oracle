@@ -1,0 +1,652 @@
+{
+  "operative": "hamza",
+  "turning_point": "26-11-celebration-revelation",
+  "state_vector": {
+    "cover_integrity": 5.5,
+    "trust_capital": 7.8,
+    "intelligence_depth": 7.5,
+    "network_strength": 4.0,
+    "exposure_risk": 7.5
+  },
+  "available_actions": [
+    "maintain_cover_report_iqbal_identification",
+    "attempt_immediate_abort_signal",
+    "confront_dakait_blow_cover",
+    "signal_delhi_evidence_request_extraction",
+    "photograph_evidence_maintain_cover_continue"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "maintain_cover_report_iqbal_identification",
+      "attempt_immediate_abort_signal",
+      "confront_dakait_blow_cover",
+      "signal_delhi_evidence_request_extraction",
+      "photograph_evidence_maintain_cover_continue",
+      "iqbal_identity_product_delivered",
+      "cover_survives_climax",
+      "dakait_link_evidence_collected",
+      "mission_intel_complete",
+      "cover_blown_at_climax",
+      "operative_captured_or_killed",
+      "early_extraction_partial_product"
+    ],
+    "edges": [
+      {
+        "cause": "maintain_cover_report_iqbal_identification",
+        "effect": "iqbal_identity_product_delivered",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "maintain_cover_report_iqbal_identification",
+        "effect": "cover_survives_climax",
+        "strength": 0.75,
+        "known_confounders": [
+          "emotional_control"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "photograph_evidence_maintain_cover_continue",
+        "effect": "iqbal_identity_product_delivered",
+        "strength": 0.92,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "photograph_evidence_maintain_cover_continue",
+        "effect": "dakait_link_evidence_collected",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "photograph_evidence_maintain_cover_continue",
+        "effect": "cover_survives_climax",
+        "strength": 0.65,
+        "known_confounders": [
+          "discovery_risk"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "attempt_immediate_abort_signal",
+        "effect": "early_extraction_partial_product",
+        "strength": 0.8,
+        "known_confounders": [
+          "sanyal_response_time"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "attempt_immediate_abort_signal",
+        "effect": "cover_blown_at_climax",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "signal_delhi_evidence_request_extraction",
+        "effect": "iqbal_identity_product_delivered",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "signal_delhi_evidence_request_extraction",
+        "effect": "early_extraction_partial_product",
+        "strength": 0.6,
+        "known_confounders": [
+          "delhi_decision_speed"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "confront_dakait_blow_cover",
+        "effect": "cover_blown_at_climax",
+        "strength": 0.98,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "confront_dakait_blow_cover",
+        "effect": "operative_captured_or_killed",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "iqbal_identity_product_delivered",
+        "effect": "mission_intel_complete",
+        "strength": 0.85,
+        "known_confounders": [
+          "dakait_link_evidence_collected"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "dakait_link_evidence_collected",
+        "effect": "mission_intel_complete",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Celebrate 26/11 success; begin post-attack phase of ISI-LeT operation; maintain Karachi network security",
+      "capability": 9.0,
+      "trigger_threshold": 7.5,
+      "information_set": [
+        "isi_surveillance_network",
+        "human_intel_karachi",
+        "ltf_informants"
+      ],
+      "observable_actions": [
+        "increase_opsec_post_attack",
+        "eliminate_potential_witnesses",
+        "order_dakait_increase_security",
+        "deploy_surveillance_on_known_faces"
+      ],
+      "hidden_states": [
+        "celebrating",
+        "consolidating",
+        "paranoid",
+        "hunting_leak"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "rehman_dakait",
+      "objective": "Celebrate the operation; consolidate power in post-26/11 political environment",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "pac_network",
+        "lyari_informants",
+        "isi_channel"
+      ],
+      "observable_actions": [
+        "increase_compound_security",
+        "test_inner_circle_loyalty",
+        "distribute_payments_to_network",
+        "eliminate_security_risks"
+      ],
+      "hidden_states": [
+        "celebrating",
+        "consolidating",
+        "paranoid"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "major_iqbal",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": null
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "jameel_jamali",
+      "strength": 0.72,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": null
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "iqbal_identity_confirm",
+      "name": "Confirm and document Major Iqbal's identity and Dakait connection",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "expose_political_link_documentary",
+      "name": "Gather documentary evidence of Dakait-Jamali-ISI terror financing chain",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "iqbal_identity_confirm"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    },
+    {
+      "id": "exfil_evidence_package",
+      "name": "Compile complete intelligence package and initiate exfiltration sequence",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "expose_political_link_documentary"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.55
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "major_iqbal_face_confirmed",
+      "name": "Visual/photographic confirmation of Major Iqbal's identity",
+      "current_entropy": 0.5,
+      "mission_relevance": 0.98,
+      "access_difficulty": 0.5,
+      "access_actions": [
+        "maintain_cover_report_iqbal_identification",
+        "photograph_evidence_maintain_cover_continue"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "dakait_iqbal_meeting_evidence",
+      "name": "Documentary evidence of Dakait-Iqbal operational meeting (26/11 nexus)",
+      "current_entropy": 1.0,
+      "mission_relevance": 0.95,
+      "access_difficulty": 4.0,
+      "access_actions": [
+        "photograph_evidence_maintain_cover_continue"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "iqbal_next_operation",
+      "name": "Intelligence on Major Iqbal's next planned operation (post-26/11)",
+      "current_entropy": 4.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "maintain_cover_report_iqbal_identification"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "cover_intact_dakait_trusting_iqbal_unaware_hamza": 0.5,
+    "cover_intact_dakait_trusting_iqbal_suspicious_hamza": 0.25,
+    "cover_suspected_emotional_crack_one_of_two_actors": 0.18,
+    "cover_blown_mission_crisis": 0.07
+  },
+  "turning_point_description": "November 26, 2008. While Mumbai burns 1,200 km away, Hamza witnesses Rehman Dakait celebrating the 26/11 attacks with ISI handler Major Iqbal inside Dakait's Lyari compound. Hamza had previously passed intelligence to Aalam about the ISI-Lyari-LeT network \u2014 intelligence that could have warned of the attack. Now he watches the men he has spent years infiltrating toast an atrocity he could have prevented. This is the moral crisis of Film 1: Hamza has the mission's primary target (Dakait-ISI link) confirmed, the intelligence failure exposed, and the primary adversary (Major Iqbal) identified in person \u2014 but acting now would blow everything. He must maintain his cover through his own grief and rage.",
+  "real_world_correlation": {
+    "26_11_real_details": "The November 26-29, 2008 Mumbai attacks were conducted by 10 Lashkar-e-Taiba operatives. 175 killed, 300+ wounded. Major Iqbal (the real ISI figure referenced by David Headley's confessions) coordinated the operation by satellite phone from a Karachi safe house during the attacks. Headley identified his ISI handler as 'Major Iqbal' in his 2013 US federal trial testimony.",
+    "intelligence_failure_pattern": "The film's central claim \u2014 that Indian intelligence had advance warning that was not acted upon \u2014 is consistent with documented accounts from 26/11 investigations. Both US (CIA/FBI) and Indian investigations found that warning signs existed but were either not collated, not believed, or politically suppressed under the 'strategic restraint' doctrine. The RAW-IB bureaucratic rivalry is a documented contributing factor.",
+    "headley_karachi_connection": "David Coleman Headley, operating under ISI direction, conducted 5 reconnaissance trips to Mumbai between 2006-2008. His handler 'Major Iqbal' coordinated from Karachi. The geographic overlap with the Lyari network Hamza was infiltrating (same city, partially overlapping financial infrastructure) is the film's core plausibility hook \u2014 Hamza's intelligence products were theoretically passing through the same pipeline that could have flagged Headley's operations.",
+    "operative_moral_crisis": "The scenario depicted \u2014 an intelligence operative watching an atrocity he had partial warning of \u2014 has real documented parallels. CIA officers present in the region during 9/11 planning have written about precisely this kind of retrospective horror. The film externalises the internal ethical calculus that real intelligence operators carry privately.",
+    "major_iqbal_identification": "This is the moment Hamza visually identifies Major Iqbal in person for the first time. In real intelligence operations, photographic confirmation of a known operative's identity is a major intelligence product. The film uses this as an emotional peak \u2014 Hamza now knows the primary target's face."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "major_iqbal",
+        {
+          "capability": 9.0,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rehman_dakait",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "hamza",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "mohammed_aalam",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "jameel_jamali",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rehman_dakait",
+        "major_iqbal",
+        {
+          "weight": 0.88,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "rehman_dakait",
+        "jameel_jamali",
+        {
+          "weight": 0.72,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "hamza",
+        "mohammed_aalam",
+        {
+          "weight": 0.85,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "hamza",
+        "ajay_sanyal",
+        {
+          "weight": 0.8,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "major_iqbal": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "jameel_jamali": 0.0
+    },
+    "eigenvector": {
+      "major_iqbal": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "jameel_jamali": 0.0
+    },
+    "clustering": {
+      "major_iqbal": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0,
+      "jameel_jamali": 0.0
+    },
+    "communities": [
+      [
+        "jameel_jamali",
+        "major_iqbal",
+        "rehman_dakait"
+      ],
+      [
+        "ajay_sanyal",
+        "hamza",
+        "mohammed_aalam"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "major_iqbal",
+      "score": 4.5,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "rehman_dakait",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.8,
+      "mohammed_aalam": 0.8499999999999999
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0,
+      "mohammed_aalam": 1.1102230246251565e-16
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Visual/photographic confirmation of Major Iqbal's identity",
+        "voi_bits": 1.6796,
+        "priority_rank": 1,
+        "effort_required": 0.5,
+        "recommendation": "High priority \u2014 gather immediately via: maintain_cover_report_iqbal_identification, photograph_evidence_maintain_cover_continue"
+      },
+      {
+        "intelligence_target": "Documentary evidence of Dakait-Iqbal operational meeting (26/11 nexus)",
+        "voi_bits": 1.6282,
+        "priority_rank": 2,
+        "effort_required": 4.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (4.0) outweighs VoI (1.63 bits)"
+      },
+      {
+        "intelligence_target": "Intelligence on Major Iqbal's next planned operation (post-26/11)",
+        "voi_bits": 1.5425,
+        "priority_rank": 3,
+        "effort_required": 9.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.0) outweighs VoI (1.54 bits)"
+      }
+    ],
+    "top_target": "Visual/photographic confirmation of Major Iqbal's identity",
+    "total_entropy_bits": 1.7139
+  },
+  "stackelberg": {
+    "leader_action": "maintain_cover_report_iqbal_identification",
+    "operative_best_response": "maintain_cover_report_iqbal_identification",
+    "follower_best_response": "major_iqbal: photograph_evidence_maintain_cover_continue",
+    "equilibrium_payoff_indian": 0.7537,
+    "equilibrium_payoff_adversary": 0.2463,
+    "commitment_value": 0.2068
+  },
+  "pomdp": {
+    "belief_state": {
+      "cover_intact_dakait_trusting_iqbal_unaware_hamza": 0.5,
+      "cover_intact_dakait_trusting_iqbal_suspicious_hamza": 0.25,
+      "cover_suspected_emotional_crack_one_of_two_actors": 0.18,
+      "cover_blown_mission_crisis": 0.07
+    },
+    "optimal_action": "maintain_cover_report_iqbal_identification",
+    "belief_state_value": -50.146,
+    "policy": {
+      "605d0f34a0": "maintain_cover_report_iqbal_identification",
+      "8bcdfa1f05": "maintain_cover_report_iqbal_identification",
+      "06161331f0": "maintain_cover_report_iqbal_identification",
+      "d9173d148b": "maintain_cover_report_iqbal_identification",
+      "7677dcfe5f": "maintain_cover_report_iqbal_identification",
+      "2e68845e83": "maintain_cover_report_iqbal_identification",
+      "712635094c": "maintain_cover_report_iqbal_identification",
+      "e7808589e5": "maintain_cover_report_iqbal_identification",
+      "963cfda8d6": "maintain_cover_report_iqbal_identification",
+      "33d07c0854": "maintain_cover_report_iqbal_identification"
+    },
+    "cover_integrity_prob": 0.84,
+    "mission_success_prob": 0.429,
+    "action_values": {
+      "maintain_cover_report_iqbal_identification": -50.146,
+      "attempt_immediate_abort_signal": -50.922,
+      "confront_dakait_blow_cover": -55.082,
+      "signal_delhi_evidence_request_extraction": -52.545,
+      "photograph_evidence_maintain_cover_continue": -50.302
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "iqbal_identity_confirm",
+      "expose_political_link_documentary",
+      "exfil_evidence_package"
+    ],
+    "total_duration_days": 51.2,
+    "optimal_duration_days": 51.2,
+    "days_saved": 0.0,
+    "bottleneck_task": "exfil_evidence_package",
+    "slack_tasks": [
+      [
+        "iqbal_identity_confirm",
+        2.220446049250313e-15
+      ],
+      [
+        "expose_political_link_documentary",
+        2.220446049250313e-15
+      ]
+    ],
+    "parallelisation_opportunities": []
+  },
+  "simulation_actual": {
+    "action": "maintain_cover_report_iqbal_identification",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "maintain_cover_report_iqbal_identification \u2192 iqbal_identity_product_delivered  (p=0.90)"
+  },
+  "simulation_optimal": {
+    "action": "maintain_cover_report_iqbal_identification",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "maintain_cover_report_iqbal_identification \u2192 iqbal_identity_product_delivered  (p=0.90)"
+  },
+  "narrative": "OPERATIVE: HAMZA\nTURNING POINT: 26-11-celebration-revelation\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  maintain_cover_report_iqbal_identification  (V(b) = -50.15)\n  Mission success prob: 42.9%\n  Cover integrity prob: 84.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 51d  \u2192  Optimal: 51d  (save 0d)\n  Bottleneck: exfil_evidence_package\n  Critical path: iqbal_identity_confirm \u2192 expose_political_link_documentary \u2192 exfil_evidence_package\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Visual/photographic confirmation of Major Iqbal's identity  VoI=1.68bits\n  #2 Documentary evidence of Dakait-Iqbal operational meeting (26/11 nexus)  VoI=1.63bits\n  #3 Intelligence on Major Iqbal's next planned operation (post-26/11)  VoI=1.54bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: maintain_cover_report_iqbal_identification\n  Operative best response: maintain_cover_report_iqbal_identification\n  Adversary counter: major_iqbal: photograph_evidence_maintain_cover_continue\n  Commitment value: +0.21\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (maintain_cover_report_iqbal_identification):  P(success)=100.0%\n  Optimal action (maintain_cover_report_iqbal_identification): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film1_act3'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['major_iqbal', 'rehman_dakait'])",
+    "adversary_node: multi-adversary Stackelberg over ['major_iqbal', 'rehman_dakait']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

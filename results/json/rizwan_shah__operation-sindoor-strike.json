@@ -1,0 +1,637 @@
+{
+  "operative": "rizwan_shah",
+  "turning_point": "operation-sindoor-strike",
+  "state_vector": {
+    "cover_integrity": 5.5,
+    "trust_capital": 4.5,
+    "intelligence_depth": 9.0,
+    "network_strength": 6.5,
+    "exposure_risk": 7.5
+  },
+  "available_actions": [
+    "assess_pakistan_full_escalation_intent_stay",
+    "exfiltrate_immediately_operation_complete",
+    "assess_and_provide_real_time_battle_damage",
+    "monitor_isi_nuclear_signalling",
+    "position_for_post_ceasefire_operations"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_pakistan_full_escalation_intent_stay",
+      "exfiltrate_immediately_operation_complete",
+      "assess_and_provide_real_time_battle_damage",
+      "monitor_isi_nuclear_signalling",
+      "position_for_post_ceasefire_operations",
+      "ceasefire_imminent_negotiation_underway",
+      "full_conventional_escalation_risk",
+      "nuclear_threshold_approached",
+      "rizwan_extracted_safely",
+      "rizwan_captured_high_isi_alert",
+      "post_ceasefire_intelligence_phase_begins"
+    ],
+    "edges": [
+      {
+        "cause": "assess_pakistan_full_escalation_intent_stay",
+        "effect": "ceasefire_imminent_negotiation_underway",
+        "strength": 0.7,
+        "known_confounders": [
+          "us_mediation_speed"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "assess_pakistan_full_escalation_intent_stay",
+        "effect": "rizwan_captured_high_isi_alert",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "exfiltrate_immediately_operation_complete",
+        "effect": "rizwan_extracted_safely",
+        "strength": 0.8,
+        "known_confounders": [
+          "isi_border_lockdown"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "exfiltrate_immediately_operation_complete",
+        "effect": "post_ceasefire_intelligence_phase_begins",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "assess_and_provide_real_time_battle_damage",
+        "effect": "ceasefire_imminent_negotiation_underway",
+        "strength": 0.6,
+        "known_confounders": [
+          "delhi_decision"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "monitor_isi_nuclear_signalling",
+        "effect": "nuclear_threshold_approached",
+        "strength": 0.15,
+        "known_confounders": [
+          "actual_nuclear_posture"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "position_for_post_ceasefire_operations",
+        "effect": "post_ceasefire_intelligence_phase_begins",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "position_for_post_ceasefire_operations",
+        "effect": "rizwan_captured_high_isi_alert",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "full_conventional_escalation_risk",
+        "effect": "nuclear_threshold_approached",
+        "strength": 0.3,
+        "known_confounders": [
+          "pakistan_nuclear_doctrine"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_general_munir_wartime_posture",
+      "objective": "Demonstrate retaliatory capability; manage domestic Pakistani narrative; avoid nuclear escalation that invites US intervention; seek ceasefire that can be declared victory",
+      "capability": 9.5,
+      "trigger_threshold": 9.0,
+      "information_set": [
+        "india_military_movements",
+        "us_mediation_channel",
+        "nuclear_arsenal_status",
+        "isi_agent_networks_india"
+      ],
+      "observable_actions": [
+        "artillery_strikes_poonch_civilian_areas",
+        "activate_us_back_channel_ceasefire_request",
+        "nuclear_signalling_medium_range_missile_movement",
+        "deploy_counter_intelligence_sweep_pakistan_wide",
+        "arrest_suspected_indian_agents"
+      ],
+      "hidden_states": [
+        "retaliating",
+        "seeking_ceasefire",
+        "escalation_threshold_calculating",
+        "nuclear_signalling"
+      ],
+      "prospect_params": {
+        "lam": 4.0,
+        "gamma": 0.5,
+        "alpha": 0.95,
+        "beta": 0.95,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "us_trump_rubio_mediators",
+      "objective": "Prevent nuclear escalation; broker ceasefire that serves US interests in South Asia; reduce risk of supply chain disruption",
+      "capability": 9.0,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "india_pak_military_postures",
+        "nuclear_arsenals",
+        "us_economic_interests"
+      ],
+      "observable_actions": [
+        "rubio_direct_calls_india_pak",
+        "vance_diplomatic_pressure",
+        "announce_ceasefire_prematurely_via_trump",
+        "deploy_us_crisis_team_south_asia"
+      ],
+      "hidden_states": [
+        "mediating",
+        "pressuring_pakistan",
+        "pressuring_india",
+        "announcing_success"
+      ],
+      "prospect_params": {
+        "lam": 1.8,
+        "gamma": 0.65,
+        "alpha": 0.82,
+        "beta": 0.82,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.5,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "ceasefire_mediation"
+    },
+    {
+      "source": "pakistan",
+      "target": "china",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "military_escalation"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "battle_damage_assess",
+      "name": "Confirm Operation Sindoor strike effects on 9 targets \u2014 battle damage assessment",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [
+        "escalation_intent_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.6
+    },
+    {
+      "id": "escalation_intent_assess",
+      "name": "Assess Pakistani military intent post-Poonch retaliation \u2014 conventional escalation vs. ceasefire seek",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "battle_damage_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    },
+    {
+      "id": "nuclear_signalling_monitor",
+      "name": "Monitor for ISI/military nuclear weapons activation signalling (NCA communication intercepts)",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [
+        "escalation_intent_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "exfil_or_continue",
+      "name": "Decision: exfiltrate Pakistan (mission complete) or remain for post-ceasefire intelligence phase",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [
+        "escalation_intent_assess"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.8
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "pakistan_nuclear_posture",
+      "name": "Whether Pakistan's NCA has activated nuclear readiness (movement of tactical weapons, NCA communication intercepts)",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "monitor_isi_nuclear_signalling"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "pakistan_ceasefire_intent",
+      "name": "Whether Pakistan army leadership is seeking ceasefire or committed to continued conventional escalation",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "assess_pakistan_full_escalation_intent_stay"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "post_sindoor_jem_let_relocation",
+      "name": "Where JeM and LeT are relocating assets after 9-target strike (KPK vs. Punjab vs. dispersed)",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "position_for_post_ceasefire_operations",
+        "assess_and_provide_real_time_battle_damage"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "pakistan_seeking_ceasefire_us_mediating": 0.55,
+    "pakistan_conventional_escalation_continuing": 0.25,
+    "pakistan_nuclear_signalling_threshold_approaching": 0.15,
+    "ceasefire_already_agreed_rizwan_safe_to_exfil": 0.05
+  },
+  "turning_point_description": "May 7, 2025. India launches Operation Sindoor \u2014 strikes on 9 terror infrastructure targets in Pakistan and Pakistan-occupied Kashmir. 125 fighter jets from both sides are at standoff ranges. Targets include JeM (Markaz Subhan Allah, Bahawalpur \u2014 Masood Azhar's hometown compound), LeT (Makaz Raheel Shahid, Kotli), and Hizbul Mujahideen facilities. The strikes run 23-25 minutes. Rizwan Shah's ground-intelligence contribution enabled the precision target packages. The turning point: with strikes complete, Pakistan launches a blitz on Poonch (16 Indian civilians killed). Rizwan must assess Pakistani military intent \u2014 is this proportional retaliation heading to ceasefire, or the opening of a full conventional escalation toward nuclear threshold? The assessment determines whether to stay in Pakistan or exfiltrate.",
+  "real_world_correlation": {
+    "event_date": "May 7, 2025",
+    "real_event": "India launched Operation Sindoor, striking 9 targets in Pakistan and PoK over 23-25 minutes. Targets included JeM's Markaz Subhan Allah (Bahawalpur), LeT's Makaz Raheel Shahid (Kotli PoK), and Hizbul Mujahideen camps. India claimed 70-100+ militants killed. Pakistan disputed civilian casualties. Pakistan retaliated with artillery strikes on Poonch, killing 16 Indian civilians. US Secretary of State Marco Rubio began ceasefire mediation immediately.",
+    "first_india_pak_air_strikes_since_1971": "Operation Sindoor was the first Indian air strikes on Pakistani territory since the 1971 war. The political significance \u2014 crossing a half-century-old threshold \u2014 represents India's definitive abandonment of 'strategic restraint' as doctrine.",
+    "precision_intelligence": "The precision of the strikes \u2014 9 specific terror infrastructure targets with reportedly no Pakistani military facilities hit (India's stated position) \u2014 required exceptional ground intelligence, signals intelligence, and satellite imagery over extended periods. RAW/DIA's intelligence preparation of the battlefield is reflected in the precision.",
+    "munir_field_marshal_promotion": "General Asim Munir was promoted to Field Marshal on May 20, 2025 \u2014 two weeks after Operation Sindoor. The timing suggests the promotion was intended to bolster military morale and domestic narrative after India's strikes, not as a reward for military victory.",
+    "tahawwur_rana_timing": "Tahawwur Rana arrived in India on April 10, 2025 \u2014 12 days before the Pahalgam attack and 27 days before Operation Sindoor. His extradition represents 26/11 accountability intersecting with the 2025 escalation cycle."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "isi_general_munir_wartime_posture",
+        {
+          "capability": 9.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "us_trump_rubio_mediators",
+        {
+          "capability": 9.0,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rizwan_shah",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "india",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "us_trump_administration",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "pakistan",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "china",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rizwan_shah",
+        "ajay_sanyal",
+        {
+          "weight": 0.92,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "india",
+        "us_trump_administration",
+        {
+          "weight": 0.5,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ],
+      [
+        "pakistan",
+        "china",
+        {
+          "weight": 0.75,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "isi_general_munir_wartime_posture": 0.0,
+      "us_trump_rubio_mediators": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0
+    },
+    "eigenvector": {
+      "isi_general_munir_wartime_posture": 0.0,
+      "us_trump_rubio_mediators": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0
+    },
+    "clustering": {
+      "isi_general_munir_wartime_posture": 0.0,
+      "us_trump_rubio_mediators": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0,
+      "pakistan": 0.0,
+      "china": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "rizwan_shah"
+      ],
+      [
+        "india",
+        "us_trump_administration"
+      ],
+      [
+        "china",
+        "pakistan"
+      ],
+      [
+        "isi_general_munir_wartime_posture"
+      ],
+      [
+        "us_trump_rubio_mediators"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "isi_general_munir_wartime_posture",
+      "score": 4.75,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "us_trump_rubio_mediators",
+      "score": 4.5,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.92
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Whether Pakistan army leadership is seeking ceasefire or committed to continued conventional escalation",
+        "voi_bits": 1.569,
+        "priority_rank": 1,
+        "effort_required": 9.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.0) outweighs VoI (1.57 bits)"
+      },
+      {
+        "intelligence_target": "Where JeM and LeT are relocating assets after 9-target strike (KPK vs. Punjab vs. dispersed)",
+        "voi_bits": 1.3609,
+        "priority_rank": 2,
+        "effort_required": 8.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.0) outweighs VoI (1.36 bits)"
+      },
+      {
+        "intelligence_target": "Whether Pakistan's NCA has activated nuclear readiness (movement of tactical weapons, NCA communication intercepts)",
+        "voi_bits": 1.585,
+        "priority_rank": 3,
+        "effort_required": 10.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (10.0) outweighs VoI (1.59 bits)"
+      }
+    ],
+    "top_target": "Whether Pakistan army leadership is seeking ceasefire or committed to continued conventional escalation",
+    "total_entropy_bits": 1.601
+  },
+  "stackelberg": {
+    "leader_action": "position_for_post_ceasefire_operations",
+    "operative_best_response": "position_for_post_ceasefire_operations",
+    "follower_best_response": "isi_general_munir_wartime_posture: exfiltrate_immediately_operation_complete",
+    "equilibrium_payoff_indian": 0.6789,
+    "equilibrium_payoff_adversary": 0.3211,
+    "commitment_value": 0.1297
+  },
+  "pomdp": {
+    "belief_state": {
+      "pakistan_seeking_ceasefire_us_mediating": 0.55,
+      "pakistan_conventional_escalation_continuing": 0.25,
+      "pakistan_nuclear_signalling_threshold_approaching": 0.15,
+      "ceasefire_already_agreed_rizwan_safe_to_exfil": 0.05
+    },
+    "optimal_action": "position_for_post_ceasefire_operations",
+    "belief_state_value": 8.308,
+    "policy": {
+      "605d0f34a0": "position_for_post_ceasefire_operations",
+      "8bcdfa1f05": "position_for_post_ceasefire_operations",
+      "06161331f0": "position_for_post_ceasefire_operations",
+      "d9173d148b": "position_for_post_ceasefire_operations",
+      "7677dcfe5f": "position_for_post_ceasefire_operations",
+      "2e68845e83": "position_for_post_ceasefire_operations",
+      "712635094c": "position_for_post_ceasefire_operations",
+      "e7808589e5": "position_for_post_ceasefire_operations",
+      "963cfda8d6": "position_for_post_ceasefire_operations",
+      "33d07c0854": "position_for_post_ceasefire_operations"
+    },
+    "cover_integrity_prob": 1.0,
+    "mission_success_prob": 0.5175,
+    "action_values": {
+      "assess_pakistan_full_escalation_intent_stay": 7.915,
+      "exfiltrate_immediately_operation_complete": 7.315,
+      "assess_and_provide_real_time_battle_damage": 7.915,
+      "monitor_isi_nuclear_signalling": 7.715,
+      "position_for_post_ceasefire_operations": 8.308
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "escalation_intent_assess",
+      "exfil_or_continue"
+    ],
+    "total_duration_days": 5.7,
+    "optimal_duration_days": 3.4,
+    "days_saved": 2.3,
+    "bottleneck_task": "exfil_or_continue",
+    "slack_tasks": [
+      [
+        "battle_damage_assess",
+        2.3333333333333335
+      ],
+      [
+        "nuclear_signalling_monitor",
+        2.3333333333333335
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "battle_damage_assess",
+        "escalation_intent_assess"
+      ],
+      [
+        "nuclear_signalling_monitor",
+        "escalation_intent_assess"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "position_for_post_ceasefire_operations",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "position_for_post_ceasefire_operations \u2192 post_ceasefire_intelligence_phase_begins  (p=0.88)"
+  },
+  "simulation_optimal": {
+    "action": "position_for_post_ceasefire_operations",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "position_for_post_ceasefire_operations \u2192 post_ceasefire_intelligence_phase_begins  (p=0.88)"
+  },
+  "narrative": "OPERATIVE: RIZWAN_SHAH\nTURNING POINT: operation-sindoor-strike\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  position_for_post_ceasefire_operations  (V(b) = 8.31)\n  Mission success prob: 51.7%\n  Cover integrity prob: 100.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 6d  \u2192  Optimal: 3d  (save 2d)\n  Bottleneck: exfil_or_continue\n  Critical path: escalation_intent_assess \u2192 exfil_or_continue\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Whether Pakistan army leadership is seeking ceasefire or committed to continued conventional escalation  VoI=1.57bits\n  #2 Where JeM and LeT are relocating assets after 9-target strike (KPK vs. Punjab vs. dispersed)  VoI=1.36bits\n  #3 Whether Pakistan's NCA has activated nuclear readiness (movement of tactical weapons, NCA communication intercepts)  VoI=1.58bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: position_for_post_ceasefire_operations\n  Operative best response: position_for_post_ceasefire_operations\n  Adversary counter: isi_general_munir_wartime_posture: exfiltrate_immediately_operation_complete\n  Commitment value: +0.13\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (position_for_post_ceasefire_operations):  P(success)=100.0%\n  Optimal action (position_for_post_ceasefire_operations): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film3_act3'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['isi_general_munir_wartime_posture', 'us_trump_rubio_mediators'])",
+    "adversary_node: multi-adversary Stackelberg over ['isi_general_munir_wartime_posture', 'us_trump_rubio_mediators']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

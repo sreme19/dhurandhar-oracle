@@ -1,0 +1,573 @@
+{
+  "operative": "rizwan_shah",
+  "turning_point": "pahalgam-attack-crisis",
+  "state_vector": {
+    "cover_integrity": 7.0,
+    "trust_capital": 5.5,
+    "intelligence_depth": 8.0,
+    "network_strength": 7.5,
+    "exposure_risk": 5.5
+  },
+  "available_actions": [
+    "confirm_isi_sanction_level_inform_delhi_scale",
+    "identify_trf_cell_commander_locate_for_elimination",
+    "trace_weapons_supply_chain_m4_carbines_origin",
+    "assess_follow_on_attack_probability",
+    "provide_intelligence_for_diplomatic_dossier"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "confirm_isi_sanction_level_inform_delhi_scale",
+      "identify_trf_cell_commander_locate_for_elimination",
+      "trace_weapons_supply_chain_m4_carbines_origin",
+      "assess_follow_on_attack_probability",
+      "provide_intelligence_for_diplomatic_dossier",
+      "india_response_calibrated_correctly",
+      "india_response_disproportionate_escalation",
+      "trf_cell_eliminated_preemptive",
+      "diplomatic_case_strengthened_un",
+      "intelligence_failure_follow_on_occurs"
+    ],
+    "edges": [
+      {
+        "cause": "confirm_isi_sanction_level_inform_delhi_scale",
+        "effect": "india_response_calibrated_correctly",
+        "strength": 0.85,
+        "known_confounders": [
+          "delhi_political_pressure"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "confirm_isi_sanction_level_inform_delhi_scale",
+        "effect": "india_response_disproportionate_escalation",
+        "strength": 0.15,
+        "known_confounders": [
+          "political_mandate"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "identify_trf_cell_commander_locate_for_elimination",
+        "effect": "trf_cell_eliminated_preemptive",
+        "strength": 0.75,
+        "known_confounders": [
+          "operational_timeline"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "trace_weapons_supply_chain_m4_carbines_origin",
+        "effect": "diplomatic_case_strengthened_un",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "provide_intelligence_for_diplomatic_dossier",
+        "effect": "diplomatic_case_strengthened_un",
+        "strength": 0.88,
+        "known_confounders": [
+          "india_pak_diplomatic_access"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "assess_follow_on_attack_probability",
+        "effect": "intelligence_failure_follow_on_occurs",
+        "strength": 0.2,
+        "known_confounders": [
+          "trf_adaptation"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "india_response_disproportionate_escalation",
+        "effect": "india_response_disproportionate_escalation",
+        "strength": 0.0,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "trf_isi_coordination",
+      "objective": "Execute follow-on attacks; deny ISI involvement; exploit international narrative about Hindu-Muslim targeting",
+      "capability": 8.0,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "kashmir_tourist_patterns",
+        "security_force_patrol_gaps",
+        "india_media_narrative"
+      ],
+      "observable_actions": [
+        "claim_and_retract_responsibility",
+        "plan_follow_on_attack",
+        "activate_diaspora_propaganda",
+        "coordinate_with_isi_media_operations"
+      ],
+      "hidden_states": [
+        "executing",
+        "denial_phase",
+        "planning_next",
+        "under_pressure"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_general_asim_munir",
+      "objective": "Calibrate India's response; determine whether India will escalate to military strikes; manage domestic narrative in Pakistan",
+      "capability": 9.5,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "india_military_posture",
+        "us_india_relations",
+        "india_domestic_politics"
+      ],
+      "observable_actions": [
+        "deny_pakistan_involvement",
+        "prepare_military_retaliation_options",
+        "activate_us_saudi_diplomatic_channels",
+        "escalate_isi_espionage_in_india"
+      ],
+      "hidden_states": [
+        "calculating",
+        "escalating",
+        "negotiating",
+        "pre_emptive_deterrent"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.55,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "crisis_mediation_needed"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_sanction_confirm",
+      "name": "Confirm whether ISI DG or corps commander-level sanctioned Pahalgam attack vs. TRF autonomy",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "trf_cell_locate",
+        "weapons_trace"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "trf_cell_locate",
+      "name": "Identify and locate TRF cell commanders responsible for Pahalgam planning",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_sanction_confirm"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "weapons_trace",
+      "name": "Trace M4 carbines used in Pahalgam to supply chain (ISI-TRF arms pipeline)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_sanction_confirm"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.12
+    },
+    {
+      "id": "follow_on_threat_assess",
+      "name": "Assess TRF follow-on attack planning against tourism/civilian targets in next 30 days",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [
+        "isi_sanction_confirm"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.18
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_sanction_level_pahalgam",
+      "name": "Was Pahalgam ordered by ISI DG Munir personally or TRF semi-autonomous operation?",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "confirm_isi_sanction_level_inform_delhi_scale"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "trf_operational_commander",
+      "name": "Identity and location of TRF operational commander who planned Pahalgam attack",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "identify_trf_cell_commander_locate_for_elimination"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "m4_supply_chain",
+      "name": "Origin of M4 carbines used in attack \u2014 ISI-TRF arms pipeline route",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.8,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "trace_weapons_supply_chain_m4_carbines_origin"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "isi_dg_sanctioned_high_level_order": 0.55,
+    "isi_facilitated_but_trf_autonomous_execution": 0.3,
+    "trf_fully_autonomous_isi_knew_but_did_not_order": 0.12,
+    "isi_unaware_trf_rogue_operation": 0.03
+  },
+  "turning_point_description": "April 22, 2025. The Resistance Front (TRF) \u2014 an LeT proxy created in 2019 to provide FATF deniability \u2014 kills 26 tourists in the Baisaran Valley meadow near Pahalgam. 25 tourists (mostly Hindu) and one local Muslim pony operator are shot with M4 carbines and AK-47s. It is the deadliest civilian attack in India since 26/11. TRF initially claims responsibility twice, then retracts. ISI-TRF coordination is confirmed through signals intelligence. Rizwan Shah, now running operations from a position of deep knowledge of the ISI-LeT structure, must determine: was this an ISI-sanctioned escalation or a TRF operational overreach? The answer determines the appropriate scale and nature of India's response.",
+  "real_world_correlation": {
+    "event_date": "April 22, 2025",
+    "real_event": "Pahalgam terrorist attack, Baisaran Valley, Anantnag district, J&K. 26 killed (25 tourists + 1 local). The Resistance Front (TRF) claimed responsibility twice (April 22-23) then denied. TRF is widely understood as an LeT-ISI proxy established post-Article 370 abrogation (October 2019) to maintain operational cover under FATF grey-listing scrutiny.",
+    "trf_structure": "TRF was founded October 2019 after India's revocation of J&K's special status. It draws cadres from LeT and Hizbul Mujahideen. Its purpose is to allow ISI/LeT to claim plausible deniability for attacks while FATF scrutiny is active. Pakistan's nominal FATF compliance (grey list exit June 2022) did not end these operations.",
+    "strategic_escalation": "The attack represents a strategic escalation from the previous pattern (security forces, political figures, infrastructure workers) to direct tourist targeting \u2014 a deliberate choice to damage Kashmir's tourism economy and signal India's inability to protect civilians. This type of target shift is consistent with ISI authorisation at a high level.",
+    "india_response_timeline": "India's response escalated over two weeks: diplomatic (Indus Waters Treaty suspended, Pakistani diplomats expelled) and military (Operation Sindoor, May 7, 2025, striking 9 terror infrastructure targets in Pakistan and PoK)."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "trf_isi_coordination",
+        {
+          "capability": 8.0,
+          "is_adversary": true
+        }
+      ],
+      [
+        "isi_general_asim_munir",
+        {
+          "capability": 9.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rizwan_shah",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "india",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "us_trump_administration",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rizwan_shah",
+        "ajay_sanyal",
+        {
+          "weight": 0.92,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "india",
+        "us_trump_administration",
+        {
+          "weight": 0.55,
+          "betrayal_history": 0,
+          "in_coalition": false
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "trf_isi_coordination": 0.0,
+      "isi_general_asim_munir": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0
+    },
+    "eigenvector": {
+      "trf_isi_coordination": 0.0,
+      "isi_general_asim_munir": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0
+    },
+    "clustering": {
+      "trf_isi_coordination": 0.0,
+      "isi_general_asim_munir": 0.0,
+      "rizwan_shah": 0.0,
+      "ajay_sanyal": 0.0,
+      "india": 0.0,
+      "us_trump_administration": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "rizwan_shah"
+      ],
+      [
+        "india",
+        "us_trump_administration"
+      ],
+      [
+        "trf_isi_coordination"
+      ],
+      [
+        "isi_general_asim_munir"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "isi_general_asim_munir",
+      "score": 4.75,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "trf_isi_coordination",
+      "score": 4.0,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.92
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Identity and location of TRF operational commander who planned Pahalgam attack",
+        "voi_bits": 1.3629,
+        "priority_rank": 1,
+        "effort_required": 8.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (8.0) outweighs VoI (1.36 bits)"
+      },
+      {
+        "intelligence_target": "Was Pahalgam ordered by ISI DG Munir personally or TRF semi-autonomous operation?",
+        "voi_bits": 1.484,
+        "priority_rank": 2,
+        "effort_required": 9.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (9.0) outweighs VoI (1.48 bits)"
+      },
+      {
+        "intelligence_target": "Origin of M4 carbines used in attack \u2014 ISI-TRF arms pipeline route",
+        "voi_bits": 1.2114,
+        "priority_rank": 3,
+        "effort_required": 7.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (7.5) outweighs VoI (1.21 bits)"
+      }
+    ],
+    "top_target": "Identity and location of TRF operational commander who planned Pahalgam attack",
+    "total_entropy_bits": 1.5143
+  },
+  "stackelberg": {
+    "leader_action": "confirm_isi_sanction_level_inform_delhi_scale",
+    "operative_best_response": "confirm_isi_sanction_level_inform_delhi_scale",
+    "follower_best_response": "isi_general_asim_munir: provide_intelligence_for_diplomatic_dossier",
+    "equilibrium_payoff_indian": 0.7732,
+    "equilibrium_payoff_adversary": 0.2268,
+    "commitment_value": 0.2419
+  },
+  "pomdp": {
+    "belief_state": {
+      "isi_dg_sanctioned_high_level_order": 0.55,
+      "isi_facilitated_but_trf_autonomous_execution": 0.3,
+      "trf_fully_autonomous_isi_knew_but_did_not_order": 0.12,
+      "isi_unaware_trf_rogue_operation": 0.03
+    },
+    "optimal_action": "confirm_isi_sanction_level_inform_delhi_scale",
+    "belief_state_value": 5.882,
+    "policy": {
+      "605d0f34a0": "confirm_isi_sanction_level_inform_delhi_scale",
+      "8bcdfa1f05": "confirm_isi_sanction_level_inform_delhi_scale",
+      "06161331f0": "confirm_isi_sanction_level_inform_delhi_scale",
+      "d9173d148b": "confirm_isi_sanction_level_inform_delhi_scale",
+      "7677dcfe5f": "confirm_isi_sanction_level_inform_delhi_scale",
+      "2e68845e83": "confirm_isi_sanction_level_inform_delhi_scale",
+      "712635094c": "confirm_isi_sanction_level_inform_delhi_scale",
+      "e7808589e5": "confirm_isi_sanction_level_inform_delhi_scale",
+      "963cfda8d6": "confirm_isi_sanction_level_inform_delhi_scale",
+      "33d07c0854": "confirm_isi_sanction_level_inform_delhi_scale"
+    },
+    "cover_integrity_prob": 1.0,
+    "mission_success_prob": 0.5,
+    "action_values": {
+      "confirm_isi_sanction_level_inform_delhi_scale": 5.882,
+      "identify_trf_cell_commander_locate_for_elimination": 5.288,
+      "trace_weapons_supply_chain_m4_carbines_origin": 5.288,
+      "assess_follow_on_attack_probability": 4.888,
+      "provide_intelligence_for_diplomatic_dossier": 5.288
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "weapons_trace"
+    ],
+    "total_duration_days": 32.3,
+    "optimal_duration_days": 19.4,
+    "days_saved": 12.9,
+    "bottleneck_task": "weapons_trace",
+    "slack_tasks": [
+      [
+        "trf_cell_locate",
+        16.833333333333336
+      ],
+      [
+        "isi_sanction_confirm",
+        16.16666666666667
+      ],
+      [
+        "follow_on_threat_assess",
+        16.16666666666667
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "isi_sanction_confirm",
+        "trf_cell_locate"
+      ],
+      [
+        "isi_sanction_confirm",
+        "weapons_trace"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "confirm_isi_sanction_level_inform_delhi_scale",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "confirm_isi_sanction_level_inform_delhi_scale \u2192 india_response_calibrated_correctly  (p=0.85)"
+  },
+  "simulation_optimal": {
+    "action": "confirm_isi_sanction_level_inform_delhi_scale",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "confirm_isi_sanction_level_inform_delhi_scale \u2192 india_response_calibrated_correctly  (p=0.85)"
+  },
+  "narrative": "OPERATIVE: RIZWAN_SHAH\nTURNING POINT: pahalgam-attack-crisis\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  confirm_isi_sanction_level_inform_delhi_scale  (V(b) = 5.88)\n  Mission success prob: 50.0%\n  Cover integrity prob: 100.0%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 32d  \u2192  Optimal: 19d  (save 13d)\n  Bottleneck: weapons_trace\n  Critical path: weapons_trace\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Identity and location of TRF operational commander who planned Pahalgam attack  VoI=1.36bits\n  #2 Was Pahalgam ordered by ISI DG Munir personally or TRF semi-autonomous operation?  VoI=1.48bits\n  #3 Origin of M4 carbines used in attack \u2014 ISI-TRF arms pipeline route  VoI=1.21bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: confirm_isi_sanction_level_inform_delhi_scale\n  Operative best response: confirm_isi_sanction_level_inform_delhi_scale\n  Adversary counter: isi_general_asim_munir: provide_intelligence_for_diplomatic_dossier\n  Commitment value: +0.24\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (confirm_isi_sanction_level_inform_delhi_scale):  P(success)=100.0%\n  Optimal action (confirm_isi_sanction_level_inform_delhi_scale): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film3_act2'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['trf_isi_coordination', 'isi_general_asim_munir'])",
+    "adversary_node: multi-adversary Stackelberg over ['trf_isi_coordination', 'isi_general_asim_munir']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}

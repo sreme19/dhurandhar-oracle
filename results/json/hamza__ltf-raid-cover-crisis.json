@@ -1,0 +1,655 @@
+{
+  "operative": "hamza",
+  "turning_point": "ltf-raid-cover-crisis",
+  "state_vector": {
+    "cover_integrity": 7.8,
+    "trust_capital": 5.2,
+    "intelligence_depth": 4.1,
+    "network_strength": 5.0,
+    "exposure_risk": 4.5
+  },
+  "available_actions": [
+    "submit_to_ltf_interrogation_maintain_cover",
+    "flee_before_raid_reaches_area",
+    "warn_dakait_network_earn_trust",
+    "use_handler_aalam_to_signal_delhi_abort",
+    "attempt_covert_contact_with_sp_aslam"
+  ],
+  "causal_dag": {
+    "nodes": [
+      "submit_to_ltf_interrogation_maintain_cover",
+      "flee_before_raid_reaches_area",
+      "warn_dakait_network_earn_trust",
+      "use_handler_aalam_to_signal_delhi_abort",
+      "attempt_covert_contact_with_sp_aslam",
+      "dakait_trust_increases",
+      "ltf_notes_hamza_for_future",
+      "cover_survives_crisis",
+      "mission_abort",
+      "cover_blown_ltf",
+      "cover_blown_dakait_suspects_informant"
+    ],
+    "edges": [
+      {
+        "cause": "submit_to_ltf_interrogation_maintain_cover",
+        "effect": "ltf_notes_hamza_for_future",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "submit_to_ltf_interrogation_maintain_cover",
+        "effect": "cover_survives_crisis",
+        "strength": 0.65,
+        "known_confounders": [
+          "interrogation_skill"
+        ],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "submit_to_ltf_interrogation_maintain_cover",
+        "effect": "cover_blown_dakait_suspects_informant",
+        "strength": 0.35,
+        "known_confounders": [
+          "dakait_paranoia_level"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "flee_before_raid_reaches_area",
+        "effect": "cover_survives_crisis",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "flee_before_raid_reaches_area",
+        "effect": "ltf_notes_hamza_for_future",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "warn_dakait_network_earn_trust",
+        "effect": "dakait_trust_increases",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "warn_dakait_network_earn_trust",
+        "effect": "ltf_notes_hamza_for_future",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "warn_dakait_network_earn_trust",
+        "effect": "cover_blown_ltf",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "use_handler_aalam_to_signal_delhi_abort",
+        "effect": "mission_abort",
+        "strength": 0.85,
+        "known_confounders": [
+          "sanyal_decision"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "use_handler_aalam_to_signal_delhi_abort",
+        "effect": "aalam_cover_preserved",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "attempt_covert_contact_with_sp_aslam",
+        "effect": "cover_blown_ltf",
+        "strength": 0.45,
+        "known_confounders": [
+          "aslam_loyalty"
+        ],
+        "identified": false,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "attempt_covert_contact_with_sp_aslam",
+        "effect": "dakait_trust_increases",
+        "strength": 0.0,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      },
+      {
+        "cause": "dakait_trust_increases",
+        "effect": "cover_survives_crisis",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.5,
+        "strength_low": null,
+        "strength_high": null,
+        "estimation_method": null,
+        "source_refs": []
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Identify PAC members, informants, and outsiders during LTF sweep",
+      "capability": 7.5,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "ltf_informant_network",
+        "criminal_database",
+        "newcomer_reports"
+      ],
+      "observable_actions": [
+        "interrogate_detainees",
+        "cross_reference_criminal_database",
+        "release_without_charge",
+        "retain_for_extended_questioning",
+        "deploy_informant_post_release"
+      ],
+      "hidden_states": [
+        "processing",
+        "suspicious",
+        "investigating",
+        "corrupt_tipping"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "rehman_dakait",
+      "objective": "Identify if Hamza is an LTF informant; protect PAC network during raids",
+      "capability": 8.5,
+      "trigger_threshold": 5.5,
+      "information_set": [
+        "pac_internal_network",
+        "ltf_release_patterns"
+      ],
+      "observable_actions": [
+        "test_loyalty_under_pressure",
+        "interrogate_post_release",
+        "assign_loyalty_monitor",
+        "accept_as_proven",
+        "eliminate_suspected_informant"
+      ],
+      "hidden_states": [
+        "trusting",
+        "probing",
+        "suspicious",
+        "hostile"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "sp_choudhary_aslam",
+      "strength": 0.25,
+      "betrayal_history": 2,
+      "in_coalition": false,
+      "trigger_condition": "ltf_operational_pressure"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "id": "build_trust_dakait",
+      "name": "Maintain and deepen trust with Rehman Dakait through LTF crisis",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "ltf_survival_protocol"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "ltf_survival_protocol",
+      "name": "Navigate LTF interrogation without blowing cover or triggering Dakait paranoia",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "build_trust_dakait"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.5
+    },
+    {
+      "id": "aalam_cover_preserve",
+      "name": "Protect Aalam's juice shop from LTF identification as meeting point",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "ltf_survival_protocol"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "gather_political_intel",
+      "name": "Gather Dakait-Jamali political link intelligence",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "build_trust_dakait"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "ltf_informant_in_pac",
+      "name": "Identity of LTF informant inside Dakait's PAC network",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.65,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "warn_dakait_network_earn_trust",
+        "build_trust_dakait"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "sp_aslam_corruption_level",
+      "name": "Whether SP Aslam can be approached for covert cooperation or is a pure adversary",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.7,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "attempt_covert_contact_with_sp_aslam"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    },
+    {
+      "id": "dakait_paranoia_state",
+      "name": "Dakait's current suspicion level toward Hamza following LTF crisis",
+      "current_entropy": 2.2,
+      "mission_relevance": 0.9,
+      "access_difficulty": 5.0,
+      "access_actions": [
+        "submit_to_ltf_interrogation_maintain_cover",
+        "warn_dakait_network_earn_trust"
+      ],
+      "confidence": 0.5,
+      "source_refs": []
+    }
+  ],
+  "initial_belief_state": {
+    "cover_intact_dakait_trusting_ltf_noted_not_flagged": 0.35,
+    "cover_intact_dakait_probing_ltf_noted_not_flagged": 0.3,
+    "cover_suspected_dakait_suspicious_ltf_watching": 0.25,
+    "cover_blown_one_or_both_actors_certain": 0.1
+  },
+  "turning_point_description": "SP Chaudhry Aslam's Lyari Task Force launches a wave of raids across PAC-linked businesses, including the juice shop area where Hamza operates as a waiter. LTF officers begin pulling in 'new faces' for interrogation. Mohammed Aalam's cover is under pressure. Hamza, now mid-embedded in Dakait's trust network, must navigate an LTF interrogation without triggering either Aslam's suspicion (who could unmask him as an Indian agent) or Dakait's paranoia (who would suspect Hamza turned informant if he was released too easily from LTF custody).",
+  "real_world_correlation": {
+    "ltf_real_history": "The Lyari Task Force (LTF) was a real Karachi police unit formed by SP Chaudhry Aslam Khan in 2008. It conducted aggressive raids throughout Lyari targeting Rehman Dakait's PAC and rival gangs. The LTF was known for extra-judicial methods \u2014 the 'encounter killings' it conducted were controversial but effective in disrupting gang operations.",
+    "double_sided_pressure": "Deep-cover operatives embedded in criminal networks face a documented 'dual-suspension' problem: if law enforcement gets too close, they cannot simply reveal themselves (doing so exposes the network) and cannot be completely transparent (risk of false positive identification or a corrupt local officer tipping off the target). This precise dilemma \u2014 being caught between the target and friendly law enforcement \u2014 has been documented in DEA, Europol, and Indian intelligence cases.",
+    "sp_aslam_fan_sanjay_dutt": "Real historical irony: SP Chaudhry Aslam was a known fan of actor Sanjay Dutt, who portrays him in this film. In Aslam's real-life conduct, he was described as playing a 'dual game' \u2014 publicly targeting criminals while maintaining complex relationships with some. His LTF was both the most effective anti-criminal force in Lyari and, by some accounts, a tool of political targeting.",
+    "encounter_killing_pattern": "Real LTF raids often resulted in 'encounters' \u2014 extrajudicial killings of gang members. The film uses this context to show Hamza's exposure risk: being present during an LTF operation risks being shot as a criminal, identified as a survivor (thus noted by LTF), or released (which Dakait might interpret as informant cooperation)."
+  },
+  "intel_graph_data": {
+    "nodes": [
+      [
+        "sp_choudhary_aslam",
+        {
+          "capability": 7.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "rehman_dakait",
+        {
+          "capability": 8.5,
+          "is_adversary": true
+        }
+      ],
+      [
+        "hamza",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "mohammed_aalam",
+        {
+          "is_adversary": false
+        }
+      ],
+      [
+        "ajay_sanyal",
+        {
+          "is_adversary": false
+        }
+      ]
+    ],
+    "edges": [
+      [
+        "rehman_dakait",
+        "sp_choudhary_aslam",
+        {
+          "weight": 0.25,
+          "betrayal_history": 2,
+          "in_coalition": false
+        }
+      ],
+      [
+        "hamza",
+        "mohammed_aalam",
+        {
+          "weight": 0.85,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ],
+      [
+        "hamza",
+        "ajay_sanyal",
+        {
+          "weight": 0.8,
+          "betrayal_history": 0,
+          "in_coalition": true
+        }
+      ]
+    ]
+  },
+  "centrality": {
+    "betweenness": {
+      "sp_choudhary_aslam": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "eigenvector": {
+      "sp_choudhary_aslam": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "clustering": {
+      "sp_choudhary_aslam": 0.0,
+      "rehman_dakait": 0.0,
+      "hamza": 0.0,
+      "mohammed_aalam": 0.0,
+      "ajay_sanyal": 0.0
+    },
+    "communities": [
+      [
+        "ajay_sanyal",
+        "hamza",
+        "mohammed_aalam"
+      ],
+      [
+        "rehman_dakait",
+        "sp_choudhary_aslam"
+      ]
+    ]
+  },
+  "threat_scores": [
+    {
+      "actor": "rehman_dakait",
+      "score": 4.25,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    },
+    {
+      "actor": "sp_choudhary_aslam",
+      "score": 3.75,
+      "betweenness": 0.0,
+      "eigenvector": 0.0,
+      "is_high": false
+    }
+  ],
+  "high_threat_actors": [],
+  "shapley": {
+    "values": {
+      "ajay_sanyal": 0.8,
+      "mohammed_aalam": 0.8499999999999999
+    },
+    "defection_incentives": {
+      "ajay_sanyal": 0.0,
+      "mohammed_aalam": 1.1102230246251565e-16
+    }
+  },
+  "hmm_results": [],
+  "belief_gaps": [],
+  "voi_result": {
+    "rankings": [
+      {
+        "intelligence_target": "Dakait's current suspicion level toward Hamza following LTF crisis",
+        "voi_bits": 1.695,
+        "priority_rank": 1,
+        "effort_required": 5.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (5.0) outweighs VoI (1.70 bits)"
+      },
+      {
+        "intelligence_target": "Identity of LTF informant inside Dakait's PAC network",
+        "voi_bits": 1.2242,
+        "priority_rank": 2,
+        "effort_required": 6.0,
+        "recommendation": "Low priority \u2014 defer; access difficulty (6.0) outweighs VoI (1.22 bits)"
+      },
+      {
+        "intelligence_target": "Whether SP Aslam can be approached for covert cooperation or is a pure adversary",
+        "voi_bits": 1.3184,
+        "priority_rank": 3,
+        "effort_required": 7.5,
+        "recommendation": "Low priority \u2014 defer; access difficulty (7.5) outweighs VoI (1.32 bits)"
+      }
+    ],
+    "top_target": "Dakait's current suspicion level toward Hamza following LTF crisis",
+    "total_entropy_bits": 1.8834
+  },
+  "stackelberg": {
+    "leader_action": "use_handler_aalam_to_signal_delhi_abort",
+    "operative_best_response": "use_handler_aalam_to_signal_delhi_abort",
+    "follower_best_response": "rehman_dakait: attempt_covert_contact_with_sp_aslam",
+    "equilibrium_payoff_indian": 0.5736,
+    "equilibrium_payoff_adversary": 0.4264,
+    "commitment_value": 0.1135
+  },
+  "pomdp": {
+    "belief_state": {
+      "cover_intact_dakait_trusting_ltf_noted_not_flagged": 0.35000000000000003,
+      "cover_intact_dakait_probing_ltf_noted_not_flagged": 0.30000000000000004,
+      "cover_suspected_dakait_suspicious_ltf_watching": 0.25000000000000006,
+      "cover_blown_one_or_both_actors_certain": 0.10000000000000002
+    },
+    "optimal_action": "use_handler_aalam_to_signal_delhi_abort",
+    "belief_state_value": -44.291,
+    "policy": {
+      "605d0f34a0": "use_handler_aalam_to_signal_delhi_abort",
+      "8bcdfa1f05": "use_handler_aalam_to_signal_delhi_abort",
+      "06161331f0": "use_handler_aalam_to_signal_delhi_abort",
+      "d9173d148b": "use_handler_aalam_to_signal_delhi_abort",
+      "7677dcfe5f": "use_handler_aalam_to_signal_delhi_abort",
+      "2e68845e83": "use_handler_aalam_to_signal_delhi_abort",
+      "712635094c": "use_handler_aalam_to_signal_delhi_abort",
+      "e7808589e5": "use_handler_aalam_to_signal_delhi_abort",
+      "963cfda8d6": "use_handler_aalam_to_signal_delhi_abort",
+      "33d07c0854": "use_handler_aalam_to_signal_delhi_abort"
+    },
+    "cover_integrity_prob": 0.775,
+    "mission_success_prob": 0.4,
+    "action_values": {
+      "submit_to_ltf_interrogation_maintain_cover": -45.315,
+      "flee_before_raid_reaches_area": -47.333,
+      "warn_dakait_network_earn_trust": -45.248,
+      "use_handler_aalam_to_signal_delhi_abort": -44.291,
+      "attempt_covert_contact_with_sp_aslam": -45.448
+    }
+  },
+  "critical_path": {
+    "critical_path": [
+      "build_trust_dakait",
+      "gather_political_intel"
+    ],
+    "total_duration_days": 90.2,
+    "optimal_duration_days": 81.2,
+    "days_saved": 9.0,
+    "bottleneck_task": "gather_political_intel",
+    "slack_tasks": [
+      [
+        "ltf_survival_protocol",
+        85.66666666666667
+      ],
+      [
+        "aalam_cover_preserve",
+        81.5
+      ],
+      [
+        "build_trust_dakait",
+        3.552713678800501e-15
+      ],
+      [
+        "gather_political_intel",
+        3.552713678800501e-15
+      ]
+    ],
+    "parallelisation_opportunities": [
+      [
+        "build_trust_dakait",
+        "ltf_survival_protocol"
+      ],
+      [
+        "aalam_cover_preserve",
+        "ltf_survival_protocol"
+      ]
+    ]
+  },
+  "simulation_actual": {
+    "action": "use_handler_aalam_to_signal_delhi_abort",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "use_handler_aalam_to_signal_delhi_abort \u2192 mission_abort  (p=0.85)"
+  },
+  "simulation_optimal": {
+    "action": "use_handler_aalam_to_signal_delhi_abort",
+    "p_mission_success": 1.0,
+    "p_cover_blown": 0.0,
+    "ci_low": 0.9981,
+    "ci_high": 1.0,
+    "n_rollouts": 2000,
+    "mode_outcome": "mission_success",
+    "key_lever": "use_handler_aalam_to_signal_delhi_abort \u2192 mission_abort  (p=0.85)"
+  },
+  "narrative": "OPERATIVE: HAMZA\nTURNING POINT: ltf-raid-cover-crisis\n\n\u2500\u2500 OPTIMAL ACTION (POMDP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  use_handler_aalam_to_signal_delhi_abort  (V(b) = -44.29)\n  Mission success prob: 40.0%\n  Cover integrity prob: 77.5%\n\n\u2500\u2500 CRITICAL PATH (CPM/PERT) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Total duration: 90d  \u2192  Optimal: 81d  (save 9d)\n  Bottleneck: gather_political_intel\n  Critical path: build_trust_dakait \u2192 gather_political_intel\n\n\u2500\u2500 INTELLIGENCE PRIORITIES (VoI) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  #1 Dakait's current suspicion level toward Hamza following LTF crisis  VoI=1.70bits\n  #2 Identity of LTF informant inside Dakait's PAC network  VoI=1.22bits\n  #3 Whether SP Aslam can be approached for covert cooperation or is a pure adversary  VoI=1.32bits\n\n\u2500\u2500 ADVERSARY RESPONSE (STACKELBERG) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Handler commits to: use_handler_aalam_to_signal_delhi_abort\n  Operative best response: use_handler_aalam_to_signal_delhi_abort\n  Adversary counter: rehman_dakait: attempt_covert_contact_with_sp_aslam\n  Commitment value: +0.11\n\n\u2500\u2500 SIMULATION DELTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Actual action (use_handler_aalam_to_signal_delhi_abort):  P(success)=100.0%\n  Optimal action (use_handler_aalam_to_signal_delhi_abort): P(success)=100.0%\n  \u0394 = +0.0% if optimal path taken\n",
+  "errors": [],
+  "warnings": [
+    "state_node: using char.state_by_act['film1_act2'] over TP state_vector",
+    "adversary_node: no high_threat_actors set \u2014 using all adversaries with capability >= 7.0 (['sp_choudhary_aslam', 'rehman_dakait'])",
+    "adversary_node: multi-adversary Stackelberg over ['sp_choudhary_aslam', 'rehman_dakait']",
+    "narrator_node: ANTHROPIC_API_KEY not set \u2014 using template fallback"
+  ]
+}
