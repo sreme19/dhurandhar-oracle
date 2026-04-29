@@ -1,16 +1,15 @@
 {
   "turning_point_id": "sajid-mir-prison-poisoning",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "poison_sajid_mir_via_prison_network_asset",
+  "immediate_effects": ["sajid_mir_hospitalised_critical", "pakistan_officially_jailed_sajid_mir_june_2022_fatf_pressure", "mir_survives_but_incapacitated"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 7,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at sajid-mir-prison-poisoning."
+  "intel_gained": ["sajid_mir_isi_protection_network_partially_burned"],
+  "cover_change": -1.5,
+  "confidence": 0.70,
+  "source_refs": ["https://en.wikipedia.org/wiki/Sajid_Mir"],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

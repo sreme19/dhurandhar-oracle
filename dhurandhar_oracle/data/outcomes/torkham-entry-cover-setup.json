@@ -1,16 +1,15 @@
 {
   "turning_point_id": "torkham-entry-cover-setup",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "cross_torkham_hamza_ali_mazari_identity",
+  "immediate_effects": ["cover_identity_activated", "pakistan_entry_clean", "lyari_insertion_begun"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 3,
   "losses": [],
   "intel_gained": [],
   "cover_change": 0.0,
-  "confidence": 0.0,
+  "confidence": 0.88,
   "source_refs": [],
-  "owner": null,
+  "owner": "hamza",
   "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at torkham-entry-cover-setup."
+  "schema_version": "1.1.0"
 }

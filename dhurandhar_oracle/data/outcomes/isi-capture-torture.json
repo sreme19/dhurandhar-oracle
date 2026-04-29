@@ -1,16 +1,15 @@
 {
   "turning_point_id": "isi-capture-torture",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "actual_action": "resist_interrogation_maintain_cover",
+  "immediate_effects": ["cover_severely_degraded", "handler_aalam_network_partial_burned", "exfil_route_compromised"],
+  "terminal_state": "exfil",
+  "days_elapsed": 21,
+  "losses": ["aalam_handler_network_partial"],
+  "intel_gained": ["isi_interrogation_methods_known", "isi_source_hunt_patterns_mapped"],
+  "cover_change": -4.5,
+  "confidence": 0.75,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at isi-capture-torture."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

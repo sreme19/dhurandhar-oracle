@@ -1,16 +1,15 @@
 {
   "turning_point_id": "operation-sindoor-strike",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "deliver_9_site_targeting_package_execute_sindoor",
+  "immediate_effects": ["9_sites_struck_may_7_2025", "lashkar_jem_hq_destroyed", "us_brokered_ceasefire_may_10", "munir_self_promoted_field_marshal"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 4,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["pakistan_air_defence_gaps_mapped", "munir_decision_speed_under_pressure_confirmed", "india_standoff_weapons_capability_validated"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at operation-sindoor-strike."
+  "confidence": 0.93,
+  "source_refs": ["https://en.wikipedia.org/wiki/Operation_Sindoor"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

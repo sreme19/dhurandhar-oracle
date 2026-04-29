@@ -1,16 +1,15 @@
 {
   "turning_point_id": "doklam-china-second-front",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "assess_pla_doklam_intent_brief_two_front_threat",
+  "immediate_effects": ["doklam_standoff_begins_june_16_2017", "standoff_resolved_aug_28_india_partial_pullback", "pla_road_construction_halted", "two_front_threat_framework_formalised"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 73,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["pla_salami_slicing_doctrine_confirmed", "doklam_bhutan_leverage_by_china_mapped", "western_theatre_command_decision_speed_estimated"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at doklam-china-second-front."
+  "confidence": 0.80,
+  "source_refs": ["https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

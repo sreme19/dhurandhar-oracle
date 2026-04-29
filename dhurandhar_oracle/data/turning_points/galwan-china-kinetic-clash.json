@@ -93,7 +93,10 @@
       "pla_action_local_commander_overreach",
       "china_pakistan_two_front_confirmed",
       "india_economic_response_imposed",
-      "further_galwan_type_clash_risk"
+      "further_galwan_type_clash_risk",
+      "pla_casualty_suppression_active",
+      "india_diplomatic_leverage_constrained",
+      "next_action_space_limited_to_economic_quad_no_kinetic"
     ],
     "edges": [
       {
@@ -147,6 +150,34 @@
           "china_retaliation_decision"
         ],
         "identified": false
+      },
+      {
+        "cause": "pla_action_politburo_authorised_sustained_pressure",
+        "effect": "pla_casualty_suppression_active",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.88,
+        "estimation_method": "adversary_response_model",
+        "source_refs": ["https://en.wikipedia.org/wiki/2020_Galwan_Valley_skirmish"]
+      },
+      {
+        "cause": "pla_casualty_suppression_active",
+        "effect": "india_diplomatic_leverage_constrained",
+        "strength": 0.80,
+        "known_confounders": ["five_eyes_intelligence_sharing"],
+        "identified": true,
+        "confidence": 0.75,
+        "estimation_method": "adversary_response_model"
+      },
+      {
+        "cause": "india_diplomatic_leverage_constrained",
+        "effect": "next_action_space_limited_to_economic_quad_no_kinetic",
+        "strength": 0.85,
+        "known_confounders": ["us_pressure_on_india_restraint"],
+        "identified": true,
+        "confidence": 0.80,
+        "estimation_method": "operative_survival_model"
       }
     ]
   },
@@ -303,5 +334,14 @@
       "added_count": 2,
       "added_at": "2026-04-29T14:38:03+00:00"
     }
-  ]
+  ],
+  "next_turning_point": "taliban-kabul-fall-recalibration",
+  "terminal_belief": {
+    "pla_action_politburo_authorised_sustained_campaign": 0.70,
+    "pla_isi_galwan_timing_coordinated": 0.45,
+    "galwan_was_theatre_command_overreach_not_politburo": 0.20,
+    "india_response_sufficient_to_deter_further_pla_kinetics": 0.15
+  },
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T15:00:00+00:00"
 }

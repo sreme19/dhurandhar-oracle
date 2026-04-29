@@ -91,7 +91,9 @@
       "cover_blown_rizwan_identified",
       "isi_retaliation_inside_india_detected",
       "launchpad_reconstruction_detected_early",
-      "post_strike_intelligence_phase_begins"
+      "post_strike_intelligence_phase_begins",
+      "isi_source_hunt_direction_locked_on_rizwan",
+      "next_action_space_constrained_to_exfil_or_dark"
     ],
     "edges": [
       {
@@ -159,6 +161,24 @@
         "strength": 0.9,
         "known_confounders": [],
         "identified": true
+      },
+      {
+        "cause": "cover_blown_rizwan_identified",
+        "effect": "isi_source_hunt_direction_locked_on_rizwan",
+        "strength": 0.85,
+        "known_confounders": ["isi_false_positive_rate"],
+        "identified": true,
+        "confidence": 0.78,
+        "estimation_method": "adversary_best_response_model"
+      },
+      {
+        "cause": "isi_source_hunt_direction_locked_on_rizwan",
+        "effect": "next_action_space_constrained_to_exfil_or_dark",
+        "strength": 0.90,
+        "known_confounders": [],
+        "identified": true,
+        "confidence": 0.82,
+        "estimation_method": "operative_survival_model"
       }
     ]
   },
@@ -266,6 +286,13 @@
     "https://en.wikipedia.org/wiki/2016_Indian_Line_of_Control_strike"
   ],
   "source_confidence": 0.92,
+  "next_turning_point": "doklam-china-second-front",
+  "terminal_belief": {
+    "cover_intact_isi_source_hunt_inconclusive": 0.45,
+    "isi_has_short_list_rizwan_on_it": 0.35,
+    "cover_blown_exfil_required": 0.15,
+    "isi_hunting_different_source_rizwan_safe": 0.05
+  },
   "schema_version": "1.1.0",
-  "updated_at": "2026-04-29T14:36:04+00:00"
+  "updated_at": "2026-04-29T15:00:00+00:00"
 }

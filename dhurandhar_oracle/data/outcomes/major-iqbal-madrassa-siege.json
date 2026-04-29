@@ -1,16 +1,15 @@
 {
   "turning_point_id": "major-iqbal-madrassa-siege",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "actual_action": "lead_compound_assault_with_rizwan",
+  "immediate_effects": ["madrassa_compound_cleared", "azam_cheema_neutralised", "iqbal_escapes_to_shipping_yard"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 1,
+  "losses": ["three_man_support_team_kia"],
+  "intel_gained": ["iqbal_shipping_yard_retreat_confirmed", "isi_safe_house_network_partial"],
+  "cover_change": -3.0,
+  "confidence": 0.85,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at major-iqbal-madrassa-siege."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

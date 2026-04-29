@@ -1,16 +1,15 @@
 {
   "turning_point_id": "26-11-celebration-revelation",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
+  "actual_action": "observe_document_report_no_intervention",
+  "immediate_effects": ["iqbal_identity_confirmed_senior_isi_architect", "26_11_celebration_documented_transmitted", "intel_received_too_late_to_prevent_attack"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 2,
+  "losses": ["26_11_not_prevented"],
+  "intel_gained": ["iqbal_is_26_11_architect_confirmed", "major_iqbal_photo_identity"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:28:49+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at 26-11-celebration-revelation."
+  "confidence": 0.92,
+  "source_refs": ["https://en.wikipedia.org/wiki/2008_Mumbai_attacks"],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

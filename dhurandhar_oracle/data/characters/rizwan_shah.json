@@ -4,8 +4,8 @@
   "nationality": "Indian",
   "side": "indian",
   "role": "RAW operative — Hamza's right-hand man in Film 2",
-  "films": [2],
-  "cover_identity": null,
+  "films": [2, 3, 4],
+  "cover_identity": "tariq_mehmood",
   "real_life_inspiration": "Pure composite — no specific real-world parallel. Represents the younger generation of post-2014 'Naya Bharat' operatives authorised to act offensively under the new doctrine.",
   "inspiration_notes": {
     "archetype": "The film uses Rizwan as a contrast to Hamza's decade-long patient deep-cover approach. Rizwan represents the post-2014 offensive posture — less patience, more direct action, authorised by the new political mandate.",
@@ -32,13 +32,46 @@
       "intelligence_depth": 8.5,
       "network_strength": 6.0,
       "exposure_risk": 7.0
+    },
+    "film3_act1": {
+      "cover_integrity": 8.5,
+      "trust_capital": 6.0,
+      "intelligence_depth": 6.5,
+      "network_strength": 7.0,
+      "exposure_risk": 3.0
+    },
+    "film3_act2": {
+      "cover_integrity": 7.0,
+      "trust_capital": 5.5,
+      "intelligence_depth": 8.0,
+      "network_strength": 7.5,
+      "exposure_risk": 5.5
+    },
+    "film3_act3": {
+      "cover_integrity": 5.5,
+      "trust_capital": 4.5,
+      "intelligence_depth": 9.0,
+      "network_strength": 6.5,
+      "exposure_risk": 7.5
+    },
+    "film4_act1": {
+      "cover_integrity": 6.5,
+      "trust_capital": 5.0,
+      "intelligence_depth": 7.5,
+      "network_strength": 7.0,
+      "exposure_risk": 6.5
     }
   },
   "observable_history": [
     {"film": 2, "act": 1, "action": "receive_operational_briefing"},
     {"film": 2, "act": 1, "action": "establish_karachi_network"},
     {"film": 2, "act": 2, "action": "track_khanani_hawala_network"},
-    {"film": 2, "act": 3, "action": "coordinate_mistry_operation"}
+    {"film": 2, "act": 3, "action": "coordinate_mistry_operation"},
+    {"film": 3, "act": 1, "action": "rebuild_cover_post_balakot"},
+    {"film": 3, "act": 2, "action": "deliver_launchpad_intel_uri"},
+    {"film": 3, "act": 2, "action": "provide_balakot_targeting_package"},
+    {"film": 3, "act": 3, "action": "survive_isi_source_hunt_post_balakot"},
+    {"film": 4, "act": 1, "action": "trace_m4_pipeline_reasi"}
   ],
   "adversary_model": null
 }

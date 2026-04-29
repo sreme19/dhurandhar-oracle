@@ -42,14 +42,16 @@ class DhurandharState(TypedDict, total=False):
     action_override: Optional[str]  # CLI --action flag; None means find optimal
 
     # ── state_node ────────────────────────────────────────────────────────────
-    state_vector:         OperativeState
-    available_actions:    list[str]
-    causal_dag:           CausalDAG
-    adversaries:          list[AdversaryModel]
-    alliance_snapshot:    list[AllianceEdge]
-    mission_tasks:        list[MissionTask]
-    intelligence_targets: list[IntelligenceTarget]
-    initial_belief_state: dict[str, float]   # world_state → prob (from JSON)
+    state_vector:              OperativeState
+    available_actions:         list[str]
+    causal_dag:                CausalDAG
+    adversaries:               list[AdversaryModel]
+    alliance_snapshot:         list[AllianceEdge]
+    mission_tasks:             list[MissionTask]
+    intelligence_targets:      list[IntelligenceTarget]
+    initial_belief_state:      dict[str, float]   # world_state → prob (from JSON)
+    turning_point_description: str               # TP description text → narrator context
+    real_world_correlation:    Optional[dict]    # grounded event data → narrator context
 
     # ── intel_network_node (parallel with coalition_node) ─────────────────────
     intel_graph_data:    dict              # serialised NetworkX adjacency

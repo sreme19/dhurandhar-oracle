@@ -53,9 +53,9 @@
       "acts": [1, 2, 3],
       "trigger_event": "real_2014_nda2_elected",
       "description": "Post-2014, under Naya Bharat mandate. Sanyal authorises targeting Major Iqbal and the 26/11 planners. Uzair Baloch (Rehman's successor) is a new target/asset. Zahoor Mistry (IC-814 hijacker, still in Karachi) is a target. SP Aslam's death (2014) removes the last Pakistani check on the ISI network.",
-      "key_turning_points": [],
+      "key_turning_points": ["naya-bharat-mandate", "zahoor-mistry-elimination", "major-iqbal-tanker-final", "khanani-ficn-network-strike", "rizwan-partnership-activation"],
       "real_world_anchor": "2014–2022",
-      "_TODO": "Confirm Film 2 turning points once Rizwan Shah's role is clarified. Is he Hamza's partner, his replacement, or a new operative working a parallel track?"
+      "operative_note": "Rizwan Shah is Hamza's parallel-track operative — different cover identity, same Sanyal handler. Film 2 confirms the dual-operative structure established in rizwan-partnership-activation."
     }
   ],
   "adversary_network_map": {

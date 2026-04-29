@@ -1,16 +1,15 @@
 {
   "turning_point_id": "burhan-wani-killing-radicalisation",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "assess_radicalisation_vector_map_isi_social_media_pipeline",
+  "immediate_effects": ["wani_killed_july_8_2016", "valley_erupts_50_civilian_deaths_month", "new_generation_isi_recruitment_pipeline_confirmed", "uri_attack_follows_september_18_2016"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 75,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["isi_social_media_radicalisation_method_mapped", "new_generation_recruits_vs_madrassa_pipeline_confirmed"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at burhan-wani-killing-radicalisation."
+  "confidence": 0.82,
+  "source_refs": ["https://en.wikipedia.org/wiki/Burhan_Wani"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

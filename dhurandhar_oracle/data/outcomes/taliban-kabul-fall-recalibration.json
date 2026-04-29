@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "taliban-kabul-fall-recalibration",
+  "actual_action": "assess_afghanistan_vacuum_pivot_pakistan_empowered_doctrine",
+  "immediate_effects": ["kabul_falls_aug_15_2021", "india_embassy_evacuated", "pakistan_celebrates_strategic_depth_gained", "isi_begins_routing_ttp_fighters_to_kashmir"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 60,
+  "losses": ["india_afghanistan_investment_network_largely_lost"],
+  "intel_gained": ["isi_new_afghanistan_leverage_confirmed", "ttp_reorientation_to_kashmir_pipeline_initial"],
+  "cover_change": 0.0,
+  "confidence": 0.78,
+  "source_refs": ["https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

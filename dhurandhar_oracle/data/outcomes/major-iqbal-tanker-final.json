@@ -1,16 +1,15 @@
 {
   "turning_point_id": "major-iqbal-tanker-final",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at major-iqbal-tanker-final."
+  "actual_action": "rpg_tanker_remote_deny_escape",
+  "immediate_effects": ["iqbal_killed_tanker_explosion", "hamza_wounded", "isi_rapid_response_incoming"],
+  "terminal_state": "exfil",
+  "days_elapsed": 1,
+  "losses": ["hamza_wounded", "cover_fully_burned"],
+  "intel_gained": ["iqbal_successor_chain_unknown"],
+  "cover_change": -9.0,
+  "confidence": 0.90,
+  "source_refs": ["https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india"],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

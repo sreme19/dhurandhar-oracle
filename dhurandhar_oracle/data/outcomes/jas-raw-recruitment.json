@@ -1,16 +1,15 @@
 {
   "turning_point_id": "jas-raw-recruitment",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "accept_raw_mission_brief",
+  "immediate_effects": ["cover_identity_hamza_ali_mazari_assigned", "handler_aalam_channel_established", "torkham_route_planned"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 7,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["isi_lyari_link_overview", "dakait_network_target_brief"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at jas-raw-recruitment."
+  "confidence": 0.90,
+  "source_refs": ["https://en.wikipedia.org/wiki/Operation_Lyari"],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

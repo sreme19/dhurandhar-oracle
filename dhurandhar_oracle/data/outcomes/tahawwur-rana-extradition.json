@@ -1,16 +1,15 @@
 {
   "turning_point_id": "tahawwur-rana-extradition",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "coordinate_us_extradition_legal_case_delivery",
+  "immediate_effects": ["rana_extradited_april_2025", "nsa_doval_receives_rana_from_us_marshals", "26_11_legal_accountability_pathway_opened"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 1,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["rana_testimony_potential_major_iqbal_network_update"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at tahawwur-rana-extradition."
+  "confidence": 0.95,
+  "source_refs": ["https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

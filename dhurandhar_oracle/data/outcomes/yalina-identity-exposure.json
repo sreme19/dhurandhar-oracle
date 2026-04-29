@@ -1,16 +1,15 @@
 {
   "turning_point_id": "yalina-identity-exposure",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "partial_identity_reveal_managed_exposure",
+  "immediate_effects": ["yalina_becomes_passive_asset", "jamali_inner_circle_access_gained", "cover_risk_elevated"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 14,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "intel_gained": ["jamali_political_network_deeper", "ficn_routing_partial"],
+  "cover_change": -1.5,
+  "confidence": 0.65,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at yalina-identity-exposure."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

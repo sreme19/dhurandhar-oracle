@@ -1,16 +1,15 @@
 {
   "turning_point_id": "rizwan-partnership-activation",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "activate_rizwan_shah_as_hamzas_parallel_field_operative",
+  "immediate_effects": ["rizwan_shah_cover_established_karachi", "hamza_rizwan_split_theatre_approach_activated", "sanyal_handler_dual_operative_structure_confirmed"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 30,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "intel_gained": ["rizwan_isi_social_network_initial_map", "dual_operative_cover_redundancy_proven"],
+  "cover_change": 0.5,
+  "confidence": 0.78,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at rizwan-partnership-activation."
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

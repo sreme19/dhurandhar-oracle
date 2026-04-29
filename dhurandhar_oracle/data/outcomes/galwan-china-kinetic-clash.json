@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "galwan-china-kinetic-clash",
+  "actual_action": "assess_pla_authorisation_chain_brief_two_front_kinetic_threat",
+  "immediate_effects": ["20_indian_soldiers_kia_june_15_2020", "india_bans_59_chinese_apps", "india_accelerates_lac_infrastructure", "pla_casualty_count_suppressed"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 30,
+  "losses": ["20_indian_soldiers_kia"],
+  "intel_gained": ["pla_ambush_was_premeditated_confirmed", "colonel_qi_fabao_wounded_identified", "pla_western_theatre_command_authorisation_confirmed", "38_sqkm_lac_creep_estimated"],
+  "cover_change": 0.0,
+  "confidence": 0.82,
+  "source_refs": ["https://en.wikipedia.org/wiki/2020_Galwan_Valley_skirmish"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

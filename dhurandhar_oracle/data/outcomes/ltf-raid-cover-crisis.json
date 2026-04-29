@@ -1,16 +1,15 @@
 {
   "turning_point_id": "ltf-raid-cover-crisis",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "survive_raid_protect_cover_via_sp_aslam_tip",
+  "immediate_effects": ["ltf_raid_survived", "sp_aslam_intelligence_value_confirmed", "cover_narrowly_preserved"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 3,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "intel_gained": ["ltf_formation_confirmed", "sp_aslam_jamali_link_suspected"],
+  "cover_change": -1.0,
+  "confidence": 0.78,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at ltf-raid-cover-crisis."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

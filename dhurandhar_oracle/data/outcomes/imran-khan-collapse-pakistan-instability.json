@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "imran-khan-collapse-pakistan-instability",
+  "actual_action": "monitor_munir_consolidation_map_new_adversary_doctrine",
+  "immediate_effects": ["imran_ousted_april_2022", "munir_appointed_coas_nov_2022", "may_9_2023_imran_arrested_crackdown", "munir_doctrine_more_aggressive_than_bajwa_assessed"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 365,
+  "losses": [],
+  "intel_gained": ["munir_personal_vendetta_against_imran_confirmed", "pakistan_army_consolidation_complete", "munir_will_use_kashmir_escalation_as_domestic_distraction_assessed"],
+  "cover_change": 0.0,
+  "confidence": 0.80,
+  "source_refs": ["https://en.wikipedia.org/wiki/Imran_Khan", "https://en.wikipedia.org/wiki/Asim_Munir"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

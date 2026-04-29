@@ -282,5 +282,14 @@
       "added_count": 1,
       "added_at": "2026-04-29T14:38:03+00:00"
     }
-  ]
+  ],
+  "next_turning_point": "operation-sindoor-strike",
+  "terminal_belief": {
+    "isi_dg_sanctioned_high_level_order": 0.70,
+    "isi_facilitated_but_trf_autonomous_execution": 0.20,
+    "trf_fully_autonomous_isi_knew_but_did_not_order": 0.08,
+    "isi_unaware_trf_rogue_operation": 0.02
+  },
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T15:00:00+00:00"
 }

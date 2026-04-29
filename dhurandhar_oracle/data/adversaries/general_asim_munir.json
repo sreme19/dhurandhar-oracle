@@ -1,0 +1,43 @@
+{
+  "actor": "general_asim_munir",
+  "real_name_composite": "General Syed Asim Munir Ahmed Shah — Chief of Army Staff Pakistan (November 2022–present); former DG ISI (October 2018–June 2019, sacked by Imran Khan); former DG MI",
+  "real_life_notes": {
+    "isi_tenure": "Munir served as DG ISI Oct 2018–June 2019. Imran Khan sacked him after 8 months — shortest-ever tenure — reportedly due to a personal dispute over intelligence briefings about Imran's wife. This created a personal vendetta dimension to the 2022-2023 crackdown.",
+    "coas_appointment": "Appointed COAS November 29, 2022 by PM Shehbaz Sharif over Imran's opposition. Bajwa hand-picked him. Munir immediately consolidated military authority.",
+    "kashmir_speech": "April 16, 2025 — days before Pahalgam — Munir told a gathering: 'Kashmir is our jugular vein. We will not compromise on it.' Indian intelligence flagged the speech as a pre-attack signal.",
+    "pahalgam_authorisation": "Indian intelligence assessment: Munir personally authorised the ISI Kashmir Desk operation that culminated in Pahalgam (April 22, 2025), using the domestic distraction hypothesis — Pakistan military legitimacy through Kashmir escalation."
+  },
+  "objective": "Consolidate Pakistani military authority over all civilian and security functions; neutralise PTI/Imran political threat; use Kashmir escalation to restore military legitimacy domestically; maintain nuclear deterrence credibility vs India; manage IMF/China/Gulf economic stabilisation simultaneously",
+  "capability": 9.5,
+  "trigger_threshold": 8.0,
+  "information_set": [
+    "domestic_political_stability_metrics",
+    "india_military_posture_lac_loc",
+    "imf_negotiation_status",
+    "isi_operational_calendar",
+    "five_eyes_india_exposure_signals",
+    "india_election_calendar"
+  ],
+  "observable_actions": [
+    "crack_down_imran_supporters_may_9",
+    "authorise_kashmir_desk_escalation",
+    "promote_self_field_marshal_post_sindoor",
+    "manage_ceasefire_us_brokered",
+    "leverage_nuclear_signalling_post_balakot"
+  ],
+  "hidden_states": [
+    "consolidating_power",
+    "using_kashmir_as_domestic_distraction",
+    "managing_nuclear_posture",
+    "seeking_ceasefire_off_ramp"
+  ],
+  "oracle_threat_note": "Film 4's primary strategic adversary — the architect behind both the post-Imran Pakistan consolidation and the Pahalgam→Sindoor escalation. Personal history with Imran creates a paranoid, consolidation-driven decision style. Higher loss aversion than Bajwa — more willing to escalate under domestic pressure.",
+  "prospect_params": {
+    "lam": 3.5,
+    "gamma": 0.55,
+    "alpha": 0.92,
+    "beta": 0.92,
+    "ref": 0.0
+  },
+  "films": [4]
+}

@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "cds-rawat-crash-institutional-setback",
+  "actual_action": "manage_institutional_vacuum_accelerate_theaterisation_despite_setback",
+  "immediate_effects": ["rawat_kia_dec_8_2021", "cds_post_vacant_14_months", "theaterisation_delayed", "institutional_knowledge_gap_significant"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 420,
+  "losses": ["cds_rawat_kia", "13_others_kia_mi17v5_crash"],
+  "intel_gained": ["mi17v5_maintenance_protocol_gaps_identified", "institutional_single_point_failure_confirmed"],
+  "cover_change": 0.0,
+  "confidence": 0.88,
+  "source_refs": ["https://en.wikipedia.org/wiki/2021_Indian_Air_Force_Mi-17_crash"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

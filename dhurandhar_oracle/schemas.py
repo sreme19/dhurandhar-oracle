@@ -148,26 +148,39 @@ class IntelligenceTarget(BaseModel):
 # ── Turning point ──────────────────────────────────────────────────────────────
 
 class TurningPoint(BaseModel):
-    id:                   str
-    operative:            str
-    film:                 int = Field(..., ge=1, le=4, description="1=Film1, 2=Film2, 3=Film3 (2016-2019), 4=Film4 (2020-2025+)")
-    act:                  int = Field(..., ge=1, le=3)
-    description:          str
-    state_vector:         OperativeState
-    available_actions:    list[str]
-    mission_tasks:        list[MissionTask]
-    causal_dag:           CausalDAG
-    adversaries:          list[AdversaryModel]
-    alliance_snapshot:    list[AllianceEdge]
-    intelligence_targets: list[IntelligenceTarget]
-    belief_state:         dict[str, float] = Field(
+    id:                      str
+    operative:               str
+    film:                    int = Field(..., ge=1, le=4, description="1=Film1, 2=Film2, 3=Film3 (2016-2019), 4=Film4 (2020-2025+)")
+    act:                     int = Field(..., ge=1, le=3)
+    description:             str
+    state_vector:            OperativeState
+    available_actions:       list[str]
+    mission_tasks:           list[MissionTask]
+    causal_dag:              CausalDAG
+    adversaries:             list[AdversaryModel]
+    alliance_snapshot:       list[AllianceEdge]
+    intelligence_targets:    list[IntelligenceTarget]
+    belief_state:            dict[str, float] = Field(
         default_factory=dict,
         description="Initial POMDP belief distribution: world_state_id → probability"
     )
-    source_refs:          list[str] = Field(default_factory=list)
-    owner:                Optional[str] = None
-    updated_at:           Optional[str] = Field(None, description="ISO timestamp for last data revision")
-    schema_version:       str = Field("1.1.0", description="Data schema version for turning points")
+    real_world_correlation:  Optional[dict] = Field(
+        None,
+        description="Grounded real-world event data: dates, actors, forensic details. "
+                    "Passed to narrator_node for Claude briefing context."
+    )
+    next_turning_point:      Optional[str] = Field(
+        None,
+        description="ID of the chronologically next TP — used to propagate terminal belief state forward"
+    )
+    terminal_belief:         Optional[dict[str, float]] = Field(
+        None,
+        description="Belief distribution at end of this TP — seeds next_turning_point initial belief"
+    )
+    source_refs:             list[str] = Field(default_factory=list)
+    owner:                   Optional[str] = None
+    updated_at:              Optional[str] = Field(None, description="ISO timestamp for last data revision")
+    schema_version:          str = Field("1.1.0", description="Data schema version for turning points")
 
 
 # ── Agent output schemas (new) ─────────────────────────────────────────────────

@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "reasi-pilgrim-bus-attack",
+  "actual_action": "trace_m4_arms_pipeline_confirm_trf_jem_isi_three_actor_model",
+  "immediate_effects": ["bus_attacked_june_9_2024_9_killed", "m4_carbines_confirmed_via_forensics", "attacker_captured_reveals_isi_routing", "trf_jem_isi_three_actor_cell_model_confirmed"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 21,
+  "losses": ["9_pilgrims_killed"],
+  "intel_gained": ["m4_pipeline_drop_points_partially_mapped", "trf_jem_coordination_mechanism_confirmed", "isi_kashmir_desk_handler_reasi_partially_id"],
+  "cover_change": -1.0,
+  "confidence": 0.82,
+  "source_refs": ["https://en.wikipedia.org/wiki/2024_Reasi_bus_attack"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

@@ -1,16 +1,15 @@
 {
   "turning_point_id": "article-370-abrogation",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
+  "actual_action": "ensure_total_opsec_zero_isi_forewarning",
+  "immediate_effects": ["370_abrogated_august_5_2019", "isi_caught_completely_off_guard", "trf_formed_october_2019_in_response", "kashmir_lockdown_communications_severed"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 90,
+  "losses": ["kashmir_political_allies_some_detained"],
+  "intel_gained": ["isi_reaction_speed_measured", "trf_formation_confirmed_new_threat_vector"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for ajay_sanyal at article-370-abrogation."
+  "confidence": 0.92,
+  "source_refs": ["https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

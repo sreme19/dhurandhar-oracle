@@ -1,16 +1,15 @@
 {
   "turning_point_id": "surgical-strikes-execution",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "execute_strikes_7_launchpads_confirmed_intelligence",
+  "immediate_effects": ["7_launchpads_struck_sept_28_29_2016", "india_announces_strikes_officially_sept_29", "pakistan_denies_any_indian_intrusion", "isi_source_hunt_for_intelligence_leak_begins"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 1,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at surgical-strikes-execution."
+  "intel_gained": ["pakistan_reaction_speed_no_military_retaliation_confirmed", "isi_internal_panic_comms_partial"],
+  "cover_change": -2.0,
+  "confidence": 0.90,
+  "source_refs": ["https://en.wikipedia.org/wiki/2016_Uri_attack#Indian_surgical_strikes"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

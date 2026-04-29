@@ -1,0 +1,42 @@
+{
+  "actor": "trf_command",
+  "real_name_composite": "The Resistance Front (TRF) — formed October 2019; operates as ISI's FATF-compliant deniable Kashmir proxy; leadership includes Sheikh Sajjad Gul (Pahalgam), Sajid Saifullah Jatt",
+  "real_life_notes": {
+    "formation": "TRF emerged weeks after Article 370 abrogation (August 5, 2019). Indian intelligence concluded it was created by ISI Directorate S as a clean-label front: no listed name on FATF watchlists, uses social media for recruitment, targets civilians not just security forces.",
+    "pahalgam": "TRF claimed the April 22, 2025 Pahalgam massacre (26 killed, mostly Hindu tourists). CCTV traced the cell to M4 carbines; the same arms pipeline was used in Reasi (June 2024).",
+    "recruitment_model": "TRF recruits post-Wani generation youth through social media (Telegram, Instagram) and WhatsApp groups — no physical madrassa pipeline. Operates leaderless cell model inspired by IS. Individual cells do not know other cells.",
+    "jem_coordination": "For high-complexity operations (Pahalgam, Reasi), TRF provides local knowledge and route intelligence while JeM provides trained Pakistani-national operatives. ISI provides weapons, funding, strategic authorisation."
+  },
+  "objective": "Execute high-visibility civilian attacks to undermine Article 370's perceived security gains; recruit post-Wani youth via social media; maintain operational tempo independent of FATF designation pressure; support ISI's two-front distraction strategy",
+  "capability": 7.5,
+  "trigger_threshold": 5.5,
+  "information_set": [
+    "kashmir_valley_civilian_movement_patterns",
+    "security_force_deployment_schedules",
+    "pilgrim_and_tourist_route_calendars",
+    "isi_arms_pipeline_drop_points",
+    "social_media_recruitment_pipeline"
+  ],
+  "observable_actions": [
+    "recruit_local_youth_social_media",
+    "receive_m4_carbines_via_isi_pipeline",
+    "coordinate_with_jem_trained_operatives",
+    "execute_civilian_targeted_attack",
+    "claim_attack_via_telegram"
+  ],
+  "hidden_states": [
+    "recruiting",
+    "pre_positioning",
+    "executing",
+    "dispersing_post_attack"
+  ],
+  "oracle_threat_note": "The Film 3-4 operational adversary on the ground in Kashmir. TRF is the delivery mechanism for ISI Kashmir Desk's strategic decisions. Its leaderless cell model makes it extremely resistant to penetration — Rizwan Shah's primary intelligence challenge is working back from individual cell members to the ISI handler chain.",
+  "prospect_params": {
+    "lam": 2.2,
+    "gamma": 0.65,
+    "alpha": 0.85,
+    "beta": 0.85,
+    "ref": 0.0
+  },
+  "films": [3, 4]
+}

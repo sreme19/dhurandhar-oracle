@@ -1,0 +1,41 @@
+{
+  "actor": "isi_kashmir_desk",
+  "real_name_composite": "Composite of ISI Directorate S (Kashmir Cell) — the covert operations wing responsible for directing LeT, JeM, TRF and Hizbul operations against India post-1989",
+  "real_life_notes": {
+    "directorate_s": "ISI's Directorate S (Special Operations) runs proxy militancy in Kashmir. Post-2019 Article 370, it created TRF as a FATF-compliant deniable front.",
+    "trf_creation": "The Resistance Front (TRF) was formed October 2019, weeks after Article 370 abrogation, explicitly to provide ISI deniability under FATF pressure while maintaining operational tempo.",
+    "pahalgam_link": "TRF claimed the April 2025 Pahalgam massacre; ISI Kashmir Desk authorised the operation per Indian intelligence assessment."
+  },
+  "objective": "Sustain militant pressure on Jammu & Kashmir through deniable proxies; recruit post-Wani generation youth; execute high-visibility civilian attacks to internationalise Kashmir dispute; degrade Article 370's perceived security gains",
+  "capability": 8.5,
+  "trigger_threshold": 6.5,
+  "information_set": [
+    "kashmir_valley_security_grid_density",
+    "trf_cell_network_status",
+    "india_crpf_deployment_patterns",
+    "pilgrim_route_calendars",
+    "m4_arms_pipeline_status"
+  ],
+  "observable_actions": [
+    "direct_trf_cell_activation",
+    "authorise_high_visibility_civilian_attack",
+    "pivot_operations_jammu_division",
+    "replace_burned_cells_with_new_recruits",
+    "coordinate_jem_for_trained_operatives"
+  ],
+  "hidden_states": [
+    "planning",
+    "activating_cell",
+    "executing",
+    "pausing_post_exposure"
+  ],
+  "oracle_threat_note": "Primary Film 3-4 adversary on the Kashmir theatre. Directly controls TRF, JeM field cells, and arms pipeline. The Galwan distraction window was exploited by this desk to maintain tempo. Pahalgam was this desk's highest-profile operation since Pulwama.",
+  "prospect_params": {
+    "lam": 2.5,
+    "gamma": 0.60,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  },
+  "films": [3, 4]
+}

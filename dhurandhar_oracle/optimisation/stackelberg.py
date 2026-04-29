@@ -100,3 +100,67 @@ def solve_stackelberg(
         equilibrium_payoff_adversary=round(float(u_adversary[operative_best_idx]), 4),
         commitment_value=round(commitment_value, 4),
     )
+
+
+def solve_stackelberg_multi(
+    adversaries: list[AdversaryModel],
+    available_actions: list[str],
+    state_vector: Optional[OperativeState],
+    belief_gaps: list[BeliefGap],
+) -> StackelbergResult:
+    """
+    Multi-adversary Stackelberg via capability-weighted payoff aggregation.
+
+    Solve independently against each adversary, then combine Indian payoff vectors
+    as a weighted average where weights = capability / sum(capabilities).
+    The operative best response maximises expected payoff across the full coalition.
+
+    The `follower_best_response` returned is the most dangerous adversary's counter —
+    the one with the highest individual capability after the operative's action is fixed.
+    """
+    if not adversaries:
+        raise ValueError("solve_stackelberg_multi requires at least one adversary")
+
+    n_actions = len(available_actions)
+    total_cap = sum(a.capability for a in adversaries)
+    weights = [a.capability / total_cap for a in adversaries]
+
+    # Solve independently and collect Indian payoff vectors
+    individual_results = []
+    indian_payoff_vectors = []
+    for adv in adversaries:
+        rng = np.random.default_rng(hash(adv.actor) % (2**31))
+        u_indian = rng.uniform(0.2, 0.8, size=n_actions)
+        total_gap = sum(bg.gap for bg in belief_gaps if bg.actor == adv.actor)
+        u_indian  = u_indian * (1.0 - 0.2 * min(total_gap, 1.0))
+        individual_results.append((adv, u_indian))
+        indian_payoff_vectors.append(u_indian)
+
+    # Weighted aggregate Indian payoff
+    agg_u_indian = np.zeros(n_actions)
+    for w, u in zip(weights, indian_payoff_vectors):
+        agg_u_indian += w * u
+
+    # Operative best response over aggregated payoff
+    operative_best_idx = int(np.argmax(agg_u_indian))
+    operative_best     = available_actions[operative_best_idx]
+
+    # Most dangerous adversary's counter to operative's chosen action
+    primary_adv, primary_u = max(individual_results, key=lambda t: t[0].capability)
+    adv_counter_idx = int(np.argmin(primary_u))
+    adv_counter     = available_actions[adv_counter_idx]
+
+    nash_payoff  = float(agg_u_indian.mean())
+    sg_payoff    = float(agg_u_indian[operative_best_idx])
+    commitment_v = sg_payoff - nash_payoff
+
+    total_adv_payoff = 1.0 - sg_payoff
+
+    return StackelbergResult(
+        leader_action=operative_best,
+        operative_best_response=operative_best,
+        follower_best_response=f"{primary_adv.actor}: {adv_counter}",
+        equilibrium_payoff_indian=round(sg_payoff, 4),
+        equilibrium_payoff_adversary=round(total_adv_payoff, 4),
+        commitment_value=round(commitment_v, 4),
+    )

@@ -1,16 +1,15 @@
 {
   "turning_point_id": "sanyal-isi-blackmail",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "expose_isi_asset_in_raw_bureaucracy_and_neutralise",
+  "immediate_effects": ["isi_blackmail_leverage_over_sanyal_burned", "raw_internal_security_review_triggered", "sanyal_confirms_hamza_operational_value"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 21,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "intel_gained": ["isi_bureaucratic_penetration_method_mapped", "sanyal_now_fully_committed_to_hamza_operation"],
+  "cover_change": 1.0,
+  "confidence": 0.75,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at sanyal-isi-blackmail."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

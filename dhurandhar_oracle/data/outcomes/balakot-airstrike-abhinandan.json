@@ -1,16 +1,15 @@
 {
   "turning_point_id": "balakot-airstrike-abhinandan",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
-  "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at balakot-airstrike-abhinandan."
+  "actual_action": "provide_balakot_targeting_package_execute_strike",
+  "immediate_effects": ["balakot_markaz_struck_feb_26", "abhinandan_mig21_shot_down_feb_27", "pakistan_returns_abhinandan_march_1_diplomatic_pressure"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 14,
+  "losses": ["abhinandan_captured_3_days", "mig21_lost"],
+  "intel_gained": ["pakistan_f16_scramble_procedures_recorded", "amraam_fired_serial_collected", "isi_post_strike_panic_communications_partial"],
+  "cover_change": -2.0,
+  "confidence": 0.88,
+  "source_refs": ["https://en.wikipedia.org/wiki/2019_Balakot_airstrike", "https://en.wikipedia.org/wiki/Abhinandan_Varthaman"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

@@ -1,16 +1,15 @@
 {
   "turning_point_id": "yalina-romance-risk",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "maintain_limited_contact_intelligence_priority",
+  "immediate_effects": ["jamali_network_partial_access_via_yalina", "emotional_risk_controlled", "cover_extended"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 60,
   "losses": [],
-  "intel_gained": [],
-  "cover_change": 0.0,
-  "confidence": 0.0,
+  "intel_gained": ["jamali_political_patronage_partial", "yalina_family_background_confirmed"],
+  "cover_change": 0.3,
+  "confidence": 0.70,
   "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for hamza at yalina-romance-risk."
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

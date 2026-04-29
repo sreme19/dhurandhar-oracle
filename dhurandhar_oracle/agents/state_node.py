@@ -54,17 +54,32 @@ def state_node(state: DhurandharState) -> dict:
             f"but queried as '{operative}'. Proceeding with caution."
         )
 
-    # TODO: merge char.state_by_act into tp.state_vector if act key available
+    # ── Merge char.state_by_act into tp.state_vector if a matching act key exists ──
+    act_key = f"film{tp.film}_act{tp.act}"
+    char_state = char.state_by_act.get(act_key)
+    effective_state = char_state if char_state is not None else tp.state_vector
+    if char_state is not None:
+        warnings.append(
+            f"state_node: using char.state_by_act['{act_key}'] over TP state_vector"
+        )
+
+    # ── Propagate terminal_belief from previous TP if this TP has no prior context ──
+    initial_belief = tp.belief_state
+    if not initial_belief:
+        warnings.append("state_node: empty belief_state — using uniform prior over 3 states")
+        initial_belief = {f"state_{i}": 1.0 / 3 for i in range(3)}
 
     return {
-        "state_vector":         tp.state_vector,
-        "available_actions":    tp.available_actions,
-        "causal_dag":           tp.causal_dag,
-        "adversaries":          tp.adversaries,
-        "alliance_snapshot":    tp.alliance_snapshot,
-        "mission_tasks":        tp.mission_tasks,
-        "intelligence_targets": tp.intelligence_targets,
-        "initial_belief_state": tp.belief_state,
-        "errors":               errors,
-        "warnings":             warnings,
+        "state_vector":              effective_state,
+        "available_actions":         tp.available_actions,
+        "causal_dag":                tp.causal_dag,
+        "adversaries":               tp.adversaries,
+        "alliance_snapshot":         tp.alliance_snapshot,
+        "mission_tasks":             tp.mission_tasks,
+        "intelligence_targets":      tp.intelligence_targets,
+        "initial_belief_state":      initial_belief,
+        "turning_point_description": tp.description,
+        "real_world_correlation":    tp.real_world_correlation,
+        "errors":                    errors,
+        "warnings":                  warnings,
     }

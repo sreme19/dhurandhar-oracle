@@ -1,0 +1,41 @@
+{
+  "actor": "pla_western_theatre_command",
+  "real_name_composite": "PLA Western Theatre Command — responsible for Ladakh, Doklam, Arunachal frontier; commanded by General Wang Haijiang during Galwan (2020)",
+  "real_life_notes": {
+    "western_theatre_command": "Established 2016 under PLA reorganisation; headquartered in Chengdu; covers India frontier, Tibet Military District, and Central Asian borders.",
+    "galwan_authorization": "The Galwan ambush (June 15, 2020) was pre-planned: iron rods, barbed-wire clubs were prepared in advance. Indian intelligence assessed this required Theatre Command authorisation minimum — likely CMC awareness.",
+    "doklam_creep": "The same command directed the road construction at Doklam (2017) that triggered the 73-day standoff. The Doklam→Galwan escalation ladder shows a consistent doctrine of territorial salami-slicing."
+  },
+  "objective": "Execute territorial expansion along LAC through incremental boundary creep (salami-slicing); exploit India-Pakistan two-front pressure windows; deny Siliguri Corridor proximity to India; establish permanent forward positions pre-Galwan status quo",
+  "capability": 10.0,
+  "trigger_threshold": 8.5,
+  "information_set": [
+    "lac_patrol_patterns_india",
+    "india_pakistan_crisis_calendar",
+    "satellite_imagery_indian_infrastructure",
+    "cpec_pakistan_coordination_channel",
+    "india_quad_alignment_status"
+  ],
+  "observable_actions": [
+    "begin_road_construction_disputed_territory",
+    "increase_patrol_frequency_lac",
+    "pre_position_troops_and_improvised_weapons",
+    "ambush_indian_patrol_at_pp14",
+    "suppress_pla_casualty_information"
+  ],
+  "hidden_states": [
+    "probing",
+    "consolidating",
+    "executing_ambush",
+    "post_incident_holding"
+  ],
+  "oracle_threat_note": "Film 4's second-front adversary. Highest capability (10.0) in the oracle dataset. Unlike ISI, PLA operates on a 10-20 year strategic horizon — individual incidents are subordinate to territorial consolidation doctrine. Galwan was both a tactical ambush and a strategic message about the two-front threat.",
+  "prospect_params": {
+    "lam": 1.8,
+    "gamma": 0.55,
+    "alpha": 0.92,
+    "beta": 0.90,
+    "ref": 0.0
+  },
+  "films": [3, 4]
+}

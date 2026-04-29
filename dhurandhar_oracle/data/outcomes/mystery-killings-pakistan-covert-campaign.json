@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "mystery-killings-pakistan-covert-campaign",
+  "actual_action": "execute_systematic_elimination_campaign_ic814_planners_plus",
+  "immediate_effects": ["zahoor_mistry_killed_march_2022", "paramjit_panjwar_killed_may_2023", "multiple_jem_hizbul_commanders_eliminated_2022_2024", "isi_partial_profile_of_campaign_operator_by_mid_2023"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 730,
+  "losses": ["hamza_cover_partially_burned_isi_profile_developing"],
+  "intel_gained": ["isi_protection_network_gaps_identified_via_surveillance", "isi_cannot_publicly_acknowledge_losses"],
+  "cover_change": -3.5,
+  "confidence": 0.72,
+  "source_refs": ["https://www.ndtv.com/world-news/from-karachi-to-lahore-a-kill-trail-of-terrorists-in-pakistan-by-unknown-gunmen-11367052"],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

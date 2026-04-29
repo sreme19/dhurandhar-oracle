@@ -1,16 +1,15 @@
 {
   "turning_point_id": "khanani-ficn-network-strike",
-  "actual_action": "unknown",
-  "immediate_effects": [],
-  "terminal_state": "in_progress",
-  "days_elapsed": 0,
+  "actual_action": "coordinate_demonetisation_timing_and_network_strike",
+  "immediate_effects": ["ficn_network_financially_neutralised", "hawala_chain_broken", "khanani_javed_killed_subsequently"],
+  "terminal_state": "mission_success",
+  "days_elapsed": 90,
   "losses": [],
-  "intel_gained": [],
+  "intel_gained": ["ficn_full_distribution_map", "isi_hawala_pakistan_routing_confirmed"],
   "cover_change": 0.0,
-  "confidence": 0.0,
-  "source_refs": [],
-  "owner": null,
-  "updated_at": "2026-04-29T14:29:06+00:00",
-  "schema_version": "1.1.0",
-  "_TODO": "Backfill with grounded outcome for rizwan_shah at khanani-ficn-network-strike."
+  "confidence": 0.82,
+  "source_refs": ["https://en.wikipedia.org/wiki/2016_Indian_banknote_demonetisation", "https://en.wikipedia.org/wiki/Altaf_Khanani"],
+  "owner": "rizwan_shah",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

@@ -1,0 +1,15 @@
+{
+  "turning_point_id": "nijjar-killing-india-canada-crisis",
+  "actual_action": "manage_five_eyes_exposure_deny_deflect_maintain_deniability",
+  "immediate_effects": ["nijjar_killed_june_18_2023", "trudeau_accuses_india_sept_18_2023", "india_expels_canadian_diplomats", "gchq_collection_on_indian_operations_flagged"],
+  "terminal_state": "exfil",
+  "days_elapsed": 180,
+  "losses": ["india_canada_relations_severed", "five_eyes_intelligence_collection_on_india_intensified"],
+  "intel_gained": ["gchq_collection_methods_partially_inferred", "canada_india_intelligence_exposure_surface_mapped"],
+  "cover_change": -2.0,
+  "confidence": 0.68,
+  "source_refs": ["https://en.wikipedia.org/wiki/Killing_of_Hardeep_Singh_Nijjar"],
+  "owner": "ajay_sanyal",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
+}

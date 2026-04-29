@@ -28,38 +28,64 @@ Why Stackelberg not CFR?
 """
 from __future__ import annotations
 
-from dhurandhar_oracle.optimisation.stackelberg import solve_stackelberg
+from dhurandhar_oracle.optimisation.stackelberg import solve_stackelberg, solve_stackelberg_multi
 from dhurandhar_oracle.schemas import StackelbergResult
 from dhurandhar_oracle.state import DhurandharState
 
 
 def adversary_node(state: DhurandharState) -> dict:
-    """Compute Stackelberg equilibrium for Indian handler → operative → adversary."""
+    """Compute Stackelberg equilibrium for Indian handler → operative → adversary.
+
+    Multi-adversary extension: when multiple high-threat adversaries exist (e.g.
+    PLA + ISI in Film 4), solve against each independently then aggregate payoffs
+    as a capability-weighted convex combination. The operative best response is the
+    action that maximises expected payoff across the adversary coalition.
+    """
     errors:   list[str] = []
     warnings: list[str] = []
 
-    adversaries      = state.get("adversaries", [])
-    high_threat      = set(state.get("high_threat_actors", []))
+    adversaries       = state.get("adversaries", [])
+    high_threat       = set(state.get("high_threat_actors", []))
     available_actions = state.get("available_actions", [])
-    state_vector     = state.get("state_vector")
-    belief_gaps      = state.get("belief_gaps", [])
+    state_vector      = state.get("state_vector")
+    belief_gaps       = state.get("belief_gaps", [])
 
-    # Focus on the single highest-threat adversary for Stackelberg
-    # (multi-adversary Stackelberg is future work)
     active_adversaries = [a for a in adversaries if a.actor in high_threat]
 
+    # Fall back: if no actor is in high_threat (e.g. threat scoring not yet run),
+    # use all adversaries above capability threshold 7.0
     if not active_adversaries:
-        warnings.append("adversary_node: no high-threat adversaries — skipping Stackelberg")
+        active_adversaries = [a for a in adversaries if a.capability >= 7.0]
+        if active_adversaries:
+            warnings.append(
+                "adversary_node: no high_threat_actors set — using all adversaries "
+                f"with capability >= 7.0 ({[a.actor for a in active_adversaries]})"
+            )
+
+    if not active_adversaries:
+        warnings.append("adversary_node: no active adversaries — skipping Stackelberg")
         return {"errors": errors, "warnings": warnings}
 
-    primary_adversary = max(active_adversaries, key=lambda a: a.capability)
-
-    result: StackelbergResult = solve_stackelberg(
-        adversary=primary_adversary,
-        available_actions=available_actions,
-        state_vector=state_vector,
-        belief_gaps=belief_gaps,
-    )
+    if len(active_adversaries) == 1:
+        # Single-adversary path (unchanged behaviour)
+        result: StackelbergResult = solve_stackelberg(
+            adversary=active_adversaries[0],
+            available_actions=available_actions,
+            state_vector=state_vector,
+            belief_gaps=belief_gaps,
+        )
+    else:
+        # Multi-adversary: capability-weighted aggregation
+        warnings.append(
+            f"adversary_node: multi-adversary Stackelberg over "
+            f"{[a.actor for a in active_adversaries]}"
+        )
+        result = solve_stackelberg_multi(
+            adversaries=active_adversaries,
+            available_actions=available_actions,
+            state_vector=state_vector,
+            belief_gaps=belief_gaps,
+        )
 
     return {
         "stackelberg": result,

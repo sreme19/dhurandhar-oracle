@@ -156,6 +156,7 @@ def _build_trace(state: DhurandharState) -> str:
     # Exclude raw graph data (too large), keep computed results
     trace_keys = [
         "operative", "turning_point",
+        "turning_point_description", "real_world_correlation",
         "pomdp", "critical_path", "voi_result", "stackelberg",
         "belief_gaps", "shapley", "simulation_actual", "simulation_optimal",
         "threat_scores", "warnings",

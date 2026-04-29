@@ -1,0 +1,84 @@
+{
+  "id": "operation-sindoor-doctrine",
+  "codename": "SINDOOR",
+  "trigger": "Burhan Wani killing (July 2016) triggers new-generation Kashmir militancy. URI attack (September 2016) forces RAW/IB decision: strategic restraint is over. 'Naya Bharat' mandate extended from covert operations (Film 2) to kinetic military doctrine (Film 3). Post-Article 370, ISI creates TRF. Pahalgam (April 2025) is ISI's long-cycle revenge. Operation Sindoor (May 2025) is India's doctrinal response.",
+  "operative_primary": "rizwan_shah",
+  "operative_secondary": "hamza",
+  "handler_strategic": "ajay_sanyal",
+  "objective_film3": "Provide ground intelligence enabling the shift from strategic restraint to punitive deterrence. Key deliverables: (1) URI launchpad intelligence package enabling surgical strikes; (2) Balakot targeting package (JeM Markaz Subhan Allah coordinates, building layout, occupancy); (3) Article 370 OPSEC — ensure ISI has zero forewarning of abrogation; (4) Map TRF formation post-370 as ISI's new deniable proxy.",
+  "objective_film4": "Ajay Sanyal (now NSA) coordinates India's response to the two-front threat (PLA-Galwan + ISI-TRF). Key deliverables: (1) Galwan: assess PLA authorisation chain for ambush, identify CMC decision fingerprint; (2) Mystery killings: run covert elimination campaign of most-wanted terrorists in Pakistan (Hamza, third cover); (3) Nijjar: manage Five Eyes intelligence exposure from GCHQ collection on Indian operations; (4) Reasi→Pahalgam: trace M4 arms pipeline, identify TRF-JeM-ISI handler chain; (5) Sindoor: provide targeting package for 9 sites across Pakistan/PoK.",
+  "era": {
+    "film3": "2016-2019 (Burhan Wani through Article 370 abrogation)",
+    "film4": "2020-2025 (Galwan through Operation Sindoor and aftermath)"
+  },
+  "real_world_parallel": "Composite of real events: 2016 surgical strikes, 2019 Balakot airstrike, 2019 Article 370 abrogation, 2020 Galwan clash, 2021 Taliban Kabul fall, 2021 CDS Rawat crash, 2022-2024 mystery killings pattern, 2023 Nijjar killing, 2024 Reasi attack, 2025 Pahalgam massacre, 2025 Operation Sindoor",
+  "phases": [
+    {
+      "phase": 5,
+      "name": "Punitive Deterrence Activation",
+      "film": 3,
+      "acts": [1, 2],
+      "trigger_event": "real_2016_uri_attack",
+      "description": "Rizwan Shah delivers URI launchpad intelligence package to Sanyal within 10-day political clock. Surgical strikes executed September 28-29, 2016. Doklam standoff simultaneously opens second-front intelligence requirement. Cover crisis: ISI post-strike source hunt forces Rizwan to adopt new identity (Tariq Mehmood).",
+      "key_turning_points": ["burhan-wani-killing-radicalisation", "uri-attack-surgical-decision", "surgical-strikes-execution", "doklam-china-second-front"],
+      "real_world_anchor": "July 2016 – August 2017",
+      "cpm_bottleneck_note": "The URI-to-strike window (10 days) was the CPM critical path. Intelligence delivery vs. cover preservation trade-off was the central operative decision."
+    },
+    {
+      "phase": 6,
+      "name": "Balakot and Threshold Testing",
+      "film": 3,
+      "acts": [2, 3],
+      "trigger_event": "real_2019_pulwama_attack",
+      "description": "Pulwama (February 14, 2019) triggers Balakot targeting package delivery. Rizwan's years-long penetration of JeM logistics network yields Markaz Subhan Allah coordinates. Balakot strike (February 26) is the first Indian air strike on Pakistani territory since 1971. Abhinandan capture (February 27) tests nuclear threshold. Article 370 abrogation (August 5) is the doctrinal culmination — executed under total OPSEC with ISI having zero forewarning.",
+      "key_turning_points": ["pulwama-balakot-decision", "balakot-airstrike-abhinandan", "article-370-abrogation"],
+      "real_world_anchor": "February 2019 – August 2019",
+      "26_11_parallel": "Balakot targeting package = the intelligence product that URI launchpad intel was a precursor to. The CPM analysis shows Rizwan's network penetration (begun Film 2) was the critical path to the targeting package — not the 12-day political window."
+    },
+    {
+      "phase": 7,
+      "name": "Two-Front Containment",
+      "film": 4,
+      "acts": [1],
+      "trigger_event": "real_2020_galwan_clash",
+      "description": "Galwan (June 15, 2020): PLA pre-planned ambush kills 20 Indian soldiers. Sanyal must simultaneously manage: LAC crisis with China, ongoing ISI-TRF operations in Kashmir post-370, and CDS Rawat crash institutional vacuum (December 2021). Two-front threat is now confirmed kinetic, not theoretical.",
+      "key_turning_points": ["galwan-china-kinetic-clash", "taliban-kabul-fall-recalibration", "cds-rawat-crash-institutional-setback"],
+      "real_world_anchor": "June 2020 – December 2021",
+      "adversary_network_note": "The Film 4 adversary network is a two-subgraph structure: (1) PLA-CPEC-ISI coordination graph; (2) ISI-TRF-JeM-M4pipeline operational graph. These are connected via the CPEC intelligence-sharing channel."
+    },
+    {
+      "phase": 8,
+      "name": "Covert Campaign and Diplomatic Exposure",
+      "film": 4,
+      "acts": [2],
+      "trigger_event": "real_2022_mystery_killings_begin",
+      "description": "Hamza (third cover identity) runs systematic elimination campaign: IC-814 hijacker Zahoor Mistry (March 2022), Paramjit Singh Panjwar (Lahore, May 2023), multiple JeM/Hizbul commanders. ISI partial profile by mid-2023. Nijjar killing (June 2023) triggers Canada-India crisis; GCHQ collection on Indian operations is the intelligence exposure risk. Imran Khan collapse (2022-2023) changes Pakistan adversary landscape — Munir doctrine is more aggressive than Bajwa.",
+      "key_turning_points": ["mystery-killings-pakistan-covert-campaign", "imran-khan-collapse-pakistan-instability", "nijjar-killing-india-canada-crisis"],
+      "real_world_anchor": "March 2022 – December 2023"
+    },
+    {
+      "phase": 9,
+      "name": "Pahalgam-Sindoor Arc",
+      "film": 4,
+      "acts": [3],
+      "trigger_event": "real_2024_reasi_attack",
+      "description": "Reasi (June 2024): M4 pipeline and TRF-JeM-ISI three-actor cell model confirmed via captured attacker. Tahawwur Rana extradited (April 2025). Pahalgam massacre (April 22, 2025): 26 tourists killed, TRF claims, M4 forensics connect to Reasi. Rizwan Shah's retroactive intelligence on the Reasi handler chain directly feeds Pahalgam investigation. Operation Sindoor (May 7, 2025): 9 sites struck across Pakistan/PoK. US-brokered ceasefire May 10. Red Fort Car Bombing epilogue (November 2025) — ISI's Sindoor revenge.",
+      "key_turning_points": ["reasi-pilgrim-bus-attack", "pahalgam-attack-crisis", "operation-sindoor-strike"],
+      "real_world_anchor": "June 2024 – November 2025"
+    }
+  ],
+  "adversary_network_map": {
+    "description": "Film 3-4 two-subgraph adversary network",
+    "nodes": {
+      "isi_kashmir_desk":          {"layer": "isi_strategic",  "connects_to": ["trf_command", "jem_field_cells", "general_asim_munir", "isi_arms_pipeline"]},
+      "general_asim_munir":        {"layer": "pakistan_army",  "connects_to": ["isi_kashmir_desk", "pla_western_theatre_command"]},
+      "trf_command":               {"layer": "proxy_operational", "connects_to": ["isi_kashmir_desk", "jem_field_cells", "local_recruits"]},
+      "jem_field_cells":           {"layer": "operational",    "connects_to": ["trf_command", "isi_kashmir_desk", "isi_arms_pipeline"]},
+      "isi_arms_pipeline":         {"layer": "logistics",      "connects_to": ["isi_kashmir_desk", "jem_field_cells", "trf_command"]},
+      "pla_western_theatre_command": {"layer": "china_strategic", "connects_to": ["general_asim_munir", "cpec_coordination"]},
+      "cpec_coordination":         {"layer": "china_pak_link", "connects_to": ["pla_western_theatre_command", "isi_kashmir_desk"]}
+    },
+    "oracle_note": "intel_network_node SNA: isi_kashmir_desk has highest betweenness centrality — broker between strategic (Munir), operational (TRF/JeM), and logistical (arms pipeline) layers. Disrupting the desk collapses the ISI→TRF→attack chain. PLA-CPEC-ISI triangle is the two-front coordination mechanism.",
+    "critical_brokers": ["isi_kashmir_desk", "cpec_coordination"]
+  }
+}

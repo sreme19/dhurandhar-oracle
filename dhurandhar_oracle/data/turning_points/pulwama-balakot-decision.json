@@ -291,6 +291,13 @@
     "https://en.wikipedia.org/wiki/2019_Balakot_airstrike"
   ],
   "source_confidence": 0.88,
+  "next_turning_point": "balakot-airstrike-abhinandan",
+  "terminal_belief": {
+    "paf_will_retaliate_if_india_strikes_balakot": 0.68,
+    "isi_will_accept_balakot_strike_as_punishment_no_conventional_war": 0.22,
+    "isi_intends_nuclear_signalling_as_deterrent_if_struck": 0.08,
+    "pakistan_will_seek_immediate_ceasefire_post_strike": 0.02
+  },
   "schema_version": "1.1.0",
-  "updated_at": "2026-04-29T14:36:04+00:00"
+  "updated_at": "2026-04-29T15:00:00+00:00"
 }

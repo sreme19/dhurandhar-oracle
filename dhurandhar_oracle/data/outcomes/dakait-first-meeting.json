@@ -1,11 +1,25 @@
 {
-  "_TODO": "GROUNDING REQUIRED — confirm actual action Hamza took at this turning point and immediate effects.",
   "turning_point_id": "dakait-first-meeting",
   "actual_action": "deepen_criminal_cover",
   "immediate_effects": [
     "dakait_trust_rises",
-    "cover_deepened"
+    "cover_deepened",
+    "infiltrate_gang_periphery_initiated"
   ],
-  "terminal_state": "in_progress",
-  "days_elapsed": 45
+  "terminal_state": "mission_success",
+  "days_elapsed": 45,
+  "losses": [],
+  "intel_gained": [
+    "dakait_arms_cache_partial",
+    "gang_periphery_contacts_established"
+  ],
+  "cover_change": 0.5,
+  "confidence": 0.82,
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Rehman_Dakait",
+    "https://en.wikipedia.org/wiki/Operation_Lyari"
+  ],
+  "owner": "hamza",
+  "updated_at": "2026-04-29T15:00:00+00:00",
+  "schema_version": "1.1.0"
 }

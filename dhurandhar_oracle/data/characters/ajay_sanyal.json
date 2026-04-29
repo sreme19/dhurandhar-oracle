@@ -4,7 +4,7 @@
   "nationality": "Indian",
   "side": "indian",
   "role": "IB Director (Intelligence Bureau) — Hamza's strategic handler",
-  "films": [1, 2],
+  "films": [1, 2, 3, 4],
   "cover_identity": null,
   "real_life_inspiration": "Ajit Doval — India's current National Security Advisor, former IB Director, and the so-called 'Godfather of Indian covert operations'. Spent years undercover in Pakistan himself in the 1980s–90s.",
   "inspiration_notes": {
@@ -33,6 +33,48 @@
       "intelligence_depth": 9.8,
       "network_strength": 9.5,
       "exposure_risk": 0.5
+    },
+    "film3_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.5,
+      "intelligence_depth": 9.5,
+      "network_strength": 9.5,
+      "exposure_risk": 0.5
+    },
+    "film3_act2": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.5,
+      "intelligence_depth": 9.8,
+      "network_strength": 9.0,
+      "exposure_risk": 1.0
+    },
+    "film3_act3": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.8,
+      "intelligence_depth": 10.0,
+      "network_strength": 9.5,
+      "exposure_risk": 1.5
+    },
+    "film4_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.5,
+      "intelligence_depth": 9.8,
+      "network_strength": 9.0,
+      "exposure_risk": 2.0
+    },
+    "film4_act2": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.5,
+      "intelligence_depth": 9.5,
+      "network_strength": 8.5,
+      "exposure_risk": 3.0
+    },
+    "film4_act3": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.8,
+      "intelligence_depth": 10.0,
+      "network_strength": 9.0,
+      "exposure_risk": 2.5
     }
   },
   "observable_history": [
@@ -40,7 +82,13 @@
     {"film": 1, "act": 1, "action": "deploy_hamza_via_torkham"},
     {"film": 1, "act": 2, "action": "issue_standing_orders"},
     {"film": 1, "act": 3, "action": "approve_exfil"},
-    {"film": 2, "act": 1, "action": "authorise_phase_2_revenge_arc"}
+    {"film": 2, "act": 1, "action": "authorise_phase_2_revenge_arc"},
+    {"film": 3, "act": 1, "action": "authorise_article_370_secrecy_protocol"},
+    {"film": 3, "act": 2, "action": "approve_balakot_targeting_package"},
+    {"film": 3, "act": 3, "action": "manage_abhinandan_diplomatic_crisis"},
+    {"film": 4, "act": 1, "action": "assess_galwan_two_front_posture"},
+    {"film": 4, "act": 2, "action": "manage_nijjar_five_eyes_exposure"},
+    {"film": 4, "act": 3, "action": "authorise_operation_sindoor_targeting"}
   ],
   "adversary_model": null
 }
