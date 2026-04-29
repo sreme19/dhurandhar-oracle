@@ -1,0 +1,272 @@
+{
+  "id": "reasi-pilgrim-bus-attack",
+  "operative": "rizwan_shah",
+  "film": 4,
+  "act": 3,
+  "description": "June 9, 2024, 1800 hours. A passenger bus carrying Hindu pilgrims from the Shiv Khori cave temple toward Katra is ambushed by two terrorists who open fire from elevated positions in Pouni tehsil, Reasi district, Jammu division. The driver loses control; the bus falls into a gorge. 9 pilgrims killed, 33 injured (many from the fall, not direct gunfire). The attackers, carrying M4 carbines and AK-47s with Pakistani markings, flee into the forest. Security forces pursue but fail to neutralise them immediately. The attack is significant on two levels: (1) it targets Hindu pilgrims in Jammu division \u2014 not the Kashmir Valley \u2014 expanding the operational footprint; (2) it occurs in Modi 3.0's first week (Modi sworn in June 9, 2024), a deliberate signal. Rizwan Shah, re-positioned post-Balakot in a rebuilt cover, has intelligence on the infiltration route used \u2014 but the terrain and timing have already yielded. The turning point: can he provide retroactive intelligence that identifies the handler chain and prevents the follow-on?",
+  "real_world_correlation": {
+    "event_date": "June 9, 2024",
+    "real_event": "Reasi attack: Bus carrying pilgrims from Shiv Khori temple on the Tuksan road, Reasi district. Two gunmen (later identified as Pakistani nationals \u2014 SIM cards, M4 carbines, tactical equipment of Pakistani origin found at the scene). Bus fell into Teryath gorge after driver hit. 9 killed, 33 injured. Gunmen fled into dense forest. Indian Army and J&K Police launched cordon-and-search operation; both attackers eventually neutralised (one killed, one captured in later operation).",
+    "jammu_pivot": "The Reasi attack was part of a 2023-2024 pattern of ISI-directed attacks shifting from the Kashmir Valley (where counter-insurgency had improved significantly post-2019) to Jammu division \u2014 which had relatively lower security grid density. Reasi, Rajouri, Poonch districts saw multiple attacks in 2023-2024. The Jammu pivot was ISI's adaptation to Article 370's security improvements in the Valley.",
+    "modi_swearing_in_timing": "Modi's third oath ceremony was June 9, 2024 \u2014 the same day as the Reasi attack. The timing was deliberate: ISI-TRF coordination to send a message on India's most politically significant day. This mirrors the 2019 Pulwama attack's strategic timing (pre-election pressure campaign).",
+    "m4_carbine_continuity": "M4 carbines were used in both the Reasi attack (June 2024) and the Pahalgam massacre (April 2025). The same weapons pipeline \u2014 traced in Indian intelligence assessments to ISI procurement via Gulf routes \u2014 connects the two attacks. This continuity is the forensic thread Rizwan Shah would exploit.",
+    "captured_attacker_intelligence": "One attacker was eventually captured (Aaqib alias Mohammed Hassan, Pakistani national). His interrogation reportedly revealed: ISI funding, TRF-JeM joint operational planning, infiltration route through Pir Panjal Pass, M4 procurement via ISI-Gulf-Pakistan arms pipeline. This intelligence directly fed into the Pahalgam investigation 10 months later.",
+    "isi_trf_joint_cell": "Indian intelligence concluded Reasi was a joint ISI-TRF-JeM operation. The TRF provided local knowledge and route intelligence; JeM provided trained operatives (Pakistani nationals); ISI provided weapons, funding, and strategic authorisation. This three-actor model became the template intelligence agencies used to reverse-engineer both Reasi and Pahalgam."
+  },
+  "state_vector": {
+    "cover_integrity": 6.5,
+    "trust_capital": 5.0,
+    "intelligence_depth": 7.5,
+    "network_strength": 7.0,
+    "exposure_risk": 6.5
+  },
+  "available_actions": [
+    "trace_m4_pipeline_reasi_to_isi_source",
+    "identify_trf_jem_joint_cell_handler_reasi",
+    "map_infiltration_route_pir_panjal_active_corridor",
+    "assess_follow_on_attack_planning_jammu_pivot",
+    "provide_intelligence_for_captured_attacker_interrogation"
+  ],
+  "mission_tasks": [
+    {
+      "id": "m4_pipeline_trace_reasi",
+      "name": "Trace M4 carbine supply chain from Reasi attack back to ISI procurement source \u2014 establish the Gulf-Pakistan arms pipeline",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "trf_jem_handler_identify",
+        "pir_panjal_route_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "trf_jem_handler_identify",
+      "name": "Identify the ISI-TRF-JeM handler chain for Reasi \u2014 who authorised at ISI level, who coordinated at TRF level",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "m4_pipeline_trace_reasi"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "pir_panjal_route_map",
+      "name": "Map the Pir Panjal Pass infiltration route used in Reasi \u2014 other cells that used it, current active corridors",
+      "optimistic_days": 14,
+      "most_likely_days": 21,
+      "pessimistic_days": 45,
+      "dependencies": [],
+      "parallelizable_with": [
+        "m4_pipeline_trace_reasi"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    },
+    {
+      "id": "followon_jammu_attack_assess",
+      "name": "Assess whether ISI-TRF has follow-on attacks planned in Jammu division \u2014 continuation of Jammu pivot strategy",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "trf_jem_handler_identify"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "trace_m4_pipeline_reasi_to_isi_source",
+      "identify_trf_jem_joint_cell_handler_reasi",
+      "map_infiltration_route_pir_panjal_active_corridor",
+      "assess_follow_on_attack_planning_jammu_pivot",
+      "provide_intelligence_for_captured_attacker_interrogation",
+      "m4_pipeline_isi_source_identified",
+      "trf_jem_handler_chain_exposed",
+      "pir_panjal_route_closed_follow_on_prevented",
+      "followon_attack_occurs_jammu",
+      "pahalgam_type_attack_enabled_by_same_pipeline"
+    ],
+    "edges": [
+      {
+        "cause": "trace_m4_pipeline_reasi_to_isi_source",
+        "effect": "m4_pipeline_isi_source_identified",
+        "strength": 0.75,
+        "known_confounders": [
+          "pipeline_compartmentalisation"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "identify_trf_jem_joint_cell_handler_reasi",
+        "effect": "trf_jem_handler_chain_exposed",
+        "strength": 0.7,
+        "known_confounders": [
+          "trf_cell_compartmentalisation"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "map_infiltration_route_pir_panjal_active_corridor",
+        "effect": "pir_panjal_route_closed_follow_on_prevented",
+        "strength": 0.65,
+        "known_confounders": [
+          "alternative_routes_available"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_follow_on_attack_planning_jammu_pivot",
+        "effect": "followon_attack_occurs_jammu",
+        "strength": 0.3,
+        "known_confounders": [
+          "isi_trf_adaptation_speed"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "m4_pipeline_isi_source_identified",
+        "effect": "pahalgam_type_attack_enabled_by_same_pipeline",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "provide_intelligence_for_captured_attacker_interrogation",
+        "effect": "trf_jem_handler_chain_exposed",
+        "strength": 0.8,
+        "known_confounders": [
+          "attacker_knowledge_depth"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_trf_jem_jammu_pivot_cell",
+      "objective": "Establish Jammu division as new operational theatre; exploit lower security grid vs. Kashmir Valley; signal capability on Modi 3.0 inauguration day; build Jammu operational precedent for future civilian-targeting attacks (Pahalgam template)",
+      "capability": 8.0,
+      "trigger_threshold": 6.5,
+      "information_set": [
+        "jammu_security_grid_density",
+        "hindu_pilgrimage_routes_calendar",
+        "pir_panjal_infiltration_corridors",
+        "isi_arms_pipeline_routes"
+      ],
+      "observable_actions": [
+        "infiltrate_pir_panjal_pass_reasi_sector",
+        "ambush_pilgrim_bus_shiv_khori_road",
+        "use_m4_carbines_isi_procurement",
+        "flee_into_forest_pre_planned_escape_route",
+        "plan_followon_attacks_rajouri_poonch"
+      ],
+      "hidden_states": [
+        "executing_reasi",
+        "fleeing",
+        "planning_followon",
+        "adapting_after_attacker_captured"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.6,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "trf",
+      "target": "jem",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "joint_operational_planning"
+    },
+    {
+      "source": "isi",
+      "target": "trf",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "strategic_authorisation_funding"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "m4_isi_procurement_source",
+      "name": "ISI procurement source for M4 carbines \u2014 Gulf intermediary, route into Pakistan, distribution to TRF-JeM (same pipeline used in Pahalgam 2025)",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.95,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "trace_m4_pipeline_reasi_to_isi_source"
+      ]
+    },
+    {
+      "id": "trf_jem_reasi_handler_chain",
+      "name": "ISI-TRF-JeM three-actor handler chain for Reasi attack \u2014 ISI authorising officer, TRF coordinator, JeM operative manager",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.92,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "identify_trf_jem_joint_cell_handler_reasi",
+        "provide_intelligence_for_captured_attacker_interrogation"
+      ]
+    },
+    {
+      "id": "pir_panjal_active_infiltration_cells",
+      "name": "How many other cells used the Pir Panjal corridor in 2023-2024 \u2014 current active infiltrators in Jammu division",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "map_infiltration_route_pir_panjal_active_corridor"
+      ]
+    }
+  ],
+  "belief_state": {
+    "same_m4_pipeline_will_be_used_in_followon_attacks": 0.8,
+    "trf_jem_handler_chain_traceable_from_captured_attacker": 0.65,
+    "pir_panjal_corridor_currently_active_other_cells": 0.6,
+    "isi_will_pause_jammu_operations_post_capture": 0.15
+  },
+  "source_refs": [
+    "https://indianexpress.com/article/india/mha-hands-over-nia-probe-terror-attack-bus-jk-9397158/",
+    "https://en.wikipedia.org/wiki/2024_Reasi_attack"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "grounding_type": "direct",
+      "confidence": 0.9,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ]
+}

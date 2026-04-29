@@ -1,0 +1,307 @@
+{
+  "id": "galwan-china-kinetic-clash",
+  "operative": "ajay_sanyal",
+  "film": 4,
+  "act": 1,
+  "description": "Night of June 15-16, 2020. Following weeks of India-China military disengagement talks in eastern Ladakh (Pangong Tso, Galwan Valley, Hot Springs \u2014 5 friction points), Indian Army's 16 Bihar Regiment CO Colonel Santosh Babu leads a patrol to verify Chinese withdrawal per the June 6 de-escalation agreement. The Chinese have not withdrawn \u2014 they have built new structures. What follows is a hand-to-hand combat at 14,000 feet in sub-zero temperatures: rocks, iron rods wrapped in barbed wire, nail-studded clubs. 20 Indian soldiers killed including Colonel Santosh Babu \u2014 the highest Indian military death toll in a China clash since 1967. Chinese casualties: officially 4 (China's first admission of any LOC casualties since 1979); credible estimates suggest 35-45. NSA Ajay Sanyal must now manage India's strategic response: the China threat is no longer a Doklam-style standoff \u2014 it is kinetic, lethal, and has breached a half-century of relative restraint.",
+  "real_world_correlation": {
+    "event_date": "June 15-16, 2020",
+    "real_event": "Galwan Valley clash: Colonel Santosh Babu (CO, 16 Bihar Regiment) and 19 other Indian soldiers killed in hand-to-hand combat at Patrol Point 14, Galwan Valley. PLA troops had established new structures post-June 6 agreement. Colonel Qi Fabao (PLA) led the Chinese contingent; he was confirmed wounded. China initially denied casualties, admitted 4 deaths after social media leaks; Australian intelligence estimated 35-45 PLA killed. The PLA troops used iron rods, barbed-wire wrapped clubs, rocks \u2014 pre-planned ambush of the Indian patrol.",
+    "tactical_ambush_evidence": "The PLA troops had prepared improvised weapons (iron rods wrapped in barbed wire, nail-studded clubs) in advance \u2014 a planned ambush, not a spontaneous confrontation. This indicates GHQ-PLA level authorisation, not local commander decision. The timing \u2014 after the de-escalation agreement \u2014 was designed to punish India for the agreement while deniably claiming it was an Indian patrol violation.",
+    "strategic_context": "The 2020 Galwan clash was preceded by Chinese territorial creep: PLA had occupied 38-40 sq km of Indian-claimed territory (Gogra-Hot Springs, Depsang, Pangong Tso north bank) between April-June 2020, exploiting India's COVID distraction. Galwan was the kinetic punctuation to a sustained territorial aggression campaign.",
+    "india_response": "India immediately restricted Chinese apps (58 apps banned June 29, 100+ more later), accelerated infrastructure construction in LAC areas, approved fast-track procurement of fighter jets and equipment, and pursued diplomatic isolation of China at the Quad (India-US-Japan-Australia). The economic response was significant: Indian imports from China were disrupted, Chinese investment in India effectively halted.",
+    "chinese_media_suppression": "China censored all domestic coverage of PLA casualties. Social media posts naming dead PLA soldiers were deleted. The PLA's belated admission of 4 deaths came 8 months later in February 2021, when the four were awarded posthumous medals. The gap between the real number and the admitted number became a major intelligence question.",
+    "disengagement": "19-round corps commander talks through 2021-2022 led to phased disengagement at Gogra-Hot Springs (August 2021), Pangong (February 2021), and partial Depsang disengagement (October 2024). Full disengagement was not achieved by 2025."
+  },
+  "state_vector": {
+    "cover_integrity": 9.5,
+    "trust_capital": 9.0,
+    "intelligence_depth": 7.0,
+    "network_strength": 8.5,
+    "exposure_risk": 3.0
+  },
+  "available_actions": [
+    "assess_pla_intent_galwan_strategic_vs_tactical",
+    "design_economic_military_response_package",
+    "map_china_pakistan_two_front_coordination",
+    "identify_pla_galwan_authorisation_chain",
+    "assess_nuclear_dimension_china_confrontation"
+  ],
+  "mission_tasks": [
+    {
+      "id": "pla_intent_assess",
+      "name": "Assess whether Galwan was GHQ/Politburo-authorised strategic escalation or local PLA commander overreach",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "china_pakistan_coordination_galwan",
+        "pla_casualty_real_count"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "china_pakistan_coordination_galwan",
+      "name": "Assess whether PLA-Galwan action was coordinated with ISI to create simultaneous two-front pressure during COVID distraction",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "pla_intent_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "pla_casualty_real_count",
+      "name": "Establish real PLA casualty count from Galwan \u2014 intelligence leverage over China's domestic narrative suppression",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "pla_intent_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "economic_response_design",
+      "name": "Design targeted economic response to China \u2014 app bans, FDI restrictions, supply chain diversification (Make in India) to impose costs without military escalation",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "pla_intent_assess"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_pla_intent_galwan_strategic_vs_tactical",
+      "design_economic_military_response_package",
+      "map_china_pakistan_two_front_coordination",
+      "identify_pla_galwan_authorisation_chain",
+      "assess_nuclear_dimension_china_confrontation",
+      "pla_action_politburo_authorised_sustained_pressure",
+      "pla_action_local_commander_overreach",
+      "china_pakistan_two_front_confirmed",
+      "india_economic_response_imposed",
+      "further_galwan_type_clash_risk"
+    ],
+    "edges": [
+      {
+        "cause": "assess_pla_intent_galwan_strategic_vs_tactical",
+        "effect": "pla_action_politburo_authorised_sustained_pressure",
+        "strength": 0.7,
+        "known_confounders": [
+          "pla_chain_of_command_opacity"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "assess_pla_intent_galwan_strategic_vs_tactical",
+        "effect": "pla_action_local_commander_overreach",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": false
+      },
+      {
+        "cause": "map_china_pakistan_two_front_coordination",
+        "effect": "china_pakistan_two_front_confirmed",
+        "strength": 0.4,
+        "known_confounders": [
+          "pla_isi_communication_opacity"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "design_economic_military_response_package",
+        "effect": "india_economic_response_imposed",
+        "strength": 0.9,
+        "known_confounders": [
+          "india_china_trade_dependency"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "pla_action_politburo_authorised_sustained_pressure",
+        "effect": "further_galwan_type_clash_risk",
+        "strength": 0.75,
+        "known_confounders": [
+          "disengagement_progress"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "india_economic_response_imposed",
+        "effect": "further_galwan_type_clash_risk",
+        "strength": 0.35,
+        "known_confounders": [
+          "china_retaliation_decision"
+        ],
+        "identified": false
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "pla_western_theatre_command_galwan",
+      "objective": "Establish territorial control of Galwan, Gogra-Hot Springs, Depsang as new LAC status quo; punish India for border infrastructure acceleration; test Quad solidarity; demonstrate PLA capability for domestic audience; suppress casualty information internally",
+      "capability": 10.0,
+      "trigger_threshold": 9.5,
+      "information_set": [
+        "india_military_deployment_lac",
+        "india_infrastructure_projects_lac",
+        "quad_solidarity_assessment",
+        "india_economic_vulnerability_to_china"
+      ],
+      "observable_actions": [
+        "maintain_new_forward_positions_post_galwan",
+        "reinforce_pangong_north_bank",
+        "suppress_casualty_information_domestically",
+        "accept_corps_commander_talks_while_consolidating_gains",
+        "signal_willingness_to_use_pla_air_power"
+      ],
+      "hidden_states": [
+        "consolidating",
+        "negotiating_face_save",
+        "preparing_next_pressure_point",
+        "absorbing_domestic_criticism"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.7,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_two_front_galwan_exploitation",
+      "objective": "Exploit India's simultaneous China distraction to resume LOC infiltration pressure; coordinate messaging with PLA on Indian military two-front stretch",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "india_military_deployment_lac_proportion",
+        "kashmir_militant_readiness",
+        "china_signals_on_coordinated_pressure"
+      ],
+      "observable_actions": [
+        "increase_infiltration_attempts_loc_during_galwan",
+        "coordinate_messaging_with_chinese_state_media",
+        "plan_attack_during_india_distraction_window"
+      ],
+      "hidden_states": [
+        "exploiting",
+        "holding",
+        "coordinating"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.6,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "narendra_modi",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.78,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "quad_activation_post_galwan"
+    },
+    {
+      "source": "india",
+      "target": "japan",
+      "strength": 0.82,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "quad_intelligence_sharing"
+    },
+    {
+      "source": "india",
+      "target": "australia",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "quad_military_exercises"
+    },
+    {
+      "source": "china",
+      "target": "pakistan",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "cpec_military_cooperation"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "pla_galwan_politburo_authorisation",
+      "name": "Whether Galwan action was authorised at Politburo Standing Committee level \u2014 determines sustained vs. accidental escalation",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.98,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "assess_pla_intent_galwan_strategic_vs_tactical",
+        "identify_pla_galwan_authorisation_chain"
+      ]
+    },
+    {
+      "id": "pla_real_casualty_count",
+      "name": "Real PLA casualty count from Galwan \u2014 intelligence leverage for future negotiations and domestic narrative management",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "identify_pla_galwan_authorisation_chain"
+      ]
+    },
+    {
+      "id": "china_isi_galwan_coordination_signal",
+      "name": "Evidence of PLA-ISI coordination on simultaneous two-front pressure during India's COVID distraction",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.9,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "map_china_pakistan_two_front_coordination"
+      ]
+    }
+  ],
+  "belief_state": {
+    "pla_action_politburo_authorised_sustained_territorial_grab": 0.65,
+    "pla_action_theatre_command_authorised_local_overreach": 0.25,
+    "pla_isi_galwan_timing_coordinated": 0.4,
+    "galwan_isolated_incident_no_further_escalation_planned": 0.1
+  },
+  "source_refs": [
+    "https://www.mea.gov.in/media-briefings.htm?dtl%2F32790%2FReadout_by_Official_Spokesperson_on_the_India__China_Border_Issue_during_the_Virtual_Weekly_Media_Briefing_on_18_June_2020=",
+    "https://www.mea.gov.in/response-to-queries.htm?dtl%2F32770%2FOfficial+Spokespersons+response+to+media+queries+seeking+comments+on+the+statement+issued+on+19+June+by+the+Chinese+Spokesperson+on+the+events+in+the+Galwan+valley+area="
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch2",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:38:03+00:00"
+    }
+  ]
+}

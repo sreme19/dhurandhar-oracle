@@ -1,0 +1,347 @@
+{
+  "id": "khanani-ficn-network-strike",
+  "operative": "rizwan_shah",
+  "film": 2,
+  "act": 2,
+  "description": "2016. Rizwan Shah, coordinating with Hamza, has mapped the Khanani-Kalia International (KKI) fake Indian currency note (FICN) distribution network. Javed Khanani (Altaf's brother, operating after Altaf's 2015 US arrest) is the primary target. The operation is timed to coordinate with a Delhi decision on currency demonetisation \u2014 rendering the FICN stockpile worthless as a coordinated intelligence strike. Rizwan must decide how to execute the financial network takedown: whether to physically eliminate Khanani (kinetic), disrupt the network through financial intelligence passed to FATF, or time the operation with the demonetisation announcement for maximum impact.",
+  "real_world_correlation": {
+    "khanani_real_history": "Khanani-Kalia International (KKI) was a real hawala network designated by US Treasury OFAC in 2012 for money laundering for terrorist organisations including LeT, Dawood Ibrahim's D-Company, and Khalistani networks. Altaf Khanani was arrested in Panama in 2015 and extradited to the US. Javed Khanani, his brother, continued operations from Karachi. Javed died in Karachi on December 4, 2016 \u2014 26 days after demonetisation. Circumstances officially disputed (cardiac arrest per Pakistani press); India's involvement widely suspected.",
+    "ficn_real_scale": "The Reserve Bank of India estimates FICN circulation at 70-200 crore rupees annually, with ISI's primary distribution chain running via Dubai \u2192 Nepal \u2192 India and via the Karachi-Gulf hawala network. The FICN is high quality (produced on Intaglio printing machines allegedly supplied by a state actor) and primarily targets Indian border states and festival seasons.",
+    "demonetisation_intelligence_framing": "India's November 8, 2016 demonetisation of \u20b9500/\u20b91000 notes was publicly framed as an economic anti-black-money measure. Intelligence community insiders have described it as also serving a counter-FICN function \u2014 rendering the estimated \u20b9400-800 crore FICN stockpile worthless overnight. The film makes this covert function explicit and primary.",
+    "fatf_intelligence_contribution": "Real intelligence products from Indian agencies contributed to the FATF evidence base that put Pakistan on the grey list in 2018. The film's intelligence narrative (Rizwan mapping the KKI network) reflects the kind of financial intelligence that feeds into FATF reporting.",
+    "coordinated_strike_doctrine": "The coordination of a kinetic/financial intelligence operation with a domestic policy announcement (demonetisation) to maximise adversary damage is a documented doctrine element \u2014 using state economic policy as a weapon is distinct from and complementary to kinetic intelligence operations."
+  },
+  "state_vector": {
+    "cover_integrity": 7.5,
+    "trust_capital": 3.0,
+    "intelligence_depth": 8.0,
+    "network_strength": 7.5,
+    "exposure_risk": 6.0
+  },
+  "available_actions": [
+    "eliminate_khanani_javed_kinetic_timed_to_demonetisation",
+    "pass_kki_network_map_to_fatf_via_delhi",
+    "disrupt_distribution_routes_without_elimination",
+    "capture_khanani_extract_d_company_isi_links",
+    "delay_operation_gather_complete_network_map"
+  ],
+  "mission_tasks": [
+    {
+      "id": "khanani_javed_surveillance",
+      "name": "Map Javed Khanani's daily routine, security detail, and operational schedule",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "ficn_distribution_route_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "ficn_distribution_route_map",
+      "name": "Complete mapping of FICN distribution routes (Karachi \u2192 Dubai \u2192 Nepal \u2192 India border)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "khanani_javed_surveillance"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.12
+    },
+    {
+      "id": "delhi_demonetisation_timing_confirm",
+      "name": "Receive confirmation of demonetisation timing from Sanyal to synchronise kinetic strike",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [
+        "ficn_distribution_route_map"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "execute_khanani_strike",
+      "name": "Execute elimination/disruption of Khanani within 48h of demonetisation announcement",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [
+        "khanani_javed_surveillance",
+        "delhi_demonetisation_timing_confirm"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.45
+    },
+    {
+      "id": "punjab_pipeline_intel_package",
+      "name": "Compile Happy PHD Punjab narco-Khalistan pipeline intel for NIA handoff",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "ficn_distribution_route_map"
+      ],
+      "parallelizable_with": [
+        "execute_khanani_strike"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "eliminate_khanani_javed_kinetic_timed_to_demonetisation",
+      "pass_kki_network_map_to_fatf_via_delhi",
+      "disrupt_distribution_routes_without_elimination",
+      "capture_khanani_extract_d_company_isi_links",
+      "delay_operation_gather_complete_network_map",
+      "ficn_network_operationally_destroyed",
+      "fatf_grey_list_evidence_strengthened",
+      "d_company_isi_nexus_exposed",
+      "isi_counter_response_major_iqbal",
+      "hamza_rizwan_exposure_risk_spikes",
+      "demonetisation_ficn_stockpile_worthless",
+      "partial_disruption_network_rebuilds"
+    ],
+    "edges": [
+      {
+        "cause": "eliminate_khanani_javed_kinetic_timed_to_demonetisation",
+        "effect": "ficn_network_operationally_destroyed",
+        "strength": 0.85,
+        "known_confounders": [
+          "kki_redundancy"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "eliminate_khanani_javed_kinetic_timed_to_demonetisation",
+        "effect": "demonetisation_ficn_stockpile_worthless",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "eliminate_khanani_javed_kinetic_timed_to_demonetisation",
+        "effect": "isi_counter_response_major_iqbal",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pass_kki_network_map_to_fatf_via_delhi",
+        "effect": "fatf_grey_list_evidence_strengthened",
+        "strength": 0.88,
+        "known_confounders": [
+          "fatf_political_dynamics"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "pass_kki_network_map_to_fatf_via_delhi",
+        "effect": "ficn_network_operationally_destroyed",
+        "strength": 0.45,
+        "known_confounders": [
+          "pakistan_fatf_compliance"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "disrupt_distribution_routes_without_elimination",
+        "effect": "partial_disruption_network_rebuilds",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "capture_khanani_extract_d_company_isi_links",
+        "effect": "d_company_isi_nexus_exposed",
+        "strength": 0.8,
+        "known_confounders": [
+          "khanani_cooperation"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "capture_khanani_extract_d_company_isi_links",
+        "effect": "isi_counter_response_major_iqbal",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "capture_khanani_extract_d_company_isi_links",
+        "effect": "hamza_rizwan_exposure_risk_spikes",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "isi_counter_response_major_iqbal",
+        "effect": "hamza_rizwan_exposure_risk_spikes",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "khanani_javed",
+      "objective": "Maintain KKI operations after Altaf's arrest; protect ISI-D-Company financial corridor",
+      "capability": 7.5,
+      "trigger_threshold": 5.5,
+      "information_set": [
+        "kki_network",
+        "isi_protection",
+        "karachi_criminal_connections"
+      ],
+      "observable_actions": [
+        "activate_alternative_hawala_routes",
+        "increase_personal_security",
+        "alert_isi_of_surveillance",
+        "accelerate_ficn_deployment_before_exposure"
+      ],
+      "hidden_states": [
+        "operating",
+        "defensive",
+        "panicking"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "major_iqbal",
+      "objective": "Detect and neutralise Indian intelligence operation targeting the FICN financial infrastructure",
+      "capability": 9.0,
+      "trigger_threshold": 6.5,
+      "information_set": [
+        "isi_surveillance",
+        "kki_isi_liaison_channel",
+        "counter_intelligence"
+      ],
+      "observable_actions": [
+        "increase_surveillance_of_karachi_financiers",
+        "deploy_counter_intelligence_teams",
+        "warn_khanani",
+        "initiate_hunt_for_indian_operatives"
+      ],
+      "hidden_states": [
+        "monitoring",
+        "suspicious",
+        "hunting"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "khanani_javed",
+      "target": "major_iqbal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "mutual_protection"
+    },
+    {
+      "source": "khanani_javed",
+      "target": "dawood_ibrahim",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "kki_full_network_map",
+      "name": "Complete KKI network: all routes, cut-outs, and ISI officer contacts",
+      "current_entropy": 1.5,
+      "mission_relevance": 0.92,
+      "access_difficulty": 3.0,
+      "access_actions": [
+        "ficn_distribution_route_map"
+      ]
+    },
+    {
+      "id": "d_company_isi_nexus",
+      "name": "Dawood Ibrahim D-Company officers receiving ISI FICN protection",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.8,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "capture_khanani_extract_d_company_isi_links"
+      ]
+    },
+    {
+      "id": "happy_phd_punjab_network",
+      "name": "Happy PHD's complete Punjab narco-Khalistan supply chain",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.78,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "ficn_distribution_route_map",
+        "punjab_pipeline_intel_package"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_iqbal_unaware_khanani_unsuspecting": 0.4,
+    "cover_intact_iqbal_monitoring_khanani_defensive": 0.3,
+    "cover_suspected_iqbal_active_hunt_khanani_alerted": 0.22,
+    "cover_blown_iqbal_identified_rizwan_or_hamza": 0.08
+  },
+  "source_refs": [
+    "https://home.treasury.gov/news/press-releases/jl0265",
+    "https://home.treasury.gov/news/press-releases/jl0574"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "grounding_type": "contextual",
+      "confidence": 0.85,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ]
+}

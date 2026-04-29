@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-29T14:38:03+00:00",
+  "method": "web_search_seed_batch2",
+  "notes": "Append-only source addendum. Existing data must remain intact.",
+  "entries": [
+    {
+      "turning_point_id": "galwan-china-kinetic-clash",
+      "confidence": 0.93,
+      "source_refs": [
+        "https://www.mea.gov.in/media-briefings.htm?dtl%2F32790%2FReadout_by_Official_Spokesperson_on_the_India__China_Border_Issue_during_the_Virtual_Weekly_Media_Briefing_on_18_June_2020=",
+        "https://www.mea.gov.in/response-to-queries.htm?dtl%2F32770%2FOfficial+Spokespersons+response+to+media+queries+seeking+comments+on+the+statement+issued+on+19+June+by+the+Chinese+Spokesperson+on+the+events+in+the+Galwan+valley+area="
+      ]
+    },
+    {
+      "turning_point_id": "doklam-china-second-front",
+      "confidence": 0.92,
+      "source_refs": [
+        "http://www.mea.gov.in/press-releases.htm?dtl%2F28572%2FRecent+Developments+in+Doklam+Area=",
+        "https://www.mea.gov.in/Uploads/PublicationDocs/28895_Doklam_new.pdf",
+        "https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff"
+      ]
+    },
+    {
+      "turning_point_id": "taliban-kabul-fall-recalibration",
+      "confidence": 0.84,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)",
+        "https://www.reuters.com/world/timeline-talibans-rapid-advance-across-afghanistan-2021-08-15/"
+      ]
+    },
+    {
+      "turning_point_id": "nijjar-killing-india-canada-crisis",
+      "confidence": 0.86,
+      "source_refs": [
+        "https://www.reuters.com/world/india/india-dismisses-absurd-canadas-accusation-sikh-leaders-murder-2023-09-19/",
+        "https://en.wikipedia.org/wiki/2023%E2%80%9325_Canada%E2%80%93India_diplomatic_row",
+        "https://www.thehindu.com/news/national/india-rejects-canadian-prime-minister-justin-trudeaus-allegations-on-killing-of-pro-khalistan-activist-hardeep-singh-nijjar/article67321510.ece"
+      ]
+    },
+    {
+      "turning_point_id": "cds-rawat-crash-institutional-setback",
+      "confidence": 0.9,
+      "source_refs": [
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=1789972",
+        "https://en.wikipedia.org/wiki/2021_Indian_Air_Force_Mil_Mi-17_crash"
+      ]
+    },
+    {
+      "turning_point_id": "imran-khan-collapse-pakistan-instability",
+      "confidence": 0.85,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/No-confidence_motion_against_Imran_Khan",
+        "https://en.wikipedia.org/wiki/2022_Pakistani_constitutional_crisis",
+        "https://www.dawn.com/news/1744819"
+      ]
+    },
+    {
+      "turning_point_id": "pahalgam-attack-crisis",
+      "confidence": 0.62,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2025_Pahalgam_attack"
+      ]
+    },
+    {
+      "turning_point_id": "operation-sindoor-strike",
+      "confidence": 0.45,
+      "source_refs": [
+        "https://www.news18.com/explainers/revisiting-operation-sindoor-how-india-delivered-pakistan-backed-terror-a-body-blow-after-pahalgam-ws-l-10047857.html"
+      ]
+    }
+  ]
+}

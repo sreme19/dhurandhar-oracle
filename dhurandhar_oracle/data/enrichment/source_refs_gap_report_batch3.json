@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-04-29T14:39:34+00:00",
+  "merge_mode": "append_only",
+  "batch": "batch3",
+  "updated_count": 6,
+  "updated": [
+    {
+      "turning_point_id": "sajid-mir-prison-poisoning",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "zahoor-mistry-elimination",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "mystery-killings-pakistan-covert-campaign",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "reasi-pilgrim-bus-attack",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "torkham-entry-cover-setup",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "khanani-ficn-network-strike",
+      "added_refs": 2
+    }
+  ],
+  "seed_missing_files": [],
+  "turning_points_without_source_refs_count": 13,
+  "turning_points_without_source_refs": [
+    "aalam-handler-contact",
+    "dakait-ambush-coordination",
+    "dakait-first-meeting",
+    "isi-capture-torture",
+    "ltf-raid-cover-crisis",
+    "major-iqbal-madrassa-siege",
+    "major-iqbal-tanker-final",
+    "marriage-proposal-gambit",
+    "naya-bharat-mandate",
+    "rizwan-partnership-activation",
+    "sanyal-isi-blackmail",
+    "yalina-identity-exposure",
+    "yalina-romance-risk"
+  ]
+}

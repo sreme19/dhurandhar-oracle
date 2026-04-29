@@ -1,0 +1,374 @@
+{
+  "id": "marriage-proposal-gambit",
+  "operative": "hamza",
+  "film": 1,
+  "act": 2,
+  "description": "Hamza proposes marriage to Yalina by formally approaching her father Jameel Jamali. The proposal is simultaneously a genuine declaration (Hamza has genuinely fallen for Yalina) and a calculated cover-deepening move \u2014 marrying into the Jamali family would grant him authority in Lyari's political-criminal network, make him nearly impossible to suspect as an Indian agent, and open direct access to the Jamali-ISI financial channel. The decision to go through with the proposal is the most ethically complex moment of Film 1.",
+  "real_world_correlation": {
+    "deep_cover_marriage": "Ravindra Kaushik (Hamza's primary real-world parallel) is reported to have married a Pakistani woman during his undercover years. The marriage provided genuine cover depth \u2014 a man with a Pakistani wife and family is structurally harder to classify as a foreign agent. Indian government neither confirmed nor denied the marriage's operational purpose.",
+    "jamali_political_network": "The Jamali character parallels documented PPP-linked politicians in Karachi who had acknowledged relationships with Lyari criminal structures. The political-criminal nexus in Karachi (particularly the PPP-PAC relationship) is one of the most documented and least prosecuted corruption structures in Pakistani political history.",
+    "strategic_marriage_in_intelligence": "Both the CIA's MKULTRA-era files and more recent Snowden documents reference 'intimate cover' relationships as intelligence access tools. The ethical framework distinguishing 'strategic' from 'genuine' relationships in deep cover is unresolved in intelligence ethics literature \u2014 which is exactly the ambiguity the film exploits.",
+    "stakes_escalation": "With marriage comes family \u2014 a child becomes possible (as happens in Film 2 with Zayan). Each deepening of the personal relationship increases both the cover depth (hard to suspect) and the catastrophic risk if blown (the family is endangered). Real deep-cover doctrine recognises this as an irreversible ratchet."
+  },
+  "state_vector": {
+    "cover_integrity": 7.5,
+    "trust_capital": 6.5,
+    "intelligence_depth": 5.0,
+    "network_strength": 5.5,
+    "exposure_risk": 4.8
+  },
+  "available_actions": [
+    "propose_marriage_full_commitment",
+    "propose_informally_delay_formal_engagement",
+    "withdraw_from_yalina_maintain_distance",
+    "request_delhi_guidance_on_personal_entanglement",
+    "use_proposal_as_access_then_abandon"
+  ],
+  "mission_tasks": [
+    {
+      "id": "jamali_political_access",
+      "name": "Gain direct access to Jamali's political and financial network via marriage",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "build_trust_dakait_via_family_standing"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.12
+    },
+    {
+      "id": "build_trust_dakait_via_family_standing",
+      "name": "Use Jamali family connection to accelerate Dakait's trust (political legitimacy in Lyari)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "jamali_political_access"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.08
+    },
+    {
+      "id": "isi_money_trail",
+      "name": "Trace ISI FICN transfers through Jamali's political donation accounts",
+      "optimistic_days": 45,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "jamali_political_access"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "major_iqbal_identification",
+      "name": "Identify the ISI handler (Major Iqbal) operating through Jamali as cut-out",
+      "optimistic_days": 60,
+      "most_likely_days": 120,
+      "pessimistic_days": 240,
+      "dependencies": [
+        "isi_money_trail"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "propose_marriage_full_commitment",
+      "propose_informally_delay_formal_engagement",
+      "withdraw_from_yalina_maintain_distance",
+      "request_delhi_guidance_on_personal_entanglement",
+      "use_proposal_as_access_then_abandon",
+      "jamali_network_fully_open",
+      "dakait_trust_elevated_legitimacy",
+      "cover_depth_maximum",
+      "yalina_endangerment_risk",
+      "mission_intel_access_maximised",
+      "personal_extraction_costs_rise",
+      "cover_blown_family_vector"
+    ],
+    "edges": [
+      {
+        "cause": "propose_marriage_full_commitment",
+        "effect": "jamali_network_fully_open",
+        "strength": 0.88,
+        "known_confounders": [
+          "jamali_approval"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "propose_marriage_full_commitment",
+        "effect": "dakait_trust_elevated_legitimacy",
+        "strength": 0.82,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "propose_marriage_full_commitment",
+        "effect": "cover_depth_maximum",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "propose_marriage_full_commitment",
+        "effect": "yalina_endangerment_risk",
+        "strength": 0.7,
+        "known_confounders": [
+          "mission_duration"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "propose_marriage_full_commitment",
+        "effect": "personal_extraction_costs_rise",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "propose_informally_delay_formal_engagement",
+        "effect": "jamali_network_fully_open",
+        "strength": 0.55,
+        "known_confounders": [
+          "jamali_patience"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "propose_informally_delay_formal_engagement",
+        "effect": "cover_depth_maximum",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "withdraw_from_yalina_maintain_distance",
+        "effect": "cover_depth_maximum",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "withdraw_from_yalina_maintain_distance",
+        "effect": "yalina_endangerment_risk",
+        "strength": 0.05,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "use_proposal_as_access_then_abandon",
+        "effect": "jamali_network_fully_open",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "use_proposal_as_access_then_abandon",
+        "effect": "yalina_endangerment_risk",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "use_proposal_as_access_then_abandon",
+        "effect": "cover_blown_family_vector",
+        "strength": 0.5,
+        "known_confounders": [
+          "yalina_reaction"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "jamali_network_fully_open",
+        "effect": "mission_intel_access_maximised",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "yalina_endangerment_risk",
+        "effect": "cover_blown_family_vector",
+        "strength": 0.4,
+        "known_confounders": [
+          "yalina_loyalty"
+        ],
+        "identified": false
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "jameel_jamali",
+      "objective": "Evaluate Hamza as son-in-law; determine if alliance serves political interests",
+      "capability": 5.0,
+      "trigger_threshold": 3.5,
+      "information_set": [
+        "ppf_network_contacts",
+        "isi_liaison_major_iqbal",
+        "lyari_reputation_checks"
+      ],
+      "observable_actions": [
+        "approve_proposal_grant_access",
+        "delay_pending_background_check",
+        "consult_isi_contact_for_vetting",
+        "reject_proposal_suspicion",
+        "approve_strategically_place_informant_in_household"
+      ],
+      "hidden_states": [
+        "evaluating",
+        "approving",
+        "suspicious",
+        "consulting_isi"
+      ],
+      "prospect_params": {
+        "lam": 2.2,
+        "gamma": 0.64,
+        "alpha": 0.86,
+        "beta": 0.86,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "major_iqbal",
+      "objective": "Vet all individuals gaining access to the ISI-Jamali financial pipeline",
+      "capability": 9.0,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "isi_database_india_raw_agents",
+        "human_intelligence_karachi",
+        "technical_surveillance"
+      ],
+      "observable_actions": [
+        "run_isi_database_check",
+        "deploy_surveillance_on_new_family_member",
+        "advise_jamali_approve",
+        "advise_jamali_reject",
+        "flag_for_monitoring"
+      ],
+      "hidden_states": [
+        "unaware",
+        "monitoring",
+        "suspicious",
+        "flagged_for_neutralisation"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "yalina_jamali",
+      "strength": 0.82,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "genuine_feeling"
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "jameel_jamali",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "political_pressure"
+    },
+    {
+      "source": "jameel_jamali",
+      "target": "major_iqbal",
+      "strength": 0.55,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "isi_patronage"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "jamali_isi_major_iqbal_link",
+      "name": "Documentary evidence of Jamali receiving ISI funds via Major Iqbal cut-out",
+      "current_entropy": 3.8,
+      "mission_relevance": 0.92,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "propose_marriage_full_commitment",
+        "jamali_political_access",
+        "isi_money_trail"
+      ]
+    },
+    {
+      "id": "major_iqbal_identity_confirm",
+      "name": "Confirm true identity and chain of command of 'Major Iqbal' ISI handler",
+      "current_entropy": 4.0,
+      "mission_relevance": 0.95,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "jamali_network_fully_open",
+        "major_iqbal_identification"
+      ]
+    },
+    {
+      "id": "yalina_knowledge_depth",
+      "name": "Extent of Yalina's knowledge of father's ISI-criminal connections",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.55,
+      "access_difficulty": 3.5,
+      "access_actions": [
+        "propose_marriage_full_commitment"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_jamali_approving_iqbal_unaware": 0.4,
+    "cover_intact_jamali_approving_iqbal_monitoring": 0.28,
+    "cover_intact_jamali_consulting_iqbal_vetting": 0.22,
+    "cover_suspected_iqbal_flagged_jamali_aware": 0.1
+  },
+  "source_refs": [
+    "https://www.cia.gov/stories/story/romeo-spies/",
+    "https://www.hindustantimes.com/india-news/seduction-and-secrets-how-diplomat-madhuri-gupta-fell-for-pakistan-isi-s-honeytrap-101747823295700.html"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.49,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

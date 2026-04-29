@@ -1,0 +1,270 @@
+{
+  "id": "pathankot-homecoming-choice",
+  "operative": "hamza",
+  "film": 2,
+  "act": 3,
+  "description": "Jaskirat Singh Rangi \u2014 no longer Hamza, or not yet \u2014 returns to his hometown of Pathankot after extraction. He stands outside his family home. His mother, sister, and nephews are visible inside. They believe Jaskirat is dead \u2014 executed long ago. He could walk in and end the story as Jaskirat. Or he could walk away and continue as whatever he has become. The film offers no resolution \u2014 the door remains open, literally and figuratively. This is the final turning point of the Dhurandhar duology: not a tactical decision but an existential one. What is left of Jaskirat Singh Rangi after 20+ years of being Hamza Ali Mazari?",
+  "real_world_correlation": {
+    "ravindra_kaushik_final_parallel": "Ravindra Kaushik died in Mianwali Central Jail on November 21, 2001. He never returned to his family. His wife and children were refused government assistance for decades. The Indian government denied having any knowledge of him. The film inverts this ending \u2014 Jaskirat is alive and at the threshold \u2014 but preserves the ambiguity by not crossing it. The film acknowledges what real intelligence history suppressed: the operative's unresolved life.",
+    "no_rehabilitation_protocol": "No documented 'return protocol' exists for deep-cover operatives who have lived under alternate identities for decades. The CIA's Witness Security Programme (for domestic informants) is the closest parallel, but deep-cover operatives abroad receive no institutional support framework for psychological or social reintegration. The film identifies this institutional gap through its open ending.",
+    "identity_erasure_permanence": "Intelligence literature (particularly the post-Cold War memoirs of KGB illegals \u2014 Willy Fisher/Rudolf Abel, Jack Barsky) documents that deep-cover operatives who lived under alternate identities for 10+ years describe the original identity as 'inaccessible' \u2014 not lost, but no longer primary. Barsky (KGB illegal in the US for 10 years) described himself as genuinely becoming an American, not performing it. Jaskirat's ambiguity at the door reflects this documented psychological reality.",
+    "yalina_and_zayan": "Hamza's Pakistani family \u2014 Yalina and son Zayan \u2014 are left in Karachi. Yalina exposed Hamza to ASP Haider to protect Zayan; Uzair Baloch was framed for Iqbal's death to give Yalina a narrative that protects her from ISI recrimination. Whether the Pakistan family survives intact is left open. Whether Jaskirat owes them anything is left open. The film holds all three lives in suspension simultaneously.",
+    "open_ending_and_naya_bharat": "The ambiguous ending sits uneasily with the film's otherwise jingoistic 'Naya Bharat' framing. Critical reviewers noted this: the film celebrates India's proactive intelligence posture but ends on a note that quietly indicts the cost. Jaskirat standing outside the door \u2014 unable to go in \u2014 is the film's honest accounting of what 'Naya Bharat' costs the people who make it real."
+  },
+  "state_vector": {
+    "cover_integrity": 0.0,
+    "trust_capital": 0.0,
+    "intelligence_depth": 9.5,
+    "network_strength": 9.5,
+    "exposure_risk": 0.0
+  },
+  "available_actions": [
+    "enter_family_home_reveal_jaskirat_alive",
+    "observe_only_do_not_reveal_identity",
+    "accept_next_mission_remain_operative",
+    "negotiate_permanent_civilian_identity_in_india",
+    "return_to_pakistan_yalina_and_zayan"
+  ],
+  "mission_tasks": [
+    {
+      "id": "psychological_debriefing",
+      "name": "RAW psychological debriefing and reintegration assessment (standard post-deep-cover protocol)",
+      "optimistic_days": 30,
+      "most_likely_days": 90,
+      "pessimistic_days": 365,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "family_decision",
+      "name": "Decide whether to reveal survival to family \u2014 irreversible decision with cascading consequences",
+      "optimistic_days": 1,
+      "most_likely_days": 30,
+      "pessimistic_days": 999,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "pakistan_family_fate",
+      "name": "Determine Yalina and Zayan's safety status in Karachi post-operation",
+      "optimistic_days": 7,
+      "most_likely_days": 30,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "family_decision"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "enter_family_home_reveal_jaskirat_alive",
+      "observe_only_do_not_reveal_identity",
+      "accept_next_mission_remain_operative",
+      "negotiate_permanent_civilian_identity_in_india",
+      "return_to_pakistan_yalina_and_zayan",
+      "jaskirat_identity_restored",
+      "hamza_identity_permanent",
+      "family_reunited",
+      "operative_continues",
+      "yalina_zayan_accessible",
+      "both_families_held_at_distance",
+      "psychological_resolution"
+    ],
+    "edges": [
+      {
+        "cause": "enter_family_home_reveal_jaskirat_alive",
+        "effect": "jaskirat_identity_restored",
+        "strength": 0.8,
+        "known_confounders": [
+          "family_acceptance"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "enter_family_home_reveal_jaskirat_alive",
+        "effect": "family_reunited",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "enter_family_home_reveal_jaskirat_alive",
+        "effect": "psychological_resolution",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": false
+      },
+      {
+        "cause": "observe_only_do_not_reveal_identity",
+        "effect": "both_families_held_at_distance",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "observe_only_do_not_reveal_identity",
+        "effect": "hamza_identity_permanent",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_next_mission_remain_operative",
+        "effect": "operative_continues",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_next_mission_remain_operative",
+        "effect": "hamza_identity_permanent",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_permanent_civilian_identity_in_india",
+        "effect": "jaskirat_identity_restored",
+        "strength": 0.6,
+        "known_confounders": [
+          "sanyal_agreement"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "return_to_pakistan_yalina_and_zayan",
+        "effect": "yalina_zayan_accessible",
+        "strength": 0.8,
+        "known_confounders": [
+          "pakistan_isi_risk"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "return_to_pakistan_yalina_and_zayan",
+        "effect": "hamza_identity_permanent",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "return_to_pakistan_yalina_and_zayan",
+        "effect": "operative_continues",
+        "strength": 0.0,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "jaskirat_identity_restored",
+        "effect": "psychological_resolution",
+        "strength": 0.6,
+        "known_confounders": [
+          "20_years_of_hamza"
+        ],
+        "identified": false
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "institutional_raw_ib",
+      "objective": "Retain operative capability; prevent identity exposure that could create diplomatic incident or future liability",
+      "capability": 8.0,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "operative_psychological_state",
+        "mission_product_value",
+        "institutional_deniability"
+      ],
+      "observable_actions": [
+        "offer_new_mission",
+        "offer_civilian_resettlement",
+        "enforce_silence_nda",
+        "deny_operative_history",
+        "support_family_reunion_quietly"
+      ],
+      "hidden_states": [
+        "retaining",
+        "releasing",
+        "denying"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.6,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "yalina_jamali",
+      "strength": 0.75,
+      "betrayal_history": 1,
+      "in_coalition": false,
+      "trigger_condition": "geographic_impossible"
+    },
+    {
+      "source": "hamza",
+      "target": "mother_sister_pathankot",
+      "strength": 1.0,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "threshold_decision"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "dhurandhar_3_mission",
+      "name": "Whether Sanyal has a Film 3 mission ready \u2014 the post-credits implication",
+      "current_entropy": 4.0,
+      "mission_relevance": 0.5,
+      "access_difficulty": 5.0,
+      "access_actions": [
+        "accept_next_mission_remain_operative"
+      ]
+    },
+    {
+      "id": "yalina_zayan_karachi_safety",
+      "name": "Confirmation that Yalina and Zayan are safe post-operation in Karachi",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.8,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "return_to_pakistan_yalina_and_zayan",
+        "negotiate_permanent_civilian_identity_in_india"
+      ]
+    }
+  ],
+  "belief_state": {
+    "jaskirat_at_threshold_undecided": 0.6,
+    "jaskirat_enters_resolved_family": 0.15,
+    "jaskirat_walks_away_accepts_next_mission": 0.2,
+    "jaskirat_returns_pakistan_yalina": 0.05
+  },
+  "source_refs": [
+    "https://pib.gov.in/newsite/erelcontent.aspx?relid=134119",
+    "https://pib.gov.in/newsite/PrintRelease.aspx?relid=136914",
+    "https://en.wikipedia.org/wiki/2016_Pathankot_attack"
+  ],
+  "source_confidence": 0.9,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

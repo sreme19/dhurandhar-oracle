@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-29T20:05:00+05:30",
+  "method": "web_search_seed",
+  "notes": "Additive source reference seed. No existing turning-point or outcome data was deleted or overwritten.",
+  "entries": [
+    {
+      "turning_point_id": "pathankot-homecoming-choice",
+      "confidence": 0.9,
+      "source_refs": [
+        "https://pib.gov.in/newsite/erelcontent.aspx?relid=134119",
+        "https://pib.gov.in/newsite/PrintRelease.aspx?relid=136914",
+        "https://en.wikipedia.org/wiki/2016_Pathankot_attack"
+      ],
+      "key_facts": [
+        "Pathankot AFS attack began 2 Jan 2016.",
+        "India MoD stated strategic assets were protected and operation involved multiple agencies."
+      ]
+    },
+    {
+      "turning_point_id": "uri-attack-surgical-decision",
+      "confidence": 0.9,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2016_Uri_attack",
+        "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=151242",
+        "https://www.mea.gov.in/media-briefings.htm?dtl%2F27446%2FTranscript_of_Joint_Briefing_by_M="
+      ],
+      "key_facts": [
+        "Uri attack occurred on 18 Sep 2016.",
+        "DGMO/MEA briefing on 29 Sep 2016 framed strikes as pre-emptive counter-terror action."
+      ]
+    },
+    {
+      "turning_point_id": "surgical-strikes-execution",
+      "confidence": 0.92,
+      "source_refs": [
+        "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=151242",
+        "https://www.mea.gov.in/media-briefings.htm?dtl%2F27446%2FTranscript_of_Joint_Briefing_by_M=",
+        "https://en.wikipedia.org/wiki/2016_Indian_Line_of_Control_strike"
+      ],
+      "key_facts": [
+        "Official DGMO statement confirms strikes on launch pads across LoC.",
+        "Operation presented as finite and not open-ended."
+      ]
+    },
+    {
+      "turning_point_id": "burhan-wani-killing-radicalisation",
+      "confidence": 0.8,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Burhan_Wani",
+        "https://en.wikipedia.org/wiki/2016%E2%80%932017_Kashmir_unrest",
+        "https://www.thehindu.com/news/national/other-states/%E2%80%98Burhan-Wani-Kashmir-Valley%E2%80%99s-most-wanted-militant-commander-killed%E2%80%99/article60528421.ece"
+      ],
+      "key_facts": [
+        "Burhan Wani killed on 8 Jul 2016.",
+        "Killing triggered prolonged unrest in Kashmir valley."
+      ]
+    },
+    {
+      "turning_point_id": "pulwama-balakot-decision",
+      "confidence": 0.88,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2019_Pulwama_attack",
+        "https://data1.ibtimes.co.in/en/file/22/pulwama-chargesheet.pdf",
+        "https://en.wikipedia.org/wiki/2019_Balakot_airstrike"
+      ],
+      "key_facts": [
+        "Pulwama attack on 14 Feb 2019 killed 40 CRPF personnel.",
+        "NIA chargesheet references conspiracy and logistics trail.",
+        "Balakot strike followed on 26 Feb 2019."
+      ]
+    },
+    {
+      "turning_point_id": "balakot-airstrike-abhinandan",
+      "confidence": 0.82,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2019_Balakot_airstrike",
+        "https://en.wikipedia.org/wiki/2019_India%E2%80%93Pakistan_border_skirmishes",
+        "https://en.wikipedia.org/wiki/2019_Jammu_and_Kashmir_airstrikes"
+      ],
+      "key_facts": [
+        "Balakot airstrike conducted on 26 Feb 2019.",
+        "Abhinandan Varthaman captured on 27 Feb and released on 1 Mar 2019."
+      ]
+    },
+    {
+      "turning_point_id": "article-370-abrogation",
+      "confidence": 0.94,
+      "source_refs": [
+        "https://ladakh.gov.in/document/the-constitution-application-to-jammu-and-kashmir-order-2019-c-o-272/",
+        "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir",
+        "https://www.scobserver.in/wp-content/uploads/2023/07/Judgement-Abrogation-of-Article-370.pdf"
+      ],
+      "key_facts": [
+        "C.O. 272 was issued on 5 Aug 2019.",
+        "Order superseded prior constitutional application order for J&K."
+      ]
+    },
+    {
+      "turning_point_id": "tahawwur-rana-extradition",
+      "confidence": 0.95,
+      "source_refs": [
+        "https://www.state.gov/extradition-of-tahawwur-rana-to-india",
+        "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india"
+      ],
+      "key_facts": [
+        "US extradited Tahawwur Rana to India on 9 Apr 2025.",
+        "Extradition followed exhaustion of legal remedies in US courts."
+      ]
+    },
+    {
+      "turning_point_id": "26-11-celebration-revelation",
+      "confidence": 0.75,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2008_Mumbai_attacks",
+        "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india"
+      ],
+      "key_facts": [
+        "Mumbai attacks ran from 26 to 29 Nov 2008 with mass civilian casualties.",
+        "DOJ statement reiterates scale and planning context."
+      ]
+    },
+    {
+      "turning_point_id": "jas-raw-recruitment",
+      "confidence": 0.7,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/2001_Indian_Parliament_attack",
+        "https://www.satp.org/satporgtp/countries/india/timeline/2001.htm"
+      ],
+      "key_facts": [
+        "Parliament attack on 13 Dec 2001 created security escalation context.",
+        "Useful for macro context anchoring, not individual-level recruitment proof."
+      ]
+    }
+  ]
+}

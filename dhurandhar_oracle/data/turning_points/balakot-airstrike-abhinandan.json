@@ -1,0 +1,300 @@
+{
+  "id": "balakot-airstrike-abhinandan",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 3,
+  "description": "February 26-28, 2019. Operation Bandar: 20 IAF Mirage 2000 fighters strike Markaz Subhan Allah, Balakot, Khyber Pakhtunkhwa at 0330 hours, dropping 1,000kg SPICE-2000 bombs. First Indian air strike on Pakistani territory since 1971. The next morning, PAF retaliates \u2014 F-16s enter J&K airspace. In the dogfight, Wing Commander Abhinandan Varthaman's MiG-21 Bison shoots down a PAF F-16 (India's claim) before his aircraft is hit by a AMRAAM missile. He ejects over PoK, is captured by Pakistani villagers, handed to the Pakistani Army. The world watches as a nuclear-armed standoff hangs on 60 hours of diplomatic pressure. Rizwan Shah, blown from his Pakistan position post-strike, is now running exit intelligence operations \u2014 and must assess: will Pakistan return Abhinandan as a 'peace gesture' (ceasefire signal) or hold him to extract concessions?",
+  "real_world_correlation": {
+    "event_date": "February 26-27, 2019",
+    "real_event": "Operation Bandar: IAF Mirage 2000 aircraft (12 per The Print/IAF sources; 20 per other accounts) struck Balakot at 0330h on Feb 26. India claimed JeM camp destroyed; satellite imagery disputed significant physical damage to buildings. Feb 27: PAF F-16s entered J&K airspace. IAF scrambled interceptors. Wing Commander Abhinandan Varthaman in MiG-21 Bison engaged the F-16s. India claimed an F-16 was shot down (confirmed via AMRAAM serial number found in J&K). Abhinandan's MiG-21 was hit; he ejected into PoK, captured. Pakistan PM Imran Khan announced Feb 28 Abhinandan would be released as 'peace gesture'; returned via Wagah border March 1.",
+    "iaf_targeting_controversy": "India claimed 300+ militants killed at Balakot. Pakistan denied any militant presence. Open-source satellite analysis (Planet Labs, CNES) showed buildings intact post-strike. The Print (India) reported from IAF sources the strike did hit the building; the question was occupancy at time of strike \u2014 India acknowledged targets may have been partially evacuated. The political impact of the strike \u2014 deterrence signal \u2014 was achieved regardless of exact casualty figures.",
+    "f16_shootdown_controversy": "India claimed an F-16 was shot down, displaying a AIM-120 AMRAAM missile serial number as evidence \u2014 AMRAAMs are not sold to Pakistan for offensive use (US arms transfer restrictions). US officials initially said they could not confirm, later statements were ambiguous. Pakistan officially denies losing an F-16. Indian narrative: Abhinandan's MiG-21 Bison achieved a kill before being downed \u2014 unprecedented for a fourth-generation vs. fifth-generation engagement.",
+    "nuclear_threshold": "The 60-hour Abhinandan crisis brought India and Pakistan \u2014 both nuclear-armed \u2014 to their closest military confrontation in decades. NSA Ajit Doval (Sanyal parallel) was in direct contact with US, Saudi, and UAE counterparts. Saudi Crown Prince MBS had visited India on February 19 and Pakistan on February 17 \u2014 positioned as a back-channel. Pakistan's ISPR chief publicly referenced Pakistan's nuclear status during the crisis, which India characterised as irresponsible.",
+    "abhinandan_release": "Pakistan's announcement of Abhinandan's release came after US Vice President Mike Pence and Secretary of State Mike Pompeo made direct calls to Pakistan. Saudi back-channel also applied pressure. The release pre-empted further Indian military action \u2014 Pakistan framed it as a de-escalatory gesture; India received it as vindication of pressure strategy."
+  },
+  "state_vector": {
+    "cover_integrity": 3.0,
+    "trust_capital": 2.0,
+    "intelligence_depth": 9.0,
+    "network_strength": 6.5,
+    "exposure_risk": 9.0
+  },
+  "available_actions": [
+    "assess_pakistan_intent_abhinandan_return_or_leverage",
+    "monitor_paf_next_sortie_planning_continued_escalation",
+    "provide_nuclear_threshold_signalling_intelligence",
+    "exfiltrate_through_iran_corridor_cover_blown",
+    "assess_us_saudi_back_channel_effectiveness"
+  ],
+  "mission_tasks": [
+    {
+      "id": "abhinandan_return_assess",
+      "name": "Assess whether Pakistan intends Abhinandan's return as genuine ceasefire signal or leverage extraction attempt",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "nuclear_signalling_monitor_balakot",
+        "paf_escalation_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "paf_escalation_assess",
+      "name": "Assess whether PAF has authorised follow-on sorties into Indian airspace \u2014 is the Feb 27 action a probe or the opening of a sustained air campaign",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 4,
+      "dependencies": [],
+      "parallelizable_with": [
+        "abhinandan_return_assess",
+        "nuclear_signalling_monitor_balakot"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "nuclear_signalling_monitor_balakot",
+      "name": "Monitor for ISI/GHQ nuclear weapons activation signalling \u2014 NCA communication patterns, tactical weapon movements",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "abhinandan_return_assess",
+        "paf_escalation_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "rizwan_exfiltration_balakot",
+      "name": "Execute exfiltration from Pakistan through Iran corridor \u2014 cover is burned post-strike, immediate priority",
+      "optimistic_days": 2,
+      "most_likely_days": 5,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "abhinandan_return_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_pakistan_intent_abhinandan_return_or_leverage",
+      "monitor_paf_next_sortie_planning_continued_escalation",
+      "provide_nuclear_threshold_signalling_intelligence",
+      "exfiltrate_through_iran_corridor_cover_blown",
+      "assess_us_saudi_back_channel_effectiveness",
+      "pakistan_releases_abhinandan_ceasefire_signal",
+      "pakistan_holds_abhinandan_extracts_concessions",
+      "paf_escalates_continued_air_incursions",
+      "nuclear_threshold_signalling_confirmed",
+      "full_scale_war_averted_diplomatic_resolution"
+    ],
+    "edges": [
+      {
+        "cause": "assess_pakistan_intent_abhinandan_return_or_leverage",
+        "effect": "pakistan_releases_abhinandan_ceasefire_signal",
+        "strength": 0.8,
+        "known_confounders": [
+          "us_pressure_speed"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_pakistan_intent_abhinandan_return_or_leverage",
+        "effect": "pakistan_holds_abhinandan_extracts_concessions",
+        "strength": 0.2,
+        "known_confounders": [
+          "ghq_civilian_government_split"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "monitor_paf_next_sortie_planning_continued_escalation",
+        "effect": "paf_escalates_continued_air_incursions",
+        "strength": 0.3,
+        "known_confounders": [
+          "us_direct_pressure_on_paf"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "provide_nuclear_threshold_signalling_intelligence",
+        "effect": "nuclear_threshold_signalling_confirmed",
+        "strength": 0.2,
+        "known_confounders": [
+          "actual_nuclear_posture"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "assess_us_saudi_back_channel_effectiveness",
+        "effect": "pakistan_releases_abhinandan_ceasefire_signal",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pakistan_releases_abhinandan_ceasefire_signal",
+        "effect": "full_scale_war_averted_diplomatic_resolution",
+        "strength": 0.92,
+        "known_confounders": [
+          "india_military_patience"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "ghq_imran_govt_split",
+      "objective": "Manage escalation without full war; use Abhinandan as diplomatic leverage to extract ceasefire; demonstrate PAF capability without crossing India's nuclear threshold trigger; restore domestic narrative after Balakot strike",
+      "capability": 9.0,
+      "trigger_threshold": 9.5,
+      "information_set": [
+        "india_military_mobilisation",
+        "us_pressure_signals",
+        "saudi_back_channel",
+        "nuclear_arsenal_status"
+      ],
+      "observable_actions": [
+        "announce_abhinandan_release_conditionally",
+        "paf_standdown_post_feb27",
+        "seek_un_intervention",
+        "imran_khan_parliament_speech_de_escalation",
+        "nuclear_signalling_via_media_statements"
+      ],
+      "hidden_states": [
+        "seeking_offramp",
+        "negotiating_terms",
+        "escalation_threshold_calculating",
+        "accepting_defeat_narrative_management"
+      ],
+      "prospect_params": {
+        "lam": 4.0,
+        "gamma": 0.5,
+        "alpha": 0.95,
+        "beta": 0.95,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "us_trump_administration_mediator",
+      "objective": "Prevent nuclear escalation; broker Abhinandan release; restore regional stability; protect US-Pakistan military aid relationship while not abandoning India",
+      "capability": 9.5,
+      "trigger_threshold": 9.0,
+      "information_set": [
+        "india_pak_military_postures",
+        "nuclear_arsenals",
+        "abhinandan_location",
+        "us_economic_interests"
+      ],
+      "observable_actions": [
+        "pence_pompeo_direct_calls_pakistan",
+        "apply_pressure_via_saudi_uae",
+        "pre_announce_abhinandan_release_in_us_media",
+        "mobilise_un_security_council"
+      ],
+      "hidden_states": [
+        "actively_mediating",
+        "pressuring_pakistan",
+        "supporting_india_quietly",
+        "managing_public_narrative"
+      ],
+      "prospect_params": {
+        "lam": 1.8,
+        "gamma": 0.65,
+        "alpha": 0.82,
+        "beta": 0.82,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "abhinandan_return_mediation"
+    },
+    {
+      "source": "india",
+      "target": "saudi_arabia_mbs",
+      "strength": 0.68,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "feb19_visit_back_channel"
+    },
+    {
+      "source": "pakistan",
+      "target": "china",
+      "strength": 0.78,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "un_security_council_veto_threat"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "pakistan_abhinandan_release_decision",
+      "name": "Whether Pakistan's GHQ has decided to release Abhinandan unconditionally or is seeking concessions",
+      "current_entropy": 2.0,
+      "mission_relevance": 0.99,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "assess_pakistan_intent_abhinandan_return_or_leverage",
+        "assess_us_saudi_back_channel_effectiveness"
+      ]
+    },
+    {
+      "id": "paf_follow_on_sortie_plan",
+      "name": "Whether PAF has authorised follow-on sorties and the intended target set if India retaliates further",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "monitor_paf_next_sortie_planning_continued_escalation"
+      ]
+    },
+    {
+      "id": "nuclear_nca_activation_status",
+      "name": "Whether Pakistan's National Command Authority has activated any nuclear readiness protocols",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "provide_nuclear_threshold_signalling_intelligence"
+      ]
+    }
+  ],
+  "belief_state": {
+    "pakistan_will_release_abhinandan_us_pressure_ceasefire": 0.7,
+    "pakistan_seeking_concessions_before_release": 0.2,
+    "paf_has_authorised_follow_on_escalation": 0.07,
+    "nuclear_threshold_signalling_active": 0.03
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/2019_Balakot_airstrike",
+    "https://en.wikipedia.org/wiki/2019_India%E2%80%93Pakistan_border_skirmishes",
+    "https://en.wikipedia.org/wiki/2019_Jammu_and_Kashmir_airstrikes"
+  ],
+  "source_confidence": 0.82,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

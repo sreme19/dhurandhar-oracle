@@ -1,0 +1,271 @@
+{
+  "id": "surgical-strikes-execution",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 2,
+  "description": "Night of September 28-29, 2016. Indian Para SF \u2014 Ghatak platoons of 6 Bihar and 10 Dogra regiments, trained on the terrain \u2014 cross the Line of Control and destroy 7 JeM/LeT infiltration launchpads across 4 sectors in PoK. 35-50 militants killed (Indian estimates; Pakistan denies any strikes occurred). DGMO Lt Gen Ranbir Singh makes a public announcement the next morning \u2014 the first time India officially acknowledged a cross-LOC operation since 1971. Rizwan Shah, whose ground intelligence formed the targeting package, must now manage the aftermath: ISI is conducting a sweep to identify how India knew exact launchpad locations. His cover is at maximum risk in the 72 hours post-strike.",
+  "real_world_correlation": {
+    "event_date": "September 28-29, 2016",
+    "real_event": "Indian Army Para SF conducted simultaneous raids on 7 launchpads across 4 LoC sectors in PoK (Bhimber Gali, Kel, Lipa, Dudhnial). DGMO Lt Gen Ranbir Singh announced at 1615 hours Sept 29 that 'significant casualties' were inflicted. Most Indian media estimates: 35-50 militants killed. Pakistan denied any strikes, claimed only a border skirmish. Pakistan's DGMO called Indian counterpart post-announcement.",
+    "units_involved": "Ghatak platoons (elite assault element) of 6 Bihar Regiment and 10 Dogra Regiment. These units were familiar with the terrain \u2014 specifically chosen for the Uri sector. Helicopters used for insertion/extraction.",
+    "international_reaction": "US called for de-escalation; China backed Pakistan's narrative of 'border skirmish'. Russia expressed concern. No country other than India acknowledged strikes as surgical cross-LOC operations. Pakistan's denial was strategic \u2014 acknowledging the strikes would have admitted vulnerability of their launchpad infrastructure.",
+    "pakistan_denial_logic": "Pakistan's denial served a dual intelligence purpose: (1) avoided admitting ISI-JeM launchpad infrastructure existed as described; (2) prevented domestic political fallout from admitting Indian Army crossed LOC. This denial also meant Pakistan could not officially retaliate without admitting the strikes happened.",
+    "doctrine_shift": "The surgical strikes represented India's definitive abandonment of strategic restraint as doctrine. Every post-Uri Indian security response \u2014 Balakot (2019), Operation Sindoor (2025) \u2014 traces its doctrinal permission back to this moment. DGMO's public announcement was deliberate: India chose to go on record, establishing deterrence through demonstrated willingness."
+  },
+  "state_vector": {
+    "cover_integrity": 4.5,
+    "trust_capital": 6.0,
+    "intelligence_depth": 8.0,
+    "network_strength": 6.5,
+    "exposure_risk": 8.5
+  },
+  "available_actions": [
+    "go_dark_cease_all_communication_72_hours",
+    "feed_isi_false_intelligence_source_misdirection",
+    "exfiltrate_immediately_cover_burned",
+    "maintain_cover_by_expressing_outrage_at_strikes",
+    "continue_operations_assess_strike_effectiveness"
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_sweep_survive",
+      "name": "Survive ISI post-strike intelligence sweep \u2014 avoid being identified as the source of launchpad coordinates",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "battle_damage_assess_surgical"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.85
+    },
+    {
+      "id": "battle_damage_assess_surgical",
+      "name": "Confirm strike effectiveness \u2014 how many launchpads destroyed, militant casualties, ISI operational capacity reduced",
+      "optimistic_days": 3,
+      "most_likely_days": 10,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_sweep_survive"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.5
+    },
+    {
+      "id": "isi_retaliation_assess_surgical",
+      "name": "Assess whether ISI will conduct retaliatory attack inside India to restore deterrence credibility",
+      "optimistic_days": 5,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "isi_sweep_survive"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    },
+    {
+      "id": "reposition_cover_narrative",
+      "name": "Reposition cover narrative \u2014 establish Rizwan was in Karachi during strikes, not PoK-adjacent",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_sweep_survive"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "go_dark_cease_all_communication_72_hours",
+      "feed_isi_false_intelligence_source_misdirection",
+      "exfiltrate_immediately_cover_burned",
+      "maintain_cover_by_expressing_outrage_at_strikes",
+      "continue_operations_assess_strike_effectiveness",
+      "cover_survives_isi_sweep",
+      "cover_blown_rizwan_identified",
+      "isi_retaliation_inside_india_detected",
+      "launchpad_reconstruction_detected_early",
+      "post_strike_intelligence_phase_begins"
+    ],
+    "edges": [
+      {
+        "cause": "go_dark_cease_all_communication_72_hours",
+        "effect": "cover_survives_isi_sweep",
+        "strength": 0.8,
+        "known_confounders": [
+          "existing_isi_suspicion_level"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "feed_isi_false_intelligence_source_misdirection",
+        "effect": "cover_survives_isi_sweep",
+        "strength": 0.7,
+        "known_confounders": [
+          "misdirection_believability"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "feed_isi_false_intelligence_source_misdirection",
+        "effect": "cover_blown_rizwan_identified",
+        "strength": 0.25,
+        "known_confounders": [
+          "isi_counterintelligence_skill"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "exfiltrate_immediately_cover_burned",
+        "effect": "post_strike_intelligence_phase_begins",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "maintain_cover_by_expressing_outrage_at_strikes",
+        "effect": "cover_survives_isi_sweep",
+        "strength": 0.65,
+        "known_confounders": [
+          "credibility_of_outrage_performance"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "continue_operations_assess_strike_effectiveness",
+        "effect": "launchpad_reconstruction_detected_early",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "continue_operations_assess_strike_effectiveness",
+        "effect": "cover_blown_rizwan_identified",
+        "strength": 0.55,
+        "known_confounders": [
+          "isi_heightened_surveillance"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "cover_survives_isi_sweep",
+        "effect": "post_strike_intelligence_phase_begins",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_counterintelligence_post_strike",
+      "objective": "Identify how India obtained precise launchpad coordinates; neutralise the intelligence source; rebuild launchpad infrastructure under new OPSEC protocols; plan face-saving retaliation inside India",
+      "capability": 9.0,
+      "trigger_threshold": 8.0,
+      "information_set": [
+        "communications_intercepts_pre_strike",
+        "launchpad_commander_reports",
+        "isi_agent_networks_india"
+      ],
+      "observable_actions": [
+        "sweep_all_isi_assets_near_struck_launchpads",
+        "interrogate_launchpad_survivors_for_leak",
+        "increase_surveillance_on_known_indian_agents_pakistan",
+        "plan_retaliation_attack_inside_india_restore_deterrence",
+        "reconstruct_launchpads_new_locations_improved_opsec"
+      ],
+      "hidden_states": [
+        "hunting_source",
+        "planning_retaliation",
+        "rebuilding",
+        "signalling_denial"
+      ],
+      "prospect_params": {
+        "lam": 4.0,
+        "gamma": 0.5,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_obama_administration",
+      "strength": 0.6,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "post_strike_diplomatic_support"
+    },
+    {
+      "source": "pakistan",
+      "target": "china",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "diplomatic_backing_on_denial_narrative"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_source_hunt_direction",
+      "name": "Which ISI counterintelligence team is conducting the post-strike source hunt \u2014 and do they have Rizwan's name",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.99,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "go_dark_cease_all_communication_72_hours"
+      ]
+    },
+    {
+      "id": "isi_retaliation_plan",
+      "name": "Whether ISI has authorised a retaliatory attack inside India to restore deterrence after the strikes",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.95,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "continue_operations_assess_strike_effectiveness",
+        "maintain_cover_by_expressing_outrage_at_strikes"
+      ]
+    },
+    {
+      "id": "launchpad_reconstruction_sites",
+      "name": "New launchpad locations ISI is establishing post-strike under improved OPSEC",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "continue_operations_assess_strike_effectiveness"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_isi_not_yet_identified_source": 0.5,
+    "isi_has_short_list_rizwan_on_it": 0.3,
+    "isi_hunting_different_source_rizwan_safe": 0.15,
+    "cover_blown_exfil_required_immediately": 0.05
+  },
+  "source_refs": [
+    "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=151242",
+    "https://www.mea.gov.in/media-briefings.htm?dtl%2F27446%2FTranscript_of_Joint_Briefing_by_M=",
+    "https://en.wikipedia.org/wiki/2016_Indian_Line_of_Control_strike"
+  ],
+  "source_confidence": 0.92,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

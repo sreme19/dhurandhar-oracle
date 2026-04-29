@@ -1,0 +1,296 @@
+{
+  "id": "burhan-wani-killing-radicalisation",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 1,
+  "description": "July 8, 2016. Hizbul Mujahideen commander Burhan Wani \u2014 22 years old, the social-media face of the new Kashmiri insurgency \u2014 is killed in an encounter in Kokernag, Tral. His death triggers the worst Kashmir unrest since 2010: 90+ civilian deaths, 15,000+ pellet gun injuries over 7 months, 100+ youths joining militancy within weeks. Intelligence gathering in Kashmir suffers a 'temporary blow' as sources dry up amid community backlash. Rizwan Shah, monitoring the radicalisation pipeline from his position embedded in the ISI-linked Kashmiri network, must assess: is this a spontaneous grief surge or is ISI exploiting Wani's martyrdom to systematically recruit a new generation of militants before the political window closes?",
+  "real_world_correlation": {
+    "event_date": "July 8, 2016",
+    "real_event": "Burhan Wani killed in encounter at Kokernag, Anantnag district, J&K. Security forces: 3 HM militants killed, 0 casualties. Wani's funeral attended by tens of thousands. Unrest lasted 7 months: 90 civilians killed, 15,000+ pellet gun injuries (1,000+ suffered partial or full blindness). Curfew in Kashmir Valley for weeks.",
+    "intelligence_collapse": "India Today reported intelligence gathering in Kashmir 'suffered a temporary blow' after Wani's killing. Sources became unavailable; informer networks dried up as community sentiment turned against security forces. At least 100 youths joined militancy in the months post-Wani \u2014 a surge not seen since 2000.",
+    "isi_exploitation": "ISI exploited the Wani narrative to rebrand Kashmiri militancy for a social-media era. Wani had never been involved in civilian killings \u2014 his clean image made him the ideal martyr. ISI's media operations used his death to recruit in madrassas, colleges, and via encrypted apps. TRF (The Resistance Front) \u2014 later responsible for Pahalgam \u2014 traces its ideological DNA to the post-Wani radicalisation cohort.",
+    "pellet_gun_controversy": "The security forces' use of pellet guns as crowd control created global human rights condemnation and strengthened ISI's propaganda narrative. UN Human Rights Council cited J&K in 2018 report. Wani's death + pellet gun footage was weaponised internationally.",
+    "wani_social_media_doctrine": "Wani pioneered the use of YouTube, WhatsApp, and Facebook by Kashmiri militants \u2014 bypassing traditional ISI-Hurriyat communication chains and speaking directly to Kashmiri youth. His death created a template for decentralised, leaderless radicalisation that Indian intelligence had not modelled."
+  },
+  "state_vector": {
+    "cover_integrity": 8.0,
+    "trust_capital": 5.5,
+    "intelligence_depth": 6.0,
+    "network_strength": 7.0,
+    "exposure_risk": 4.0
+  },
+  "available_actions": [
+    "assess_isi_exploitation_of_wani_narrative",
+    "map_new_militant_recruitment_pipeline",
+    "identify_radicalized_youth_cohort_leaders",
+    "monitor_hurriyat_isi_coordination_post_wani",
+    "provide_intelligence_on_pellet_gun_propaganda_operations"
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_exploitation_assess",
+      "name": "Assess whether ISI is directing Wani martyrdom exploitation or riding spontaneous grief",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "recruitment_pipeline_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "recruitment_pipeline_map",
+      "name": "Map new militant recruitment pipeline \u2014 madrassa, college, encrypted app channels post-Wani",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_exploitation_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "trf_precursor_identify",
+      "name": "Identify radicalized youth cell leaders who will form next-generation militant organizations (TRF precursors)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "recruitment_pipeline_map"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "source_network_rebuild",
+      "name": "Rebuild Kashmir intelligence source network after post-Wani community backlash dried up informers",
+      "optimistic_days": 30,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "isi_exploitation_assess"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.05
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_isi_exploitation_of_wani_narrative",
+      "map_new_militant_recruitment_pipeline",
+      "identify_radicalized_youth_cohort_leaders",
+      "monitor_hurriyat_isi_coordination_post_wani",
+      "provide_intelligence_on_pellet_gun_propaganda_operations",
+      "isi_directed_systematic_post_wani_recruitment",
+      "spontaneous_grief_surge_no_isi_direction",
+      "next_generation_militant_network_identified",
+      "intelligence_vacuum_allows_undetected_radicalisation",
+      "trf_precursor_cells_formed_undetected"
+    ],
+    "edges": [
+      {
+        "cause": "assess_isi_exploitation_of_wani_narrative",
+        "effect": "isi_directed_systematic_post_wani_recruitment",
+        "strength": 0.75,
+        "known_confounders": [
+          "hurriyat_autonomy"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_isi_exploitation_of_wani_narrative",
+        "effect": "spontaneous_grief_surge_no_isi_direction",
+        "strength": 0.25,
+        "known_confounders": [
+          "community_sentiment_measurement"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "map_new_militant_recruitment_pipeline",
+        "effect": "next_generation_militant_network_identified",
+        "strength": 0.8,
+        "known_confounders": [
+          "encryption_penetration_difficulty"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "identify_radicalized_youth_cohort_leaders",
+        "effect": "trf_precursor_cells_formed_undetected",
+        "strength": 0.6,
+        "known_confounders": [
+          "cell_compartmentalisation"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "provide_intelligence_on_pellet_gun_propaganda_operations",
+        "effect": "isi_directed_systematic_post_wani_recruitment",
+        "strength": 0.65,
+        "known_confounders": [
+          "international_media_amplification"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "monitor_hurriyat_isi_coordination_post_wani",
+        "effect": "isi_directed_systematic_post_wani_recruitment",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "intelligence_vacuum_allows_undetected_radicalisation",
+        "effect": "trf_precursor_cells_formed_undetected",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_kashmir_desk_wani_exploitation",
+      "objective": "Convert Wani martyrdom into systematic recruitment surge; rebrand militancy as legitimate resistance for international audience; exploit pellet gun controversy for propaganda; seed TRF-precursor cells before Indian intelligence rebuilds sources",
+      "capability": 8.5,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "kashmir_youth_demographic_data",
+        "pellet_gun_casualty_lists",
+        "hurriyat_communication_channels",
+        "social_media_reach_metrics"
+      ],
+      "observable_actions": [
+        "amplify_wani_funeral_footage_internationally",
+        "coordinate_hartaal_and_stone_pelting_calendar",
+        "recruit_via_encrypted_apps_post_wani",
+        "plant_propaganda_in_kashmir_colleges_and_madrassas",
+        "dry_up_indian_intelligence_sources_through_community_pressure"
+      ],
+      "hidden_states": [
+        "exploiting",
+        "consolidating",
+        "recruiting",
+        "preparing_next_attack_cycle"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.6,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "hurriyat_conference_post_wani",
+      "objective": "Leverage unrest for political bargaining; coordinate with ISI without being directly implicated; present as civil society voice internationally",
+      "capability": 6.5,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "pakistan_government_support_signals",
+        "un_human_rights_access",
+        "valley_sentiment_data"
+      ],
+      "observable_actions": [
+        "call_hartaal_strike_calendars",
+        "meet_pakistan_high_commission",
+        "issue_statements_for_international_media",
+        "coordinate_stone_pelting_logistics"
+      ],
+      "hidden_states": [
+        "bargaining",
+        "inciting",
+        "signalling_pak",
+        "playing_civilian"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.65,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "isi_kashmir_desk",
+      "target": "hurriyat_conference",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "post_wani_exploitation_window"
+    },
+    {
+      "source": "india",
+      "target": "kashmir_intelligence_sources",
+      "strength": 0.3,
+      "betrayal_history": 1,
+      "in_coalition": false,
+      "trigger_condition": "source_network_rebuild_required"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_recruitment_direction_post_wani",
+      "name": "Confirmation that ISI is directing \u2014 not merely exploiting \u2014 post-Wani recruitment surge through specific operational channels",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.95,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "assess_isi_exploitation_of_wani_narrative",
+        "monitor_hurriyat_isi_coordination_post_wani"
+      ]
+    },
+    {
+      "id": "trf_precursor_cell_identities",
+      "name": "Identities of radicalised youth cell leaders who will form next-generation militant orgs (proto-TRF, 2019-onward)",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "identify_radicalized_youth_cohort_leaders",
+        "map_new_militant_recruitment_pipeline"
+      ]
+    },
+    {
+      "id": "pellet_gun_isi_propaganda_ops",
+      "name": "Extent and coordination of ISI media operations weaponising pellet gun imagery internationally",
+      "current_entropy": 2.2,
+      "mission_relevance": 0.75,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "provide_intelligence_on_pellet_gun_propaganda_operations"
+      ]
+    }
+  ],
+  "belief_state": {
+    "isi_directing_systematic_post_wani_recruitment": 0.6,
+    "isi_exploiting_but_not_directing_spontaneous_unrest": 0.3,
+    "unrest_primarily_spontaneous_isi_reactive": 0.08,
+    "hurriyat_autonomous_isi_not_yet_engaged": 0.02
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Burhan_Wani",
+    "https://en.wikipedia.org/wiki/2016%E2%80%932017_Kashmir_unrest",
+    "https://www.thehindu.com/news/national/other-states/%E2%80%98Burhan-Wani-Kashmir-Valley%E2%80%99s-most-wanted-militant-commander-killed%E2%80%99/article60528421.ece"
+  ],
+  "source_confidence": 0.8,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

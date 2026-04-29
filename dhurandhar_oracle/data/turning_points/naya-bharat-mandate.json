@@ -1,0 +1,372 @@
+{
+  "id": "naya-bharat-mandate",
+  "operative": "hamza",
+  "film": 2,
+  "act": 1,
+  "description": "2015. Post-2014 election, India's NSA Ajay Sanyal calls Hamza out of his Karachi semi-retirement. The new government's 'Naya Bharat' (New India) doctrine has replaced strategic restraint with a mandate for proactive accountability. Sanyal offers Hamza an expanded mandate: target the 26/11 planners \u2014 Major Iqbal, Azam Cheema, Sajid Mir \u2014 and simultaneously dismantle the financial infrastructure (FICN/Khanani network, Punjab narco-Khalistan pipeline). Unlike Film 1's institutional-bureaucratic operation, Hamza now has near-autonomous authority. The turning point: does Hamza accept the mandate that is both personal revenge and national mission, knowing the costs of Film 1's years-long sacrifice?",
+  "real_world_correlation": {
+    "nda2_doctrine_shift": "The May 2014 Modi government election marked a documented shift in India's stated security posture. NSA Ajit Doval's 'offensive defence' doctrine replaced the UPA-era 'strategic restraint.' The film maps Sanyal onto Doval \u2014 both as the architect of the new mandate. The 2016 surgical strikes across the LoC (in response to the Uri attack) are the real-world proof point that the doctrine was operational, not rhetorical.",
+    "26_11_accountability_gap": "By 2015, none of the masterminds of 26/11 had faced Indian justice: Major Iqbal (ISI) remained at large; Azam Cheema (LeT) remained free in Pakistan; Sajid Mir was allegedly 'dead' per Pakistan's claims. Hafiz Saeed was under nominal house arrest, repeatedly released. This impunity is the fuel for Film 2's revenge arc \u2014 the fiction closes what reality left open.",
+    "ficn_khanani_real_operation": "The fake Indian currency note (FICN) network was a documented ISI-D-Company operation, channelled through hawala networks including Khanani-Kalia International (KKI). KKI was designated by the US Treasury in 2012. The film's 'Operation Green Leaf' (demonetisation as counter-FICN strike) is a fictionalization of real intelligence documentation of FICN flows through the Khanani network.",
+    "autonomous_mandate_precedent": "Deniable 'autonomous' operations \u2014 where an operative has expanded authority with no paper trail of specific orders \u2014 are documented in intelligence history. The CIA's post-9/11 enhanced interrogation program and Mossad's targeted killing operations are cases where institutional authority was granted informally through verbal authorisation, creating later deniability. The film mirrors this structure.",
+    "hamza_as_jaskirat": "By Film 2, Hamza has lived as Hamza Ali Mazari for 13+ years. He has a Pakistani wife, a son, and genuine community roots. Accepting the Film 2 mandate is not just accepting a mission \u2014 it is accepting that he cannot return to being Jaskirat Singh Rangi. The film makes this sacrifice explicit in the opening sequence."
+  },
+  "state_vector": {
+    "cover_integrity": 8.5,
+    "trust_capital": 4.0,
+    "intelligence_depth": 6.5,
+    "network_strength": 6.5,
+    "exposure_risk": 3.5
+  },
+  "available_actions": [
+    "accept_mandate_full_autonomous_authority",
+    "accept_mandate_request_institutional_backup",
+    "negotiate_terms_family_protection_first",
+    "refuse_mandate_permanent_exfil",
+    "accept_mandate_limited_scope_ficn_only"
+  ],
+  "mission_tasks": [
+    {
+      "id": "target_prioritisation",
+      "name": "Establish priority order: Major Iqbal vs. Cheema vs. Mir vs. Khanani network",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "rizwan_integration"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "rizwan_integration",
+      "name": "Integrate Rizwan Shah as operational partner \u2014 establish shared comms and protocols",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "target_prioritisation"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "reactivate_karachi_network",
+      "name": "Reactivate dormant Karachi contacts (post-Dakait Lyari, Uzair Baloch mapping)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "rizwan_integration"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "zahoor_mistry_locate",
+      "name": "Locate Zahoor Mistry (IC-814 hijacker, living under alias in Karachi)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "reactivate_karachi_network"
+      ],
+      "parallelizable_with": [
+        "khanani_network_mapping"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "khanani_network_mapping",
+      "name": "Map Khanani-Kalia FICN network: routes, cut-outs, ISI-D-Company nexus points",
+      "optimistic_days": 60,
+      "most_likely_days": 120,
+      "pessimistic_days": 240,
+      "dependencies": [
+        "reactivate_karachi_network"
+      ],
+      "parallelizable_with": [
+        "zahoor_mistry_locate"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "major_iqbal_locate",
+      "name": "Locate Major Iqbal's current operational base (post-26/11, now runs broader ISI Pakistan ops)",
+      "optimistic_days": 90,
+      "most_likely_days": 180,
+      "pessimistic_days": 365,
+      "dependencies": [
+        "reactivate_karachi_network"
+      ],
+      "parallelizable_with": [
+        "khanani_network_mapping"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "accept_mandate_full_autonomous_authority",
+      "accept_mandate_request_institutional_backup",
+      "negotiate_terms_family_protection_first",
+      "refuse_mandate_permanent_exfil",
+      "accept_mandate_limited_scope_ficn_only",
+      "film2_operation_begins",
+      "family_protection_secured",
+      "institutional_backup_available",
+      "autonomous_high_risk_high_reward",
+      "mission_limited_partial_success",
+      "hamza_returns_india_jaskirat_restored"
+    ],
+    "edges": [
+      {
+        "cause": "accept_mandate_full_autonomous_authority",
+        "effect": "film2_operation_begins",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_mandate_full_autonomous_authority",
+        "effect": "autonomous_high_risk_high_reward",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_mandate_request_institutional_backup",
+        "effect": "film2_operation_begins",
+        "strength": 0.85,
+        "known_confounders": [
+          "institutional_willingness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "accept_mandate_request_institutional_backup",
+        "effect": "institutional_backup_available",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_terms_family_protection_first",
+        "effect": "family_protection_secured",
+        "strength": 0.6,
+        "known_confounders": [
+          "sanyal_capacity"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "negotiate_terms_family_protection_first",
+        "effect": "film2_operation_begins",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "refuse_mandate_permanent_exfil",
+        "effect": "hamza_returns_india_jaskirat_restored",
+        "strength": 0.75,
+        "known_confounders": [
+          "exfil_security"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "accept_mandate_limited_scope_ficn_only",
+        "effect": "film2_operation_begins",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_mandate_limited_scope_ficn_only",
+        "effect": "mission_limited_partial_success",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "autonomous_high_risk_high_reward",
+        "effect": "film2_operation_begins",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Maintain ISI operational network; escalate FICN distribution post-SP-Aslam death; activate 26/11-style second strike planning",
+      "capability": 9.0,
+      "trigger_threshold": 7.5,
+      "information_set": [
+        "isi_agent_database",
+        "karachi_surveillance",
+        "khanani_network"
+      ],
+      "observable_actions": [
+        "accelerate_ficn_distribution",
+        "activate_happy_phd_punjab_pipeline",
+        "increase_counter_intelligence_sweeps",
+        "plan_second_strike_india"
+      ],
+      "hidden_states": [
+        "consolidating",
+        "escalating",
+        "hunting_indian_agents"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "khanani_javed",
+      "objective": "Maintain hawala/FICN network operations post-Altaf Khanani US arrest (2015); expand ISI-D-Company financial corridor",
+      "capability": 7.5,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "kki_network_nodes",
+        "isi_protection",
+        "d_company_channels"
+      ],
+      "observable_actions": [
+        "activate_alternative_routes",
+        "increase_counter_surveillance",
+        "coordinate_with_isi_for_protection",
+        "accelerate_ficn_deployment"
+      ],
+      "hidden_states": [
+        "operating",
+        "defensive",
+        "compromised"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "yalina_jamali",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "sushant_bansal",
+      "strength": 0.65,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "operational_need"
+    },
+    {
+      "source": "major_iqbal",
+      "target": "khanani_javed",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "major_iqbal_current_location",
+      "name": "Major Iqbal's current operational base and security posture",
+      "current_entropy": 4.5,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "reactivate_karachi_network",
+        "major_iqbal_locate"
+      ]
+    },
+    {
+      "id": "khanani_ficn_routes",
+      "name": "Current Khanani-Kalia FICN distribution routes into India",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "khanani_network_mapping"
+      ]
+    },
+    {
+      "id": "happy_phd_punjab_pipeline",
+      "name": "Happy PHD's narco-Khalistan pipeline: drug routes and arms smuggling into Punjab",
+      "current_entropy": 4.0,
+      "mission_relevance": 0.82,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "reactivate_karachi_network",
+        "khanani_network_mapping"
+      ]
+    },
+    {
+      "id": "zahoor_mistry_alias",
+      "name": "Zahoor Mistry's current alias and address in Karachi",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.75,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "zahoor_mistry_locate",
+        "reactivate_karachi_network"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_iqbal_unaware_hamza_reactivated": 0.6,
+    "cover_intact_iqbal_monitoring_increased_vigilance": 0.25,
+    "cover_suspected_iqbal_flagged_raw_agent_returned": 0.12,
+    "cover_blown_iqbal_neutralise_order": 0.03
+  },
+  "source_refs": [
+    "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=151242",
+    "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.66,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "id": "torkham-entry-cover-setup",
+  "operative": "hamza",
+  "film": 1,
+  "act": 1,
+  "description": "Hamza Ali Mazari crosses from Afghanistan into Pakistan via the Torkham border crossing. He carries documents establishing him as a Baloch from Quetta with criminal connections. In Lyari, he takes work as a waiter at Mohammed Aalam's juice shop \u2014 his cover employer and field handler. He must establish himself as a credible, low-level Lyari resident without triggering the neighbourhood's intense communal surveillance, while beginning to map the gang structure from the ground up.",
+  "real_world_correlation": {
+    "primary_inspiration": "Ravindra Kaushik's Pakistan insertion (mid-1970s) via similar indirect route. RAW's classic deep-cover insertion route avoids direct India-Pakistan border crossing (too surveilled) in favour of third-country routing (Nepal, Afghanistan, Gulf states).",
+    "torkham_route": "Torkham (Khyber Pass) crossing is a real high-traffic commercial border point. Afghan/Central Asian refugee flows in 2001-2002 made it operationally feasible for an individual to blend in without standing out as an Indian national.",
+    "juice_shop_cover": "Handler using a small commercial business (juice shop, tea stall, shop) as cover is standard tradecraft \u2014 provides plausible reason for cash transactions, regular community contact, and a meeting point that doesn't look like a dead drop.",
+    "lyari_ground_truth": "Lyari is a real Karachi neighbourhood, historically controlled by Baloch-majority PAC (Peoples' Aman Committee). Outsiders are noticed but Baloch from Quetta/Balochistan province are common \u2014 consistent cover for a Punjabi-origin operative given intensive Balochi dialect training."
+  },
+  "state_vector": {
+    "cover_integrity": 9.0,
+    "trust_capital": 0.8,
+    "intelligence_depth": 0.8,
+    "network_strength": 3.5,
+    "exposure_risk": 3.0
+  },
+  "available_actions": [
+    "establish_lyari_street_presence_slow",
+    "accelerate_gang_contact_via_aalam",
+    "conduct_passive_surveillance_only",
+    "bribe_local_informants_for_quick_intel",
+    "request_exfil_abort_mission"
+  ],
+  "mission_tasks": [
+    {
+      "id": "establish_cover",
+      "name": "Establish Lyari cover identity (juice shop routine, community recognition)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "passive_surveillance"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "passive_surveillance",
+      "name": "Map Lyari gang hierarchy through observation (PAC structure, key lieutenants)",
+      "optimistic_days": 21,
+      "most_likely_days": 45,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "establish_cover"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.02
+    },
+    {
+      "id": "aalam_comms_establish",
+      "name": "Establish secure dead-drop and burst-transmission comms protocol with Aalam \u2192 Sanyal",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "establish_cover"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.08
+    },
+    {
+      "id": "peripheral_gang_contact",
+      "name": "First contact with PAC peripheral members (not Dakait himself)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "establish_cover",
+        "passive_surveillance"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.1
+    },
+    {
+      "id": "police_landscape_map",
+      "name": "Identify LTF (Lyari Task Force) presence and patrol patterns \u2014 exposure risk mapping",
+      "optimistic_days": 14,
+      "most_likely_days": 21,
+      "pessimistic_days": 45,
+      "dependencies": [],
+      "parallelizable_with": [
+        "establish_cover",
+        "passive_surveillance"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.04
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "establish_lyari_street_presence_slow",
+      "accelerate_gang_contact_via_aalam",
+      "conduct_passive_surveillance_only",
+      "bribe_local_informants_for_quick_intel",
+      "community_acceptance_achieved",
+      "gang_periphery_accessible",
+      "cover_suspected_local",
+      "ltf_attention_drawn",
+      "mission_proceeds",
+      "cover_blown_early"
+    ],
+    "edges": [
+      {
+        "cause": "establish_lyari_street_presence_slow",
+        "effect": "community_acceptance_achieved",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "establish_lyari_street_presence_slow",
+        "effect": "gang_periphery_accessible",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accelerate_gang_contact_via_aalam",
+        "effect": "gang_periphery_accessible",
+        "strength": 0.8,
+        "known_confounders": [
+          "aalam_credibility"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "accelerate_gang_contact_via_aalam",
+        "effect": "cover_suspected_local",
+        "strength": 0.4,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "conduct_passive_surveillance_only",
+        "effect": "community_acceptance_achieved",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "conduct_passive_surveillance_only",
+        "effect": "gang_periphery_accessible",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "bribe_local_informants_for_quick_intel",
+        "effect": "gang_periphery_accessible",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "bribe_local_informants_for_quick_intel",
+        "effect": "ltf_attention_drawn",
+        "strength": 0.5,
+        "known_confounders": [
+          "informant_loyalty"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "community_acceptance_achieved",
+        "effect": "mission_proceeds",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "cover_suspected_local",
+        "effect": "cover_blown_early",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "ltf_attention_drawn",
+        "effect": "cover_blown_early",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "lyari_community_surveillance",
+      "objective": "Identify outsiders; protect neighbourhood from police informants",
+      "capability": 5.5,
+      "trigger_threshold": 4.0,
+      "information_set": [
+        "lyari_social_graph",
+        "known_faces",
+        "financial_transactions"
+      ],
+      "observable_actions": [
+        "question_stranger",
+        "report_to_pac",
+        "ignore_accepted_member",
+        "watch_and_wait"
+      ],
+      "hidden_states": [
+        "neutral",
+        "curious",
+        "suspicious",
+        "hostile"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.65,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Identify criminal elements in Lyari; maintain Karachi law-and-order optics",
+      "capability": 7.0,
+      "trigger_threshold": 5.5,
+      "information_set": [
+        "ltf_informant_network",
+        "criminal_records",
+        "newcomer_reports"
+      ],
+      "observable_actions": [
+        "conduct_ltf_raid",
+        "interrogate_newcomers",
+        "surveil_juice_shops",
+        "cultivate_paid_informants"
+      ],
+      "hidden_states": [
+        "monitoring",
+        "neutral",
+        "investigating",
+        "hostile"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "pac_hierarchy",
+      "name": "People's Aman Committee (PAC) leadership hierarchy under Rehman Dakait",
+      "current_entropy": 3.8,
+      "mission_relevance": 0.88,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "establish_lyari_street_presence_slow",
+        "peripheral_gang_contact"
+      ]
+    },
+    {
+      "id": "ltf_patrol_pattern",
+      "name": "Lyari Task Force patrol patterns and informant density",
+      "current_entropy": 2.2,
+      "mission_relevance": 0.55,
+      "access_difficulty": 3.0,
+      "access_actions": [
+        "conduct_passive_surveillance_only",
+        "bribe_local_informants_for_quick_intel"
+      ]
+    },
+    {
+      "id": "aalam_security_status",
+      "name": "Whether Mohammed Aalam's juice shop cover is secure (LTF not suspicious)",
+      "current_entropy": 1.8,
+      "mission_relevance": 0.8,
+      "access_difficulty": 2.5,
+      "access_actions": [
+        "aalam_comms_establish"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_community_unaware_ltf_passive": 0.65,
+    "cover_intact_community_curious_ltf_passive": 0.25,
+    "cover_suspected_community_flagged_ltf_active": 0.08,
+    "cover_blown_community_hostile": 0.02
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Torkham_Border_Crossing",
+    "https://www.bbc.com/news/world-asia-36438575"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "grounding_type": "contextual",
+      "confidence": 0.67,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-04-29T14:40:38+00:00",
+  "merge_mode": "append_only",
+  "batch": "batch4",
+  "updated_count": 13,
+  "updated": [
+    {
+      "turning_point_id": "aalam-handler-contact",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "dakait-first-meeting",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "dakait-ambush-coordination",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "ltf-raid-cover-crisis",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "isi-capture-torture",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "sanyal-isi-blackmail",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "major-iqbal-madrassa-siege",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "major-iqbal-tanker-final",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "naya-bharat-mandate",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "rizwan-partnership-activation",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "marriage-proposal-gambit",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "yalina-romance-risk",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "yalina-identity-exposure",
+      "added_refs": 2
+    }
+  ],
+  "seed_missing_files": [],
+  "turning_points_without_source_refs_count": 0,
+  "turning_points_without_source_refs": []
+}

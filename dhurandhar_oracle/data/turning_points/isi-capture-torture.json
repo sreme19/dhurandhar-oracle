@@ -1,0 +1,312 @@
+{
+  "id": "isi-capture-torture",
+  "operative": "hamza",
+  "film": 2,
+  "act": 3,
+  "description": "ISI captures Hamza following Major Iqbal's death. He is held in an ISI facility and subjected to enhanced interrogation. ISI knows he is an Indian operative \u2014 the question is what he will give them: other RAW assets in Pakistan, the full architecture of the Film 1-2 operations, information about Rizwan Shah. The turning point: how does Hamza resist? And what does he sacrifice to protect the network? The session is also a character arc endpoint \u2014 this is what 13 years of deep cover costs in its most concrete form.",
+  "real_world_correlation": {
+    "isi_detention_documented": "ISI detention of foreign intelligence operatives is documented. The case of Raymond Davis (CIA contractor, Lahore 2011) is the most public \u2014 Davis killed two ISI surveillance agents, was arrested, held for 47 days, and released when the US paid blood money to the families. Less public cases (Indian, Afghan, Israeli operatives) are documented in secondary sources and never officially acknowledged.",
+    "kaushik_capture_parallel": "Ravindra Kaushik was captured by Pakistani intelligence in 1983 after his cover was compromised. He was tried in a Pakistani court, sentenced to death (commuted to life), and died in Mianwali Jail in 2001. The film diverges from this precedent \u2014 Hamza is released, whereas Kaushik died in custody. The divergence is the film's most significant departure from its primary real-world inspiration.",
+    "resist_to_survive_doctrine": "Real intelligence training for capture scenarios (SERE \u2014 Survival, Evasion, Resistance, Extraction) involves resisting interrogation while giving minimal actionable intelligence. The doctrine accepts that operatives under extreme duress will yield some information \u2014 the goal is to yield information that is outdated, partial, or verifiable-but-not-operational. Whether Hamza succeeds at this is the central question of the scene.",
+    "torture_in_isi_facilities": "ISI's use of enhanced interrogation techniques in its detention facilities is documented in multiple human rights reports (Human Rights Watch, Amnesty International, UN Special Rapporteur on Torture). The techniques documented include stress positions, sleep deprivation, electric shocks, and waterboarding analogues. The film depicts this without sanitisation."
+  },
+  "state_vector": {
+    "cover_integrity": 0.0,
+    "trust_capital": 0.0,
+    "intelligence_depth": 9.5,
+    "network_strength": 2.0,
+    "exposure_risk": 10.0
+  },
+  "available_actions": [
+    "resist_completely_reveal_nothing",
+    "offer_limited_outdated_intelligence",
+    "feign_cooperation_provide_false_intel",
+    "negotiate_prisoner_exchange_reveal_sanyal_channel",
+    "emergency_signal_rizwan_rescue_attempt"
+  ],
+  "mission_tasks": [
+    {
+      "id": "protect_rizwan_identity",
+      "name": "Ensure Rizwan Shah's identity and location are not revealed under torture",
+      "optimistic_days": 1,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "protect_delhi_network"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "protect_delhi_network",
+      "name": "Protect full operational architecture of dhurandhar-oracle from ISI extraction",
+      "optimistic_days": 1,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "protect_rizwan_identity"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "survive_long_enough_for_sanyal_action",
+      "name": "Survive ISI detention long enough for Sanyal to arrange release or rescue",
+      "optimistic_days": 3,
+      "most_likely_days": 14,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "protect_rizwan_identity",
+        "protect_delhi_network"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "resist_completely_reveal_nothing",
+      "offer_limited_outdated_intelligence",
+      "feign_cooperation_provide_false_intel",
+      "negotiate_prisoner_exchange_reveal_sanyal_channel",
+      "emergency_signal_rizwan_rescue_attempt",
+      "rizwan_identity_protected",
+      "delhi_network_compromised",
+      "hamza_survives_torture",
+      "hamza_killed_in_custody",
+      "false_intel_accepted",
+      "sanyal_leverage_becomes_necessary",
+      "hamza_broken_networks_exposed"
+    ],
+    "edges": [
+      {
+        "cause": "resist_completely_reveal_nothing",
+        "effect": "rizwan_identity_protected",
+        "strength": 0.85,
+        "known_confounders": [
+          "torture_severity"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "resist_completely_reveal_nothing",
+        "effect": "hamza_survives_torture",
+        "strength": 0.45,
+        "known_confounders": [
+          "isi_intentions"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "resist_completely_reveal_nothing",
+        "effect": "hamza_killed_in_custody",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "offer_limited_outdated_intelligence",
+        "effect": "hamza_survives_torture",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "offer_limited_outdated_intelligence",
+        "effect": "rizwan_identity_protected",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "offer_limited_outdated_intelligence",
+        "effect": "delhi_network_compromised",
+        "strength": 0.2,
+        "known_confounders": [
+          "intelligence_age"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "feign_cooperation_provide_false_intel",
+        "effect": "false_intel_accepted",
+        "strength": 0.55,
+        "known_confounders": [
+          "isi_verification_capability"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "feign_cooperation_provide_false_intel",
+        "effect": "hamza_killed_in_custody",
+        "strength": 0.4,
+        "known_confounders": [
+          "false_intel_exposure"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_prisoner_exchange_reveal_sanyal_channel",
+        "effect": "sanyal_leverage_becomes_necessary",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_prisoner_exchange_reveal_sanyal_channel",
+        "effect": "hamza_survives_torture",
+        "strength": 0.65,
+        "known_confounders": [
+          "isi_willingness"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "emergency_signal_rizwan_rescue_attempt",
+        "effect": "hamza_survives_torture",
+        "strength": 0.55,
+        "known_confounders": [
+          "rizwan_capability"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "hamza_broken_networks_exposed",
+        "effect": "delhi_network_compromised",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_interrogation_team",
+      "objective": "Extract maximum intelligence about RAW's Pakistan operations; identify all active Indian agents",
+      "capability": 8.0,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "hamza_activities_hamza_surveillance",
+        "iqbal_death_scene_evidence"
+      ],
+      "observable_actions": [
+        "enhanced_interrogation_stress_positions",
+        "sleep_deprivation_cycle",
+        "false_information_injection",
+        "threat_to_family_yalina_zayan",
+        "simulated_execution"
+      ],
+      "hidden_states": [
+        "probing",
+        "escalating",
+        "breaking",
+        "negotiating"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.58,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_director_general_shahnawaz",
+      "objective": "Decide whether Hamza's intelligence value exceeds the diplomatic cost of executing him",
+      "capability": 9.0,
+      "trigger_threshold": 7.5,
+      "information_set": [
+        "india_pakistan_diplomatic_channel",
+        "hamza_intelligence_yield",
+        "leak_video_shahnawaz_israel"
+      ],
+      "observable_actions": [
+        "authorise_continued_torture",
+        "authorise_prisoner_exchange",
+        "authorise_execution",
+        "accept_sanyal_blackmail_terms"
+      ],
+      "hidden_states": [
+        "calculating",
+        "vulnerable",
+        "negotiating"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "hamza",
+      "strength": 0.95,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "extraction_required"
+    },
+    {
+      "source": "rizwan_shah",
+      "target": "hamza",
+      "strength": 0.95,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "rescue_attempt"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_dg_shahnawaz_leverage",
+      "name": "Leverage material on ISI DG Shahnawaz (Israel leak videos) \u2014 Sanyal holds this",
+      "current_entropy": 0.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 0.5,
+      "access_actions": [
+        "negotiate_prisoner_exchange_reveal_sanyal_channel"
+      ]
+    },
+    {
+      "id": "isi_interrogation_knowledge_gap",
+      "name": "What ISI already knows about Hamza's operations \u2014 calibrate resistance strategy",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.9,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "offer_limited_outdated_intelligence"
+      ]
+    }
+  ],
+  "belief_state": {
+    "captured_isi_probing_sanyal_unaware": 0.3,
+    "captured_isi_escalating_sanyal_aware_acting": 0.4,
+    "captured_isi_negotiating_sanyal_leverage_deployed": 0.25,
+    "captured_execution_imminent": 0.05
+  },
+  "source_refs": [
+    "https://www.hrw.org/reports/2006/pakistan0906/7.htm",
+    "https://www.globalsecurity.org/wmd/library/news/pakistan/2024/pakistan-240327-voa01.htm"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.68,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

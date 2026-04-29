@@ -1,0 +1,357 @@
+{
+  "id": "yalina-romance-risk",
+  "operative": "hamza",
+  "film": 1,
+  "act": 2,
+  "description": "Hamza meets Yalina Jamali \u2014 daughter of PPP politician Jameel Jamali \u2014 through the Lyari social circuit. She is educated, politically aware, and drawn to Hamza's quiet intensity. He is drawn to her genuinely. The turning point: Hamza must decide whether to pursue the relationship (which could provide strategic access to the Jamali political network \u2014 a key mission target) or maintain emotional distance to protect both her and his cover. Pursuing her is both the most tactically useful and the most personally dangerous choice.",
+  "real_world_correlation": {
+    "intelligence_romance_precedent": "The use of romantic relationships as intelligence access vectors ('honey traps' or 'Romeo operations') is documented across multiple intelligence services. Real RAW/ISI operations have both employed and been victimised by this tactic. The ethical complexity the film raises \u2014 can a genuine feeling emerge within a tactical operation? \u2014 mirrors real documented cases.",
+    "jamali_political_access": "Yalina's father Jameel Jamali is a PPP-affiliated politician with connections to Rehman Dakait's PAC. In real Karachi politics, PPP maintained complex, acknowledged relationships with Lyari's criminal power structures. The political-criminal nexus the film depicts (Jamali \u2194 Dakait \u2194 ISI) is a documented real-world structure.",
+    "emotional_cost_of_deep_cover": "Ravindra Kaushik (Hamza's real-world parallel) reportedly had a Pakistani wife and child during his years undercover. The genuine personal relationships formed by deep-cover operatives are among the most studied and least discussed aspects of intelligence work. The film dramatises what is usually suppressed in official narratives.",
+    "cover_integrity_paradox": "Marrying into a Pakistani family deepens cover (harder to be suspected) while simultaneously raising stakes if blown (endangers the family). This is the exact paradox described in real intelligence doctrine on deep-cover family relationships."
+  },
+  "state_vector": {
+    "cover_integrity": 7.8,
+    "trust_capital": 4.2,
+    "intelligence_depth": 3.2,
+    "network_strength": 5.0,
+    "exposure_risk": 4.8
+  },
+  "available_actions": [
+    "pursue_yalina_strategically_emotional_distance",
+    "pursue_yalina_authentically_accept_risk",
+    "avoid_yalina_protect_cover",
+    "use_yalina_contact_for_jamali_intel_then_disengage",
+    "report_yalina_contact_to_aalam_request_guidance"
+  ],
+  "mission_tasks": [
+    {
+      "id": "peripheral_gang_contact",
+      "name": "Infiltrate PAC peripheral network",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "build_trust_dakait",
+      "name": "Build direct trust with Rehman Dakait",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [],
+      "parallelizable_with": [
+        "jamali_political_access"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "jamali_political_access",
+      "name": "Gain access to Jameel Jamali's political network and FICN money flows",
+      "optimistic_days": 14,
+      "most_likely_days": 45,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "build_trust_dakait"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.18
+    },
+    {
+      "id": "isi_link_documentary",
+      "name": "Gather documentary evidence of ISI-PAC-Jamali terror financing chain",
+      "optimistic_days": 60,
+      "most_likely_days": 120,
+      "pessimistic_days": 240,
+      "dependencies": [
+        "build_trust_dakait",
+        "jamali_political_access"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "safe_exfil",
+      "name": "Exfiltrate safely with evidence",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [
+        "isi_link_documentary"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.5
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "pursue_yalina_strategically_emotional_distance",
+      "pursue_yalina_authentically_accept_risk",
+      "avoid_yalina_protect_cover",
+      "use_yalina_contact_for_jamali_intel_then_disengage",
+      "jamali_network_accessible",
+      "cover_deepened_family_attachment",
+      "emotional_entanglement_mission_risk",
+      "yalina_discovers_identity_risk",
+      "cover_integrity_maintained",
+      "mission_success",
+      "cover_blown_via_personal_connection"
+    ],
+    "edges": [
+      {
+        "cause": "pursue_yalina_strategically_emotional_distance",
+        "effect": "jamali_network_accessible",
+        "strength": 0.7,
+        "known_confounders": [
+          "yalina_perceptiveness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "pursue_yalina_strategically_emotional_distance",
+        "effect": "emotional_entanglement_mission_risk",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pursue_yalina_authentically_accept_risk",
+        "effect": "jamali_network_accessible",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pursue_yalina_authentically_accept_risk",
+        "effect": "cover_deepened_family_attachment",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pursue_yalina_authentically_accept_risk",
+        "effect": "yalina_discovers_identity_risk",
+        "strength": 0.4,
+        "known_confounders": [
+          "duration_of_operation"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "avoid_yalina_protect_cover",
+        "effect": "cover_integrity_maintained",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "avoid_yalina_protect_cover",
+        "effect": "jamali_network_accessible",
+        "strength": 0.15,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "use_yalina_contact_for_jamali_intel_then_disengage",
+        "effect": "jamali_network_accessible",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "use_yalina_contact_for_jamali_intel_then_disengage",
+        "effect": "yalina_discovers_identity_risk",
+        "strength": 0.6,
+        "known_confounders": [
+          "yalina_intelligence"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "cover_deepened_family_attachment",
+        "effect": "mission_success",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "yalina_discovers_identity_risk",
+        "effect": "cover_blown_via_personal_connection",
+        "strength": 0.55,
+        "known_confounders": [
+          "yalina_loyalty"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "emotional_entanglement_mission_risk",
+        "effect": "cover_blown_via_personal_connection",
+        "strength": 0.35,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "jameel_jamali",
+      "objective": "Protect political position; scrutinise Yalina's suitors for political utility or threat",
+      "capability": 5.0,
+      "trigger_threshold": 4.0,
+      "information_set": [
+        "ppf_political_network",
+        "dakait_pac_connection",
+        "lyari_social_graph"
+      ],
+      "observable_actions": [
+        "background_check_suitor",
+        "use_isi_contacts_to_verify",
+        "approve_relationship_for_political_gain",
+        "reject_relationship_suspect_motives"
+      ],
+      "hidden_states": [
+        "approving",
+        "neutral",
+        "suspicious",
+        "hostile"
+      ],
+      "prospect_params": {
+        "lam": 2.2,
+        "gamma": 0.64,
+        "alpha": 0.86,
+        "beta": 0.86,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "rehman_dakait",
+      "objective": "Assess whether Hamza's relationship with Jamali's daughter is a threat or opportunity",
+      "capability": 8.5,
+      "trigger_threshold": 6.5,
+      "information_set": [
+        "lyari_social_graph",
+        "jamali_political_ties"
+      ],
+      "observable_actions": [
+        "test_hamza_loyalty_task",
+        "probe_hamza_relationship_motives",
+        "use_yalina_as_informant",
+        "accept_hamza_deeper_into_network"
+      ],
+      "hidden_states": [
+        "trusting",
+        "probing",
+        "suspicious"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.8,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "yalina_jamali",
+      "target": "jameel_jamali",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "jameel_jamali",
+      "strength": 0.68,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "political_pressure"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "jamali_ficn_accounts",
+      "name": "Jameel Jamali's offshore accounts receiving ISI/FICN transfers",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "pursue_yalina_authentically_accept_risk",
+        "jamali_political_access"
+      ]
+    },
+    {
+      "id": "jamali_isi_contact",
+      "name": "Which ISI officer Jamali liaises with (Major Iqbal connection)",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "pursue_yalina_authentically_accept_risk",
+        "build_trust_dakait"
+      ]
+    },
+    {
+      "id": "yalina_awareness_level",
+      "name": "How much Yalina knows of her father's criminal/ISI connections",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.6,
+      "access_difficulty": 4.0,
+      "access_actions": [
+        "pursue_yalina_authentically_accept_risk",
+        "pursue_yalina_strategically_emotional_distance"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_jamali_unaware_dakait_trusting": 0.45,
+    "cover_intact_jamali_suspicious_dakait_trusting": 0.3,
+    "cover_intact_jamali_approving_dakait_probing": 0.18,
+    "cover_suspected_emotional_entanglement_risk": 0.07
+  },
+  "source_refs": [
+    "https://www.cia.gov/stories/story/romeo-spies/",
+    "https://www.independent.co.uk/news/uk/this-britain/secrets-revealed-of-gay-honey-trap-that-made-spy-of-vassall-6096771.html"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.51,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

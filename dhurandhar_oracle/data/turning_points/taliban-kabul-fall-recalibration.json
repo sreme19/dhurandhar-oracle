@@ -1,0 +1,300 @@
+{
+  "id": "taliban-kabul-fall-recalibration",
+  "operative": "ajay_sanyal",
+  "film": 4,
+  "act": 1,
+  "description": "August 15, 2021. Kabul falls to the Taliban in hours, not the weeks the CIA had predicted. President Ashraf Ghani flees. The US-trained 300,000-man Afghan National Army collapses without a fight. India had invested $3 billion in Afghanistan \u2014 Salma Dam, Kandahar consulates, Parliament building, roads \u2014 all now under Taliban control. India had 4 consulates in Afghanistan, all closed in panic. NSA Ajay Sanyal must perform an immediate strategic recalibration: Pakistan's 'strategic depth' in Afghanistan is now realised, but its costs are also visible \u2014 the TTP (Tehrik-i-Taliban Pakistan) will be emboldened, Pakistan's western border will bleed. The key intelligence question: will the Taliban honour the Pakistan-ISI relationship that gave it sanctuary for 20 years, or will the Pashtunwali code and TTP pressures turn Afghanistan into Pakistan's own strategic nightmare?",
+  "real_world_correlation": {
+    "event_date": "August 15, 2021",
+    "real_event": "Taliban captured Kabul August 15, 2021 \u2014 ahead of the September 11 US withdrawal deadline. President Ghani fled to UAE with cash-filled helicopters (disputed). ANA collapse: 300,000 trained soldiers, $88 billion in US military equipment, yielded without sustained resistance. Taliban took 33 of 34 provincial capitals in 10 days. India evacuated its ambassador and staff from Kabul; closed Kandahar, Herat, Jalalabad, and Mazar-i-Sharif consulates.",
+    "india_investment_lost": "India's $3 billion investment in Afghanistan \u2014 including the $290m Salma Dam (renamed Afghan-India Friendship Dam), Kabul Parliament Building ($90m), Zaranj-Delaram highway (218km, connecting Afghan road network to Iran border), multiple consulates \u2014 all fell under Taliban control. India had no Taliban relationship to leverage.",
+    "pakistan_strategic_depth_costs": "ISI's long-term strategy of supporting the Taliban as 'strategic depth' against India succeeded in its immediate objective \u2014 but at unexpected costs: (1) TTP (Pakistani Taliban), emboldened by Afghan Taliban success, dramatically escalated attacks inside Pakistan from 2021 onward; (2) Afghanistan under Taliban refused to honour the Durand Line; (3) Afghan Taliban-ISI relations deteriorated over Pakistan's treatment of Afghan refugees and TTP sanctuary",
+    "ttp_escalation": "TTP attacks inside Pakistan: 2021 \u2014 300+ attacks; 2022 \u2014 500+; 2023 \u2014 700+; 2024 \u2014 900+. Pakistan's own 'strategic asset' (Afghan Taliban) was enabling Pakistan's worst terrorist threat (TTP). The chickens-coming-home dynamic Sanyal would monologue about.",
+    "india_quiet_engagement": "Despite having no consular presence, India quietly re-engaged with the Taliban through back-channels by 2023. Indian technical staff resumed work on Salma Dam. Trade through Pakistan-India was explored for Afghan access. India's pragmatic engagement with the Taliban (without recognition) was classic NSA Doval doctrine \u2014 interests over ideology.",
+    "raw_intelligence_failure": "RAW's assessment of ANA collapse timeline was significantly wrong. US CIA's 'months not weeks' prediction was also wrong. The speed of Taliban advance caught every intelligence agency off-guard \u2014 representing a fundamental failure to assess the ANA's will to fight vs. its equipment capability."
+  },
+  "state_vector": {
+    "cover_integrity": 9.5,
+    "trust_capital": 8.5,
+    "intelligence_depth": 6.5,
+    "network_strength": 8.0,
+    "exposure_risk": 2.5
+  },
+  "available_actions": [
+    "assess_taliban_isi_relationship_post_kabul",
+    "evaluate_ttp_escalation_threat_to_pakistan_stability",
+    "design_quiet_engagement_channel_taliban",
+    "assess_isi_use_of_afghan_territory_for_india_operations",
+    "map_us_equipment_windfall_taliban_capabilities"
+  ],
+  "mission_tasks": [
+    {
+      "id": "taliban_isi_relationship_assess",
+      "name": "Assess whether Taliban will honour ISI relationship or use strategic independence now that US is gone",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [],
+      "parallelizable_with": [
+        "ttp_escalation_map",
+        "afghan_territory_india_ops_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "ttp_escalation_map",
+      "name": "Map TTP escalation trajectory post-Kabul \u2014 assess when TTP instability becomes strategic opportunity for India (Pakistan two-front internal)",
+      "optimistic_days": 60,
+      "most_likely_days": 120,
+      "pessimistic_days": 180,
+      "dependencies": [],
+      "parallelizable_with": [
+        "taliban_isi_relationship_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "afghan_territory_india_ops_assess",
+      "name": "Assess ISI's intent to use Afghan territory as a safe staging area for operations against India under Taliban cover",
+      "optimistic_days": 30,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "taliban_isi_relationship_assess"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "us_equipment_taliban_capability",
+      "name": "Assess Taliban's real military capability from US equipment windfall \u2014 helicopters, armoured vehicles, night vision \u2014 impact on ISI's proxy capability",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "taliban_isi_relationship_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_taliban_isi_relationship_post_kabul",
+      "evaluate_ttp_escalation_threat_to_pakistan_stability",
+      "design_quiet_engagement_channel_taliban",
+      "assess_isi_use_of_afghan_territory_for_india_operations",
+      "map_us_equipment_windfall_taliban_capabilities",
+      "taliban_honours_isi_relationship_india_threat_increases",
+      "taliban_independent_isi_relationship_deteriorates",
+      "ttp_destabilises_pakistan_strategic_opportunity_india",
+      "isi_uses_afghan_territory_india_operations",
+      "quiet_engagement_prevents_full_anti_india_alignment"
+    ],
+    "edges": [
+      {
+        "cause": "assess_taliban_isi_relationship_post_kabul",
+        "effect": "taliban_honours_isi_relationship_india_threat_increases",
+        "strength": 0.4,
+        "known_confounders": [
+          "pashtunwali_vs_isi_interests"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "assess_taliban_isi_relationship_post_kabul",
+        "effect": "taliban_independent_isi_relationship_deteriorates",
+        "strength": 0.6,
+        "known_confounders": [
+          "ttp_pressure_on_isi_taliban_relations"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "evaluate_ttp_escalation_threat_to_pakistan_stability",
+        "effect": "ttp_destabilises_pakistan_strategic_opportunity_india",
+        "strength": 0.7,
+        "known_confounders": [
+          "pakistan_military_ttp_response_effectiveness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_isi_use_of_afghan_territory_for_india_operations",
+        "effect": "isi_uses_afghan_territory_india_operations",
+        "strength": 0.45,
+        "known_confounders": [
+          "taliban_permission_level"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "design_quiet_engagement_channel_taliban",
+        "effect": "quiet_engagement_prevents_full_anti_india_alignment",
+        "strength": 0.65,
+        "known_confounders": [
+          "taliban_interests_in_india_trade"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "taliban_independent_isi_relationship_deteriorates",
+        "effect": "ttp_destabilises_pakistan_strategic_opportunity_india",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_post_kabul_strategic_management",
+      "objective": "Maintain Taliban relationship and extract strategic benefit from Kabul; use Afghan territory for anti-India operations; manage TTP threat to Pakistan's own stability; prevent India from re-establishing Afghan presence",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "taliban_factional_dynamics",
+        "ttp_command_structure",
+        "india_afghan_back_channels",
+        "cpec_afghan_connectivity_plans"
+      ],
+      "observable_actions": [
+        "install_isi_aligned_taliban_officials_in_kabul",
+        "prevent_india_reengagement_taliban",
+        "use_afghan_territory_trf_let_training",
+        "manage_ttp_through_selective_talks_selective_pressure"
+      ],
+      "hidden_states": [
+        "consolidating",
+        "managing_ttp_blowback",
+        "preventing_india_reentry",
+        "using_afghan_space"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "afghan_taliban_command",
+      "objective": "Establish governance; manage TTP relationship; extract economic resources from all international actors including India; avoid being constrained solely by Pakistan",
+      "capability": 8.0,
+      "trigger_threshold": 6.5,
+      "information_set": [
+        "international_recognition_levers",
+        "economic_aid_sources",
+        "isi_dependency_vs_independence"
+      ],
+      "observable_actions": [
+        "accept_quiet_indian_engagement_for_trade_leverage",
+        "allow_ttp_sanctuary_while_claiming_no_ttp_operations",
+        "play_india_against_pakistan_for_economic_gain",
+        "refuse_durand_line_recognition"
+      ],
+      "hidden_states": [
+        "consolidating_governance",
+        "managing_ttp",
+        "extracting_from_all_patrons",
+        "strategic_autonomy_seeking"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.68,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "narendra_modi",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "iran",
+      "strength": 0.72,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "chabahar_port_afghan_access"
+    },
+    {
+      "source": "pakistan",
+      "target": "afghan_taliban",
+      "strength": 0.65,
+      "betrayal_history": 1,
+      "in_coalition": false,
+      "trigger_condition": "isi_sanctuary_historical"
+    },
+    {
+      "source": "china",
+      "target": "afghan_taliban",
+      "strength": 0.6,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "bri_connectivity_copper_mines"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "taliban_isi_operational_relationship",
+      "name": "Whether Taliban is providing ISI operational space for anti-India activities in Afghan territory post-Kabul",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.95,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "assess_isi_use_of_afghan_territory_for_india_operations",
+        "assess_taliban_isi_relationship_post_kabul"
+      ]
+    },
+    {
+      "id": "ttp_pakistan_stability_trajectory",
+      "name": "TTP attack trajectory \u2014 when does TTP destabilisation of Pakistan create a strategic opening for India to apply pressure",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.88,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "evaluate_ttp_escalation_threat_to_pakistan_stability"
+      ]
+    },
+    {
+      "id": "taliban_india_engagement_openness",
+      "name": "Degree of Taliban openness to quiet Indian engagement \u2014 trade, technical assistance, Salma Dam \u2014 without formal recognition",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.8,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "design_quiet_engagement_channel_taliban"
+      ]
+    }
+  ],
+  "belief_state": {
+    "taliban_seeks_independence_from_isi_strategic_opportunity_india": 0.55,
+    "taliban_honours_isi_debt_anti_india_alignment": 0.3,
+    "taliban_plays_india_pakistan_both_for_resources": 0.12,
+    "ttp_collapses_pakistan_within_3_years": 0.03
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)",
+    "https://www.reuters.com/world/timeline-talibans-rapid-advance-across-afghanistan-2021-08-15/"
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch2",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:38:03+00:00"
+    }
+  ]
+}

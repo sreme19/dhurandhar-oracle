@@ -1,0 +1,267 @@
+{
+  "id": "doklam-china-second-front",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 2,
+  "description": "June 18 \u2013 August 28, 2017. China's PLA begins constructing a road across the Doklam plateau \u2014 Bhutanese territory at the India-China-Bhutan tri-junction \u2014 toward the Jampheri Ridge, which overlooks India's Siliguri Corridor (the 27km 'Chicken's Neck' connecting Northeast India to the mainland). Indian Army intervenes on Bhutan's behalf per the 1949 India-Bhutan treaty, blocking the road construction. A 73-day military standoff ensues \u2014 Indian and Chinese troops in eyeball-to-eyeball positions at 14,000 feet. For Rizwan Shah, embedded in Pakistan-focused ISI networks, this represents a doctrinal shift: India now faces a coordinated two-front pressure \u2014 ISI-Pakistan in the west, PLA-China in the east. The critical intelligence question: is Doklam ISI-coordinated with China, or an independent Chinese move that ISI will exploit?",
+  "real_world_correlation": {
+    "event_date": "June 18 \u2013 August 28, 2017",
+    "real_event": "PLA troops began road construction at Doklam (Zhoglam), Bhutanese territory per India's position. Indian Army moved in to block on June 18. 73-day standoff ended August 28 with both sides withdrawing from the construction point \u2014 China's road construction halted (per Indian version), though China later resumed infrastructure activity nearby. The standoff was the longest India-China military face-off since 1987.",
+    "siliguri_corridor_significance": "Jampheri Ridge overlooks the Siliguri Corridor \u2014 the narrow 27km land strip connecting Northeast India to the mainland. Control of Doklam plateau gives the PLA direct observation and potential interdiction capability over this corridor. Loss of Siliguri would effectively cut off Assam, Meghalaya, Arunachal Pradesh, Nagaland, Manipur, Mizoram, and Tripura. The strategic stakes were existential \u2014 not merely territorial.",
+    "india_bhutan_treaty": "India intervened under the 1949 India-Bhutan Treaty of Friendship (superseded by 2007 treaty) which obligated India to guide Bhutan's foreign policy. Bhutan's own foreign ministry protested the Chinese construction. This made the standoff legally complex: India was defending Bhutanese territory, not Indian territory directly.",
+    "china_pakistan_cpec_link": "The standoff occurred as CPEC (China-Pakistan Economic Corridor) construction was accelerating through PoK \u2014 territory India considers its own. CPEC was the structural link between PLA and ISI strategic interests. Intelligence analysts noted: Doklam pressure timed with post-Uri Pakistani denial \u2014 coordinated two-front coercion against India.",
+    "resolution": "Both sides withdrew from the construction point. India claimed China halted road extension toward Jampheri Ridge. China claimed India withdrew troops first. Satellite imagery (2018) showed China resumed construction slightly north \u2014 the plateau remained contested. The 73-day standoff was a preview of Galwan (2020).",
+    "doval_role": "NSA Ajit Doval visited Beijing in late July 2017 for a BRICS security summit \u2014 a direct back-channel to Chinese leadership during the standoff. His visit is seen as the diplomatic precursor to the withdrawal agreement."
+  },
+  "state_vector": {
+    "cover_integrity": 7.0,
+    "trust_capital": 6.0,
+    "intelligence_depth": 6.5,
+    "network_strength": 7.0,
+    "exposure_risk": 5.0
+  },
+  "available_actions": [
+    "assess_china_isi_coordination_doklam_timing",
+    "map_isi_exploitation_of_doklam_two_front_pressure",
+    "identify_jem_escalation_plans_during_doklam_window",
+    "monitor_cpec_intelligence_sharing_pakistan_china",
+    "provide_intelligence_on_chinese_pla_doctrine_signals"
+  ],
+  "mission_tasks": [
+    {
+      "id": "china_isi_coordination_confirm",
+      "name": "Confirm whether ISI was informed of / coordinated Doklam timing with PLA, or this is independent Chinese action ISI is exploiting",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_kashmir_escalation_doklam_window"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "isi_kashmir_escalation_doklam_window",
+      "name": "Assess whether ISI plans to exploit Doklam distraction window for Kashmir escalation (infiltration surge, attack)",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "china_isi_coordination_confirm"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "cpec_intelligence_sharing_map",
+      "name": "Map intelligence sharing between ISI and PLA on Indian military positioning \u2014 CPEC security corridor as intelligence channel",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "china_isi_coordination_confirm"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_china_isi_coordination_doklam_timing",
+      "map_isi_exploitation_of_doklam_two_front_pressure",
+      "identify_jem_escalation_plans_during_doklam_window",
+      "monitor_cpec_intelligence_sharing_pakistan_china",
+      "provide_intelligence_on_chinese_pla_doctrine_signals",
+      "coordinated_two_front_pressure_confirmed",
+      "independent_pla_action_isi_opportunist",
+      "kashmir_attack_during_doklam_standoff",
+      "india_stretched_two_front_response",
+      "cpec_military_intelligence_channel_identified"
+    ],
+    "edges": [
+      {
+        "cause": "assess_china_isi_coordination_doklam_timing",
+        "effect": "coordinated_two_front_pressure_confirmed",
+        "strength": 0.45,
+        "known_confounders": [
+          "pla_isi_communication_opacity"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "assess_china_isi_coordination_doklam_timing",
+        "effect": "independent_pla_action_isi_opportunist",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "map_isi_exploitation_of_doklam_two_front_pressure",
+        "effect": "kashmir_attack_during_doklam_standoff",
+        "strength": 0.5,
+        "known_confounders": [
+          "isi_resource_constraints"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "identify_jem_escalation_plans_during_doklam_window",
+        "effect": "kashmir_attack_during_doklam_standoff",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "monitor_cpec_intelligence_sharing_pakistan_china",
+        "effect": "cpec_military_intelligence_channel_identified",
+        "strength": 0.7,
+        "known_confounders": [
+          "cpec_communication_encryption"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "india_stretched_two_front_response",
+        "effect": "kashmir_attack_during_doklam_standoff",
+        "strength": 0.6,
+        "known_confounders": [
+          "indian_reserve_capacity"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "pla_western_theatre_command",
+      "objective": "Establish road construction precedent on Doklam plateau; test India's resolve on Bhutan treaty obligations; assess Siliguri Corridor interdiction options; probe Indian response threshold without crossing into war",
+      "capability": 9.5,
+      "trigger_threshold": 9.0,
+      "information_set": [
+        "india_bhutan_treaty_obligations",
+        "siliguri_corridor_military_geography",
+        "india_military_deployment_doklam",
+        "china_domestic_political_calendar"
+      ],
+      "observable_actions": [
+        "continue_road_construction_incrementally",
+        "increase_pla_troop_presence_doklam",
+        "issue_diplomatic_ultimatums",
+        "conduct_military_exercises_near_arunachal",
+        "signal_willingness_to_fight_through_media"
+      ],
+      "hidden_states": [
+        "testing_threshold",
+        "negotiating_back_channel",
+        "preparing_to_withdraw",
+        "escalating"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.7,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "isi_two_front_exploitation",
+      "objective": "Exploit Doklam distraction to conduct Kashmir escalation; reinforce CPEC political narrative; coordinate ISI-PLA intelligence sharing on Indian military positioning",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "india_military_attention_split",
+        "doklam_standoff_duration_estimates",
+        "kashmir_militant_readiness"
+      ],
+      "observable_actions": [
+        "increase_infiltration_attempts_loc_during_doklam",
+        "coordinate_attacks_sunjuwan_type_during_doklam_window",
+        "amplify_two_front_pressure_narrative_diplomatically"
+      ],
+      "hidden_states": [
+        "exploiting",
+        "holding_for_better_opportunity",
+        "coordinating_china"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.6,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "china",
+      "target": "pakistan",
+      "strength": 0.82,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "cpec_security_coordination"
+    },
+    {
+      "source": "india",
+      "target": "bhutan",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "doklam_defence_obligation"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "china_isi_doklam_coordination_signal",
+      "name": "ISI-PLA communication confirming whether Doklam timing was coordinated with Pakistan's post-Uri recovery phase",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.92,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "assess_china_isi_coordination_doklam_timing",
+        "monitor_cpec_intelligence_sharing_pakistan_china"
+      ]
+    },
+    {
+      "id": "isi_kashmir_attack_doklam_window",
+      "name": "Specific JeM/LeT attack plan targeting the Doklam distraction window \u2014 any planned strikes in J&K or mainland India",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "identify_jem_escalation_plans_during_doklam_window",
+        "map_isi_exploitation_of_doklam_two_front_pressure"
+      ]
+    }
+  ],
+  "belief_state": {
+    "independent_pla_action_isi_opportunistically_exploiting": 0.5,
+    "loosely_coordinated_pla_isi_two_front_pressure_informal": 0.35,
+    "formally_coordinated_pla_isi_joint_coercion_plan": 0.1,
+    "pla_action_constraining_isi_doklam_competing_priorities": 0.05
+  },
+  "source_refs": [
+    "http://www.mea.gov.in/press-releases.htm?dtl%2F28572%2FRecent+Developments+in+Doklam+Area=",
+    "https://www.mea.gov.in/Uploads/PublicationDocs/28895_Doklam_new.pdf",
+    "https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff"
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch2",
+      "added_count": 3,
+      "added_at": "2026-04-29T14:38:03+00:00"
+    }
+  ]
+}

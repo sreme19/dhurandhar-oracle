@@ -1,0 +1,16 @@
+{
+  "turning_point_id": "surgical-strikes-execution",
+  "actual_action": "unknown",
+  "immediate_effects": [],
+  "terminal_state": "in_progress",
+  "days_elapsed": 0,
+  "losses": [],
+  "intel_gained": [],
+  "cover_change": 0.0,
+  "confidence": 0.0,
+  "source_refs": [],
+  "owner": null,
+  "updated_at": "2026-04-29T14:29:06+00:00",
+  "schema_version": "1.1.0",
+  "_TODO": "Backfill with grounded outcome for rizwan_shah at surgical-strikes-execution."
+}

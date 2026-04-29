@@ -1,0 +1,333 @@
+{
+  "id": "yalina-identity-exposure",
+  "operative": "hamza",
+  "film": 2,
+  "act": 2,
+  "description": "Yalina discovers Hamza's true identity: Jaskirat Singh Rangi, an Indian RAW operative. The trigger is ambiguous \u2014 years of small inconsistencies, a document she finds, or a moment during the ISI-Iqbal escalation when Hamza's reactions don't fit the man she married. Their son Zayan is in the household. Yalina holds the key to Hamza's survival (she could expose him to ISI/Pakistan authorities) or his mission (she could protect him). Her choice \u2014 and Hamza's response when confronted \u2014 is the film's central emotional turning point. The decision calculus is not tactical but moral: what does Hamza owe the woman he has genuinely loved under false pretenses for over a decade?",
+  "real_world_correlation": {
+    "deep_cover_family_reality": "Ravindra Kaushik's Pakistani wife and family are the real-world anchor. His wife reportedly did not know his true identity until after his 1983 capture by Pakistani intelligence. The emotional reality of a Pakistani woman discovering her Indian husband's identity has never been documented from the Pakistani family's perspective \u2014 the film fills this gap.",
+    "yalina_agency": "In real documented cases of deep-cover spousal discovery, the spouse's response ranges from immediate reporting to authorities (seen as patriotic) to protection (seen as betrayal of nationality). The film gives Yalina genuine moral agency \u2014 she chooses to protect Hamza despite the betrayal, because of Zayan and her own accumulated knowledge of her father's (Jamali's) culpability.",
+    "son_as_operational_constraint": "The existence of a child born to an operative and a local spouse creates an irresolvable operational constraint: the child cannot be exfiltrated without exposing the mission; the child cannot be abandoned without destroying the operative's cover story and creating a witness. This 'hostage of love' dynamic is one of the most ethically complex scenarios in deep-cover doctrine.",
+    "asp_omar_haider": "In Film 2, ASP Omar Haider is the Pakistani security officer to whom Yalina eventually reveals Hamza's identity (to protect Zayan from ISI). The use of a relatively lower-level police officer (rather than directly contacting ISI) reflects Yalina's calculation \u2014 Omar Haider might be manipulable, might protect Zayan, might not immediately escalate to Major Iqbal. It is Yalina's own intelligence operation within the film."
+  },
+  "state_vector": {
+    "cover_integrity": 3.5,
+    "trust_capital": 2.0,
+    "intelligence_depth": 8.5,
+    "network_strength": 6.0,
+    "exposure_risk": 9.0
+  },
+  "available_actions": [
+    "confess_to_yalina_appeal_to_love_and_zayan",
+    "deny_and_maintain_cover_gaslight",
+    "confess_and_begin_joint_exfil_plan",
+    "request_sanyal_emergency_extraction",
+    "preemptively_neutralise_yalina_as_threat"
+  ],
+  "mission_tasks": [
+    {
+      "id": "yalina_management",
+      "name": "Manage Yalina's discovery \u2014 prevent exposure to ISI within 48 hours",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [
+        "zayan_protection"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.8
+    },
+    {
+      "id": "zayan_protection",
+      "name": "Secure Zayan's physical safety regardless of how Yalina responds",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "yalina_management"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "major_iqbal_operation_continue",
+      "name": "Continue Major Iqbal operation despite exposure crisis (mission cannot stop)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "yalina_management"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.55
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "confess_to_yalina_appeal_to_love_and_zayan",
+      "deny_and_maintain_cover_gaslight",
+      "confess_and_begin_joint_exfil_plan",
+      "request_sanyal_emergency_extraction",
+      "preemptively_neutralise_yalina_as_threat",
+      "yalina_protects_hamza",
+      "yalina_exposes_hamza_to_haider",
+      "yalina_directly_contacts_isi",
+      "zayan_safety_secured",
+      "isi_captures_hamza",
+      "mission_aborted_emergency_exfil",
+      "mission_continues_reduced_cover"
+    ],
+    "edges": [
+      {
+        "cause": "confess_to_yalina_appeal_to_love_and_zayan",
+        "effect": "yalina_protects_hamza",
+        "strength": 0.55,
+        "known_confounders": [
+          "yalina_character",
+          "years_of_genuine_relationship"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "confess_to_yalina_appeal_to_love_and_zayan",
+        "effect": "yalina_exposes_hamza_to_haider",
+        "strength": 0.35,
+        "known_confounders": [
+          "yalina_patriotism_vs_love"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "confess_to_yalina_appeal_to_love_and_zayan",
+        "effect": "zayan_safety_secured",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "deny_and_maintain_cover_gaslight",
+        "effect": "yalina_directly_contacts_isi",
+        "strength": 0.6,
+        "known_confounders": [
+          "yalina_certainty_level"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "deny_and_maintain_cover_gaslight",
+        "effect": "yalina_protects_hamza",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "confess_and_begin_joint_exfil_plan",
+        "effect": "mission_aborted_emergency_exfil",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "confess_and_begin_joint_exfil_plan",
+        "effect": "yalina_protects_hamza",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "request_sanyal_emergency_extraction",
+        "effect": "mission_aborted_emergency_exfil",
+        "strength": 0.88,
+        "known_confounders": [
+          "sanyal_speed"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "preemptively_neutralise_yalina_as_threat",
+        "effect": "mission_continues_reduced_cover",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "preemptively_neutralise_yalina_as_threat",
+        "effect": "zayan_safety_secured",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "yalina_exposes_hamza_to_haider",
+        "effect": "isi_captures_hamza",
+        "strength": 0.65,
+        "known_confounders": [
+          "haider_response_speed"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "yalina_directly_contacts_isi",
+        "effect": "isi_captures_hamza",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "yalina_protects_hamza",
+        "effect": "mission_continues_reduced_cover",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "yalina_jamali",
+      "objective": "Protect son Zayan; process betrayal of 15-year relationship; decide between Pakistani patriotism and personal love",
+      "capability": 5.0,
+      "trigger_threshold": 3.5,
+      "information_set": [
+        "hamza_inconsistencies_archive",
+        "jameel_jamali_father_guilt",
+        "zayan_welfare"
+      ],
+      "observable_actions": [
+        "protect_hamza_identity_internally",
+        "confront_hamza_privately",
+        "contact_asp_haider",
+        "contact_isi_directly",
+        "flee_with_zayan"
+      ],
+      "hidden_states": [
+        "shocked",
+        "grieving",
+        "protecting",
+        "reporting",
+        "protecting_zayan_first"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.65,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "asp_omar_haider",
+      "objective": "Enforce Pakistani security law; determine whether Hamza report requires ISI escalation",
+      "capability": 5.5,
+      "trigger_threshold": 4.5,
+      "information_set": [
+        "police_database",
+        "yalina_report",
+        "local_intelligence"
+      ],
+      "observable_actions": [
+        "escalate_to_isi_immediately",
+        "investigate_independently_before_escalating",
+        "protect_yalina_and_zayan",
+        "detain_hamza"
+      ],
+      "hidden_states": [
+        "procedural",
+        "sympathetic",
+        "escalating"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.86,
+        "beta": 0.86,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "yalina_jamali",
+      "strength": 0.9,
+      "betrayal_history": 1,
+      "in_coalition": false,
+      "trigger_condition": "discovery_event"
+    },
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "yalina_jamali",
+      "target": "asp_omar_haider",
+      "strength": 0.4,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "zayan_protection_need"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "yalina_decision_prediction",
+      "name": "Whether Yalina will protect or expose Hamza \u2014 read from her psychological state",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.99,
+      "access_difficulty": 5.5,
+      "access_actions": [
+        "confess_to_yalina_appeal_to_love_and_zayan"
+      ]
+    },
+    {
+      "id": "haider_escalation_threshold",
+      "name": "Whether ASP Omar Haider will escalate to ISI or handle at local police level",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.9,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "confess_to_yalina_appeal_to_love_and_zayan"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_blown_yalina_knows_isi_unaware": 0.55,
+    "cover_blown_yalina_knows_haider_informed": 0.25,
+    "cover_blown_yalina_knows_isi_alerted": 0.15,
+    "cover_blown_yalina_knows_isi_hunting": 0.05
+  },
+  "source_refs": [
+    "https://www.cia.gov/stories/story/romeo-spies/",
+    "https://rollingstone.com/politics/politics-features/cia-agent-deep-undercover-spy-islamic-radicals-war-on-terror-1235075156"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.51,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

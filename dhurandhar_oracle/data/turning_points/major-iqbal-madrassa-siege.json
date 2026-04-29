@@ -1,0 +1,302 @@
+{
+  "id": "major-iqbal-madrassa-siege",
+  "operative": "hamza",
+  "film": 2,
+  "act": 3,
+  "description": "Hamza has located Major Iqbal's operational compound \u2014 a madrassa network in Karachi used as a Mujahideen staging ground and ISI safe house. Rizwan Shah coordinates a strike on the compound (BUF \u2014 disguised Pakistan Rangers \u2014 are the cover force). Hamza must decide how to approach the final confrontation: lead the assault directly and risk capture, direct from a remote position, or attempt a negotiated extraction of Major Iqbal (live capture for intelligence) versus simple elimination. This is the decisive kinetic engagement of Film 2.",
+  "real_world_correlation": {
+    "madrassa_isi_nexus": "The use of madrassa networks as ISI safe houses and operational staging grounds is extensively documented. The Haqqani network's madrassa system in Pakistan (North Waziristan) and Jamaat-ud-Dawa's educational network (Hafiz Saeed's LeT front) are the most documented examples. The film's Karachi madrassa compound reflects documented ISI practice of using religious educational infrastructure for operational purposes.",
+    "buf_disguised_rangers": "The use of Pakistani state forces (Rangers/paramilitary) as a 'legitimate' strike force that provides ISI deniability for operations against its own assets is documented. Operation Zarb-e-Azb (2014) used military forces to eliminate elements of the TTP while protecting others. The BUF formation in the film mirrors this layered deniability structure.",
+    "abbottabad_parallel": "The Operation Neptune Spear (Osama bin Laden, May 2011) raid on a compound in Pakistan is the film's most obvious operational precedent. The structure \u2014 foreign intelligence operative identifying target location, coordinated compound assault, high-value target elimination \u2014 mirrors the Abbottabad template. The difference is India lacks the US capability for unilateral helicopter insertion; the film solves this via the BUF proxy force.",
+    "major_iqbal_composite": "The 'Major Iqbal' character is a documented composite of real ISI figures associated with 26/11. David Headley's FBI testimony names his ISI handler as 'Major Iqbal' and describes him operating from Karachi. The real individual's identity has never been officially confirmed by Pakistan. The film's Arjun Rampal portrayal conflates this figure with characteristics of Ilyas Kashmiri (ISI-linked militant commander killed by US drone strike 2011)."
+  },
+  "state_vector": {
+    "cover_integrity": 4.0,
+    "trust_capital": 1.5,
+    "intelligence_depth": 9.0,
+    "network_strength": 7.0,
+    "exposure_risk": 8.5
+  },
+  "available_actions": [
+    "lead_assault_direct_command",
+    "direct_from_remote_position_rizwan_leads",
+    "attempt_live_capture_iqbal_priority",
+    "strike_compound_eliminate_all",
+    "abort_negotiate_diplomatic_channel"
+  ],
+  "mission_tasks": [
+    {
+      "id": "compound_layout_final",
+      "name": "Final confirmation of compound layout, guard positions, and Iqbal's location within",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "buf_coordinate"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "buf_coordinate",
+      "name": "Coordinate BUF strike team timing, entry points, and rules of engagement",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 4,
+      "dependencies": [],
+      "parallelizable_with": [
+        "compound_layout_final"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "execute_compound_assault",
+      "name": "Execute compound assault \u2014 neutralise Mujahideen, isolate Iqbal",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 2,
+      "dependencies": [
+        "compound_layout_final",
+        "buf_coordinate"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.7
+    },
+    {
+      "id": "iqbal_neutralised",
+      "name": "Confirm Major Iqbal neutralised (dead or captured) before BUF withdrawal",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 3,
+      "dependencies": [
+        "execute_compound_assault"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.6
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "lead_assault_direct_command",
+      "direct_from_remote_position_rizwan_leads",
+      "attempt_live_capture_iqbal_priority",
+      "strike_compound_eliminate_all",
+      "abort_negotiate_diplomatic_channel",
+      "iqbal_neutralised_confirmed",
+      "iqbal_escapes_compound",
+      "hamza_wounded_exposed",
+      "buf_cover_maintained",
+      "isi_identifies_hamza_post_assault",
+      "mission_primary_objective_complete"
+    ],
+    "edges": [
+      {
+        "cause": "lead_assault_direct_command",
+        "effect": "iqbal_neutralised_confirmed",
+        "strength": 0.8,
+        "known_confounders": [
+          "iqbal_escape_routes"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "lead_assault_direct_command",
+        "effect": "hamza_wounded_exposed",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "lead_assault_direct_command",
+        "effect": "isi_identifies_hamza_post_assault",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "direct_from_remote_position_rizwan_leads",
+        "effect": "iqbal_neutralised_confirmed",
+        "strength": 0.7,
+        "known_confounders": [
+          "rizwan_effectiveness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "direct_from_remote_position_rizwan_leads",
+        "effect": "hamza_wounded_exposed",
+        "strength": 0.15,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "direct_from_remote_position_rizwan_leads",
+        "effect": "buf_cover_maintained",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "attempt_live_capture_iqbal_priority",
+        "effect": "iqbal_neutralised_confirmed",
+        "strength": 0.6,
+        "known_confounders": [
+          "iqbal_resistance"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "attempt_live_capture_iqbal_priority",
+        "effect": "hamza_wounded_exposed",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "attempt_live_capture_iqbal_priority",
+        "effect": "isi_identifies_hamza_post_assault",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "strike_compound_eliminate_all",
+        "effect": "iqbal_neutralised_confirmed",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "strike_compound_eliminate_all",
+        "effect": "buf_cover_maintained",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "abort_negotiate_diplomatic_channel",
+        "effect": "iqbal_escapes_compound",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "iqbal_neutralised_confirmed",
+        "effect": "mission_primary_objective_complete",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "isi_identifies_hamza_post_assault",
+        "effect": "hamza_wounded_exposed",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Escape compound if assault detected; eliminate Indian operatives; trigger ISI emergency protocol",
+      "capability": 9.0,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "compound_security_system",
+        "isi_emergency_network",
+        "mujahideen_defence"
+      ],
+      "observable_actions": [
+        "activate_mujahideen_defence",
+        "escape_via_tunnels",
+        "call_isi_reinforcements",
+        "destroy_intelligence_materials",
+        "identify_and_capture_attacking_operatives"
+      ],
+      "hidden_states": [
+        "secure",
+        "alerted",
+        "fighting",
+        "escaping"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.95,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "iqbal_escape_routes",
+      "name": "Major Iqbal's pre-planned escape routes from compound",
+      "current_entropy": 2.0,
+      "mission_relevance": 0.95,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "compound_layout_final"
+      ]
+    },
+    {
+      "id": "isi_reinforcement_response_time",
+      "name": "How quickly ISI can reinforce the compound after assault begins",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "buf_coordinate"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_blown_iqbal_alerted_mission_compromised": 0.2,
+    "cover_blown_iqbal_unalerted_mission_proceeding": 0.55,
+    "cover_blown_isi_reinforcing_hamza_exposed": 0.18,
+    "cover_blown_iqbal_escaped": 0.07
+  },
+  "source_refs": [
+    "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india",
+    "https://www.reuters.com/world/pakistan-has-credible-evidence-link-indian-agents-killings-pakistani-citizens-2024-01-25/"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.52,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

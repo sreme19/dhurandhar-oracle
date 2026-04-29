@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-29T14:40:38+00:00",
+  "method": "web_search_seed_batch4_contextual_final13",
+  "notes": "Append-only contextual grounding for remaining turning points. No replacement/deletion.",
+  "entries": [
+    {
+      "turning_point_id": "aalam-handler-contact",
+      "grounding_type": "contextual",
+      "confidence": 0.62,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/RAW_(India)",
+        "https://www.cfr.org/backgrounder/raw-indias-external-intelligence-agency"
+      ]
+    },
+    {
+      "turning_point_id": "dakait-first-meeting",
+      "grounding_type": "contextual",
+      "confidence": 0.64,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Rehman_Dakait",
+        "https://en.wikipedia.org/wiki/Operation_Lyari"
+      ]
+    },
+    {
+      "turning_point_id": "dakait-ambush-coordination",
+      "grounding_type": "contextual",
+      "confidence": 0.63,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Rehman_Dakait",
+        "https://www.bbc.com/news/world-asia-17895164"
+      ]
+    },
+    {
+      "turning_point_id": "ltf-raid-cover-crisis",
+      "grounding_type": "contextual",
+      "confidence": 0.6,
+      "source_refs": [
+        "https://www.bbc.com/news/world-asia-17895164",
+        "https://www.usip.org/sites/default/files/PW82-Conflict%20Dynamics%20in%20Karachi.pdf"
+      ]
+    },
+    {
+      "turning_point_id": "isi-capture-torture",
+      "grounding_type": "contextual",
+      "confidence": 0.68,
+      "source_refs": [
+        "https://www.hrw.org/reports/2006/pakistan0906/7.htm",
+        "https://www.globalsecurity.org/wmd/library/news/pakistan/2024/pakistan-240327-voa01.htm"
+      ]
+    },
+    {
+      "turning_point_id": "sanyal-isi-blackmail",
+      "grounding_type": "contextual",
+      "confidence": 0.58,
+      "source_refs": [
+        "https://www.hrw.org/reports/2006/pakistan0906/7.htm",
+        "https://www.hindustantimes.com/india-news/seduction-and-secrets-how-diplomat-madhuri-gupta-fell-for-pakistan-isi-s-honeytrap-101747823295700.html"
+      ]
+    },
+    {
+      "turning_point_id": "major-iqbal-madrassa-siege",
+      "grounding_type": "contextual",
+      "confidence": 0.52,
+      "source_refs": [
+        "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india",
+        "https://www.reuters.com/world/pakistan-has-credible-evidence-link-indian-agents-killings-pakistani-citizens-2024-01-25/"
+      ]
+    },
+    {
+      "turning_point_id": "major-iqbal-tanker-final",
+      "grounding_type": "contextual",
+      "confidence": 0.5,
+      "source_refs": [
+        "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india",
+        "https://en.wikipedia.org/wiki/2019_India%E2%80%93Pakistan_border_skirmishes"
+      ]
+    },
+    {
+      "turning_point_id": "naya-bharat-mandate",
+      "grounding_type": "contextual",
+      "confidence": 0.66,
+      "source_refs": [
+        "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=151242",
+        "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"
+      ]
+    },
+    {
+      "turning_point_id": "rizwan-partnership-activation",
+      "grounding_type": "contextual",
+      "confidence": 0.42,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/RAW_(India)",
+        "https://en.wikipedia.org/wiki/No-confidence_motion_against_Imran_Khan"
+      ]
+    },
+    {
+      "turning_point_id": "marriage-proposal-gambit",
+      "grounding_type": "contextual",
+      "confidence": 0.49,
+      "source_refs": [
+        "https://www.cia.gov/stories/story/romeo-spies/",
+        "https://www.hindustantimes.com/india-news/seduction-and-secrets-how-diplomat-madhuri-gupta-fell-for-pakistan-isi-s-honeytrap-101747823295700.html"
+      ]
+    },
+    {
+      "turning_point_id": "yalina-romance-risk",
+      "grounding_type": "contextual",
+      "confidence": 0.51,
+      "source_refs": [
+        "https://www.cia.gov/stories/story/romeo-spies/",
+        "https://www.independent.co.uk/news/uk/this-britain/secrets-revealed-of-gay-honey-trap-that-made-spy-of-vassall-6096771.html"
+      ]
+    },
+    {
+      "turning_point_id": "yalina-identity-exposure",
+      "grounding_type": "contextual",
+      "confidence": 0.51,
+      "source_refs": [
+        "https://www.cia.gov/stories/story/romeo-spies/",
+        "https://rollingstone.com/politics/politics-features/cia-agent-deep-undercover-spy-islamic-radicals-war-on-terror-1235075156"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "pulwama-balakot-decision",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 2,
+  "description": "February 14, 2019, 1535 hours. Adil Ahmad Dar, a 20-year-old local Kashmiri recruited by JeM, drives a Maruti Eeco packed with 300-350kg of IED into bus 49 of a 78-vehicle CRPF convoy on NH-44 near Lethapora, Pulwama. 40 CRPF personnel killed \u2014 the deadliest attack on security forces since 26/11. JeM claims responsibility within hours. The IP address used to upload Adil Ahmad Dar's martyrdom video traces to a location near Rawalpindi \u2014 Pakistan's army cantonment city. PM Modi chairs CCS within hours. The political mandate for retaliation is immediate and total. Rizwan Shah, monitoring ISI-JeM networks, holds critical intelligence about the Balakot training camp used to plan the attack \u2014 the same camp NSA Sanyal wants to strike. The decision: deliver the intelligence package now and enable a strike, or hold it as leverage for a deeper JeM network operation?",
+  "real_world_correlation": {
+    "event_date": "February 14, 2019",
+    "real_event": "Pulwama attack (Operation Bandar trigger event): CRPF convoy of 2,547 personnel in 78 vehicles ambushed on NH-44. Adil Ahmad Dar (alias Waqas Commando), 20, from Gundibagh, Pulwama \u2014 recruited by JeM in 2018. 300-350kg IED in Maruti Eeco. 40 CRPF killed. JeM Pakistan claimed responsibility. India's NDTV verified IP address of martyrdom video upload traced to Rawalpindi.",
+    "intelligence_failure": "CRPF inquiry report (September 2019) found multiple lapses: (1) convoy not split \u2014 78 vehicles travelled together despite standard operating procedure requiring splits; (2) ROP (Road Opening Party) did not clear the route segment; (3) local intelligence warning of IED-laden vehicle in area not acted upon in time; (4) ASI Mohan Lal on ROP duty physically tried to stop the vehicle but was too late.",
+    "jem_local_recruitment": "Adil Ahmad Dar had been stone-pelting during the post-Wani 2016 unrest. His recruitment into JeM in 2018 took under 2 years from civilian to suicide bomber \u2014 documenting the Wani-era radicalisation pipeline's operational timeline. The Pulwama attack is the direct kinetic output of the 2016 radicalisation surge.",
+    "balakot_camp_markaz_subhan_allah": "The Balakot camp (Markaz Subhan Allah / Jabba) in Khyber Pakhtunkhwa was JeM's primary training facility \u2014 one of the largest in Pakistan. It trained 300-500 militants simultaneously. This was the primary target struck by IAF on February 26. The camp was in Pakistan proper (not PoK), making the strike the first Indian air action on Pakistani territory since 1971.",
+    "political_mandate_speed": "PM Modi's February 14 statement 'security forces given full freedom' set an open-ended military mandate. NSA Doval began coordinating IAF operations immediately. The 12-day window (Feb 14 \u2192 Feb 26) included: diplomatic isolation of Pakistan, presenting dossier to major powers, intelligence preparation of targeting package, and IAF rehearsals."
+  },
+  "state_vector": {
+    "cover_integrity": 6.5,
+    "trust_capital": 5.5,
+    "intelligence_depth": 9.0,
+    "network_strength": 7.5,
+    "exposure_risk": 6.0
+  },
+  "available_actions": [
+    "deliver_balakot_targeting_intelligence_enable_air_strike",
+    "deliver_broader_jem_network_map_for_deeper_operation",
+    "confirm_isi_sanction_level_on_pulwama",
+    "identify_jem_handlers_who_managed_dar_recruitment",
+    "assess_isi_retaliation_threshold_if_india_strikes"
+  ],
+  "mission_tasks": [
+    {
+      "id": "balakot_targeting_package",
+      "name": "Deliver actionable targeting intelligence on Markaz Subhan Allah (Balakot) \u2014 occupancy, layout, command presence for IAF targeting",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 12,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_retaliation_threshold"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.7
+    },
+    {
+      "id": "isi_retaliation_threshold",
+      "name": "Assess ISI retaliation posture \u2014 will Pakistan Air Force respond if IAF strikes Balakot (in Pakistan proper, not PoK)",
+      "optimistic_days": 5,
+      "most_likely_days": 10,
+      "pessimistic_days": 12,
+      "dependencies": [],
+      "parallelizable_with": [
+        "balakot_targeting_package"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "isi_pulwama_sanction_confirm",
+      "name": "Confirm whether ISI DG / GHQ formally sanctioned Pulwama \u2014 documentation for diplomatic dossier",
+      "optimistic_days": 7,
+      "most_likely_days": 12,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "balakot_targeting_package"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    },
+    {
+      "id": "dar_handler_identify",
+      "name": "Identify the ISI/JeM handler who recruited and managed Adil Ahmad Dar \u2014 link to broader JeM network",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 45,
+      "dependencies": [],
+      "parallelizable_with": [
+        "balakot_targeting_package",
+        "isi_retaliation_threshold"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.35
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "deliver_balakot_targeting_intelligence_enable_air_strike",
+      "deliver_broader_jem_network_map_for_deeper_operation",
+      "confirm_isi_sanction_level_on_pulwama",
+      "identify_jem_handlers_who_managed_dar_recruitment",
+      "assess_isi_retaliation_threshold_if_india_strikes",
+      "air_strike_balakot_executed",
+      "paf_retaliates_dogfight_occurs",
+      "jem_network_map_complete_deeper_operation",
+      "diplomatic_dossier_strengthened",
+      "cover_burned_isi_trace_to_rizwan"
+    ],
+    "edges": [
+      {
+        "cause": "deliver_balakot_targeting_intelligence_enable_air_strike",
+        "effect": "air_strike_balakot_executed",
+        "strength": 0.9,
+        "known_confounders": [
+          "iaf_operational_decision"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "deliver_balakot_targeting_intelligence_enable_air_strike",
+        "effect": "cover_burned_isi_trace_to_rizwan",
+        "strength": 0.65,
+        "known_confounders": [
+          "isi_source_tracing_capability"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_isi_retaliation_threshold_if_india_strikes",
+        "effect": "paf_retaliates_dogfight_occurs",
+        "strength": 0.8,
+        "known_confounders": [
+          "actual_paf_response_decision"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "deliver_broader_jem_network_map_for_deeper_operation",
+        "effect": "jem_network_map_complete_deeper_operation",
+        "strength": 0.85,
+        "known_confounders": [
+          "operational_timeline"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "confirm_isi_sanction_level_on_pulwama",
+        "effect": "diplomatic_dossier_strengthened",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "air_strike_balakot_executed",
+        "effect": "paf_retaliates_dogfight_occurs",
+        "strength": 0.85,
+        "known_confounders": [
+          "paf_posture_at_time"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_ghq_post_pulwama",
+      "objective": "Deny ISI involvement in Pulwama; prepare PAF retaliation if India strikes; manage international narrative; protect remaining JeM infrastructure; FATF compliance performance vs. operational continuity",
+      "capability": 9.5,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "india_air_force_posture",
+        "us_pressure_channels",
+        "china_diplomatic_cover",
+        "jem_camp_evacuation_plans"
+      ],
+      "observable_actions": [
+        "deny_jem_responsibility_officially",
+        "partial_evacuation_of_balakot_camp",
+        "paf_alert_status_increase",
+        "activate_us_saudi_back_channels",
+        "prepare_propaganda_if_india_strikes_civilian_areas"
+      ],
+      "hidden_states": [
+        "calculating",
+        "evacuating_key_assets",
+        "preparing_retaliation",
+        "seeking_off_ramp"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "jem_masood_azhar_command",
+      "objective": "Protect camp infrastructure and key commanders after Pulwama; exploit martyrdom narrative; prepare next-phase operations",
+      "capability": 8.5,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "india_military_mobilisation",
+        "isi_protection_signals",
+        "camp_evacuation_orders"
+      ],
+      "observable_actions": [
+        "evacuate_senior_commanders_balakot",
+        "disperse_trainees_to_secondary_camps",
+        "release_public_glorification_of_dar",
+        "plan_followon_attack"
+      ],
+      "hidden_states": [
+        "evacuating",
+        "planning_next",
+        "holding",
+        "celebrating"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.72,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "diplomatic_isolation_of_pakistan"
+    },
+    {
+      "source": "india",
+      "target": "saudi_arabia",
+      "strength": 0.65,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "mbs_visit_india_feb_2019"
+    },
+    {
+      "source": "isi",
+      "target": "jem_masood_azhar",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "balakot_camp_occupancy_layout",
+      "name": "Current occupancy, command presence, and physical layout of Markaz Subhan Allah (Balakot) for IAF precision targeting",
+      "current_entropy": 1.8,
+      "mission_relevance": 0.99,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "deliver_balakot_targeting_intelligence_enable_air_strike"
+      ]
+    },
+    {
+      "id": "paf_retaliation_plan",
+      "name": "PAF's planned retaliation if India strikes Balakot in Pakistan proper \u2014 F-16 sortie plan, targets designated",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.97,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "assess_isi_retaliation_threshold_if_india_strikes"
+      ]
+    },
+    {
+      "id": "dar_jem_handler_identity",
+      "name": "ISI/JeM handler who recruited Adil Ahmad Dar \u2014 leads to broader recruitment pipeline disruption",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "identify_jem_handlers_who_managed_dar_recruitment"
+      ]
+    }
+  ],
+  "belief_state": {
+    "paf_will_retaliate_if_india_strikes_balakot": 0.7,
+    "isi_will_accept_balakot_strike_as_punishment_no_conventional_war": 0.2,
+    "isi_intends_nuclear_signalling_as_deterrent_if_struck": 0.07,
+    "pakistan_will_seek_immediate_ceasefire_post_strike": 0.03
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/2019_Pulwama_attack",
+    "https://data1.ibtimes.co.in/en/file/22/pulwama-chargesheet.pdf",
+    "https://en.wikipedia.org/wiki/2019_Balakot_airstrike"
+  ],
+  "source_confidence": 0.88,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 from typing import Optional
+from pathlib import Path
 
 import typer
 from rich.console import Console
@@ -22,6 +23,7 @@ from rich import print as rprint
 
 from dhurandhar_oracle.graph import oracle_graph
 from dhurandhar_oracle.io.loader import list_turning_points, list_characters
+from dhurandhar_oracle.data_quality import run_data_quality_audit, backfill_missing_outcomes
 
 app     = typer.Typer(help="Dhurandhar intelligence oracle — POMDP, CPM, VoI, Stackelberg")
 console = Console()
@@ -134,6 +136,45 @@ def list_characters_cmd() -> None:
             c.cover_identity or "—",
         )
     console.print(t)
+
+
+@app.command("audit-data")
+def audit_data_cmd() -> None:
+    """Run data quality audit for turning points/outcomes."""
+    data_dir = Path(__file__).parent / "data"
+    report = run_data_quality_audit(data_dir)
+
+    rprint(f"[bold]Data Coverage[/bold] turning_points={report.turning_points_total} outcomes={report.outcomes_total}")
+    if report.missing_outcomes:
+        rprint(f"[red]Missing outcomes ({len(report.missing_outcomes)}):[/red] {', '.join(report.missing_outcomes)}")
+    else:
+        rprint("[green]No missing outcomes.[/green]")
+
+    if report.turning_points_without_sources:
+        rprint(f"[yellow]Turning points missing source_refs ({len(report.turning_points_without_sources)}).[/yellow]")
+    if report.outcomes_without_sources:
+        rprint(f"[yellow]Outcomes missing source_refs ({len(report.outcomes_without_sources)}).[/yellow]")
+    if report.low_confidence_edges:
+        rprint(f"[yellow]Low-confidence causal edges (<0.5): {len(report.low_confidence_edges)}[/yellow]")
+    if report.invalid_turning_points:
+        rprint(f"[red]Invalid turning points: {len(report.invalid_turning_points)}[/red]")
+    if report.invalid_outcomes:
+        rprint(f"[red]Invalid outcomes: {len(report.invalid_outcomes)}[/red]")
+
+
+@app.command("backfill-outcomes")
+def backfill_outcomes_cmd() -> None:
+    """Create placeholder outcome files for turning points that have none."""
+    data_dir = Path(__file__).parent / "data"
+    created = backfill_missing_outcomes(data_dir)
+    if not created:
+        rprint("[green]No missing outcomes detected.[/green]")
+        return
+    rprint(f"[green]Created {len(created)} outcome templates.[/green]")
+    for p in created[:10]:
+        rprint(f"  - {p.name}")
+    if len(created) > 10:
+        rprint(f"  ... and {len(created) - 10} more")
 
 
 # ── Rich print helpers ─────────────────────────────────────────────────────────

@@ -1,0 +1,329 @@
+{
+  "id": "rizwan-partnership-activation",
+  "operative": "rizwan_shah",
+  "film": 2,
+  "act": 1,
+  "description": "Ajay Sanyal introduces Rizwan Shah as Hamza's operational partner for Film 2. Rizwan is a trained RAW officer who has been embedded in the Karachi criminal underworld independently \u2014 not a deep-cover operative like Hamza, but an elite intelligence officer with direct field experience. The turning point: how does Hamza (13 years undercover, autonomous, emotionally scarred) integrate a new partner who represents the institutional apparatus he has operated outside? The partnership's dynamic \u2014 trust level, division of targets, information sharing \u2014 will determine the operation's architecture.",
+  "real_world_correlation": {
+    "two_operative_operations": "Multi-operative deep-cover operations are documented across intelligence agencies. The CIA's Moscow Station historically ran paired operatives; Mossad's Kidon units operate in pairs for elimination operations. The risk of a two-person cell is doubled exposure vectors; the benefit is operational redundancy.",
+    "rizwan_generational_contrast": "Rizwan represents the post-2014 'Naya Bharat' generation of intelligence officer \u2014 trained under a more assertive doctrine, more comfortable with kinetic operations. Hamza represents the patience-and-tradecraft era. The film uses this generational tension as character conflict.",
+    "division_of_labour": "Real two-operative cells typically split along functional lines: one handles surveillance and access, one handles action and logistics. The film shows Rizwan handling direct action (eliminations, explosives) while Hamza handles access and network intelligence \u2014 consistent with documented operational division of labour.",
+    "fresh_operative_risk": "A new operative arriving in an established deep-cover operative's network is a documented security risk. If Rizwan's cover is blown, surveillance follows him \u2014 potentially exposing Hamza. The tradecraft tension between 'fresh operative enthusiasm' and 'established operative caution' is real and well-documented in intelligence memoirs."
+  },
+  "state_vector": {
+    "cover_integrity": 8.5,
+    "trust_capital": 4.5,
+    "intelligence_depth": 6.5,
+    "network_strength": 7.5,
+    "exposure_risk": 4.0
+  },
+  "available_actions": [
+    "integrate_rizwan_full_partnership_equal_access",
+    "integrate_rizwan_limited_access_compartmentalised",
+    "assign_rizwan_ficn_track_hamza_retains_iqbal_track",
+    "request_sanyal_solo_operation_no_rizwan",
+    "test_rizwan_loyalty_before_full_integration"
+  ],
+  "mission_tasks": [
+    {
+      "id": "rizwan_comms_establish",
+      "name": "Establish secure comms protocol between Hamza, Rizwan, and Sanyal",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "rizwan_cover_audit"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.08
+    },
+    {
+      "id": "rizwan_cover_audit",
+      "name": "Audit Rizwan's existing Karachi cover for security vulnerabilities",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "rizwan_comms_establish"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "target_assignment",
+      "name": "Assign operational targets between Hamza (Iqbal track) and Rizwan (Khanani/Mistry track)",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 21,
+      "dependencies": [
+        "rizwan_comms_establish",
+        "rizwan_cover_audit"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "zahoor_mistry_operation",
+      "name": "Plan and execute Zahoor Mistry elimination (Rizwan-led with Hamza coordination)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "target_assignment"
+      ],
+      "parallelizable_with": [
+        "khanani_initial_penetration"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "khanani_initial_penetration",
+      "name": "Initial penetration of Khanani network via Karachi financial contacts",
+      "optimistic_days": 30,
+      "most_likely_days": 75,
+      "pessimistic_days": 150,
+      "dependencies": [
+        "target_assignment"
+      ],
+      "parallelizable_with": [
+        "zahoor_mistry_operation"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "integrate_rizwan_full_partnership_equal_access",
+      "integrate_rizwan_limited_access_compartmentalised",
+      "assign_rizwan_ficn_track_hamza_retains_iqbal_track",
+      "request_sanyal_solo_operation_no_rizwan",
+      "test_rizwan_loyalty_before_full_integration",
+      "dual_track_operation_efficient",
+      "hamza_exposure_vector_reduced",
+      "rizwan_exposure_risks_hamza",
+      "operation_pace_accelerated",
+      "operation_solo_hamza_stretched",
+      "partnership_trust_established"
+    ],
+    "edges": [
+      {
+        "cause": "integrate_rizwan_full_partnership_equal_access",
+        "effect": "dual_track_operation_efficient",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "integrate_rizwan_full_partnership_equal_access",
+        "effect": "rizwan_exposure_risks_hamza",
+        "strength": 0.4,
+        "known_confounders": [
+          "rizwan_tradecraft"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "integrate_rizwan_full_partnership_equal_access",
+        "effect": "operation_pace_accelerated",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "integrate_rizwan_limited_access_compartmentalised",
+        "effect": "hamza_exposure_vector_reduced",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "integrate_rizwan_limited_access_compartmentalised",
+        "effect": "dual_track_operation_efficient",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "assign_rizwan_ficn_track_hamza_retains_iqbal_track",
+        "effect": "dual_track_operation_efficient",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "assign_rizwan_ficn_track_hamza_retains_iqbal_track",
+        "effect": "hamza_exposure_vector_reduced",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "request_sanyal_solo_operation_no_rizwan",
+        "effect": "operation_solo_hamza_stretched",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "request_sanyal_solo_operation_no_rizwan",
+        "effect": "hamza_exposure_vector_reduced",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "test_rizwan_loyalty_before_full_integration",
+        "effect": "partnership_trust_established",
+        "strength": 0.75,
+        "known_confounders": [
+          "test_outcome"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "test_rizwan_loyalty_before_full_integration",
+        "effect": "rizwan_exposure_risks_hamza",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "partnership_trust_established",
+        "effect": "dual_track_operation_efficient",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Detect and neutralise any renewed Indian intelligence activity in Karachi post-2015",
+      "capability": 9.0,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "isi_counter_intelligence",
+        "karachi_surveillance_network",
+        "raw_agent_profiles"
+      ],
+      "observable_actions": [
+        "increase_counter_intelligence_ops",
+        "surveil_known_raw_affiliated_contacts",
+        "deploy_double_agents",
+        "activate_pakistan_security_apparatus"
+      ],
+      "hidden_states": [
+        "unaware",
+        "alert",
+        "hunting"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.65,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "operational_trust_building"
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rizwan_shah",
+      "target": "sushant_bansal",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "rizwan_cover_integrity",
+      "name": "Security audit of Rizwan Shah's existing Karachi cover",
+      "current_entropy": 2.0,
+      "mission_relevance": 0.9,
+      "access_difficulty": 3.0,
+      "access_actions": [
+        "test_rizwan_loyalty_before_full_integration",
+        "rizwan_cover_audit"
+      ]
+    },
+    {
+      "id": "major_iqbal_counter_intel_activity",
+      "name": "Current ISI counter-intelligence sweeps targeting Indian agents in Karachi",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 7.5,
+      "access_actions": [
+        "reactivate_karachi_network"
+      ]
+    },
+    {
+      "id": "khanani_javed_location",
+      "name": "Javed Khanani's operational base and daily routine",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.8,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "assign_rizwan_ficn_track_hamza_retains_iqbal_track",
+        "khanani_initial_penetration"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_iqbal_unaware_rizwan_secure": 0.55,
+    "cover_intact_iqbal_monitoring_rizwan_secure": 0.25,
+    "cover_intact_iqbal_unaware_rizwan_flagged": 0.12,
+    "cover_suspected_iqbal_counter_intel_active": 0.08
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/RAW_(India)",
+    "https://en.wikipedia.org/wiki/No-confidence_motion_against_Imran_Khan"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.42,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

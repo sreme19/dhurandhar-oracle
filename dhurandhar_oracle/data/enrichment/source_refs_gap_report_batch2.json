@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-04-29T14:38:03+00:00",
+  "merge_mode": "append_only",
+  "updated_count": 8,
+  "updated": [
+    {
+      "turning_point_id": "galwan-china-kinetic-clash",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "doklam-china-second-front",
+      "added_refs": 3
+    },
+    {
+      "turning_point_id": "taliban-kabul-fall-recalibration",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "nijjar-killing-india-canada-crisis",
+      "added_refs": 3
+    },
+    {
+      "turning_point_id": "cds-rawat-crash-institutional-setback",
+      "added_refs": 2
+    },
+    {
+      "turning_point_id": "imran-khan-collapse-pakistan-instability",
+      "added_refs": 3
+    },
+    {
+      "turning_point_id": "pahalgam-attack-crisis",
+      "added_refs": 1
+    },
+    {
+      "turning_point_id": "operation-sindoor-strike",
+      "added_refs": 1
+    }
+  ],
+  "seed_missing_files": [],
+  "turning_points_without_source_refs_count": 19,
+  "turning_points_without_source_refs": [
+    "aalam-handler-contact",
+    "dakait-ambush-coordination",
+    "dakait-first-meeting",
+    "isi-capture-torture",
+    "khanani-ficn-network-strike",
+    "ltf-raid-cover-crisis",
+    "major-iqbal-madrassa-siege",
+    "major-iqbal-tanker-final",
+    "marriage-proposal-gambit",
+    "mystery-killings-pakistan-covert-campaign",
+    "naya-bharat-mandate",
+    "reasi-pilgrim-bus-attack",
+    "rizwan-partnership-activation",
+    "sajid-mir-prison-poisoning",
+    "sanyal-isi-blackmail",
+    "torkham-entry-cover-setup",
+    "yalina-identity-exposure",
+    "yalina-romance-risk",
+    "zahoor-mistry-elimination"
+  ]
+}

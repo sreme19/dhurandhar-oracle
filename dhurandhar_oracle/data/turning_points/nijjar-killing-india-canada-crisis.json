@@ -1,0 +1,305 @@
+{
+  "id": "nijjar-killing-india-canada-crisis",
+  "operative": "ajay_sanyal",
+  "film": 4,
+  "act": 2,
+  "description": "June 18, 2023. Hardeep Singh Nijjar \u2014 president of the Guru Nanak Sikh Gurdwara in Surrey, British Columbia, Canadian citizen, designated 'individual terrorist' by India in 2020 for leading Sikhs for Justice's Khalistan Referendum campaign \u2014 is shot dead in the gurdwara parking lot by masked gunmen in a coordinated ambush. Three Canadian citizens of South Asian origin are later arrested. On September 18, 2023, Canadian PM Justin Trudeau tells Parliament there are 'credible allegations' of Indian government involvement. India expels 41 Canadian diplomats; Canada expels 6 Indian officials. The Five Eyes intelligence alliance is activated against India. NSA Ajay Sanyal must manage the most significant diplomatic-intelligence crisis India has faced with a Western democracy \u2014 while the operation itself remains officially unacknowledged.",
+  "real_world_correlation": {
+    "event_date": "June 18, 2023",
+    "real_event": "Hardeep Singh Nijjar killed at 8:20pm outside Guru Nanak Sikh Gurdwara, 7050 120 St, Surrey BC. Two masked gunmen in a grey Chevrolet Malibu. Canadian police arrested: Kamalpreet Singh (21), Karanpreet Singh (28), Karan Brar (22) \u2014 all Canadian citizens. RCMP Commissioner Duheme stated Indian government agents directed the killing.",
+    "canadian_allegations": "Trudeau's September 18, 2023 Parliament statement cited 'credible allegations of a potential link between agents of the Government of India and the killing.' CSIS Director David Vigneault subsequently confirmed the intelligence basis. GCHQ (UK) reportedly provided Canada signals intelligence linking the killing to Indian government direction. The Five Eyes sharing was exceptional.",
+    "nijjar_background": "Nijjar (1977-2023) was born in Jalandhar, emigrated 1997. He led SFJ's 'Khalistan Referendum' \u2014 a non-binding plebiscite campaign. India designated him a terrorist in 2020 under UAPA. He was accused of providing weapons training to Khalistan activists and links to Pakistan-based ISI-funded Khalistan operations. He had been under threat \u2014 he had applied for enhanced RCMP protection. Canada declined to extradite him to India.",
+    "india_official_position": "India's MEA: 'absurd and motivated.' India characterised Nijjar as a terrorist and rejected Canadian allegations. India requested Canadian cooperation in investigating Nijjar's links to ISI-funded Khalistan networks \u2014 an implicit counter-allegation that ISI was using Nijjar.",
+    "nijjar_isi_link": "Indian intelligence position: Nijjar was a node in ISI's Khalistan revival strategy \u2014 ISI-funded operatives in Canada were coordinating with the Khalistani diaspora to: (1) organise violent activists; (2) fundraise for Punjab-based networks; (3) provide legitimacy cover. The Khalistan Referendum was ISI's information operation dressed as civil society. Eliminating Nijjar was, in this framing, an operation against an ISI proxy \u2014 not a political assassination.",
+    "five_eyes_response": "The US, UK, Australia, New Zealand all expressed concern and stood with Canada. The Five Eyes intelligence sharing on the case was the first major case of the alliance being explicitly activated against India. The strategic implication: India's growing power projection was being subjected to Western intelligence scrutiny at a peer level.",
+    "diplomatic_fallout": "India expelled 41 of Canada's 62 diplomats in October 2023. Canada expelled 6 Indian officials. High Commission in Ottawa downgraded to skeleton staff. Visa services to Canadian citizens suspended (affecting 800,000 pending visa applications). India-Canada trade talks halted. The relationship was the worst since 1971."
+  },
+  "state_vector": {
+    "cover_integrity": 9.0,
+    "trust_capital": 8.5,
+    "intelligence_depth": 9.0,
+    "network_strength": 8.0,
+    "exposure_risk": 5.5
+  },
+  "available_actions": [
+    "manage_five_eyes_intelligence_exposure_diplomatic_damage",
+    "expose_nijjar_isi_funding_links_counter_narrative",
+    "assess_gchq_signals_intelligence_india_operations_depth",
+    "calculate_canada_diplomatic_cost_benefit_analysis",
+    "identify_remaining_isi_khalistan_network_canada_us"
+  ],
+  "mission_tasks": [
+    {
+      "id": "five_eyes_exposure_manage",
+      "name": "Assess depth of Five Eyes signals intelligence collection on Indian covert operations \u2014 what do they know, what operations are now burned",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "nijjar_isi_link_expose",
+        "canada_diplomatic_cost_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "nijjar_isi_link_expose",
+      "name": "Compile intelligence dossier on Nijjar-ISI funding links for counter-narrative \u2014 evidence of ISI directing Khalistan referendum as proxy operation",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "five_eyes_exposure_manage"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "canada_diplomatic_cost_assess",
+      "name": "Calculate diplomatic cost-benefit of Canada expulsion vs. engagement \u2014 does isolating Canada worsen or improve Five Eyes intelligence exposure",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "five_eyes_exposure_manage"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "remaining_isi_khalistan_map",
+      "name": "Map remaining ISI-funded Khalistan network in Canada, UK, US, Australia \u2014 identify targets and ISI handler chain",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [
+        "nijjar_isi_link_expose"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "manage_five_eyes_intelligence_exposure_diplomatic_damage",
+      "expose_nijjar_isi_funding_links_counter_narrative",
+      "assess_gchq_signals_intelligence_india_operations_depth",
+      "calculate_canada_diplomatic_cost_benefit_analysis",
+      "identify_remaining_isi_khalistan_network_canada_us",
+      "five_eyes_significant_collection_other_ops_burned",
+      "nijjar_isi_link_accepted_internationally",
+      "canada_accepts_india_counter_narrative",
+      "diplomatic_normalisation_eventual",
+      "india_isolated_from_western_intelligence_sharing"
+    ],
+    "edges": [
+      {
+        "cause": "manage_five_eyes_intelligence_exposure_diplomatic_damage",
+        "effect": "five_eyes_significant_collection_other_ops_burned",
+        "strength": 0.6,
+        "known_confounders": [
+          "gchq_collection_depth"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "expose_nijjar_isi_funding_links_counter_narrative",
+        "effect": "nijjar_isi_link_accepted_internationally",
+        "strength": 0.4,
+        "known_confounders": [
+          "western_media_framing"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "expose_nijjar_isi_funding_links_counter_narrative",
+        "effect": "canada_accepts_india_counter_narrative",
+        "strength": 0.3,
+        "known_confounders": [
+          "trudeau_domestic_sikh_vote"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "calculate_canada_diplomatic_cost_benefit_analysis",
+        "effect": "diplomatic_normalisation_eventual",
+        "strength": 0.55,
+        "known_confounders": [
+          "canadian_election_cycle"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "india_isolated_from_western_intelligence_sharing",
+        "effect": "five_eyes_significant_collection_other_ops_burned",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "five_eyes_significant_collection_other_ops_burned",
+        "effect": "india_isolated_from_western_intelligence_sharing",
+        "strength": 0.65,
+        "known_confounders": [
+          "us_india_quad_interests"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_khalistan_operation_canada",
+      "objective": "Exploit Nijjar killing for maximum India-West diplomatic damage; reinforce Khalistan narrative for ISI-directed propaganda; protect remaining ISI-funded Khalistan network in diaspora; use Five Eyes response to constrain Indian covert operations globally",
+      "capability": 7.5,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "india_canada_diplomatic_tension",
+        "five_eyes_response_signals",
+        "khalistan_diaspora_sentiment",
+        "india_overseas_operations_pattern"
+      ],
+      "observable_actions": [
+        "amplify_trudeau_statement_globally",
+        "fund_khalistan_referendum_protests_post_nijjar",
+        "brief_western_journalists_on_india_assassination_pattern",
+        "activate_sikh_diaspora_lobbying_us_uk_australia",
+        "protect_remaining_isi_khalistan_nodes_in_diaspora"
+      ],
+      "hidden_states": [
+        "amplifying",
+        "protecting_network",
+        "recruiting_post_nijjar",
+        "exploiting_diplomatically"
+      ],
+      "prospect_params": {
+        "lam": 2.5,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "canadian_government_trudeau",
+      "objective": "Respond to domestic political pressure from Sikh-Canadian community (Brampton, Surrey); maintain Five Eyes alliance credibility; avoid full India rupture given economic interests; manage RCMP investigation for political sustainability",
+      "capability": 7.0,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "csis_intelligence_on_indian_agents",
+        "sikh_canadian_electoral_map",
+        "five_eyes_sharing_obligations",
+        "india_trade_data"
+      ],
+      "observable_actions": [
+        "trudeau_parliament_statement_september_2023",
+        "expel_6_indian_officials",
+        "suspend_canada_india_trade_talks",
+        "share_intelligence_with_five_eyes_partners",
+        "seek_india_cooperation_via_diplomatic_back_channel"
+      ],
+      "hidden_states": [
+        "domestically_pressured",
+        "diplomatically_managing",
+        "five_eyes_obligated",
+        "seeking_off_ramp"
+      ],
+      "prospect_params": {
+        "lam": 1.8,
+        "gamma": 0.65,
+        "alpha": 0.82,
+        "beta": 0.82,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "narendra_modi",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_biden_administration",
+      "strength": 0.72,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "quad_interests_vs_canada_solidarity"
+    },
+    {
+      "source": "canada",
+      "target": "five_eyes_alliance",
+      "strength": 0.95,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "nijjar_intelligence_sharing"
+    },
+    {
+      "source": "isi",
+      "target": "khalistan_diaspora_network",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "isi_funding_khalistan_referendum"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "gchq_collection_india_operations",
+      "name": "Depth and scope of GCHQ signals intelligence collection on Indian covert operations globally \u2014 what other operations are now exposed",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.97,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "assess_gchq_signals_intelligence_india_operations_depth",
+        "manage_five_eyes_intelligence_exposure_diplomatic_damage"
+      ]
+    },
+    {
+      "id": "isi_khalistan_network_diaspora",
+      "name": "ISI handler chain and remaining funded nodes in Khalistan diaspora network \u2014 Canada, UK, US, Australia targets",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.9,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "identify_remaining_isi_khalistan_network_canada_us"
+      ]
+    },
+    {
+      "id": "canada_five_eyes_india_intelligence_shared",
+      "name": "What specific intelligence Canada shared with Five Eyes partners about Indian covert operations beyond Nijjar",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.95,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "manage_five_eyes_intelligence_exposure_diplomatic_damage"
+      ]
+    }
+  ],
+  "belief_state": {
+    "five_eyes_collection_significant_multiple_india_ops_exposed": 0.55,
+    "five_eyes_collection_limited_to_nijjar_specific": 0.3,
+    "canada_seeking_diplomatic_off_ramp_eventually": 0.7,
+    "canada_will_formally_charge_indian_officials_full_rupture": 0.15
+  },
+  "source_refs": [
+    "https://www.reuters.com/world/india/india-dismisses-absurd-canadas-accusation-sikh-leaders-murder-2023-09-19/",
+    "https://en.wikipedia.org/wiki/2023%E2%80%9325_Canada%E2%80%93India_diplomatic_row",
+    "https://www.thehindu.com/news/national/india-rejects-canadian-prime-minister-justin-trudeaus-allegations-on-killing-of-pro-khalistan-activist-hardeep-singh-nijjar/article67321510.ece"
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch2",
+      "added_count": 3,
+      "added_at": "2026-04-29T14:38:03+00:00"
+    }
+  ]
+}

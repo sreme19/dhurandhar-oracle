@@ -1,0 +1,280 @@
+{
+  "id": "sanyal-isi-blackmail",
+  "operative": "hamza",
+  "film": 2,
+  "act": 3,
+  "description": "Ajay Sanyal deploys the operation's insurance: compromising videos of ISI Director General Shahnawaz leaking Pakistan intelligence to Israeli Mossad. The material was held as a long-game leverage asset throughout the Film 2 operation. Sanyal confronts Shahnawaz through a back-channel: release Hamza, frame Uzair Baloch as the scapegoat for Major Iqbal's death, and the Shahnawaz-Israel recordings stay buried. This is the resolution mechanism \u2014 not kinetic, not diplomatic, but raw intelligence leverage. The turning point: does Sanyal use the material (and give away a long-term asset), and what are the terms?",
+  "real_world_correlation": {
+    "intelligence_leverage_as_currency": "Intelligence services routinely collect compromising material on senior officials of adversary states as leverage assets \u2014 often held for years before deployment. The CIA's documented files on foreign leaders, the KGB's kompromat operations, and India's RAW's known collection of material on Pakistani civil-military divide figures are all examples. The Shahnawaz-Israel recording is consistent with documented ISI internal tension regarding the degree to which Pakistani intelligence cooperates with Israel (particularly on shared Iran threats) while publicly maintaining anti-Israel postures.",
+    "uzair_baloch_real_scapegoating": "In real life, Uzair Baloch was arrested in January 2016 by Sindh Rangers and handed to Pakistan Army's Military Intelligence in 2017. He was convicted in 2021 for espionage for 'a foreign agency' \u2014 widely understood to mean India's RAW, though Iran's IRGC connections were also alleged. The film uses Uzair as the scapegoat for Iqbal's death \u2014 consistent with real Pakistani institutional practice of blaming convenient criminal proxies for unexplained security incidents.",
+    "india_pak_back_channels": "Documented back-channels between RAW and ISI exist even during periods of formal diplomatic rupture. The 2001-2002 standoff period, the 2008 post-26/11 period, and the 2019 Balakot aftermath all saw covert back-channel communications through third parties (UAE, Saudi Arabia, Turkey). The film's Sanyal-Shahnawaz back-channel reflects this documented reality.",
+    "intelligence_insurance": "The practice of holding intelligence leverage in reserve ('capability, not intent') is standard. The value of the leverage is highest before deployment \u2014 once used, it loses its hold. Sanyal uses the Shahnawaz material knowing it sacrifices future leverage to extract Hamza now. This is the operational cost of success: burning an asset to protect an operative."
+  },
+  "state_vector": {
+    "cover_integrity": 0.0,
+    "trust_capital": 0.0,
+    "intelligence_depth": 9.5,
+    "network_strength": 9.0,
+    "exposure_risk": 10.0
+  },
+  "available_actions": [
+    "deploy_shahnawaz_recordings_demand_release",
+    "negotiate_prisoner_exchange_other_terms",
+    "escalate_diplomatically_official_india_pak_channel",
+    "attempt_rescue_operation_rizwan_led",
+    "abandon_hamza_maintain_deniability"
+  ],
+  "mission_tasks": [
+    {
+      "id": "shahnawaz_confrontation",
+      "name": "Deliver Shahnawaz recordings via back-channel \u2014 demand Hamza's release within 24h",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "uzair_scapegoat_package"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "uzair_scapegoat_package",
+      "name": "Prepare Uzair Baloch scapegoat narrative \u2014 provide ISI evidence that pins Iqbal death on Uzair",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 4,
+      "dependencies": [],
+      "parallelizable_with": [
+        "shahnawaz_confrontation"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "hamza_extraction",
+      "name": "Receive Hamza via back-channel transfer (not official border crossing)",
+      "optimistic_days": 2,
+      "most_likely_days": 5,
+      "pessimistic_days": 14,
+      "dependencies": [
+        "shahnawaz_confrontation"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "deploy_shahnawaz_recordings_demand_release",
+      "negotiate_prisoner_exchange_other_terms",
+      "escalate_diplomatically_official_india_pak_channel",
+      "attempt_rescue_operation_rizwan_led",
+      "abandon_hamza_maintain_deniability",
+      "hamza_released",
+      "shahnawaz_leverage_burned",
+      "uzair_scapegoated",
+      "diplomatic_crisis",
+      "rizwan_captured_or_killed",
+      "hamza_dies_in_custody",
+      "india_pak_official_incident"
+    ],
+    "edges": [
+      {
+        "cause": "deploy_shahnawaz_recordings_demand_release",
+        "effect": "hamza_released",
+        "strength": 0.85,
+        "known_confounders": [
+          "shahnawaz_calculation"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "deploy_shahnawaz_recordings_demand_release",
+        "effect": "shahnawaz_leverage_burned",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "deploy_shahnawaz_recordings_demand_release",
+        "effect": "uzair_scapegoated",
+        "strength": 0.8,
+        "known_confounders": [
+          "isi_narrative_control"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_prisoner_exchange_other_terms",
+        "effect": "hamza_released",
+        "strength": 0.55,
+        "known_confounders": [
+          "indian_assets_available"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_prisoner_exchange_other_terms",
+        "effect": "india_pak_official_incident",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "escalate_diplomatically_official_india_pak_channel",
+        "effect": "diplomatic_crisis",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "escalate_diplomatically_official_india_pak_channel",
+        "effect": "hamza_released",
+        "strength": 0.2,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "attempt_rescue_operation_rizwan_led",
+        "effect": "hamza_released",
+        "strength": 0.4,
+        "known_confounders": [
+          "facility_security"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "attempt_rescue_operation_rizwan_led",
+        "effect": "rizwan_captured_or_killed",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "abandon_hamza_maintain_deniability",
+        "effect": "hamza_dies_in_custody",
+        "strength": 0.75,
+        "known_confounders": [
+          "isi_decision"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "shahnawaz_leverage_burned",
+        "effect": "uzair_scapegoated",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_director_general_shahnawaz",
+      "objective": "Protect Israel recordings from public disclosure; maintain ISI reputation; find face-saving exit from Iqbal situation",
+      "capability": 9.0,
+      "trigger_threshold": 8.5,
+      "information_set": [
+        "india_back_channel_request",
+        "shahnawaz_israel_exposure_risk",
+        "isi_internal_politics"
+      ],
+      "observable_actions": [
+        "accept_sanyal_terms",
+        "refuse_and_call_sanyal_bluff",
+        "release_hamza_publicly_create_incident",
+        "arrest_sanyal_intermediary",
+        "scapegoat_uzair_accept_deal"
+      ],
+      "hidden_states": [
+        "calculating",
+        "cornered",
+        "negotiating",
+        "accepting"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "hamza",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "ajay_sanyal",
+      "target": "isi_director_general_shahnawaz",
+      "strength": 0.0,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "blackmail_deployment"
+    },
+    {
+      "source": "uzair_baloch",
+      "target": "isi_director_general_shahnawaz",
+      "strength": 0.3,
+      "betrayal_history": 1,
+      "in_coalition": false,
+      "trigger_condition": "scapegoat_arranged"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "shahnawaz_israel_recording_details",
+      "name": "Full content and credibility of Shahnawaz-Israel recordings as leverage material",
+      "current_entropy": 0.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 0.5,
+      "access_actions": [
+        "deploy_shahnawaz_recordings_demand_release"
+      ]
+    },
+    {
+      "id": "isi_internal_response",
+      "name": "Whether ISI's response to losing Iqbal will be de-escalation or retaliatory escalation",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 8.0,
+      "access_actions": [
+        "deploy_shahnawaz_recordings_demand_release"
+      ]
+    }
+  ],
+  "belief_state": {
+    "hamza_in_custody_sanyal_deploying_leverage": 0.6,
+    "hamza_in_custody_sanyal_leverage_accepted_release_imminent": 0.25,
+    "hamza_in_custody_shahnawaz_calling_bluff": 0.1,
+    "hamza_released_extraction_complete": 0.05
+  },
+  "source_refs": [
+    "https://www.hrw.org/reports/2006/pakistan0906/7.htm",
+    "https://www.hindustantimes.com/india-news/seduction-and-secrets-how-diplomat-madhuri-gupta-fell-for-pakistan-isi-s-honeytrap-101747823295700.html"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.58,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "id": "dakait-ambush-coordination",
+  "operative": "hamza",
+  "film": 1,
+  "act": 3,
+  "description": "Following 26/11, Hamza has extracted the Dakait-Jamali-ISI evidence. Mission objective achieved. Hamza now engineers Rehman Dakait's elimination by coordinating secretly with SP Chaudhry Aslam's LTF. He must lure Dakait into a jungle ambush while maintaining his loyal-lieutenant performance inside the PAC network. This is the most operationally delicate moment: one slip in front of Dakait, and the extraction dies with Hamza. One misfire in coordinating with Aslam, and Hamza is either shot by LTF or exposed as an Indian agent by Aslam using him as a bargaining chip with ISI.",
+  "real_world_correlation": {
+    "dakait_real_death": "Rehman Dakait (Sardar Abdul Rehman Baloch) was killed in a real police encounter on August 9, 2009, by SP Chaudhry Aslam's LTF. He was 30 years old. The real circumstances involved an intercept and shootout \u2014 Dakait died en route to hospital. The exact intelligence that led to the intercept has never been officially disclosed.",
+    "encounter_killing_as_intelligence_product": "Pakistani law enforcement 'encounter killings' frequently function as disposable intelligence products \u2014 intelligence provided by agencies that cannot be used in court (e.g., because it came from a foreign agent or unlawful surveillance) is operationalised through a staged police encounter. This is the mechanism the film depicts: Hamza's intelligence product becomes Aslam's encounter.",
+    "india_pakistan_tacit_cooperation": "There is documented, if unacknowledged, cooperation between Indian and Pakistani intelligence agencies against common targets. Karachi criminal networks that financed terrorism were adversarial to both Indian RAW and Pakistani law enforcement at various points. The film dramatises this ambivalent cooperation through the Hamza-Aslam relationship.",
+    "operative_complicity": "This turning point implicates Hamza morally in Dakait's death. The film does not sanitise this \u2014 Hamza has been embedded in Dakait's family circle (now married to Yalina), and yet engineers his elimination. The 'monster he became' arc the film explores (noted in critical reviews) crystallises here.",
+    "luring_technique": "The use of an operative's established trust to lure a target into an ambush is documented in multiple intelligence operations. The ethical framework for this \u2014 does trust built on lies constitute betrayal? \u2014 is left deliberately open by the film."
+  },
+  "state_vector": {
+    "cover_integrity": 5.5,
+    "trust_capital": 8.8,
+    "intelligence_depth": 7.8,
+    "network_strength": 5.5,
+    "exposure_risk": 8.5
+  },
+  "available_actions": [
+    "lure_dakait_to_ambush_coordinate_with_aslam",
+    "provide_intel_to_aslam_without_direct_involvement",
+    "exfiltrate_first_let_aslam_act_independently",
+    "abort_ambush_protect_yalina",
+    "attempt_to_turn_dakait_as_informant_instead"
+  ],
+  "mission_tasks": [
+    {
+      "id": "lure_dakait",
+      "name": "Engineer plausible lure to bring Dakait to the ambush location without triggering suspicion",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [],
+      "parallelizable_with": [
+        "coordinate_aslam_ltf"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.6
+    },
+    {
+      "id": "coordinate_aslam_ltf",
+      "name": "Pass ambush location and timing to SP Aslam via secure cut-out (not direct contact)",
+      "optimistic_days": 1,
+      "most_likely_days": 2,
+      "pessimistic_days": 5,
+      "dependencies": [],
+      "parallelizable_with": [
+        "lure_dakait"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.35
+    },
+    {
+      "id": "evidence_package_exfil",
+      "name": "Complete evidence package transmitted to Delhi before ambush (insurance)",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 3,
+      "dependencies": [],
+      "parallelizable_with": [
+        "lure_dakait",
+        "coordinate_aslam_ltf"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "post_dakait_cover_maintain",
+      "name": "Maintain PAC loyalty performance immediately post-ambush (appear devastated, not complicit)",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [
+        "lure_dakait"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.45
+    },
+    {
+      "id": "safe_exfil",
+      "name": "Exfiltrate from Karachi to India via secure route",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [
+        "post_dakait_cover_maintain",
+        "evidence_package_exfil"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.5
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "lure_dakait_to_ambush_coordinate_with_aslam",
+      "provide_intel_to_aslam_without_direct_involvement",
+      "exfiltrate_first_let_aslam_act_independently",
+      "abort_ambush_protect_yalina",
+      "attempt_to_turn_dakait_as_informant_instead",
+      "dakait_eliminated",
+      "cover_maintained_post_elimination",
+      "hamza_exfiltrated_safely",
+      "yalina_protected",
+      "mission_complete",
+      "cover_blown_ltf_exposure",
+      "cover_blown_pac_suspects",
+      "operative_captured_pakistan"
+    ],
+    "edges": [
+      {
+        "cause": "lure_dakait_to_ambush_coordinate_with_aslam",
+        "effect": "dakait_eliminated",
+        "strength": 0.88,
+        "known_confounders": [
+          "aslam_reliability"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "lure_dakait_to_ambush_coordinate_with_aslam",
+        "effect": "cover_maintained_post_elimination",
+        "strength": 0.65,
+        "known_confounders": [
+          "performance_quality"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "lure_dakait_to_ambush_coordinate_with_aslam",
+        "effect": "cover_blown_pac_suspects",
+        "strength": 0.3,
+        "known_confounders": [
+          "pac_suspicion_level"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "provide_intel_to_aslam_without_direct_involvement",
+        "effect": "dakait_eliminated",
+        "strength": 0.72,
+        "known_confounders": [
+          "intel_quality_aslam"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "provide_intel_to_aslam_without_direct_involvement",
+        "effect": "cover_maintained_post_elimination",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "provide_intel_to_aslam_without_direct_involvement",
+        "effect": "cover_blown_ltf_exposure",
+        "strength": 0.25,
+        "known_confounders": [
+          "aslam_discretion"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "exfiltrate_first_let_aslam_act_independently",
+        "effect": "hamza_exfiltrated_safely",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "exfiltrate_first_let_aslam_act_independently",
+        "effect": "dakait_eliminated",
+        "strength": 0.4,
+        "known_confounders": [
+          "aslam_independent_capability"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "abort_ambush_protect_yalina",
+        "effect": "yalina_protected",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "abort_ambush_protect_yalina",
+        "effect": "mission_complete",
+        "strength": 0.05,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "attempt_to_turn_dakait_as_informant_instead",
+        "effect": "cover_blown_pac_suspects",
+        "strength": 0.75,
+        "known_confounders": [
+          "dakait_reaction"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "dakait_eliminated",
+        "effect": "mission_complete",
+        "strength": 0.88,
+        "known_confounders": [
+          "evidence_package_exfil"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "cover_maintained_post_elimination",
+        "effect": "hamza_exfiltrated_safely",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "cover_blown_pac_suspects",
+        "effect": "operative_captured_pakistan",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "rehman_dakait",
+      "objective": "Consolidate power post-26/11; identify any emerging threats to PAC network",
+      "capability": 8.5,
+      "trigger_threshold": 6.0,
+      "information_set": [
+        "pac_network",
+        "lyari_informants",
+        "isi_channel_major_iqbal"
+      ],
+      "observable_actions": [
+        "test_inner_circle_loyalty",
+        "increase_personal_security",
+        "execute_suspected_informants",
+        "relocate_compound",
+        "trust_hamza_as_loyal_asset"
+      ],
+      "hidden_states": [
+        "trusting",
+        "consolidating",
+        "paranoid",
+        "hunting_threat"
+      ],
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.62,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Eliminate Rehman Dakait; gain political credit for operation",
+      "capability": 7.5,
+      "trigger_threshold": 4.0,
+      "information_set": [
+        "ltf_surveillance",
+        "informant_network",
+        "hamza_intelligence"
+      ],
+      "observable_actions": [
+        "execute_ambush_on_schedule",
+        "exploit_hamza_then_expose_him",
+        "protect_hamza_as_future_asset",
+        "conduct_encounter_killing",
+        "hold_for_interrogation"
+      ],
+      "hidden_states": [
+        "cooperating",
+        "self_serving",
+        "potentially_corrupt"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "sp_choudhary_aslam",
+      "strength": 0.55,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "tactical_alignment"
+    },
+    {
+      "source": "hamza",
+      "target": "yalina_jamali",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "rehman_dakait",
+      "target": "hamza",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "dakait_daily_route_final",
+      "name": "Dakait's route on the day of the planned ambush",
+      "current_entropy": 0.8,
+      "mission_relevance": 0.95,
+      "access_difficulty": 2.0,
+      "access_actions": [
+        "lure_dakait_to_ambush_coordinate_with_aslam"
+      ]
+    },
+    {
+      "id": "pac_succession_threat",
+      "name": "Who in PAC would suspect Hamza's role in Dakait's death (Uzair Baloch threat level)",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.75,
+      "access_difficulty": 5.0,
+      "access_actions": [
+        "provide_intel_to_aslam_without_direct_involvement"
+      ]
+    },
+    {
+      "id": "aslam_reliability_confirm",
+      "name": "Confirmation that SP Aslam will execute ambush without exposing Hamza as Indian agent",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "lure_dakait_to_ambush_coordinate_with_aslam"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_dakait_unsuspecting_aslam_cooperative": 0.5,
+    "cover_intact_dakait_unsuspecting_aslam_self_serving": 0.25,
+    "cover_suspected_pac_emerging_suspicion": 0.18,
+    "cover_blown_aslam_exposed_hamza_or_pac_identified": 0.07
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Rehman_Dakait",
+    "https://www.bbc.com/news/world-asia-17895164"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.63,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

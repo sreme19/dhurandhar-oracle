@@ -1,0 +1,285 @@
+{
+  "id": "jas-raw-recruitment",
+  "operative": "hamza",
+  "film": 1,
+  "act": 1,
+  "description": "Jaskirat Singh Rangi \u2014 a death-row convict who killed 12 men in revenge for his family's destruction \u2014 is abducted from a prison transfer vehicle by Ajay Sanyal. Sanyal offers him a choice: die on the gallows as a murderer, or be reborn as 'Hamza Ali Mazari' and serve India in Pakistan. Jaskirat must decide whether to accept total identity erasure in exchange for a mission that may take decades. His answer shapes everything that follows.",
+  "real_world_correlation": {
+    "primary_inspiration": "Ravindra Kaushik ('Black Tiger') \u2014 real RAW operative who adopted the identity 'Nabi Ahmed Shakir' and spent 8 years embedded in Pakistan Army's Military Accounts Department (1975\u20131983). Recruited via similar mechanism: criminal/desperate background used as leverage by intelligence.",
+    "secondary_inspiration": "Major Mohit Sharma \u2014 RAW Para-SF operative who adopted alias 'Iftikhar Bhatt' to infiltrate Lashkar-e-Taiba networks in Kashmir; KIA 2009, awarded Ashoka Chakra posthumously.",
+    "narrative_liberty": "Film gives Jaskirat a personal tragedy (family destroyed) as recruitment motivation. Real RAW deep-cover operatives were typically career intelligence officers or Para-SF volunteers \u2014 personal vendettas are fictional dramatisation to create audience emotional entry point.",
+    "recruitment_realism": "The 'criminal turned operative' trope has real precedent. Intelligence agencies worldwide have recruited individuals with legal liability as a control mechanism. The complete identity erasure offered is consistent with deep-cover doctrine \u2014 'sterile identity' with no traceable connection to the source country."
+  },
+  "state_vector": {
+    "cover_integrity": 10.0,
+    "trust_capital": 0.0,
+    "intelligence_depth": 0.0,
+    "network_strength": 2.0,
+    "exposure_risk": 0.5
+  },
+  "available_actions": [
+    "accept_recruitment_full_erasure",
+    "negotiate_conditions_partial_identity",
+    "refuse_recruitment_face_execution",
+    "accept_and_plan_defection",
+    "demand_family_protection_first"
+  ],
+  "mission_tasks": [
+    {
+      "id": "identity_construction",
+      "name": "Construct Hamza Ali Mazari cover identity (documents, backstory, language)",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [],
+      "parallelizable_with": [
+        "urdu_cultural_immersion",
+        "karachi_geography_briefing"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "urdu_cultural_immersion",
+      "name": "Deep cultural and linguistic immersion (Karachi Baloch dialect, criminal slang, religious practice)",
+      "optimistic_days": 60,
+      "most_likely_days": 180,
+      "pessimistic_days": 365,
+      "dependencies": [],
+      "parallelizable_with": [
+        "identity_construction",
+        "karachi_geography_briefing"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "karachi_geography_briefing",
+      "name": "Intelligence briefing: Lyari geography, gang structure, police networks",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "identity_construction",
+        "urdu_cultural_immersion"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "handler_network_setup",
+      "name": "Establish Mohammed Aalam cover (juice shop owner, Lyari contact)",
+      "optimistic_days": 45,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "identity_construction"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "insertion_route_plan",
+      "name": "Plan insertion route: India \u2192 Afghanistan \u2192 Torkham \u2192 KPK \u2192 Karachi",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "identity_construction"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.1
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "accept_recruitment_full_erasure",
+      "negotiate_conditions_partial_identity",
+      "refuse_recruitment_face_execution",
+      "accept_and_plan_defection",
+      "demand_family_protection_first",
+      "mission_begins",
+      "identity_conflict_latent",
+      "full_commitment_achieved",
+      "family_protected",
+      "operative_executed",
+      "mission_compromised_early"
+    ],
+    "edges": [
+      {
+        "cause": "accept_recruitment_full_erasure",
+        "effect": "mission_begins",
+        "strength": 0.95,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_recruitment_full_erasure",
+        "effect": "identity_conflict_latent",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_recruitment_full_erasure",
+        "effect": "full_commitment_achieved",
+        "strength": 0.8,
+        "known_confounders": [
+          "latent_family_attachment"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "negotiate_conditions_partial_identity",
+        "effect": "mission_begins",
+        "strength": 0.6,
+        "known_confounders": [
+          "sanyal_willingness"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "negotiate_conditions_partial_identity",
+        "effect": "mission_compromised_early",
+        "strength": 0.35,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "refuse_recruitment_face_execution",
+        "effect": "operative_executed",
+        "strength": 0.98,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_and_plan_defection",
+        "effect": "mission_begins",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_and_plan_defection",
+        "effect": "mission_compromised_early",
+        "strength": 0.55,
+        "known_confounders": [
+          "handler_vigilance"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "demand_family_protection_first",
+        "effect": "family_protected",
+        "strength": 0.45,
+        "known_confounders": [
+          "sanyal_priorities"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "demand_family_protection_first",
+        "effect": "mission_begins",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "identity_conflict_latent",
+        "effect": "mission_compromised_early",
+        "strength": 0.3,
+        "known_confounders": [
+          "psychological_resilience"
+        ],
+        "identified": false
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "institutional_inertia_ib_raw",
+      "objective": "Minimise operational risk; avoid diplomatic incident if operative exposed",
+      "capability": 7.0,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "operative_criminal_record",
+        "mission_risk_assessment"
+      ],
+      "observable_actions": [
+        "impose_strict_comms_protocol",
+        "limit_exfil_options",
+        "deny_operative_if_captured",
+        "provide_deep_training"
+      ],
+      "hidden_states": [
+        "supportive",
+        "indifferent",
+        "abandoning"
+      ],
+      "prospect_params": {
+        "lam": 1.8,
+        "gamma": 0.6,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.5,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "recruitment_acceptance"
+    },
+    {
+      "source": "hamza",
+      "target": "ks_bhullar",
+      "strength": 0.3,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "lyari_gang_structure",
+      "name": "Lyari criminal network hierarchy and ISI linkages",
+      "current_entropy": 4.5,
+      "mission_relevance": 0.95,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "accept_recruitment_full_erasure",
+        "complete_training"
+      ]
+    },
+    {
+      "id": "jem_let_financing_karachi",
+      "name": "JeM/LeT terror financing pipeline through Karachi criminal networks",
+      "current_entropy": 4.0,
+      "mission_relevance": 0.9,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "accept_recruitment_full_erasure",
+        "infiltrate_lyari"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_mission_pre_deployment_sanyal_committed": 0.8,
+    "cover_intact_mission_pre_deployment_institutional_resistance": 0.15,
+    "operative_refuse_mission_fails": 0.05
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/2001_Indian_Parliament_attack",
+    "https://www.satp.org/satporgtp/countries/india/timeline/2001.htm"
+  ],
+  "source_confidence": 0.7,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

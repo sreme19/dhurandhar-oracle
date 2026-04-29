@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-29T14:39:34+00:00",
+  "method": "web_search_seed_batch3_contextual",
+  "notes": "Append-only contextual/direct grounding batch for previously unreferenced turning points.",
+  "entries": [
+    {
+      "turning_point_id": "sajid-mir-prison-poisoning",
+      "grounding_type": "contextual",
+      "confidence": 0.72,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Sajid_Mir",
+        "https://www.thehindu.com/news/national/2611-planner-sajid-mir-was-arrested-and-convicted-within-weeks/article65573701.ece"
+      ]
+    },
+    {
+      "turning_point_id": "zahoor-mistry-elimination",
+      "grounding_type": "contextual",
+      "confidence": 0.76,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Indian_Airlines_Flight_814",
+        "https://timesofindia.indiatimes.com/india/ic-814-hijacker-mistry-zahoor-ibrahim-shot-dead-in-karachi-report/articleshow/90072246.cms"
+      ]
+    },
+    {
+      "turning_point_id": "mystery-killings-pakistan-covert-campaign",
+      "grounding_type": "contextual",
+      "confidence": 0.78,
+      "source_refs": [
+        "https://www.reuters.com/world/pakistan-has-credible-evidence-link-indian-agents-killings-pakistani-citizens-2024-01-25/",
+        "https://www.reuters.com/world/asia-pacific/former-anti-india-militant-killed-pakistan-controlled-kashmir-2023-09-08/"
+      ]
+    },
+    {
+      "turning_point_id": "reasi-pilgrim-bus-attack",
+      "grounding_type": "direct",
+      "confidence": 0.9,
+      "source_refs": [
+        "https://indianexpress.com/article/india/mha-hands-over-nia-probe-terror-attack-bus-jk-9397158/",
+        "https://en.wikipedia.org/wiki/2024_Reasi_attack"
+      ]
+    },
+    {
+      "turning_point_id": "torkham-entry-cover-setup",
+      "grounding_type": "contextual",
+      "confidence": 0.67,
+      "source_refs": [
+        "https://en.wikipedia.org/wiki/Torkham_Border_Crossing",
+        "https://www.bbc.com/news/world-asia-36438575"
+      ]
+    },
+    {
+      "turning_point_id": "khanani-ficn-network-strike",
+      "grounding_type": "contextual",
+      "confidence": 0.85,
+      "source_refs": [
+        "https://home.treasury.gov/news/press-releases/jl0265",
+        "https://home.treasury.gov/news/press-releases/jl0574"
+      ]
+    }
+  ]
+}

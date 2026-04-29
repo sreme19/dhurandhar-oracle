@@ -1,0 +1,332 @@
+{
+  "id": "aalam-handler-contact",
+  "operative": "hamza",
+  "film": 1,
+  "act": 1,
+  "description": "Hamza has spent three months as a juice shop waiter, building his Lyari identity. Mohammed Aalam (the juice shop owner and RAW-embedded field handler) now activates the first formal intelligence-passing protocol. This turning point captures the moment Hamza must decide how aggressively to push for gang access \u2014 Aalam is urging patience while Sanyal's handlers in Delhi are pressing for actionable product. The tension between tradecraft caution and operational urgency is the central decision.",
+  "real_world_correlation": {
+    "field_handler_model": "Real RAW deep-cover networks use a 'stay-behind' field handler embedded in the target country years before the operative arrives. The handler establishes the business cover, the neighbourhood credibility, and the dead-drop infrastructure that the operative inherits on arrival.",
+    "comms_protocol": "Burst transmission (encrypted short-wave or GSM) is the real-world equivalent. The juice shop setting mirrors documented RAW/ISI tradecraft: small retail businesses generate legitimate cash flow, explain irregular hours, and attract daily foot traffic that disguises contact meetings.",
+    "delhi_impatience_pattern": "Intelligence history is full of cases where handlers in the field advocate patience while headquarters demands product. The 1970s IC operations saw similar friction between field officers and Delhi. This friction is the source of many cover compromises.",
+    "handler_vulnerability": "The field handler is the operative's greatest operational vulnerability \u2014 if Aalam is identified, the entire network collapses. Real doctrine uses multiple cut-outs to prevent this single-point-of-failure."
+  },
+  "state_vector": {
+    "cover_integrity": 9.0,
+    "trust_capital": 1.5,
+    "intelligence_depth": 1.2,
+    "network_strength": 5.0,
+    "exposure_risk": 2.5
+  },
+  "available_actions": [
+    "accept_aalam_pace_build_slowly",
+    "push_for_faster_gang_access_risk_cover",
+    "request_delhi_reduce_pressure",
+    "establish_parallel_contact_outside_aalam",
+    "conduct_solo_surveillance_unsanctioned"
+  ],
+  "mission_tasks": [
+    {
+      "id": "establish_cover",
+      "name": "Establish Lyari cover identity (juice shop routine, community recognition)",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "aalam_comms_establish",
+      "name": "Establish secure handler comms protocol",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 1,
+      "dependencies": [],
+      "parallelizable_with": [],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "peripheral_gang_contact",
+      "name": "First contact with PAC peripheral members",
+      "optimistic_days": 14,
+      "most_likely_days": 45,
+      "pessimistic_days": 90,
+      "dependencies": [],
+      "parallelizable_with": [
+        "police_landscape_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.1
+    },
+    {
+      "id": "police_landscape_map",
+      "name": "Map LTF patrol patterns and informant density",
+      "optimistic_days": 7,
+      "most_likely_days": 21,
+      "pessimistic_days": 45,
+      "dependencies": [],
+      "parallelizable_with": [
+        "peripheral_gang_contact"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.04
+    },
+    {
+      "id": "dakait_profile_build",
+      "name": "Construct full operational profile of Rehman Dakait (schedule, routes, paranoia triggers)",
+      "optimistic_days": 45,
+      "most_likely_days": 90,
+      "pessimistic_days": 180,
+      "dependencies": [
+        "peripheral_gang_contact"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "isi_link_preliminary",
+      "name": "First evidence of ISI-PAC financial connection (preliminary only)",
+      "optimistic_days": 90,
+      "most_likely_days": 180,
+      "pessimistic_days": 365,
+      "dependencies": [
+        "dakait_profile_build"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "accept_aalam_pace_build_slowly",
+      "push_for_faster_gang_access_risk_cover",
+      "request_delhi_reduce_pressure",
+      "establish_parallel_contact_outside_aalam",
+      "conduct_solo_surveillance_unsanctioned",
+      "deep_community_trust_built",
+      "gang_access_accelerated",
+      "aalam_compromise_risk",
+      "delhi_impatient_escalates",
+      "cover_stable",
+      "cover_suspected",
+      "handler_network_fragmented"
+    ],
+    "edges": [
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "deep_community_trust_built",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "cover_stable",
+        "strength": 0.9,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accept_aalam_pace_build_slowly",
+        "effect": "delhi_impatient_escalates",
+        "strength": 0.6,
+        "known_confounders": [
+          "sanyal_patience"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "push_for_faster_gang_access_risk_cover",
+        "effect": "gang_access_accelerated",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "push_for_faster_gang_access_risk_cover",
+        "effect": "cover_suspected",
+        "strength": 0.4,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "request_delhi_reduce_pressure",
+        "effect": "cover_stable",
+        "strength": 0.7,
+        "known_confounders": [
+          "sanyal_response"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "request_delhi_reduce_pressure",
+        "effect": "delhi_impatient_escalates",
+        "strength": 0.3,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "establish_parallel_contact_outside_aalam",
+        "effect": "gang_access_accelerated",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "establish_parallel_contact_outside_aalam",
+        "effect": "aalam_compromise_risk",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "conduct_solo_surveillance_unsanctioned",
+        "effect": "gang_access_accelerated",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "conduct_solo_surveillance_unsanctioned",
+        "effect": "cover_suspected",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "aalam_compromise_risk",
+        "effect": "handler_network_fragmented",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "handler_network_fragmented",
+        "effect": "cover_suspected",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Identify and neutralise criminal elements in Lyari; LTF raids ongoing",
+      "capability": 7.0,
+      "trigger_threshold": 5.5,
+      "information_set": [
+        "ltf_informant_network",
+        "juice_shop_surveillance_flag"
+      ],
+      "observable_actions": [
+        "raid_lyari_businesses",
+        "interrogate_new_faces",
+        "cultivate_gang_informants",
+        "cordon_and_search"
+      ],
+      "hidden_states": [
+        "monitoring",
+        "neutral",
+        "investigating"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.63,
+        "alpha": 0.88,
+        "beta": 0.88,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "mohammed_aalam",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.75,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ks_bhullar",
+      "strength": 0.4,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "delhi_orders"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "dakait_schedule",
+      "name": "Rehman Dakait's daily schedule and approach routes",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.85,
+      "access_difficulty": 6.5,
+      "access_actions": [
+        "peripheral_gang_contact",
+        "passive_surveillance"
+      ]
+    },
+    {
+      "id": "pac_internal_politics",
+      "name": "PAC internal faction dynamics (who is loyal vs. using Dakait)",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.7,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "push_for_faster_gang_access_risk_cover",
+        "accept_aalam_pace_build_slowly"
+      ]
+    },
+    {
+      "id": "aalam_handler_security",
+      "name": "Whether Aalam's cover as juice shop owner is secure",
+      "current_entropy": 1.5,
+      "mission_relevance": 0.9,
+      "access_difficulty": 2.0,
+      "access_actions": [
+        "accept_aalam_pace_build_slowly"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_aalam_secure_ltf_passive": 0.7,
+    "cover_intact_aalam_secure_ltf_monitoring": 0.2,
+    "cover_intact_aalam_flagged_ltf_monitoring": 0.07,
+    "cover_suspected_aalam_compromised": 0.03
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/RAW_(India)",
+    "https://www.cfr.org/backgrounder/raw-indias-external-intelligence-agency"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "grounding_type": "contextual",
+      "confidence": 0.62,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch4",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:40:38+00:00"
+    }
+  ]
+}

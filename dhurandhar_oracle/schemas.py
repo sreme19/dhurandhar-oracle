@@ -45,6 +45,11 @@ class CausalEdge(BaseModel):
     strength:          float = Field(..., ge=0, le=1, description="P(effect | cause) approximately")
     known_confounders: list[str] = Field(default_factory=list)
     identified:        bool = Field(True, description="Whether do-calculus identification holds")
+    confidence:        float = Field(0.5, ge=0, le=1, description="Confidence in strength estimate")
+    strength_low:      Optional[float] = Field(None, ge=0, le=1)
+    strength_high:     Optional[float] = Field(None, ge=0, le=1)
+    estimation_method: Optional[str] = Field(None, description="How this edge strength was estimated")
+    source_refs:       list[str] = Field(default_factory=list, description="Traceability references")
 
 
 class CausalDAG(BaseModel):
@@ -136,6 +141,8 @@ class IntelligenceTarget(BaseModel):
                                     description="Effort / risk required to gather this intel")
     access_actions:   list[str] = Field(default_factory=list,
                                         description="Actions that would yield this intel")
+    confidence:       float = Field(0.5, ge=0, le=1, description="Confidence in target scoring inputs")
+    source_refs:      list[str] = Field(default_factory=list)
 
 
 # ── Turning point ──────────────────────────────────────────────────────────────
@@ -143,7 +150,7 @@ class IntelligenceTarget(BaseModel):
 class TurningPoint(BaseModel):
     id:                   str
     operative:            str
-    film:                 int = Field(..., ge=1, le=2)
+    film:                 int = Field(..., ge=1, le=4, description="1=Film1, 2=Film2, 3=Film3 (2016-2019), 4=Film4 (2020-2025+)")
     act:                  int = Field(..., ge=1, le=3)
     description:          str
     state_vector:         OperativeState
@@ -157,6 +164,10 @@ class TurningPoint(BaseModel):
         default_factory=dict,
         description="Initial POMDP belief distribution: world_state_id → probability"
     )
+    source_refs:          list[str] = Field(default_factory=list)
+    owner:                Optional[str] = None
+    updated_at:           Optional[str] = Field(None, description="ISO timestamp for last data revision")
+    schema_version:       str = Field("1.1.0", description="Data schema version for turning points")
 
 
 # ── Agent output schemas (new) ─────────────────────────────────────────────────
@@ -300,3 +311,11 @@ class OutcomeEntry(BaseModel):
     immediate_effects: list[str]
     terminal_state:    str   # "mission_success" | "cover_blown" | "exfil" | "kia" | "in_progress"
     days_elapsed:      int
+    losses:            list[str] = Field(default_factory=list)
+    intel_gained:      list[str] = Field(default_factory=list)
+    cover_change:      float = Field(0.0, ge=-10, le=10, description="Delta in cover_integrity")
+    confidence:        float = Field(0.5, ge=0, le=1)
+    source_refs:       list[str] = Field(default_factory=list)
+    owner:             Optional[str] = None
+    updated_at:        Optional[str] = Field(None, description="ISO timestamp for last data revision")
+    schema_version:    str = Field("1.1.0", description="Data schema version for outcomes")

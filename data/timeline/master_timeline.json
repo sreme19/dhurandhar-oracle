@@ -1,6 +1,6 @@
 {
-  "timeline_version": "3.0.0",
-  "last_updated": "2024-01-15",
+  "timeline_version": "4.0.0",
+  "last_updated": "2026-04-29",
   "project": "dhurandhar-oracle",
   "description": "Master timeline for Dhurandhar universe — real-world anchor events (1999-2026) with film creative liberties noted. Covers Parts 1-4 and expanded universe.",
   "date_range": {
@@ -165,121 +165,155 @@
     {
       "date": "2016-07-08",
       "event": "Burhan Wani Killed",
-      "real_world": "Hizbul commander Burhan Wani killed in Tral encounter; triggers months of Kashmir unrest",
-      "film_relevance": "Part 3 opening: Radicalization backdrop; youth militancy surge",
-      "characters_involved": ["burhan_wani"]
+      "real_world": "Hizbul commander Burhan Wani (22) killed in Kokernag encounter; 90+ civilian deaths, 15,000+ pellet gun injuries in 7-month unrest; 100+ youths join militancy; intelligence gathering suffers temporary collapse",
+      "film_relevance": "Part 3 opening: Radicalization backdrop; youth militancy surge; TRF precursor cells formed",
+      "characters_involved": ["burhan_wani"],
+      "intelligence_significance": "ISI exploitation of martyrdom narrative creates next-generation militant cohort; social-media-driven leaderless radicalisation not modelled by RAW; direct pipeline to TRF (formed October 2019)",
+      "turning_point_ref": "burhan-wani-killing-radicalisation"
     },
     {
       "date": "2016-09-18",
       "event": "Uri Attack",
-      "real_world": "JeM fedayeen storm Army brigade HQ; 19 soldiers killed; deadliest Kashmir attack on forces in decades",
-      "film_relevance": "Part 3: Surgical strikes trigger; military vulnerability",
-      "characters_involved": ["masood_azhar"]
+      "real_world": "4 JeM fedayeen in Indian Army uniforms storm 12 Infantry Brigade HQ, Uri; 19 soldiers killed during battalion changeover; Pakistani GPS, food rations, medicines found on fedayeen; 2 Pakistani facilitators arrested by BSF",
+      "film_relevance": "Part 3: Surgical strikes trigger; 10-day political clock; launchpad intelligence decision",
+      "characters_involved": ["masood_azhar", "rizwan_shah"],
+      "intelligence_significance": "JeM completes Gurdaspur-Pathankot-Uri pattern (state-sponsored escalatory signalling); intelligence held by embedded operative becomes surgical strike enabler vs. long-operation trade-off",
+      "turning_point_ref": "uri-attack-surgical-decision"
     },
     {
       "date": "2016-09-28",
       "event": "Surgical Strikes",
-      "real_world": "Indian Para SF cross LoC; hit JeM launchpads in PoK; first acknowledged ground operation since 1971",
-      "film_relevance": "Part 3 first-act climax; punitive deterrence doctrine established",
-      "characters_involved": ["bipin_rawat", "ajit_doval"]
+      "real_world": "Indian Para SF (Ghatak platoons of 6 Bihar, 10 Dogra) cross LoC; 7 launchpads across 4 PoK sectors struck; 35-50 militants killed (est.); Pakistan denies; DGMO announces publicly Sept 29 — first acknowledged cross-LoC ground operation since 1971",
+      "film_relevance": "Part 3 first-act climax; punitive deterrence doctrine established; cover-blown operative survival crisis",
+      "characters_involved": ["bipin_rawat", "ajit_doval", "rizwan_shah"],
+      "intelligence_significance": "India's strategic restraint doctrine abandoned; operative faces maximum exposure risk in ISI post-strike source hunt; launchpad reconstruction begins under new OPSEC within weeks",
+      "turning_point_ref": "surgical-strikes-execution"
     },
     {
       "date": "2017-06-18",
       "event": "Doklam Standoff Begins",
-      "real_world": "India-China 73-day eyeball-to-eyeball at Bhutan tri-junction; second front opening",
-      "film_relevance": "Part 3: China as emerging adversary; Galwan prelude",
-      "characters_involved": []
+      "real_world": "PLA begins road construction on Doklam plateau (Bhutanese territory) toward Jampheri Ridge overlooking Siliguri Corridor; India intervenes under India-Bhutan treaty; 73-day eyeball-to-eyeball standoff; NSA Doval visits Beijing July 2017; both sides withdraw August 28",
+      "film_relevance": "Part 3: China as emerging second-front adversary; ISI-PLA coordination question; Galwan strategic prelude",
+      "characters_involved": ["ajit_doval"],
+      "intelligence_significance": "First India-China military standoff since 1987; Siliguri Corridor existential stakes; ISI simultaneously probing Kashmir distraction window; CPEC as intelligence-sharing channel confirmed",
+      "turning_point_ref": "doklam-china-second-front"
     },
     {
       "date": "2018-02-10",
       "event": "Sunjuwan Attack",
-      "real_world": "JeM strikes Army camp in Jammu; keeps JeM thread warm before Pulwama",
-      "film_relevance": "Part 3: Sustained threat continuity",
-      "characters_involved": ["masood_azhar"]
+      "real_world": "JeM fedayeen attack Army family quarters at Sunjuwan Military Station, Jammu; 6 killed (3 soldiers, 1 family member, 2 militants); keeps JeM pattern active between Uri and Pulwama",
+      "film_relevance": "Part 3: Sustained JeM threat continuity; Jammu as emerging theatre",
+      "characters_involved": ["masood_azhar"],
+      "intelligence_significance": "Completes JeM escalation ladder: Gurdaspur→Pathankot→Uri→Sunjuwan→Pulwama; ISI maintains operational tempo despite post-Uri surgical strike deterrence",
+      "turning_point_ref": null
     },
     {
       "date": "2019-02-14",
       "event": "Pulwama Attack",
-      "real_world": "Adil Ahmad Dar suicide bombs CRPF convoy; 40 killed; JeM claims responsibility",
-      "film_relevance": "Part 3: Balakot catalyst; deadliest Kashmir attack",
-      "characters_involved": ["adil_ahmad_dar", "masood_azhar"]
+      "real_world": "Adil Ahmad Dar (20, local Kashmiri, JeM-recruited 2018) drives 300-350kg IED Maruti Eeco into CRPF convoy bus 49 on NH-44, Lethapora; 40 CRPF killed; JeM claims; IP address of martyrdom video traced to Rawalpindi; India presents dossier to UNSC P5",
+      "film_relevance": "Part 3: Balakot catalyst; Wani radicalisation pipeline's kinetic output; Rizwan launchpad intelligence decision",
+      "characters_involved": ["adil_ahmad_dar", "masood_azhar", "rizwan_shah"],
+      "intelligence_significance": "Pulwama = kinetic output of 2016 post-Wani radicalization; IP address to Rawalpindi provides dossier basis; 12-day window to Balakot; M4-carbine continuity thread to Reasi (2024) and Pahalgam (2025)",
+      "turning_point_ref": "pulwama-balakot-decision"
     },
     {
       "date": "2019-02-26",
       "event": "Balakot Air Strike",
-      "real_world": "IAF Mirage 2000s strike JeM camp at Balakot, Khyber Pakhtunkhwa; first air crossing of border since 1971",
-      "film_relevance": "Part 3 centerpiece; air warfare spectacle; escalation threshold",
-      "characters_involved": ["bipin_rawat", "masood_azhar"]
+      "real_world": "Operation Bandar: IAF Mirage 2000 aircraft strike Markaz Subhan Allah (JeM HQ), Balakot, KPK at 0330h; 1,000kg SPICE-2000 bombs; first Indian air strike on Pakistani territory since 1971; India claims 300+ killed; satellite imagery disputes building damage; PAF retaliates Feb 27",
+      "film_relevance": "Part 3 centerpiece; air warfare spectacle; nuclear-threshold adjacency; escalation doctrine matured",
+      "characters_involved": ["bipin_rawat", "masood_azhar", "rizwan_shah"],
+      "intelligence_significance": "Cover burned for embedded operative post-strike; ISI source hunt highest since 1971; deterrence signal achieved regardless of exact casualties; Balakot targeting package = culmination of years of ground intelligence",
+      "turning_point_ref": "balakot-airstrike-abhinandan"
     },
     {
       "date": "2019-02-27",
       "event": "Abhinandan Captured",
-      "real_world": "Wing Commander Abhinandan Varthaman shot down over PoK; captured; held 60 hours",
-      "film_relevance": "Part 3: Capture-return drama; international pressure; cinematic centerpiece",
-      "characters_involved": ["abhinandan_varthaman"]
+      "real_world": "Wing Commander Abhinandan Varthaman (MiG-21 Bison) engages PAF F-16s post-Balakot; shoots down F-16 (AMRAAM serial evidence); his aircraft hit; ejects over PoK; captured by civilians then Pakistani Army; held 60 hours; released March 1 after US/Saudi pressure; nuclear signalling referenced in Pakistani statements",
+      "film_relevance": "Part 3: Capture-return drama; nuclear threshold in real time; US/Saudi mediation as diplomatic instrument",
+      "characters_involved": ["abhinandan_varthaman", "rizwan_shah"],
+      "intelligence_significance": "60-hour window: real nuclear threshold test between two nuclear-armed states; US Pence/Pompeo calls decisive; ISI exfil window for burned operatives; Pakistan chose de-escalation — doctrine lesson for Sindoor (2025)",
+      "turning_point_ref": "balakot-airstrike-abhinandan"
     },
     {
       "date": "2019-08-05",
       "event": "Article 370 Abrogation",
-      "real_world": "J&K special status revoked; bifurcated into two Union Territories; full constitutional integration",
-      "film_relevance": "Part 3 triumphal closer; Sanyal/Doval doctrine culmination",
-      "characters_involved": ["narendra_modi", "amit_shah", "ajit_doval"]
+      "real_world": "Presidential Order revokes Article 370; J&K Reorganisation Act bifurcates state into J&K UT (legislature) and Ladakh UT; 35,000+ additional troops deployed under Amarnath Yatra cover; communication lockdown August 4 midnight; Omar Abdullah, Mehbooba Mufti, Farooq Abdullah detained; ISI had zero forewarning",
+      "film_relevance": "Part 3 triumphal closer; Sanyal/Doval operational secrecy doctrine; ISI Kashmir narrative rendered structurally obsolete",
+      "characters_involved": ["narendra_modi", "amit_shah", "ajit_doval"],
+      "intelligence_significance": "ISI creates TRF (October 2019) in direct response — Khalistan-style proxy for FATF deniability; TRF's Pahalgam 2025 attack is ISI's long-cycle revenge for 370; longest internet shutdown in a democracy as security measure",
+      "turning_point_ref": "article-370-abrogation"
     },
     {
       "date": "2020-06-15",
       "event": "Galwan Clash",
-      "real_world": "Hand-to-hand combat at 14,000ft; 20 Indian soldiers killed including Colonel Santosh Babu; deadliest since 1967",
-      "film_relevance": "Part 4 opening; China as second adversary; Santosh Babu sacrifice",
-      "characters_involved": ["colonel_santosh_babu"]
+      "real_world": "Colonel Santosh Babu (CO, 16 Bihar) leads patrol to verify PLA withdrawal per June 6 agreement; PLA ambush with iron rods, barbed-wire clubs at Patrol Point 14; 20 Indian soldiers killed; PLA officially 4 killed (estimated 35-45); China suppresses casualties for 8 months; Colonel Qi Fabao (PLA) wounded",
+      "film_relevance": "Part 4 opening; China as kinetic second adversary; Santosh Babu sacrifice; two-front threat confirmed",
+      "characters_involved": ["colonel_santosh_babu"],
+      "intelligence_significance": "Pre-planned PLA ambush (improvised weapons prepared in advance) indicates theatre command authorisation minimum; China-Pakistan CPEC as intelligence coordination channel; ISI exploits distraction window simultaneously; Quad activated post-Galwan",
+      "turning_point_ref": "galwan-china-kinetic-clash"
     },
     {
       "date": "2021-08-15",
       "event": "Taliban Takeover Afghanistan",
-      "real_world": "Kabul falls; Pakistan's 'strategic depth' realized but disrupted; regional balance shift",
-      "film_relevance": "Part 4: Sanyal 'chickens coming home' monologue context",
-      "characters_involved": []
+      "real_world": "Kabul falls in hours; 300,000-man ANA collapses; Ghani flees; US leaves $7B military equipment to Taliban; India evacuates from 4 consulates; $3B Indian investment (Salma Dam, Parliament, highways) under Taliban control; TTP attacks inside Pakistan: 300+ in 2021, escalating to 900+ in 2024",
+      "film_relevance": "Part 4: Sanyal 'chickens coming home' monologue; ISI strategic depth realised but costs visible; Pakistan's western flank bleeds",
+      "characters_involved": [],
+      "intelligence_significance": "RAW assessment of ANA timeline catastrophically wrong; ISI loses control of its Taliban 'strategic asset' to TTP blowback; India's quiet re-engagement with Taliban (2023) begins; CPEC-Taliban-ISI triangle creates new intelligence challenge",
+      "turning_point_ref": "taliban-kabul-fall-recalibration"
     },
     {
       "date": "2021-12-08",
       "event": "CDS Rawat Killed",
-      "real_world": "General Bipin Rawat, first CDS, killed in helicopter crash near Coonoor",
-      "film_relevance": "Part 4 emotional inflection; institutional setback",
-      "characters_involved": ["bipin_rawat"]
+      "real_world": "IAF Mi-17V5 crashes near Coonoor, Tamil Nadu; 13 of 14 killed including General Bipin Rawat (India's first CDS) and wife Madhulika; IAF inquiry: pilot error, controlled flight into terrain; India has no CDS for 3+ months; Theatrisation reform pauses; Group Captain Varun Singh survives crash, dies December 15",
+      "film_relevance": "Part 4 emotional inflection; institutional setback at peak China-India LAC standoff; ISI information operations exploit sabotage narrative",
+      "characters_involved": ["bipin_rawat"],
+      "intelligence_significance": "3-month CDS vacancy creates unified military perspective gap in ongoing LAC talks; ISI amplifies sabotage narrative; PLA extracts lac negotiation positions during vacuum; Theatrisation delay weakens India's two-front integration",
+      "turning_point_ref": "cds-rawat-crash-institutional-setback"
     },
     {
       "date": "2022-03-01",
-      "event": "Zahoor Mistry Killed (Mystery Killings Pattern)",
-      "real_world": "IC-814 hijacker shot in Karachi; first of pattern of India's most-wanted dying in Pakistan",
-      "film_relevance": "Part 4: Implicit Hamza covert operations; justice without attribution",
-      "characters_involved": ["zahoor_mistry"]
+      "event": "Mystery Killings Pattern Begins — Zahoor Mistry",
+      "real_world": "IC-814 hijacker Abdul Latif (Zahoor) Mistry shot dead at Crescent Furniture, Karachi; first of pattern — Guardian (April 2024) reports 'up to 20 assassinations since 2020' attributed to Indian government; subsequent: Sajid Mir (reportedly poisoned 2023), Paramjit Singh Panjwar (Lahore, May 2023), multiple Hizbul/JeM commanders 2023-2024; all using close-range gunfire, no attribution claimed",
+      "film_relevance": "Part 4: Hamza's off-screen covert operations 2022-2024; systematic closure of Film 1-2 unresolved justice; ISI identifies pattern by mid-2023",
+      "characters_involved": ["zahoor_mistry", "hamza"],
+      "intelligence_significance": "Hamza's third cover identity; ISI partial profile by 2023 triggers maximum exposure risk; Five Eyes Canada-Nijjar revelation simultaneously blows India's global covert capability as intelligence theme",
+      "turning_point_ref": "mystery-killings-pakistan-covert-campaign"
     },
     {
       "date": "2022-04-10",
       "event": "Imran Khan Ousted",
-      "real_world": "PM Imran Khan removed via no-confidence vote; military establishment reasserts control",
-      "film_relevance": "Part 4: Adversary instability; civilian leadership collapse",
-      "characters_involved": ["imran_khan", "qamar_javed_bajwa"]
+      "real_world": "No-confidence vote 174-0; replaced by Shehbaz Sharif; Bajwa-military establishment withdraws support; Bajwa retires November 2022; General Asim Munir becomes COAS; Munir had been sacked as DG ISI by Imran 2019 (personal dispute) — sets stage for personal vendetta dynamic",
+      "film_relevance": "Part 4: Civilian-military compact collapse; Munir as Film 4 adversary architect; Pakistan instability = escalation risk",
+      "characters_involved": ["imran_khan", "qamar_javed_bajwa", "asim_munir"],
+      "intelligence_significance": "Munir-Imran personal history makes Munir's Kashmir doctrine more aggressive (domestic legitimacy need); ISI operations continue at full capacity despite political chaos; NCA stability under military control",
+      "turning_point_ref": "imran-khan-collapse-pakistan-instability"
     },
     {
       "date": "2023-05-09",
-      "event": "Imran Khan Arrested",
-      "real_world": "Arrested on corruption charges; nationwide protests; military cracks down",
-      "film_relevance": "Part 4: Pakistani internal collapse continues",
-      "characters_involved": ["imran_khan"]
+      "event": "Imran Khan Arrested — May 9 Attacks on Military",
+      "real_world": "Khan arrested at IHC on Al-Qadir Trust charges; PTI supporters storm Lahore Corps Commander residence, GHQ gates (Rawalpindi), air force bases; military declares attack on state; hundreds arrested including senior PTI leaders; unprecedented civilian assault on military property",
+      "film_relevance": "Part 4: Pakistani internal collapse reaches military itself; Munir crackdown legitimises expanded military authority",
+      "characters_involved": ["imran_khan", "asim_munir"],
+      "intelligence_significance": "Pakistani army absorbs all civilian functions post-May 9 crackdown; Munir's consolidated authority correlates to Pahalgam (April 2025) authorisation; Imran's intelligence from PM tenure becomes ISI leverage",
+      "turning_point_ref": "imran-khan-collapse-pakistan-instability"
     },
     {
       "date": "2023-06-18",
-      "event": "Hardeep Nijjar Killed",
-      "real_world": "Khalistani separatist killed in Canada; triggers India-Canada diplomatic crisis",
-      "film_relevance": "Part 4: Continuation of Punjab/Khalistan arc from Part 2",
-      "characters_involved": []
+      "event": "Hardeep Nijjar Killed — India-Canada Crisis",
+      "real_world": "Khalistan Commando Front leader Hardeep Singh Nijjar (45) shot dead in Surrey BC gurdwara parking lot; Trudeau tells Parliament September 18 'credible allegations' of Indian government role; GCHQ tipped Canada; 3 Canadian citizens of South Asian origin arrested; India expels 41 Canadian diplomats; ISI-Nijjar funding links (India's counter-narrative); RCMP confirms Indian government direction",
+      "film_relevance": "Part 4: Khalistan arc from Part 2 reaches Western democratic soil; Five Eyes activated against India; ISI-Khalistan network exposure",
+      "characters_involved": [],
+      "intelligence_significance": "GCHQ signals intelligence on Indian operations globally = catastrophic exposure risk for other programmes; ISI exploits Nijjar for maximum India-West diplomatic damage; Canada-India relationship worst since 1971",
+      "turning_point_ref": "nijjar-killing-india-canada-crisis"
     },
     {
       "date": "2024-06-09",
       "event": "Reasi Pilgrim Bus Attack",
-      "real_world": "Terrorists fire on pilgrim bus in J&K; 9 killed; terror thread in Modi 3.0",
-      "film_relevance": "Part 4: Sustained threat despite Article 370",
-      "characters_involved": []
+      "real_world": "Two ISI-TRF-JeM joint cell terrorists ambush Hindu pilgrim bus from Shiv Khori temple on Pouni tehsil road, Reasi; M4 carbines + AK-47s; bus falls into Taryath gorge; 9 killed, 33 injured; attack on Modi 3.0 inauguration day (deliberate); one attacker captured (Pakistani national, Aaqib alias Mohammed Hassan); M4 pipeline traced — same arms route used in Pahalgam (2025)",
+      "film_relevance": "Part 4: ISI Jammu pivot strategy post-Article 370; same M4 pipeline to Pahalgam; Modi 3.0 opening signal",
+      "characters_involved": [],
+      "intelligence_significance": "Jammu division = ISI's new operational theatre post-Kashmir Valley security improvements; M4 carbine forensic continuity directly connects Reasi→Pahalgam; ISI-TRF-JeM three-actor joint cell model confirmed; captured attacker intelligence feeds Pahalgam investigation",
+      "turning_point_ref": "reasi-pilgrim-bus-attack"
     },
     {
       "date": "2025-04-10",
@@ -328,5 +362,11 @@
   "film_2_span": "2013-2022 (Pappu beheading through Mistry killing, Punjab arc, demonetisation)",
   "film_3_span": "2016-2019 (Burhan Wani through Article 370; Surgical Strikes, Balakot, Abhinandan)",
   "film_4_span": "2020-2025 (Galwan through Red Fort; Pahalgam, Sindoor, white-collar terror epilogue)",
-  "oracle_expansion": "Parts 3-4 encyclopedia created for agent reference; real-world events 2016-2025 documented for potential franchise continuation"
+  "oracle_expansion": "Parts 3-4 encyclopedia created for agent reference; real-world events 2016-2025 documented; 14 new post-Film-2 turning points generated with full internet scraping enrichment (Stage 2 complete)",
+  "turning_point_coverage": {
+    "film_1": ["jas-raw-recruitment", "aalam-handler-contact", "dakait-first-meeting", "dakait-ambush-coordination", "torkham-entry-cover-setup", "isi-capture-torture", "yalina-romance-risk", "yalina-identity-exposure", "marriage-proposal-gambit", "ltf-raid-cover-crisis", "major-iqbal-madrassa-siege", "26-11-celebration-revelation", "major-iqbal-tanker-final"],
+    "film_2": ["naya-bharat-mandate", "pathankot-homecoming-choice", "rizwan-partnership-activation", "sanyal-isi-blackmail", "khanani-ficn-network-strike", "zahoor-mistry-elimination"],
+    "film_3": ["burhan-wani-killing-radicalisation", "uri-attack-surgical-decision", "surgical-strikes-execution", "doklam-china-second-front", "pulwama-balakot-decision", "balakot-airstrike-abhinandan", "article-370-abrogation", "sajid-mir-prison-poisoning", "tahawwur-rana-extradition", "pahalgam-attack-crisis", "operation-sindoor-strike"],
+    "film_4": ["galwan-china-kinetic-clash", "taliban-kabul-fall-recalibration", "cds-rawat-crash-institutional-setback", "mystery-killings-pakistan-covert-campaign", "imran-khan-collapse-pakistan-instability", "nijjar-killing-india-canada-crisis", "reasi-pilgrim-bus-attack"]
+  }
 }

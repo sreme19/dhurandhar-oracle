@@ -1,0 +1,303 @@
+{
+  "id": "imran-khan-collapse-pakistan-instability",
+  "operative": "ajay_sanyal",
+  "film": 4,
+  "act": 2,
+  "description": "April 10, 2022 \u2013 May 9, 2023. Pakistan's civilian-military compact collapses in real time. PM Imran Khan is ousted via no-confidence vote (April 10, 2022) after the military establishment \u2014 specifically Army Chief General Qamar Javed Bajwa \u2014 withdraws support. Imran's 'conspiracy' narrative (blaming the US and Bajwa) splits Pakistan's political establishment and the public. Thirteen months later, on May 9, 2023, Imran Khan is arrested on corruption charges. His supporters storm military installations including the Lahore Corps Commander's residence \u2014 an unprecedented attack on military property by civilian supporters. The military cracks down. Pakistan's political system is in a death spiral: the military rules but cannot govern; civilian governments cannot survive; the economy is collapsing (IMF bailout crisis). NSA Ajay Sanyal must assess: does Pakistani internal collapse create a strategic opportunity for India, or does it create an unstable nuclear-armed adversary more dangerous than a coherent one?",
+  "real_world_correlation": {
+    "event_date": "April 10, 2022 and May 9, 2023",
+    "real_event": "April 9-10, 2022: Imran Khan loses no-confidence vote (174-0, opposition boycott then re-vote). First Pakistani PM removed via parliamentary vote. Replaced by Shehbaz Sharif. Khan blamed US 'cipher conspiracy' and General Bajwa. November 2022: Bajwa retires, General Asim Munir becomes Army Chief. May 9, 2023: Imran Khan arrested at Islamabad High Court (Al-Qadir Trust corruption). PTI supporters storm 9 Corps Commander (Lahore) residence, GHQ gates (Rawalpindi), air force bases. Military declares an 'attack on the state'. Hundreds arrested including senior PTI leaders.",
+    "bajwa_munir_transition": "The Bajwa-Munir transition was significant: Bajwa had been the architect of Imran's 2018 rise to power and his 2022 removal. Munir (COAS from November 2022) was a former DG ISI briefly \u2014 sacked by Imran Khan in 2019 in a personal dispute. Munir's appointment set the stage for a military-Imran confrontation that had a personal dimension. By May 2023, Munir authorised a crackdown that had no precedent in Pakistan's political history.",
+    "economic_collapse_context": "Pakistan's economy in 2022-2023: inflation 38% (peak), foreign exchange reserves $3.5 billion (barely 3 weeks of imports), IMF programme suspended. Pakistan sought Chinese rollover, Saudi deposit, UAE deposit to survive. The economic crisis was simultaneously a security crisis \u2014 a destabilised Pakistan with nuclear weapons and an active ISI is a different threat profile than a stable one.",
+    "india_strategic_calculation": "India's official position: 'Pakistan's internal matters.' But NSA-level analysis: (1) a weakened Pakistan army is less capable of sustaining ISI operations at historical levels; (2) a politically chaotic Pakistan is more likely to use security crises (Kashmir escalation) to distract domestically \u2014 Pulwama-type events become more, not less, likely during domestic turmoil; (3) Pakistani nuclear command and control stability is the key concern.",
+    "munir_pahalgam_link": "General Asim Munir \u2014 who became COAS November 2022 \u2014 made a speech in April 2025 (days before Pahalgam) describing Kashmir as Pakistan's 'jugular vein.' Intelligence analysis linked the speech to the Pahalgam attack 10 days later. Munir's role as the architect of Pakistan's post-Imran consolidation is central to Film 4's adversary model.",
+    "isi_operational_continuity": "Despite political chaos, ISI operations continued without interruption. ISI's operational independence from civilian governments was structurally reinforced during this period \u2014 the military had effectively absorbed all state functions, including foreign and security policy. For RAW/IB, the implication was that Pakistan's civilian political chaos was irrelevant to ISI's operational calendar."
+  },
+  "state_vector": {
+    "cover_integrity": 9.5,
+    "trust_capital": 9.0,
+    "intelligence_depth": 8.0,
+    "network_strength": 8.5,
+    "exposure_risk": 2.0
+  },
+  "available_actions": [
+    "assess_isi_operational_continuity_through_political_chaos",
+    "evaluate_pakistan_nuclear_command_stability",
+    "map_munir_doctrine_compared_to_bajwa",
+    "assess_domestic_distraction_kashmir_escalation_risk",
+    "identify_imran_isi_military_split_intelligence_implications"
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_operational_continuity_assess",
+      "name": "Assess whether ISI operations against India are continuing, pausing, or escalating during political chaos",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "nuclear_command_stability",
+        "munir_doctrine_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "nuclear_command_stability",
+      "name": "Assess Pakistan nuclear command and control stability during army-civilian confrontation \u2014 NCA composition and loyalty",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_operational_continuity_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "munir_doctrine_map",
+      "name": "Map General Asim Munir's security doctrine \u2014 is he more or less aggressive than Bajwa on Kashmir and India operations",
+      "optimistic_days": 30,
+      "most_likely_days": 60,
+      "pessimistic_days": 120,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_operational_continuity_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.2
+    },
+    {
+      "id": "domestic_distraction_escalation_assess",
+      "name": "Assess probability of Pakistan military using Kashmir escalation to distract from domestic political crisis",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "munir_doctrine_map"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "assess_isi_operational_continuity_through_political_chaos",
+      "evaluate_pakistan_nuclear_command_stability",
+      "map_munir_doctrine_compared_to_bajwa",
+      "assess_domestic_distraction_kashmir_escalation_risk",
+      "identify_imran_isi_military_split_intelligence_implications",
+      "isi_operations_continuing_full_capacity",
+      "isi_operations_degraded_political_distraction",
+      "nuclear_command_stable_despite_chaos",
+      "munir_more_aggressive_kashmir_escalation_imminent",
+      "domestic_distraction_attack_india_planned"
+    ],
+    "edges": [
+      {
+        "cause": "assess_isi_operational_continuity_through_political_chaos",
+        "effect": "isi_operations_continuing_full_capacity",
+        "strength": 0.75,
+        "known_confounders": [
+          "isi_structural_independence"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "assess_isi_operational_continuity_through_political_chaos",
+        "effect": "isi_operations_degraded_political_distraction",
+        "strength": 0.25,
+        "known_confounders": [
+          "officer_corps_loyalty_split"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "evaluate_pakistan_nuclear_command_stability",
+        "effect": "nuclear_command_stable_despite_chaos",
+        "strength": 0.8,
+        "known_confounders": [
+          "army_control_of_nca"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "map_munir_doctrine_compared_to_bajwa",
+        "effect": "munir_more_aggressive_kashmir_escalation_imminent",
+        "strength": 0.65,
+        "known_confounders": [
+          "munir_calculation_of_india_response"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "assess_domestic_distraction_kashmir_escalation_risk",
+        "effect": "domestic_distraction_attack_india_planned",
+        "strength": 0.55,
+        "known_confounders": [
+          "munir_risk_appetite"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "munir_more_aggressive_kashmir_escalation_imminent",
+        "effect": "domestic_distraction_attack_india_planned",
+        "strength": 0.7,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "general_asim_munir_coas",
+      "objective": "Consolidate military power post-Imran; neutralise PTI political threat; manage economy through IMF/China/Gulf; maintain ISI operational capability against India; use Kashmir narrative to restore military legitimacy domestically",
+      "capability": 9.5,
+      "trigger_threshold": 8.0,
+      "information_set": [
+        "domestic_political_stability_data",
+        "india_military_posture",
+        "imf_negotiation_status",
+        "isi_operational_calendar"
+      ],
+      "observable_actions": [
+        "crack_down_imran_supporters_may_9",
+        "public_speech_kashmir_jugular_vein_april_2025",
+        "manage_isi_operations_independent_of_politics",
+        "promote_self_to_field_marshal_post_sindoor",
+        "seek_imf_bailout_simultaneously"
+      ],
+      "hidden_states": [
+        "consolidating_power",
+        "using_kashmir_distraction",
+        "managing_nuclear_posture",
+        "preparing_escalation"
+      ],
+      "prospect_params": {
+        "lam": 3.5,
+        "gamma": 0.55,
+        "alpha": 0.92,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "imran_khan_isi_split",
+      "objective": "Expose ISI-military nexus through political campaign; rally Pakistani public against army establishment; seek external support (US, Saudi) against military; use intelligence about ISI operations as political weapon",
+      "capability": 7.0,
+      "trigger_threshold": 5.0,
+      "information_set": [
+        "isi_operations_knowledge_from_pm_tenure",
+        "public_sentiment_data",
+        "us_state_dept_contacts",
+        "saudi_establishment_links"
+      ],
+      "observable_actions": [
+        "expose_cipher_conspiracy_narrative",
+        "rally_supporters_for_long_march",
+        "leak_information_about_isi_operations",
+        "seek_political_asylum_options"
+      ],
+      "hidden_states": [
+        "fighting",
+        "negotiating",
+        "exposing",
+        "capitulating"
+      ],
+      "prospect_params": {
+        "lam": 2.0,
+        "gamma": 0.65,
+        "alpha": 0.85,
+        "beta": 0.85,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "ajay_sanyal",
+      "target": "narendra_modi",
+      "strength": 0.98,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "pakistan_army",
+      "target": "china",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "cpec_economic_support"
+    },
+    {
+      "source": "pakistan_army",
+      "target": "saudi_arabia",
+      "strength": 0.72,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "gulf_deposit_economic_stabilisation"
+    },
+    {
+      "source": "imran_khan",
+      "target": "pakistan_army",
+      "strength": 0.05,
+      "betrayal_history": 2,
+      "in_coalition": false,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "munir_kashmir_escalation_intent",
+      "name": "Whether General Munir has authorised ISI to plan a Kashmir escalation to restore military legitimacy domestically",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.97,
+      "access_difficulty": 9.0,
+      "access_actions": [
+        "map_munir_doctrine_compared_to_bajwa",
+        "assess_domestic_distraction_kashmir_escalation_risk"
+      ]
+    },
+    {
+      "id": "pakistan_nuclear_command_composition",
+      "name": "Current NCA composition and loyalty chain under Munir \u2014 who controls nuclear release authority during political chaos",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.95,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "evaluate_pakistan_nuclear_command_stability"
+      ]
+    },
+    {
+      "id": "isi_imran_leverage_material",
+      "name": "Whether Imran Khan possesses operational intelligence from his PM tenure that ISI considers a security threat \u2014 leverage for his detention",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.8,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "identify_imran_isi_military_split_intelligence_implications"
+      ]
+    }
+  ],
+  "belief_state": {
+    "munir_planning_kashmir_escalation_domestic_distraction": 0.55,
+    "munir_focused_economy_no_immediate_kashmir_escalation": 0.3,
+    "isi_operations_continuing_full_capacity_despite_chaos": 0.8,
+    "pakistan_nuclear_command_unstable": 0.1
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/No-confidence_motion_against_Imran_Khan",
+    "https://en.wikipedia.org/wiki/2022_Pakistani_constitutional_crisis",
+    "https://www.dawn.com/news/1744819"
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch2",
+      "added_count": 3,
+      "added_at": "2026-04-29T14:38:03+00:00"
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "id": "zahoor-mistry-elimination",
+  "operative": "hamza",
+  "film": 2,
+  "act": 2,
+  "description": "March 2022. Zahoor Mistry \u2014 one of the five IC-814 hijackers who walked free in 1999 \u2014 has lived under the alias 'Zahid Akhund' in Karachi for 22 years, running a furniture shop. Hamza and Rizwan have located him. The operation: a drive-by elimination on a Karachi street. The turning point is not whether to act \u2014 Mistry is a confirmed target \u2014 but how: a clean kill that leaves no fingerprints pointing to Indian intelligence, versus a 'capture and extract' that could yield intelligence on remaining IC-814 network but risks triggering ISI counter-response. The film frames the elimination as the first public-facing proof that India's new doctrine is real.",
+  "real_world_correlation": {
+    "mistry_real_killing": "Abdul Latif alias Zahoor Mistry was one of the five hijackers of IC-814 in December 1999. He was released when India capitulated to the hijackers' demands (releasing Masood Azhar, Omar Sheikh, Mushtaq Zargar). After release, he returned to Karachi and lived freely for 22 years under the alias Zahid Akhund, reportedly running a furniture business. He was shot dead on March 1, 2022, by unknown motorcycle assailants on a Karachi street. The killing was unclaimed. Indian intelligence is widely believed responsible. Pakistan conducted no serious investigation.",
+    "mossad_parallel": "The operation parallels documented Mossad 'kidon' elimination operations \u2014 particularly the 1972 Operation Wrath of God targeting Munich massacre perpetrators. The methodology (drive-by motorcycle assassination on a crowded street) is identical to documented Mossad and RAW operations in third countries. India maintains official deniability for all such operations.",
+    "ic814_national_shame": "IC-814 is a defining national trauma in India \u2014 the humiliation of releasing three high-value terrorists under threat. Masood Azhar (released) founded Jaish-e-Mohammed, which attacked India's Parliament in 2001 and the Pulwama CRPF convoy in 2019. Omar Sheikh (released) was later convicted for Daniel Pearl's murder. The targets released in IC-814 killed far more Indians than the original hostage situation. Mistry's elimination is the film's first closure of this wound.",
+    "deniability_architecture": "Real Indian intelligence operations abroad (notably in Pakistan, Bangladesh, and Southeast Asia) are structured to maintain plausible deniability. Drive-by motorcycle assassinations are specifically chosen because: (1) evidence is minimal; (2) no body to extract; (3) local criminal attribution is plausible in Karachi's violent environment. The film makes the authorship explicit \u2014 reality kept it deniable."
+  },
+  "state_vector": {
+    "cover_integrity": 8.0,
+    "trust_capital": 3.5,
+    "intelligence_depth": 7.0,
+    "network_strength": 7.0,
+    "exposure_risk": 5.5
+  },
+  "available_actions": [
+    "execute_clean_drive_by_no_fingerprints",
+    "capture_mistry_extract_for_interrogation",
+    "execute_with_intelligence_collection_hybrid",
+    "delay_for_additional_surveillance",
+    "abandon_target_focus_on_iqbal_track"
+  ],
+  "mission_tasks": [
+    {
+      "id": "mistry_routine_map",
+      "name": "Map Zahoor Mistry daily routine, security posture, and predictable locations",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "exfil_route_plan"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.08
+    },
+    {
+      "id": "exfil_route_plan",
+      "name": "Plan exfiltration route for Rizwan post-elimination (motorcycle escape, safe house chain)",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "mistry_routine_map"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "execute_elimination",
+      "name": "Execute drive-by elimination (Rizwan triggers; Hamza provides real-time route intel)",
+      "optimistic_days": 1,
+      "most_likely_days": 1,
+      "pessimistic_days": 3,
+      "dependencies": [
+        "mistry_routine_map",
+        "exfil_route_plan"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.4
+    },
+    {
+      "id": "post_op_cover_maintain",
+      "name": "Maintain Hamza's Karachi cover immediately post-elimination (appear unconnected)",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [
+        "execute_elimination"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.3
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "execute_clean_drive_by_no_fingerprints",
+      "capture_mistry_extract_for_interrogation",
+      "execute_with_intelligence_collection_hybrid",
+      "delay_for_additional_surveillance",
+      "abandon_target_focus_on_iqbal_track",
+      "mistry_eliminated_clean",
+      "ic814_network_intel_collected",
+      "isi_counter_response_triggered",
+      "karachi_police_investigation_launched",
+      "hamza_cover_maintained",
+      "rizwan_exposed"
+    ],
+    "edges": [
+      {
+        "cause": "execute_clean_drive_by_no_fingerprints",
+        "effect": "mistry_eliminated_clean",
+        "strength": 0.92,
+        "known_confounders": [
+          "execution_precision"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "execute_clean_drive_by_no_fingerprints",
+        "effect": "hamza_cover_maintained",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "execute_clean_drive_by_no_fingerprints",
+        "effect": "karachi_police_investigation_launched",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "capture_mistry_extract_for_interrogation",
+        "effect": "ic814_network_intel_collected",
+        "strength": 0.75,
+        "known_confounders": [
+          "mistry_willingness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "capture_mistry_extract_for_interrogation",
+        "effect": "isi_counter_response_triggered",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "capture_mistry_extract_for_interrogation",
+        "effect": "rizwan_exposed",
+        "strength": 0.6,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "execute_with_intelligence_collection_hybrid",
+        "effect": "mistry_eliminated_clean",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "execute_with_intelligence_collection_hybrid",
+        "effect": "ic814_network_intel_collected",
+        "strength": 0.5,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "execute_with_intelligence_collection_hybrid",
+        "effect": "isi_counter_response_triggered",
+        "strength": 0.45,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "delay_for_additional_surveillance",
+        "effect": "ic814_network_intel_collected",
+        "strength": 0.4,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "isi_counter_response_triggered",
+        "effect": "hamza_cover_maintained",
+        "strength": 0.2,
+        "known_confounders": [
+          "counter_intel_precision"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "karachi_police_investigation_launched",
+        "effect": "hamza_cover_maintained",
+        "strength": 0.65,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "major_iqbal",
+      "objective": "Detect Indian intelligence operation behind Mistry killing; protect remaining IC-814 network",
+      "capability": 9.0,
+      "trigger_threshold": 7.0,
+      "information_set": [
+        "isi_counter_intelligence",
+        "karachi_surveillance",
+        "ic814_network_contacts"
+      ],
+      "observable_actions": [
+        "launch_counter_intelligence_sweep",
+        "warn_remaining_ic814_survivors",
+        "increase_protection_for_other_targets",
+        "deploy_honey_trap_for_indian_agents"
+      ],
+      "hidden_states": [
+        "unaware",
+        "investigating",
+        "hunting_indian_agents"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "rizwan_shah",
+      "strength": 0.85,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.9,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "mistry_ic814_remaining_network",
+      "name": "Other IC-814 hijackers still alive and their current locations",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.65,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "capture_mistry_extract_for_interrogation",
+        "execute_with_intelligence_collection_hybrid"
+      ]
+    },
+    {
+      "id": "isi_counter_response_magnitude",
+      "name": "How aggressively ISI responds to Mistry killing \u2014 proportional to whether India is suspected",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.85,
+      "access_difficulty": 6.0,
+      "access_actions": [
+        "execute_clean_drive_by_no_fingerprints",
+        "post_op_cover_maintain"
+      ]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_iqbal_unaware_police_routine_investigation": 0.5,
+    "cover_intact_iqbal_suspicious_police_investigating": 0.3,
+    "cover_suspected_iqbal_hunting_agents": 0.15,
+    "cover_blown_iqbal_identified_hamza_rizwan": 0.05
+  },
+  "source_refs": [
+    "https://en.wikipedia.org/wiki/Indian_Airlines_Flight_814",
+    "https://timesofindia.indiatimes.com/india/ic-814-hijacker-mistry-zahoor-ibrahim-shot-dead-in-karachi-report/articleshow/90072246.cms"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "grounding_type": "contextual",
+      "confidence": 0.76,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ]
+}

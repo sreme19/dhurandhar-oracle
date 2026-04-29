@@ -1,0 +1,224 @@
+{
+  "id": "tahawwur-rana-extradition",
+  "operative": "rizwan_shah",
+  "film": 3,
+  "act": 2,
+  "description": "April 10, 2025. Tahawwur Rana \u2014 Pakistani-American 26/11 co-conspirator, colleague of David Headley \u2014 arrives in India after the US Supreme Court rejects his final extradition appeal. He is the first significant 26/11 figure extradited to face Indian justice. NIA takes custody. Rana worked with Headley to plan 26/11 and was convicted in the US on other charges. His potential testimony could expose ISI's chain of command in 26/11 planning. Rizwan's role: provide intelligence on which ISI officers and LeT figures Rana has contact knowledge of, to maximise the intelligence yield from NIA's interrogation. The risk: ISI will attempt to either discredit Rana's testimony or eliminate any witnesses he might name while he is in Indian custody.",
+  "real_world_correlation": {
+    "event_date": "April 10, 2025",
+    "real_event": "Tahawwur Rana arrived in India on April 10, 2025, after the Trump administration facilitated his extradition from the US. The US Supreme Court rejected his final appeal. A NIA team flew to the US on April 8, 2025, to take custody. Rana is the first major 26/11 co-conspirator to face Indian justice.",
+    "rana_profile": "Tahawwur Hussain Rana: born 1960, Pakistani-Canadian. Childhood friend of David Coleman Headley. A Pakistani army doctor, he later immigrated to Canada, became a Canadian citizen, moved to Chicago. Rana provided cover for Headley's reconnaissance trips to Mumbai by registering a fake immigration services office as an LeT front. Convicted in US of providing material support to LeT (2011), but acquitted on 26/11 conspiracy charges in US trial.",
+    "intelligence_significance": "Rana has direct knowledge of: Headley's ISI handlers (Major Iqbal), LeT's operational planning for 26/11, the LeT-ISI coordination structure, and potentially names of ISI officers who will not appear in any Pakistan document. His testimony under Indian NIA interrogation could produce intelligence product that fills the gaps left by Headley's US trial testimony.",
+    "isi_risk": "Pakistan officially opposed the extradition. ISI will attempt to: limit Rana's cooperation through messages to his family; discredit his testimony through Pakistani media; eliminate witnesses he might name in India. The window for maximum intelligence yield from Rana is narrow \u2014 before ISI fully activates these countermeasures."
+  },
+  "state_vector": {
+    "cover_integrity": 8.0,
+    "trust_capital": 5.5,
+    "intelligence_depth": 8.5,
+    "network_strength": 8.0,
+    "exposure_risk": 4.5
+  },
+  "available_actions": [
+    "provide_nia_intelligence_briefing_on_rana_knowledge",
+    "identify_isi_figures_rana_can_name_preemptively",
+    "monitor_isi_countermeasures_against_rana_testimony",
+    "map_rana_network_for_remaining_26_11_figures",
+    "coordinate_rana_testimony_with_headley_us_records"
+  ],
+  "mission_tasks": [
+    {
+      "id": "rana_knowledge_map",
+      "name": "Map Rana's known contacts with ISI officers and LeT planners \u2014 pre-brief NIA",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_countermeasures_monitor"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.12
+    },
+    {
+      "id": "isi_countermeasures_monitor",
+      "name": "Monitor ISI's response to Rana extradition \u2014 identify which networks they activate to suppress testimony",
+      "optimistic_days": 7,
+      "most_likely_days": 14,
+      "pessimistic_days": 30,
+      "dependencies": [],
+      "parallelizable_with": [
+        "rana_knowledge_map"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.18
+    },
+    {
+      "id": "26_11_remaining_chain",
+      "name": "From Rana's knowledge, identify ISI officers still active who directed 26/11 (post-Major Iqbal)",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": [
+        "rana_knowledge_map"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.22
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "provide_nia_intelligence_briefing_on_rana_knowledge",
+      "identify_isi_figures_rana_can_name_preemptively",
+      "monitor_isi_countermeasures_against_rana_testimony",
+      "map_rana_network_for_remaining_26_11_figures",
+      "rana_testimony_maximised",
+      "isi_countermeasures_mapped",
+      "new_26_11_isi_figures_identified",
+      "rana_testimony_suppressed",
+      "26_11_chain_of_command_complete"
+    ],
+    "edges": [
+      {
+        "cause": "provide_nia_intelligence_briefing_on_rana_knowledge",
+        "effect": "rana_testimony_maximised",
+        "strength": 0.8,
+        "known_confounders": [
+          "rana_cooperation"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "identify_isi_figures_rana_can_name_preemptively",
+        "effect": "new_26_11_isi_figures_identified",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "monitor_isi_countermeasures_against_rana_testimony",
+        "effect": "isi_countermeasures_mapped",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "monitor_isi_countermeasures_against_rana_testimony",
+        "effect": "rana_testimony_suppressed",
+        "strength": 0.25,
+        "known_confounders": [
+          "isi_effectiveness"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "map_rana_network_for_remaining_26_11_figures",
+        "effect": "new_26_11_isi_figures_identified",
+        "strength": 0.82,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "new_26_11_isi_figures_identified",
+        "effect": "26_11_chain_of_command_complete",
+        "strength": 0.75,
+        "known_confounders": [
+          "headley_records_cross_ref"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "rana_testimony_maximised",
+        "effect": "26_11_chain_of_command_complete",
+        "strength": 0.8,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_legal_suppression",
+      "objective": "Minimise Rana's testimony yield; discredit him in international media; threaten his family in Pakistan",
+      "capability": 8.0,
+      "trigger_threshold": 6.5,
+      "information_set": [
+        "rana_family_pakistan",
+        "rana_us_trial_testimony",
+        "nia_interrogation_structure"
+      ],
+      "observable_actions": [
+        "threaten_rana_family_in_pakistan",
+        "launch_media_discrediting_campaign",
+        "file_counter_legal_challenge_via_pakistan",
+        "activate_rana_legal_team_delay_tactics"
+      ],
+      "hidden_states": [
+        "suppressing",
+        "discrediting",
+        "threatening"
+      ],
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.6,
+        "alpha": 0.9,
+        "beta": 0.9,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "rizwan_shah",
+      "target": "ajay_sanyal",
+      "strength": 0.92,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": null
+    },
+    {
+      "source": "india",
+      "target": "us_trump_administration",
+      "strength": 0.7,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "26_11_extradition_cooperation"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "rana_isi_contact_names",
+      "name": "Names of ISI officers Rana has personal knowledge of beyond Major Iqbal",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.95,
+      "access_difficulty": 7.0,
+      "access_actions": [
+        "map_rana_network_for_remaining_26_11_figures",
+        "identify_isi_figures_rana_can_name_preemptively"
+      ]
+    },
+    {
+      "id": "isi_countermeasures_activation",
+      "name": "Which ISI officers are activated to suppress Rana's testimony \u2014 reveals who feels most exposed",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.88,
+      "access_difficulty": 8.5,
+      "access_actions": [
+        "monitor_isi_countermeasures_against_rana_testimony"
+      ]
+    }
+  ],
+  "belief_state": {
+    "rana_cooperating_testimony_productive": 0.45,
+    "rana_partially_cooperating_isi_countermeasures_limited": 0.35,
+    "rana_not_cooperating_isi_threats_effective": 0.15,
+    "rana_testimony_complete_chain_of_command_mapped": 0.05
+  },
+  "source_refs": [
+    "https://www.state.gov/extradition-of-tahawwur-rana-to-india",
+    "https://www.justice.gov/opa/pr/us-extradites-alleged-co-conspirator-2008-mumbai-terrorist-attacks-face-charges-india"
+  ],
+  "source_confidence": 0.95,
+  "schema_version": "1.1.0",
+  "updated_at": "2026-04-29T14:36:04+00:00"
+}

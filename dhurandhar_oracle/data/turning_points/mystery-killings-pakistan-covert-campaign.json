@@ -1,0 +1,254 @@
+{
+  "id": "mystery-killings-pakistan-covert-campaign",
+  "operative": "hamza",
+  "film": 4,
+  "act": 2,
+  "description": "2022-2024. A pattern emerges across Pakistan's major cities: India's most-wanted terrorists are dying. March 2022: Zahoor Mistry (IC-814 hijacker, the man who inspired Film 1) shot dead at his Crescent Furniture store in Karachi \u2014 22 years after the hijacking. 2023: Sajid Mir (26/11 handler, the ghost who was declared dead by Pakistan) reportedly poisoned in custody. May 2023: Paramjit Singh Panjwar (Khalistan Commando Force chief, Pakistan-based) shot dead in Lahore. 2023-2024: Multiple Hizbul and JeM commanders die in car bombs, shootings, 'unknown assailants'. The Guardian reports 'up to 20 assassinations since 2020, Indian government ordered.' Pakistan's intelligence officials brief The Guardian; Islamabad lodges formal diplomatic protests. Hamza \u2014 Jaskirat Singh Rangi, living under a third cover identity, operational in Karachi \u2014 is the covert instrument. The turning point: Pakistan's ISI has identified the pattern and has a partial profile of the operator. Does Hamza complete the final target on his list \u2014 or break contact and exfiltrate before ISI closes the net?",
+  "real_world_correlation": {
+    "event_date": "2022-2024 (pattern)",
+    "real_event": "Series of killings in Pakistan: (1) March 2022 \u2014 Zahoor Mistry (Abdul Latif Mistry), IC-814 hijacker, shot dead at Karachi furniture shop; (2) 2023 \u2014 Sajid Mir reportedly poisoned in Pakistani custody after FATF-pressured conviction; (3) May 2023 \u2014 Paramjit Singh Panjwar (KCF chief) shot in Lahore; (4) 2023-2024 \u2014 multiple Hizbul Mujahideen and JeM commanders killed by unknown assailants in PoK and Pakistan. The Guardian (April 2024) reported Indian government allegedly behind 'up to 20 assassinations since 2020', citing Pakistani intelligence officials.",
+    "attribution_pattern": "All killings share characteristics: close-range gunfire, multiple assailants, no group claims responsibility, victims are Indian-designated terrorists. Methods vary: Mistry \u2014 handgun, close range; Panjwar \u2014 gunmen; Sajid Mir \u2014 disputed (prison, possibly natural causes + poison). The variation in method suggests a professional covert programme, not spontaneous local violence.",
+    "india_official_denial": "India has never confirmed any involvement. Foreign Ministry responses to journalist questions: 'We don't comment on intelligence matters.' The pattern of denial mirrors Mossad's post-1972 M\u00fcnchen operation approach \u2014 acknowledged only decades later.",
+    "guardian_report_context": "The April 2024 Guardian report followed Canada's September 2023 accusation (Nijjar killing) \u2014 placing India in the unprecedented position of being accused of state-sponsored assassinations in both a Five Eyes country and an adversary state simultaneously. The timing was geopolitically significant.",
+    "operational_significance": "The killings close the loop on unresolved justice from Films 1 and 2: Zahoor Mistry (IC-814, Film 1) and the ISI network (Film 2) are systematically being dismantled. Each killing is a closure beat \u2014 but also an escalation in operational exposure as the pattern becomes identifiable.",
+    "isi_response": "ISI identified the pattern by mid-2023. Security was significantly tightened around remaining India-designated terrorists in Pakistan. The ISI launched an internal investigation \u2014 one of the reasons Sajid Mir was 'produced alive' for FATF (May 2023) was to deny India a clean kill and demonstrate he was alive and under ISI protection."
+  },
+  "state_vector": {
+    "cover_integrity": 3.5,
+    "trust_capital": 1.5,
+    "intelligence_depth": 9.5,
+    "network_strength": 5.0,
+    "exposure_risk": 9.5
+  },
+  "available_actions": [
+    "complete_final_target_before_isi_closes_net",
+    "break_contact_exfiltrate_iran_corridor",
+    "feed_isi_false_profile_extend_operational_window",
+    "identify_degree_of_isi_partial_profile_accuracy",
+    "assess_final_target_security_posture_post_pattern_identified"
+  ],
+  "mission_tasks": [
+    {
+      "id": "isi_profile_accuracy_assess",
+      "name": "Assess how accurate ISI's partial profile of the operator is \u2014 does ISI have Hamza's current identity or only the pattern",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": [
+        "final_target_security_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.85
+    },
+    {
+      "id": "final_target_security_assess",
+      "name": "Assess final target's security posture post-pattern-identification \u2014 ISI tightening protection, location known",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_profile_accuracy_assess"
+      ],
+      "requires_cover": true,
+      "risk_to_cover": 0.9
+    },
+    {
+      "id": "exfil_route_prepare",
+      "name": "Prepare exfiltration route \u2014 Iran land corridor via Balochistan, priority is speed over target completion",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": [
+        "isi_profile_accuracy_assess"
+      ],
+      "requires_cover": false,
+      "risk_to_cover": 0.0
+    },
+    {
+      "id": "final_operation_execute",
+      "name": "Execute final elimination \u2014 highest risk, requires abandoning all cover immediately after",
+      "optimistic_days": 1,
+      "most_likely_days": 3,
+      "pessimistic_days": 7,
+      "dependencies": [
+        "final_target_security_assess"
+      ],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 1.0
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "complete_final_target_before_isi_closes_net",
+      "break_contact_exfiltrate_iran_corridor",
+      "feed_isi_false_profile_extend_operational_window",
+      "identify_degree_of_isi_partial_profile_accuracy",
+      "assess_final_target_security_posture_post_pattern_identified",
+      "final_target_eliminated_mission_complete",
+      "hamza_captured_isi_net_closes",
+      "hamza_exfiltrated_mission_incomplete",
+      "isi_false_profile_buys_time_final_op_possible",
+      "pattern_identified_india_pakistan_diplomatic_crisis"
+    ],
+    "edges": [
+      {
+        "cause": "complete_final_target_before_isi_closes_net",
+        "effect": "final_target_eliminated_mission_complete",
+        "strength": 0.55,
+        "known_confounders": [
+          "target_security_posture",
+          "isi_hunt_speed"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "complete_final_target_before_isi_closes_net",
+        "effect": "hamza_captured_isi_net_closes",
+        "strength": 0.45,
+        "known_confounders": [
+          "isi_profile_accuracy"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "break_contact_exfiltrate_iran_corridor",
+        "effect": "hamza_exfiltrated_mission_incomplete",
+        "strength": 0.75,
+        "known_confounders": [
+          "isi_border_lockdown"
+        ],
+        "identified": true
+      },
+      {
+        "cause": "feed_isi_false_profile_extend_operational_window",
+        "effect": "isi_false_profile_buys_time_final_op_possible",
+        "strength": 0.6,
+        "known_confounders": [
+          "isi_counterintelligence_skill"
+        ],
+        "identified": false
+      },
+      {
+        "cause": "identify_degree_of_isi_partial_profile_accuracy",
+        "effect": "hamza_captured_isi_net_closes",
+        "strength": 0.25,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "pattern_identified_india_pakistan_diplomatic_crisis",
+        "effect": "hamza_captured_isi_net_closes",
+        "strength": 0.35,
+        "known_confounders": [
+          "international_pressure_on_india"
+        ],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "isi_counterintelligence_hunt_operator",
+      "objective": "Identify and capture the Indian covert operator behind the assassination pattern; end the programme; extract operational details for propaganda and diplomatic leverage; demonstrate ISI capability to protect designated terrorists",
+      "capability": 9.5,
+      "trigger_threshold": 8.0,
+      "information_set": [
+        "partial_operator_profile",
+        "pattern_analysis_kills",
+        "karachi_surveillance_networks",
+        "india_diplomatic_links"
+      ],
+      "observable_actions": [
+        "increase_surveillance_karachi_lahore_networks",
+        "tighten_security_all_designated_terrorist_targets",
+        "brief_guardian_and_international_media",
+        "deploy_counterintelligence_teams_systematically",
+        "lodge_formal_protest_india_high_commission"
+      ],
+      "hidden_states": [
+        "hunting",
+        "closing_net",
+        "partial_profile_only",
+        "finalising_trap"
+      ],
+      "prospect_params": {
+        "lam": 4.5,
+        "gamma": 0.48,
+        "alpha": 0.95,
+        "beta": 0.95,
+        "ref": 0.0
+      }
+    }
+  ],
+  "alliance_snapshot": [
+    {
+      "source": "hamza",
+      "target": "ajay_sanyal",
+      "strength": 0.88,
+      "betrayal_history": 0,
+      "in_coalition": true,
+      "trigger_condition": "exfil_authorised_by_sanyal"
+    },
+    {
+      "source": "india",
+      "target": "iran",
+      "strength": 0.65,
+      "betrayal_history": 0,
+      "in_coalition": false,
+      "trigger_condition": "exfil_corridor_chabahar"
+    }
+  ],
+  "intelligence_targets": [
+    {
+      "id": "isi_profile_hamza_accuracy",
+      "name": "How complete is ISI's partial profile of the operator \u2014 current cover identity, location, cell structure",
+      "current_entropy": 3.5,
+      "mission_relevance": 0.99,
+      "access_difficulty": 10.0,
+      "access_actions": [
+        "identify_degree_of_isi_partial_profile_accuracy",
+        "feed_isi_false_profile_extend_operational_window"
+      ]
+    },
+    {
+      "id": "final_target_location_security",
+      "name": "Current location and security posture of the final target \u2014 ISI protection tightened post-pattern-identification",
+      "current_entropy": 3.0,
+      "mission_relevance": 0.98,
+      "access_difficulty": 9.5,
+      "access_actions": [
+        "assess_final_target_security_posture_post_pattern_identified"
+      ]
+    }
+  ],
+  "belief_state": {
+    "isi_has_pattern_not_identity_window_still_open": 0.4,
+    "isi_has_partial_identity_hamza_on_short_list": 0.35,
+    "isi_has_full_identity_net_closing_immediately": 0.2,
+    "isi_profile_completely_wrong_significant_time_remains": 0.05
+  },
+  "source_refs": [
+    "https://www.reuters.com/world/pakistan-has-credible-evidence-link-indian-agents-killings-pakistani-citizens-2024-01-25/",
+    "https://www.reuters.com/world/asia-pacific/former-anti-india-militant-killed-pakistan-controlled-kashmir-2023-09-08/"
+  ],
+  "grounding_log": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "grounding_type": "contextual",
+      "confidence": 0.78,
+      "added_refs": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ],
+  "source_ref_additions": [
+    {
+      "batch": "source_refs_seed_batch3",
+      "added_count": 2,
+      "added_at": "2026-04-29T14:39:34+00:00"
+    }
+  ]
+}
