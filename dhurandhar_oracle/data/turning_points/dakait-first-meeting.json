@@ -1,0 +1,274 @@
+{
+  "_TODO": "GROUNDING REQUIRED — populate causal_dag edges, exact belief_state, and mission_tasks once film plot details are confirmed.",
+  "id": "dakait-first-meeting",
+  "operative": "hamza",
+  "film": 1,
+  "act": 2,
+  "description": "Hamza secures his first direct meeting with Rehman Dakait. He must choose how to position himself — as a useful criminal asset, a political broker, or an intelligence source — without triggering Dakait's suspicion.",
+  "state_vector": {
+    "cover_integrity": 7.8,
+    "trust_capital": 3.5,
+    "intelligence_depth": 2.0,
+    "network_strength": 5.0,
+    "exposure_risk": 4.5
+  },
+  "available_actions": [
+    "deepen_criminal_cover",
+    "offer_political_intelligence",
+    "accelerate_dakait_trust",
+    "request_handler_backup",
+    "trigger_early_exfil"
+  ],
+  "mission_tasks": [
+    {
+      "id": "establish_cover",
+      "name": "Establish Lyari cover identity",
+      "optimistic_days": 5,
+      "most_likely_days": 10,
+      "pessimistic_days": 21,
+      "dependencies": [],
+      "parallelizable_with": ["contact_handler_network"],
+      "requires_cover": true,
+      "risk_to_cover": 0.05
+    },
+    {
+      "id": "contact_handler_network",
+      "name": "Establish secure handler communication channel",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 14,
+      "dependencies": [],
+      "parallelizable_with": ["establish_cover"],
+      "requires_cover": false,
+      "risk_to_cover": 0.02
+    },
+    {
+      "id": "infiltrate_gang_periphery",
+      "name": "Infiltrate Dakait gang periphery",
+      "optimistic_days": 14,
+      "most_likely_days": 30,
+      "pessimistic_days": 60,
+      "dependencies": ["establish_cover"],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.15
+    },
+    {
+      "id": "build_trust_dakait",
+      "name": "Build direct trust with Rehman Dakait",
+      "optimistic_days": 21,
+      "most_likely_days": 45,
+      "pessimistic_days": 90,
+      "dependencies": ["infiltrate_gang_periphery"],
+      "parallelizable_with": ["gather_political_intel"],
+      "requires_cover": true,
+      "risk_to_cover": 0.20
+    },
+    {
+      "id": "gather_political_intel",
+      "name": "Gather intel on Dakait-Jamali political link",
+      "optimistic_days": 14,
+      "most_likely_days": 28,
+      "pessimistic_days": 60,
+      "dependencies": ["infiltrate_gang_periphery"],
+      "parallelizable_with": ["build_trust_dakait"],
+      "requires_cover": true,
+      "risk_to_cover": 0.25
+    },
+    {
+      "id": "expose_political_link",
+      "name": "Gather actionable evidence of Dakait-Jamali terror financing",
+      "optimistic_days": 10,
+      "most_likely_days": 20,
+      "pessimistic_days": 45,
+      "dependencies": ["build_trust_dakait", "gather_political_intel"],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.40
+    },
+    {
+      "id": "safe_exfil",
+      "name": "Exfiltrate safely with evidence",
+      "optimistic_days": 3,
+      "most_likely_days": 7,
+      "pessimistic_days": 21,
+      "dependencies": ["expose_political_link"],
+      "parallelizable_with": [],
+      "requires_cover": true,
+      "risk_to_cover": 0.50
+    }
+  ],
+  "causal_dag": {
+    "nodes": [
+      "deepen_criminal_cover",
+      "offer_political_intelligence",
+      "accelerate_dakait_trust",
+      "trigger_early_exfil",
+      "dakait_trust_rises",
+      "cover_deepened",
+      "political_link_exposed",
+      "cover_suspected",
+      "mission_success",
+      "cover_blown",
+      "operative_captured"
+    ],
+    "edges": [
+      {
+        "cause": "deepen_criminal_cover",
+        "effect": "dakait_trust_rises",
+        "strength": 0.72,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "deepen_criminal_cover",
+        "effect": "cover_deepened",
+        "strength": 0.85,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "offer_political_intelligence",
+        "effect": "dakait_trust_rises",
+        "strength": 0.60,
+        "known_confounders": ["jamali_awareness"],
+        "identified": false
+      },
+      {
+        "cause": "offer_political_intelligence",
+        "effect": "cover_suspected",
+        "strength": 0.35,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accelerate_dakait_trust",
+        "effect": "dakait_trust_rises",
+        "strength": 0.80,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "accelerate_dakait_trust",
+        "effect": "cover_suspected",
+        "strength": 0.45,
+        "known_confounders": ["dakait_paranoia"],
+        "identified": true
+      },
+      {
+        "cause": "dakait_trust_rises",
+        "effect": "political_link_exposed",
+        "strength": 0.68,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "political_link_exposed",
+        "effect": "mission_success",
+        "strength": 0.88,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "cover_suspected",
+        "effect": "cover_blown",
+        "strength": 0.62,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "cover_blown",
+        "effect": "operative_captured",
+        "strength": 0.75,
+        "known_confounders": [],
+        "identified": true
+      },
+      {
+        "cause": "trigger_early_exfil",
+        "effect": "cover_suspected",
+        "strength": 0.55,
+        "known_confounders": [],
+        "identified": true
+      }
+    ]
+  },
+  "adversaries": [
+    {
+      "actor": "rehman_dakait",
+      "objective": "Consolidate criminal empire; gain political legitimacy through Jamali",
+      "capability": 8.5,
+      "trigger_threshold": 6.5,
+      "information_set": ["lyari_street_intel", "police_contacts"],
+      "observable_actions": [
+        "consolidate_territory",
+        "test_loyalty",
+        "negotiate_political_access",
+        "eliminate_threat",
+        "withdraw_trust"
+      ],
+      "hidden_states": ["trusting", "probing", "suspicious", "hostile"],
+      "prospect_params": {"lam": 2.8, "gamma": 0.62, "alpha": 0.88, "beta": 0.88, "ref": 0.0}
+    },
+    {
+      "actor": "sp_choudhary_aslam",
+      "objective": "Maintain law-and-order optics while navigating political pressure from Jamali",
+      "capability": 6.5,
+      "trigger_threshold": 5.0,
+      "information_set": ["police_reports", "dakait_network_intel"],
+      "observable_actions": [
+        "increase_police_presence",
+        "negotiate_with_dakait",
+        "investigate_outsiders",
+        "back_off_politically"
+      ],
+      "hidden_states": ["monitoring", "neutral", "hostile"],
+      "prospect_params": {"lam": 2.0, "gamma": 0.63, "alpha": 0.88, "beta": 0.88, "ref": 0.0}
+    }
+  ],
+  "alliance_snapshot": [
+    {"source": "hamza", "target": "mohammed_aalam", "strength": 0.90, "betrayal_history": 0, "in_coalition": true, "trigger_condition": null},
+    {"source": "hamza", "target": "ajay_sanyal",    "strength": 0.95, "betrayal_history": 0, "in_coalition": true, "trigger_condition": null},
+    {"source": "rehman_dakait", "target": "jameel_jamali", "strength": 0.75, "betrayal_history": 0, "in_coalition": false, "trigger_condition": null},
+    {"source": "rehman_dakait", "target": "sp_choudhary_aslam", "strength": 0.45, "betrayal_history": 1, "in_coalition": false, "trigger_condition": "political_pressure"}
+  ],
+  "intelligence_targets": [
+    {
+      "id": "jamali_swiss_account",
+      "name": "Jamali's offshore terror financing accounts",
+      "current_entropy": 3.2,
+      "mission_relevance": 0.90,
+      "access_difficulty": 8.0,
+      "access_actions": ["build_trust_dakait", "intercept_financial_comms"]
+    },
+    {
+      "id": "dakait_arms_cache",
+      "name": "Dakait's arms cache location",
+      "current_entropy": 2.5,
+      "mission_relevance": 0.65,
+      "access_difficulty": 5.0,
+      "access_actions": ["deepen_criminal_cover", "accompany_dakait"]
+    },
+    {
+      "id": "aalam_allegiance",
+      "name": "Mohammed Aalam's true allegiance",
+      "current_entropy": 2.0,
+      "mission_relevance": 0.75,
+      "access_difficulty": 3.5,
+      "access_actions": ["monitor_handler_comms", "request_handler_verification"]
+    },
+    {
+      "id": "jamali_political_network",
+      "name": "Jamali's political patronage network",
+      "current_entropy": 2.8,
+      "mission_relevance": 0.80,
+      "access_difficulty": 6.5,
+      "access_actions": ["offer_political_intelligence", "build_trust_dakait"]
+    }
+  ],
+  "belief_state": {
+    "cover_intact_mission_early_adv_unaware":    0.50,
+    "cover_intact_mission_mid_adv_suspicious":   0.30,
+    "cover_suspected_mission_mid_adv_suspicious": 0.15,
+    "cover_blown_mission_stalled_adv_certain":   0.05
+  }
+}

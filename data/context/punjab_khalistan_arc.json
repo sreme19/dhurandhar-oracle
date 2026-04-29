@@ -1,0 +1,85 @@
+{
+  "id": "punjab_khalistan_arc",
+  "name": "Punjab Khalistan Arc / Third Front Doctrine",
+  "alternate_names": ["Khalistan 2.0", "Punjab Narco-Terror Resurgence", "ISI Punjab Operations"],
+  "type": "geopolitical_strategy",
+  "description": "ISI's sustained effort to reactivate Khalistani militancy in Indian Punjab as 'third front' against India (complementing Kashmir and conventional threats). Post-1990s iteration emphasizes narcotics-funded operations, diaspora coordination, and social media radicalization rather than mass insurgency.",
+  "historical_phases": {
+    "phase_1_1980s": {
+      "name": "Original Khalistan Insurgency",
+      "period": "1980-1994",
+      "characteristics": "Mass militancy, Golden Temple occupation (1984), state-level armed confrontation",
+      "outcome": "Indian military/police suppression; costly victory; 20,000+ deaths"
+    },
+    "phase_2_1990s_2000s": {
+      "name": "Diaspora Preservation",
+      "period": "1994-2010",
+      "characteristics": "Militancy suppressed in India but sustained in Pakistan (residual camps) and Western diaspora (Canada, UK, US)",
+      "is_role": "Pakistan maintained 'Khalistan' as pressure option; low-level cross-border infiltration"
+    },
+    "phase_3_2010s_present": {
+      "name": "Narco-Jihad Hybrid",
+      "period": "2010-present",
+      "characteristics": "Opioid crisis creates recruitment pool; social media enables coordination; targeted killings replace mass actions",
+      "is_innovation": "Financial self-sustaining operations through drug trade; deniable 'criminal' veneer"
+    }
+  },
+  "current_operational_structure": {
+    "leadership": {
+      "pakistan_based": ["Happy PhD (Harmeet Singh)", "Residual Wadhawa Singh-era figures"],
+      "diaspora_nodes": ["Sikh for Justice (SFJ)", "Various gurdwara committees (Canada, UK)"],
+      "india_coordination": ["Amarjit Singh Brar tier — cross-border facilitators"]
+    },
+    "funding_mechanisms": [
+      "Afghan heroin trade (self-sustaining)",
+      "Diaspora donations (ideological cover)",
+      "ISI operational subsidies (high-value targets only)",
+      "Extortion from Punjab drug economy"
+    ],
+    "recruitment_pool": {
+      "demographic": "Rural Punjab youth; unemployed/underemployed; opioid addicts",
+      "ideological_vector": "Historical grievances (1984, Blue Star), farmer protests (2020-2021), identity politics",
+      "economic_vector": "Drug trade opportunities; smuggling income"
+    },
+    "tactics": [
+      "Targeted assassinations of Hindu leaders, police, informants",
+      "Grenade attacks on police stations",
+      "IED placement under vehicles",
+      "Social media intimidation campaigns",
+      "Referenda gimmicks (diaspora-only 'votes')"
+    ]
+  },
+  "key_individuals_documented": {
+    "harmeet_singh_happy_phd": {
+      "role": "Operations chief based in Pakistan",
+      "background": "PhD credential (hence moniker) turned militant; represents educated leadership vs earlier peasant-army",
+      "is_support": "Protected, funded, armed by ISI; coordinates with D-Company logistics"
+    },
+    "wadhawa_singh": {
+      "role": "Babbar Khalsa International chief",
+      "status": "Reported killed 2021 but succession sustained operations"
+    },
+    "lakhbir_singh_landa": {
+      "role": "Factional rival to Happy PhD; indicates fragmented leadership",
+      "significance": "Multiple competing centers suggest ISI 'portfolio approach' — multiple horses"
+    }
+  },
+  "indian_response": {
+    "security_measures": ["NIA (National Investigation Agency) cases", "Punjab Police counter-terror operations", "Border fencing enhancement", "Diaspora engagement"],
+    "social_measures": ["Drug rehabilitation programs", "Economic development", "Religious institution engagement"],
+    "covert_measures": ["Counter-intelligence penetration", "Cross-border operations (unacknowledged)", "Diplomatic pressure on Pakistan"],
+    "effectiveness": "Contingent — operations suppressed but not eliminated; recurring low-level attacks indicate sustained capability"
+  },
+  "film_relevance": {
+    "dhurandhar_2_subplot": "Primary secondary arc — Rizwan Shah's mission includes penetrating/ disrupting this network",
+    "key_adversaries": ["happy_phd", "amarjit_singh_brar", "gurbaaz_singh_pinda"],
+    "indian_operatives": ["rizwan_shah", "prabhneet_singh"],
+    "narrative_stakes": "Demonstrates multi-front threat India faces; connects Karachi criminal networks to Punjab security; justifies 'Naya Bharat' proactive doctrine",
+    "thematic_function": "Continuity of threat — old enemies adapt; requires adaptive response"
+  },
+  "oracle_implications": {
+    "rizwan_objective": "Disrupt narco-jihad corridor; neutralize or turn key facilitators; gather actionable intelligence for Indian follow-on",
+    "critical_path_insight": "Local Punjab police coordination (Prabhneet Singh tier) is force multiplier; cross-border action alone insufficient",
+    "voi_priority": "Intelligence on 'Happy PhD' location and communications; diaspora financial flows; local recruitment networks"
+  }
+}

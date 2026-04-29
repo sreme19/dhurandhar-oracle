@@ -1,0 +1,38 @@
+{
+  "id": "siyahi",
+  "name": "Siyahi",
+  "portrayed_by": "Rouhallah Gazi",
+  "real_life_parallel": "Lyari composite henchman; street-level PAC operative",
+  "side": "pakistani",
+  "capability_score": 4.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Street-level operative in PAC network. Disposable enforcement tier below Donga and Shakeel Commando. Represents Lyari's abundant low-level criminal labor pool.",
+    "role_in_pac": "Street enforcement; disposable muscle",
+    "film_1_role": "PAC street presence",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Peoples' Aman Committee (PAC)",
+    "affiliations": ["Rehman Dakait network"],
+    "chain_superior": "donga / rehman_dakait",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "street_enforcer",
+    "motivation": "income_plus_belonging",
+    "risk_profile": {
+      "lambda": 1.8,
+      "description": "Lower risk tolerance than leadership; motivated by economic necessity"
+    },
+    "threat_capabilities": ["intimidation", "street_violence"]
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2],
+    "key_scenes": ["PAC street operations"]
+  }
+}

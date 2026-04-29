@@ -1,0 +1,38 @@
+{
+  "id": "naieem_baloch",
+  "name": "Naieem Baloch",
+  "portrayed_by": "Actor TBD",
+  "real_life_parallel": "Rehman Dakait's eldest son; succession heir; Film 2 power vacuum context",
+  "side": "unknown",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Eldest son of Rehman Dakait. Natural succession heir in criminal patriarchy. Film 2 explores power vacuum dynamics post-Rehman's death — Naieem's claim vs Uzair's actual control.",
+    "succession_status": "Claimant to Dakait legacy; may be figurehead while Uzair exercises actual power",
+    "film_1_role": "Minor or referenced as son",
+    "film_2_role": "Succession tension; power vacuum dynamics"
+  },
+  "faction": {
+    "primary": "Dakait family",
+    "affiliations": ["PAC legacy claim"],
+    "chain_superior": "ulfat (mother) / rehman_dakait (father, deceased)"
+  },
+  "adversary_model": {
+    "type": "succession_claimant",
+    "motivation": "legacy_plus_position",
+    "risk_profile": {
+      "lambda": 1.8,
+      "description": "Youthful risk tolerance; untested leadership"
+    },
+    "threat_capabilities": ["legacy_mobilization", "family_loyalty"],
+    "intelligence_value": "Succession dynamics; Uzair legitimacy challenge"
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2],
+    "key_scenes": ["Succession context", "Power vacuum"]
+  }
+}

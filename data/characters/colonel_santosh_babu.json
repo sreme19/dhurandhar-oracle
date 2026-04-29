@@ -1,0 +1,24 @@
+{
+  "id": "colonel_santosh_babu",
+  "name": "Colonel Santosh Babu",
+  "portrayed_by": "Likely fictionalized CO archetype",
+  "real_life_parallel": "16 Bihar CO killed at Galwan June 2020; posthumous Maha Vir Chakra",
+  "side": "indian",
+  "capability_score": 8.5,
+  "biography": {
+    "birth_year": 1983,
+    "death_year": 2020,
+    "origin": "Telangana, India",
+    "background": "Commanding Officer, 16 Bihar Regiment. Led troops during Galwan Valley clash 15 June 2020. Killed in hand-to-hand combat with PLA at 14,000 feet. Posthumous Maha Vir Chakra.",
+    "death_circumstances": "Attempted to negotiate de-escalation; overwhelmed by PLA numbers; fought to death",
+    "galwan_context": "First Indian CO killed in action since 1971; 20 Indian soldiers killed total",
+    "film_relevance": "Part 4: Galwan centerpiece; sacrifice representation; China front opening"
+  },
+  "faction": {
+    "primary": "Indian Army (16 Bihar Regiment)"
+  },
+  "honors": {
+    "maha_vir_chakra": "Posthumous (2021)",
+    "legacy": "Galwan martyrdom symbol; 'Santosh Babu' memorials"
+  }
+}

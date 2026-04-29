@@ -1,0 +1,47 @@
+{
+  "id": "mohammed_aalam",
+  "name": "Mohammed Aalam",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "Sleeper field handler — Lyari juice shop owner cover",
+  "films": [1],
+  "cover_identity": "Juice shop owner in Lyari, Karachi — long-term local implant",
+  "real_life_inspiration": "No clear single real person. Represents the 'sleeper handler' archetype — a locally embedded Indian asset who has lived under deep cover for years in Pakistan, maintaining a normal business life as a front. He is the network's anchor: Hamza's primary communication link to Ajay Sanyal.",
+  "inspiration_notes": {
+    "archetype_note": "Aalam is not the muscle — he's the infrastructure. Without Aalam's established cover and communication channel, Hamza is operating blind. This makes him simultaneously the most valuable asset AND the highest defection risk (a compromised Aalam collapses the entire operation).",
+    "mole_status": "NOT confirmed as a mole by public sources. The mole implication was a research-agent assumption — treat as UNCONFIRMED. His observable_history entry 'unknown_contact' (Film 1, Act 3) was the basis of the suspicion. The film may reveal him as compromised (high narrative payoff) or as loyal under pressure (equally valid dramatic choice).",
+    "shapley_implication": "Aalam has the highest defection incentive in the coalition Shapley analysis because: (a) he's been in deep cover the longest (highest cost, highest burnout risk), (b) he has the most direct exposure to Pakistani counter-intelligence, (c) his network anchor role means offers to turn him would be very high-value to ISI.",
+    "hmm_note": "Aalam's hidden state is the most uncertain in the belief_node. Viterbi path over his observable actions produces the highest belief-gap score — which is precisely the oracle's mole-alert signal. Whether the alert is real or false-positive is a data question, not an algorithm question."
+  },
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 9.0,
+      "trust_capital": 7.0,
+      "intelligence_depth": 6.5,
+      "network_strength": 7.5,
+      "exposure_risk": 2.0
+    },
+    "film1_act2": {
+      "cover_integrity": 8.0,
+      "trust_capital": 7.0,
+      "intelligence_depth": 6.5,
+      "network_strength": 7.5,
+      "exposure_risk": 4.0
+    },
+    "film1_act3": {
+      "cover_integrity": 4.5,
+      "trust_capital": 7.0,
+      "intelligence_depth": 6.5,
+      "network_strength": 5.0,
+      "exposure_risk": 7.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "receive_operative"},
+    {"film": 1, "act": 1, "action": "establish_communication_channel"},
+    {"film": 1, "act": 2, "action": "relay_dakait_intel"},
+    {"film": 1, "act": 2, "action": "arrange_safe_house"},
+    {"film": 1, "act": 3, "action": "unknown_contact"}
+  ],
+  "adversary_model": null
+}

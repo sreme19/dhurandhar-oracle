@@ -1,0 +1,36 @@
+{
+  "actor": "uzair_baloch",
+  "real_name": "Uzair Jan Baloch (cousin/successor of Rehman Dakait in real life)",
+  "real_life_notes": "Real Uzair Baloch was Rehman Dakait's cousin and successor as People's Aman Committee (PAC) leader. Arrested by Pakistan in 2016 and tried for espionage — was found to have links to both Iran's IRGC and, allegedly, Indian intelligence. His case remains murky. The film keeps his real name.",
+  "objective": "Inherit Rehman Dakait's criminal empire after his death; maintain ISI patronage while exploring independent revenue streams",
+  "capability": 6.5,
+  "trigger_threshold": 5.0,
+  "information_set": [
+    "lyari_street_network",
+    "dakait_legacy_contacts",
+    "iran_irgc_channel",
+    "ficn_peripheral_knowledge"
+  ],
+  "observable_actions": [
+    "consolidate_succession",
+    "test_new_associate",
+    "negotiate_with_isi",
+    "pursue_iran_channel",
+    "expose_dakait_associate",
+    "withdraw_from_operations"
+  ],
+  "hidden_states": [
+    "consolidating_power",
+    "testing_loyalty",
+    "wavering_allegiance",
+    "hostile"
+  ],
+  "oracle_role_note": "Uzair is more relevant in Film 2 (post-Dakait death). His unknown allegiances (Iran? ISI? self-interest?) make him a high-VoI intelligence target — the 'aalam_allegiance' analog for the Pakistani side.",
+  "prospect_params": {
+    "lam": 2.2,
+    "gamma": 0.64,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

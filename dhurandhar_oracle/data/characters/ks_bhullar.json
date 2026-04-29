@@ -1,0 +1,41 @@
+{
+  "id": "ks_bhullar",
+  "name": "K.S. Bhullar, R&AW Special Secretary",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "RAW Special Secretary — institutional skeptic and bureaucratic counterweight to Sanyal",
+  "films": [1, 2],
+  "actor": "Ali Raza Namdar",
+  "cover_identity": null,
+  "real_life_inspiration": "A.S. Dulat — former RAW Chief (1999–2000) and long-time Intelligence Bureau operative. Dulat was RAW chief during the IC-814 period and is known for his nuanced, dialogue-first approach to Kashmir and Pakistan — diametrically opposed to Doval's doctrine. Wrote critically about the hawkish turn in Indian intelligence in his memoir 'The Spy Chronicles' (co-authored with Pakistani ISI general Asad Durrani).",
+  "inspiration_notes": {
+    "as_dulat_parallel": "A.S. Dulat served as RAW chief 1999-2000 — precisely the IC-814 era. His pragmatic, engagement-oriented approach to Pakistan intelligence contrasts sharply with Doval's offensive posture. The film uses this ideological friction to dramatise the institutional debate.",
+    "spy_chronicles": "Dulat's book 'The Spy Chronicles' (2018), co-authored with Pakistani ISI general Asad Durrani, was controversial in India for suggesting dialogue with Pakistan. The book was seen as going against the grain of the post-2016 hawkish consensus — exactly what Bhullar represents in the film.",
+    "ib_vs_raw_dispute": "IB is technically domestic intelligence; RAW handles external. Sanyal as IB Director running Pakistan operations is the institutional boundary violation that Bhullar (as RAW's representative) disputes. This turf war is well-documented in Indian intelligence literature.",
+    "film_arc": "In Film 1, Bhullar is the voice arguing for 'strategic patience' and opposing Operation Dhurandhar. His arc tracks the UPA-era institutional consensus. In Film 2 (Naya Bharat era), he is sidelined — Sanyal's approach has been politically vindicated."
+  },
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 6.0,
+      "intelligence_depth": 8.0,
+      "network_strength": 8.5,
+      "exposure_risk": 0.0
+    },
+    "film2_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 4.0,
+      "intelligence_depth": 8.0,
+      "network_strength": 6.0,
+      "exposure_risk": 0.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "oppose_operation_dhurandhar_approval"},
+    {"film": 1, "act": 2, "action": "demand_hamza_recall_citing_exposure_risk"},
+    {"film": 1, "act": 3, "action": "invoke_diplomatic_consequences_after_26_11"},
+    {"film": 2, "act": 1, "action": "obstruct_phase_2_authorisation"},
+    {"film": 2, "act": 2, "action": "accept_political_override"}
+  ],
+  "adversary_model": null
+}

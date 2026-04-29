@@ -1,0 +1,57 @@
+{
+  "id": "ficn_network",
+  "name": "FICN (Fake Indian Currency Notes) Network",
+  "alternate_names": ["Counterfeit Currency Operations", "D-Company Financial Warfare", "ISI Economic Sabotage"],
+  "type": "financial_weapon_system",
+  "description": "Systematic production and distribution of high-quality counterfeit Indian currency, operated as joint venture between ISI (strategic direction, technical expertise) and D-Company (production, distribution networks). Designed to undermine Indian monetary stability, fund operations without traceable financial flows, and create economic chaos.",
+  "origins": {
+    "earliest_operations": "Early 1990s — following 1993 Bombay bombings establishes D-Company capability for large-scale operations",
+    "quality_breakthrough": "Post-2000 — acquisition of high-grade printing technology (North Korean and European sources suspected)",
+    "scale_estimates": "Annual injection of ₹100-300 crore of FICN into Indian economy at peak (2005-2016)"
+  },
+  "operational_structure": {
+    "production": {
+      "locations": ["Pakistan (Karachi, Peshawar)", "Nepal (safe houses)", "Bangladesh (border facilities)"],
+      "technical_sources": ["North Korean supernote technology", "Retired currency printers", "ISI technical division"],
+      "denominations": "Primarily ₹500 and ₹1000 notes (pre-demonetisation)",
+      "quality": "Grade A — passes standard bank verification; requires specialized detection"
+    },
+    "distribution": {
+      "primary_channels": [
+        "Khanani network — global hawala for FICN placement",
+        "D-Company India cells — smuggling across western borders",
+        "Nepal route — porous border, shared cultural space",
+        "Bangladesh route — eastern seaboard entry"
+      ],
+      "placement_strategy": "Mix with genuine currency at 10-15% ratio to avoid immediate detection; circulate through rural/semi-urban markets first"
+    }
+  },
+  "strategic_purpose": {
+    "economic_warfare": "Inflationary pressure, monetary trust erosion, transaction friction costs",
+    "operational_finance": "Terror operations funded without electronic traceability; cash-only jihad logistics",
+    "intelligence_cover": "Payments to assets untraceable; deniable sponsorship"
+  },
+  "key_operators": {
+    "dawood_ibrahim": "Strategic oversight, production facility protection via ISI cover",
+    "khanani_altaf": "Global distribution network, hawala integration, FICN placement into formal economy",
+    "khanani_javed": "India-facing operations, border logistics, coordination with sleeper cells",
+    "major_iqbal": "ISI liaison for operational funding allocation, strategic targeting decisions",
+    "bade_sahab": "Institutional protection, conflict resolution between network partners"
+  },
+  "timeline_key_events": [
+    {"date": "1993-03", "event": "1993 Bombay bombings", "ficn_significance": "Establishes D-Company capability for coordinated large-scale operations"},
+    {"date": "2005-2008", "event": "FICN peak detection period", "ficn_significance": "RBI and IB identify systematic high-quality counterfeiting operation"},
+    {"date": "2010-10", "event": "David Headley interrogations", "ficn_significance": "Confirms ISI-D-Company joint operations including currency warfare"},
+    {"date": "2016-11-08", "event": "Demonetisation announcement", "ficn_significance": "Kinetic financial strike — ₹500 and ₹1000 notes demonetised overnight"},
+    {"date": "2016-12-04", "event": "Khanani Javed death", "ficn_significance": "26 days post-demonetisation; circumstances disputed — natural, assassinated, or suicide"}
+  ],
+  "detection_mechanisms": {
+    "indian_response": ["Currency verification at high-value transactions", "Border smuggling interdiction", "International coordination with Nepal/Bangladesh", "Post-demonetisation new security features"],
+    "effectiveness": "Demonetisation achieved >80% FICN value destruction overnight; new ₹500/2000 notes with different security features forced network restart"
+  },
+  "film_relevance": {
+    "dhurandhar_2_climax": "Demonetisation as financial warfare — direct strike on adversary funding",
+    "key_targets": ["khanani_altaf", "khanani_javed", "dawood_ibrahim"],
+    "operational_significance": "Without FICN network, adversary operations face traceability; Indian response forces adaptation to less efficient funding"
+  }
+}

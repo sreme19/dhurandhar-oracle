@@ -1,0 +1,11 @@
+{
+  "_TODO": "GROUNDING REQUIRED — confirm actual action Hamza took at this turning point and immediate effects.",
+  "turning_point_id": "dakait-first-meeting",
+  "actual_action": "deepen_criminal_cover",
+  "immediate_effects": [
+    "dakait_trust_rises",
+    "cover_deepened"
+  ],
+  "terminal_state": "in_progress",
+  "days_elapsed": 45
+}

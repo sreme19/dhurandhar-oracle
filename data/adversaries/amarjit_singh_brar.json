@@ -1,0 +1,46 @@
+{
+  "id": "amarjit_singh_brar",
+  "name": "Amarjit Singh Brar",
+  "portrayed_by": "Vijender Singh",
+  "real_life_parallel": "Possibly based on real Punjab figure — likely composite of Khalistani militants recycled into narco-terror operations",
+  "side": "pakistani",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Punjab region (Indian side, crossed over; or Pakistani Punjab)",
+    "background": "Khalistani militant background repurposed for ISI's narco-jihad operations. Represents the 'Happy PhD' network's India-facing arm — diaspora/ideological links exploited for operational capability inside Indian Punjab.",
+    "role": "In-state coordinator for narco-jihad infiltration. Bridges Pakistan-based logistics with Indian Punjab distribution and recruitment."
+  },
+  "faction": {
+    "primary": "ISI Punjab third-front operations",
+    "affiliations": ["Happy PhD network", "Khalistan-focused militant cells", "Narco-jihad corridor"],
+    "chain_superior": "happy_phd",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "domestic_infiltrator",
+    "motivation": "ideology_narcotics_combined",
+    "risk_profile": {
+      "lambda": 2.5,
+      "description": "High risk tolerance due to dual ideological commitment and addiction/criminal entanglement. Harder to deter through conventional countermeasures."
+    },
+    "threat_capabilities": ["local_recruitment", "drug_distribution", "weapons_cache_management", "intelligence_from_india", "safe_house_provision"],
+    "intelligence_signature": {
+      "communications": "Uses encrypted Sikh diaspora networks — religious community channels exploited for operational cover",
+      "pattern": "Cross-border movement correlates with harvest/delivery seasons; family connections in Indian Punjab",
+      "detection_difficulty": 0.65
+    }
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Punjab drug network operations", "Confrontation with Indian counter-intelligence"]
+  },
+  "real_world_notes": {
+    "verification_status": "SPECULATIVE — Represents documented pattern rather than confirmed individual",
+    "historical_insight": "Post-1980s Khalistani militants were repurposed by ISI into drug trade during 1990s-2000s. By 2010s, this evolved into systematic narco-terror: Afghan heroin → Pakistani handlers → Indian Punjab distribution → weapons purchases → terrorist operations. Character embodies this operational evolution.",
+    "creative_liberties": "Name 'Brar' references prominent Khalistani family names; character consolidates network into single identifiable figure for narrative clarity."
+  }
+}

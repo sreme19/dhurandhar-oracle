@@ -1,0 +1,31 @@
+{
+  "id": "nawab_shafiq",
+  "name": "Nawab Shafiq",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Pakistani Prime Minister equivalent — political authority during IC-814 era",
+  "films": [1],
+  "actor": "Mashhoor Amrohi",
+  "cover_identity": null,
+  "real_life_inspiration": "Nawaz Sharif — Prime Minister of Pakistan during the IC-814 hijacking (December 1999). The Kargil War (May–July 1999) had just ended; Sharif was removed in a military coup by General Pervez Musharraf on 12 October 1999 — barely two months before the IC-814 hijacking. The film's Nawab Shafiq captures this politically weakened Pakistani PM who is simultaneously managing post-Kargil fallout and military pressure.",
+  "inspiration_notes": {
+    "nawaz_sharif_parallel": "Nawaz Sharif was PM during Kargil (which he reportedly wasn't fully briefed on by the army before it started — a documented civil-military fracture). He was ousted October 1999. IC-814 happened December 1999 — by then Musharraf's military government was in charge. The film likely compresses the timeline.",
+    "kargil_context": "The 1999 Kargil War's civil-military breakdown in Pakistan — where the army launched the operation without full PM knowledge — is the subtext behind Nawab Shafiq's political weakness. He is the nominal authority; the real power is the army (Bade Sahab).",
+    "film_function": "Nawab Shafiq represents the Pakistani civilian political class that has nominal authority but is fundamentally subordinate to the military in matters of India-Pakistan operations. He is the face that Devavrat Kapoor negotiates with; the army is the actual power behind the hijacking.",
+    "oracle_note": "Like Zarwari, Nawab Shafiq is non-operational. He is the civilian political layer above which Bade Sahab operates. Relevant for the Stackelberg hierarchy as: Bade Sahab (COAS) → Nawab Shafiq (PM, subordinate) → Jameel Jamali (politician) → Rehman Dakait (criminal) → operations."
+  },
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 3.0,
+      "intelligence_depth": 5.0,
+      "network_strength": 7.0,
+      "exposure_risk": 2.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "manage_ic814_political_fallout"},
+    {"film": 1, "act": 1, "action": "accept_terrorist_release_as_fait_accompli"}
+  ],
+  "adversary_model": null
+}

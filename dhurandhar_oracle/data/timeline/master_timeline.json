@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "note": "Unified reel-vs-real timeline. Each event has a type: 'real' (documented history), 'film' (dramatised event), or 'film_implied' (shown as happening but not in public record). Film events are anchored to real events where possible.",
+    "version": "2.0 — rebuilt with full event set including IC-814 specifics, Kargil, Headley confessions, Kasab execution, Khanani arrest, demonetisation, FATF, Sajid Mir resurrection",
+    "era_map": {
+      "film1": "~1999–2009, UPA/NDA-1 era, 'strategic restraint' doctrine",
+      "film2": "Post-2014, Modi/NDA-2 era, 'Naya Bharat / ghar mein ghusna' doctrine"
+    }
+  },
+  "events": [
+    {
+      "id": "real_1987_let_founded",
+      "type": "real",
+      "date": "1987-01-01",
+      "description": "Lashkar-e-Taiba (LeT) founded in Kunar Province, Afghanistan, as the armed wing of Markaz al-Dawah wal-Irshad. Co-founders: Hafiz Muhammad Saeed, Zafar Iqbal, Abdullah Yusuf Azzam. Abdul Salam Bhuttavi (Abdul Bhuttovi in film) provides religious-scholarly legitimacy. ISI patronage from inception.",
+      "significance": "The organisation that will execute 26/11 is born here — 21 years before the attack",
+      "characters_involved": ["major_iqbal", "azam_cheema", "sajid_mir", "abdul_bhuttovi"]
+    },
+    {
+      "id": "real_1993_bombay_bombings",
+      "type": "real",
+      "date": "1993-03-12",
+      "description": "12 coordinated bomb blasts across Bombay. 257 killed. Mastermind: Dawood Ibrahim, in coordination with ISI. RDX smuggled via D-Company's sea routes. Dawood flees to Karachi permanently. Tiger Memon flees to Pakistan. D-Company-ISI nexus institutionalised.",
+      "significance": "Establishes the template for every ISI-criminal-terror collaboration in both films. D-Company's protection deal with ISI dates from this event.",
+      "causal_forward": ["real_1999_ic814"],
+      "characters_involved": ["dawood_ibrahim"]
+    },
+    {
+      "id": "real_1999_kargil_war",
+      "type": "real",
+      "date": "1999-05-03",
+      "description": "Kargil War: Pakistani soldiers and militants occupy strategic peaks in Kargil, Kashmir. Indian Army retakes positions by July 1999. Pakistan PM Nawaz Sharif (Nawab Shafiq in film) was reportedly not fully briefed by General Musharraf (Shamshad Hassan composite in film) before the operation. US pressure forces Pakistan to withdraw. Musharraf later claims Nawaz lied; Nawaz claims Musharraf deceived him.",
+      "significance": "Exposes civilian-military tensions in Pakistan that the film dramatises through Nawab Shafiq vs General Shamshad Hassan. Nawaz/Nawab Shafiq's authority is permanently weakened.",
+      "causal_forward": ["real_1999_musharraf_coup", "real_1999_ic814"],
+      "characters_involved": ["nawab_shafiq", "general_shamshad_hassan"]
+    },
+    {
+      "id": "real_1999_musharraf_coup",
+      "type": "real",
+      "date": "1999-10-12",
+      "description": "General Pervez Musharraf (composite with Shamshad Hassan in film) stages military coup, removing PM Nawaz Sharif. Musharraf becomes Chief Executive, later President. ISI's institutional power over Pakistan's foreign and security policy is consolidated. The military-jihadi complex enters its peak operational period.",
+      "significance": "Sets the political environment for Film 1: ISI operates without civilian oversight. Nawab Shafiq (Nawaz parallel) is now out of power — the character who might have checked ISI excesses is removed.",
+      "characters_involved": ["nawab_shafiq", "general_shamshad_hassan", "bade_sahab"]
+    },
+    {
+      "id": "real_1999_ic814",
+      "type": "real",
+      "date": "1999-12-24",
+      "description": "IC-814 (Indian Airlines Flight 814) hijacked from Kathmandu, diverted via Amritsar, Lahore, Dubai to Kandahar. 7-day standoff. India releases Masood Azhar (JeM founder), Ahmed Omar Saeed Sheikh, and Mushtaq Ahmed Zargar in exchange for 176 hostages. Zahoor Mistry (Abdul Latif) is one of the 5 hijackers. Devavrat Kapoor (Jaswant Singh) flies to Kandahar personally to deliver the terrorists.",
+      "film_parallel": "Film 1 opening context — the IC-814 capitulation is the founding shame that motivates the entire strategic restraint critique. Devavrat Kapoor's career-defining moment. Zahoor Mistry established as Film 1's first introduced adversary.",
+      "causal_forward": ["real_2001_jem_founded", "real_2001_jem_parliament_attack"],
+      "characters_involved": ["zahoor_mistry", "devavrat_kapoor", "ajay_sanyal", "ibrahim_athar"]
+    },
+    {
+      "id": "real_2001_jem_founded",
+      "type": "real",
+      "date": "2000-01-31",
+      "description": "Masood Azhar founds Jaish-e-Mohammed (JeM) in Bahawalpur, Pakistan within weeks of his release from IC-814. His brother Ibrahim Athar is core founding operational member. Pakistan bans JeM (2002) but ISI maintains liaison. Within a year, JeM attacks India's Parliament.",
+      "significance": "Direct consequence of IC-814 capitulation — releasing Masood Azhar created JeM",
+      "characters_involved": ["ibrahim_athar", "zahoor_mistry"]
+    },
+    {
+      "id": "real_2001_jem_parliament_attack",
+      "type": "real",
+      "date": "2001-12-13",
+      "description": "JeM and LeT operatives attack the Indian Parliament. 14 people killed (including 5 attackers). India and Pakistan mobilise troops; Operation Parakram begins. Near-war is averted by US mediation. JeM's Karachi infrastructure (Mistry-connected safe houses) partially exposed.",
+      "film_parallel": "This attack triggers 'Operation Dhurandhar' in the film — Ajay Sanyal authorises Hamza's deployment.",
+      "causal_forward": ["film1_operation_dhurandhar_authorised"],
+      "characters_involved": ["ajay_sanyal", "ibrahim_athar"]
+    },
+    {
+      "id": "film1_operation_dhurandhar_authorised",
+      "type": "film",
+      "date_relative": "early 2002",
+      "description": "Ajay Sanyal (IB Director) authorises Operation Dhurandhar: deploy Jaskirat Singh Rangi under deep cover as 'Hamza Ali Mazari' to infiltrate Karachi's Lyari criminal network and map the ISI-Lyari-JeM/LeT terror financing nexus.",
+      "film": 1, "act": 1,
+      "characters_involved": ["ajay_sanyal", "hamza", "ks_bhullar"]
+    },
+    {
+      "id": "film1_hamza_enters_via_torkham",
+      "type": "film",
+      "date_relative": "mid 2002",
+      "description": "Hamza crosses into Pakistan via the Torkham border crossing (Afghanistan → KPK → Karachi). Establishes Hamza Ali Mazari cover identity in Lyari's Baloch community. Initial surveillance phase.",
+      "film": 1, "act": 1,
+      "characters_involved": ["hamza"]
+    },
+    {
+      "id": "film1_hamza_first_dakait_contact",
+      "type": "film",
+      "date_relative": "late 2002 / 2003",
+      "description": "Hamza makes first substantive contact with Rehman Dakait's People's Aman Committee (PAC) through the Lyari community network. This is the turning point documented in dakait-first-meeting.json.",
+      "film": 1, "act": 2,
+      "turning_point_ref": "dakait-first-meeting",
+      "characters_involved": ["hamza", "rehman_dakait"]
+    },
+    {
+      "id": "real_2003_headley_isi_deployment",
+      "type": "real",
+      "date": "2003-01-01",
+      "description": "David Coleman Headley (Daood Gilani) begins working with ISI, Major Iqbal (real) as handler. Headley starts LeT training and begins reconnaissance trips to India. His access as American passport holder makes him uniquely valuable for pre-attack surveillance.",
+      "significance": "The operational planning for 26/11 begins 5 years before the attack. Hamza is already in the field — the race between his intelligence-gathering and the attack timeline is the Film 1 tension.",
+      "characters_involved": ["david_headley", "major_iqbal"]
+    },
+    {
+      "id": "real_2005_headley_india_recon",
+      "type": "real",
+      "date": "2005-01-01",
+      "description": "David Headley makes first reconnaissance visit to Mumbai. Surveys targets including Taj Mahal Palace Hotel, Nariman House (Chabad House), CST railway station, Leopold Cafe. Sends photographs and videos to Major Iqbal.",
+      "significance": "The targets of 26/11 are being surveilled while Hamza is simultaneously building his Lyari network. The two timelines are converging.",
+      "characters_involved": ["david_headley", "major_iqbal"]
+    },
+    {
+      "id": "real_2008_ltf_formed",
+      "type": "real",
+      "date": "2008-01-01",
+      "description": "SP Chaudhry Aslam Khan forms the Lyari Task Force (LTF) within Karachi police to target gang warfare between Rehman Dakait's PAC and Arshad Pappu faction. LTF begins aggressive raids on Lyari.",
+      "film_parallel": "Film 1 Act 2–3 — Aslam's LTF creates cover-integrity pressure for Hamza embedded inside the Dakait network.",
+      "characters_involved": ["sp_choudhary_aslam", "rehman_dakait", "hamza"]
+    },
+    {
+      "id": "real_2008_lyari_gang_war_peak",
+      "type": "real",
+      "date": "2008-06-01",
+      "description": "Lyari gang war peaks. Rehman Dakait's PAC vs Arshad Pappu faction. Dozens killed. ISI uses chaos as cover for FICN distribution operations. Jameel Jamali (PPP-linked politician) hedges between both factions.",
+      "film_parallel": "Film 1 Act 2–3 backdrop — the gang war is the operational environment Hamza navigates.",
+      "characters_involved": ["rehman_dakait", "arshad_pappu", "jameel_jamali", "hamza"]
+    },
+    {
+      "id": "real_2008_2611_mumbai",
+      "type": "real",
+      "date": "2008-11-26",
+      "description": "10 LeT operatives (including Ajmal Kasab) launch coordinated attacks across Mumbai. 4-day siege. 166 killed, 300+ wounded. Kasab captured alive. Major Iqbal coordinates by satphone from Karachi. Azam Cheema is named in subsequent investigations. Sajid Mir ('Wasi') is the voice on recordings coaching attackers. David Headley's surveillance enabled precise target selection.",
+      "film_parallel": "Film 1 climax — the attack happens DESPITE Hamza's intelligence. This is the central tragedy of Film 1: the operative in the field had intel the system failed to act on.",
+      "causal_forward": ["film1_26_11_intel_failure", "real_2008_kasab_arrested", "real_2010_headley_arrested", "film2_revenge_arc_authorised"],
+      "characters_involved": ["major_iqbal", "ajmal_kasab", "azam_cheema", "sajid_mir", "david_headley", "hamza", "ajay_sanyal"]
+    },
+    {
+      "id": "real_2008_kasab_arrested",
+      "type": "real",
+      "date": "2008-11-26",
+      "description": "Ajmal Amir Kasab, the only surviving 26/11 attacker, captured alive by Mumbai Police at Girgaon Chowpatty. His testimony in subsequent trial provides operational details of LeT training, ISI involvement, and Major Iqbal's handler role.",
+      "film_parallel": "Kasab's capture is dramatised — his willingness to talk confirms the ISI-LeT chain of command that Hamza has been mapping from the Karachi end.",
+      "characters_involved": ["ajmal_kasab", "major_iqbal"]
+    },
+    {
+      "id": "film1_26_11_intel_failure",
+      "type": "film_implied",
+      "date_relative": "November 2008",
+      "description": "Hamza had gathered intelligence pointing to the 26/11 attack network but it was either not passed on in time, not believed, or politically suppressed (IB-RAW friction / strategic restraint doctrine). This is the central tragedy: the operative had the intel; the system failed.",
+      "film": 1, "act": 3,
+      "oracle_note": "This is the key counterfactual for Hamza's Film 1 arc — answered by CPM/PERT critical path analysis in critical_path_node.py",
+      "characters_involved": ["hamza", "ajay_sanyal", "ks_bhullar", "mohammed_aalam", "major_iqbal"]
+    },
+    {
+      "id": "film1_dakait_jamali_link_exposed",
+      "type": "film",
+      "date_relative": "late 2008 / early 2009",
+      "description": "Hamza extracts actionable evidence of the Dakait-Jamali-ISI terror financing link. Film 1 mission objective achieved — but too late to prevent 26/11.",
+      "film": 1, "act": 3,
+      "characters_involved": ["hamza", "rehman_dakait", "jameel_jamali", "major_iqbal"]
+    },
+    {
+      "id": "real_2009_dakait_killed",
+      "type": "real",
+      "date": "2009-01-01",
+      "description": "Rehman Dakait (Sardar Abdul Rehman Baloch) killed in a police encounter in Karachi. Age ~30. People's Aman Committee fragments. Uzair Baloch begins succession struggle.",
+      "film_parallel": "Film 1 climax — Dakait's elimination. Film likely frames this as direct consequence of Hamza's intelligence operation feeding to Pakistani authorities through a cut-out.",
+      "causal_forward": ["film2_uzair_succession"],
+      "characters_involved": ["rehman_dakait", "uzair_baloch", "sp_choudhary_aslam"]
+    },
+    {
+      "id": "real_2009_hamza_mohit_killed",
+      "type": "real",
+      "date": "2009-03-21",
+      "description": "Major Mohit Sharma (Hamza's real-world inspiration), operating under alias 'Iftikhar Bhatt' in Kupwara, killed when his cover is blown during a Hizbul Mujahideen operation. Awarded Ashoka Chakra posthumously. His sacrifice is the biographical anchor for the Hamza character.",
+      "film_parallel": "Film 1 ending — Hamza's fate is likely modelled on Major Mohit Sharma's trajectory. The film may show Hamza's cover being blown or a near-fatal extraction.",
+      "characters_involved": ["hamza"]
+    },
+    {
+      "id": "real_2010_kasab_convicted",
+      "type": "real",
+      "date": "2010-05-03",
+      "description": "Ajmal Kasab convicted and sentenced to death in special court in Mumbai. Trial establishes full operational record of 26/11: LeT training, ISI direction, Major Iqbal's handler role, Headley's surveillance.",
+      "characters_involved": ["ajmal_kasab", "major_iqbal"]
+    },
+    {
+      "id": "real_2010_headley_arrested",
+      "type": "real",
+      "date": "2009-10-03",
+      "description": "David Coleman Headley arrested by FBI in Chicago. His confessions to the FBI become the single most detailed public record of ISI's 26/11 planning. He names 'Major Iqbal' as his ISI handler. His testimony corroborates what Hamza has been reporting from the field.",
+      "significance": "Headley's confessions are the real-world intelligence anchor for the entire Dhurandhar universe — they validate that the ISI-LeT-D-Company network Hamza maps in Film 1 is real.",
+      "characters_involved": ["david_headley", "major_iqbal", "azam_cheema"]
+    },
+    {
+      "id": "real_2011_headley_plea",
+      "type": "real",
+      "date": "2011-01-24",
+      "description": "Headley pleads guilty to all 12 counts in US federal court. Sentenced to 35 years (2013). India denied direct interrogation access. His court testimony specifically names 'Major Iqbal' as the ISI handler who directed 26/11, and documents the LeT-ISI chain of command in operational detail.",
+      "characters_involved": ["david_headley", "major_iqbal"]
+    },
+    {
+      "id": "real_2012_kasab_executed",
+      "type": "real",
+      "date": "2012-11-21",
+      "description": "Ajmal Kasab hanged at Yerawada Jail, Pune. 4 AM, secret execution to prevent legal challenges. Only public confirmation came after. Kasab died repentant, reportedly reciting prayers. He was 25 years old.",
+      "significance": "Kasab's execution closes the judicial chapter of 26/11. The political-intelligence chapter — holding Major Iqbal, Azam Cheema, Sajid Mir accountable — remains open. This unfinished business drives Film 2.",
+      "characters_involved": ["ajmal_kasab"]
+    },
+    {
+      "id": "real_2012_operation_lyari_pakistan",
+      "type": "real",
+      "date": "2012-04-26",
+      "description": "Pakistani paramilitary (Rangers) and police launch Operation Lyari targeting Uzair Baloch's gang. 6-week operation. Uzair goes underground. Lyari power vacuum intensifies.",
+      "film_parallel": "Film 2 background — post-Dakait Lyari power dynamics",
+      "characters_involved": ["uzair_baloch", "sp_choudhary_aslam"]
+    },
+    {
+      "id": "real_2013_pappu_beheaded",
+      "type": "real",
+      "date": "2013-01-01",
+      "description": "Arshad Pappu, Rehman Dakait's rival gang leader in Lyari, beheaded. Killing attributed to Uzair Baloch's PAC consolidating Lyari after Rehman's 2009 death. The only rival gang of comparable strength is eliminated.",
+      "significance": "Removes the only other power centre in Lyari — Uzair now has monopoly but also becomes more exposed as the single target for law enforcement and ISI leverage",
+      "characters_involved": ["arshad_pappu", "uzair_baloch"]
+    },
+    {
+      "id": "real_2014_aslam_killed",
+      "type": "real",
+      "date": "2014-01-09",
+      "description": "SP Chaudhry Aslam Khan killed in a suicide bombing on his convoy on the Lyari Expressway, Karachi. TTP (Tehrik-i-Taliban Pakistan) claims responsibility. Karachi loses its most feared counter-terror officer. 6 others killed in the blast.",
+      "film_parallel": "Film 2 — Aslam's death removes the last effective Pakistani check on the ISI-Lyari network. The vacuum enables Major Iqbal's escalation.",
+      "causal_forward": ["film2_isi_escalation"],
+      "characters_involved": ["sp_choudhary_aslam", "major_iqbal"]
+    },
+    {
+      "id": "real_2014_nda2_elected",
+      "type": "real",
+      "date": "2014-05-26",
+      "description": "Narendra Modi elected PM with BJP majority. Ajit Doval appointed National Security Advisor. India's official doctrine shifts from 'strategic restraint' to 'ghar mein ghusna' (surgical strike doctrine). Intelligence mandate expanded under Doval.",
+      "film_parallel": "Film 2's Naya Bharat framing. Ajay Sanyal's promotion to expanded authority. The strategic patience era (KS Bhullar's Film 1 doctrine) is formally abandoned.",
+      "causal_forward": ["film2_revenge_arc_authorised"],
+      "characters_involved": ["ajay_sanyal", "ks_bhullar"]
+    },
+    {
+      "id": "real_2015_baba_ladla_killed",
+      "type": "real",
+      "date": "2015-12-23",
+      "description": "Baba Ladla (Uzair Baloch's top commander in Lyari, real name Zafar Baloch) killed in a police encounter. Lyari gang leadership decapitated at the second tier. Uzair Baloch increasingly relies on ISI protection as local enforcement capability collapses.",
+      "characters_involved": ["baba_ladla", "uzair_baloch"]
+    },
+    {
+      "id": "real_2015_khanani_arrested",
+      "type": "real",
+      "date": "2015-01-01",
+      "description": "Altaf Khanani arrested in Panama and extradited to the United States. US DOJ had been building the KKI money laundering case since the 2012 Treasury OFAC designation. The arrest partially disrupts Khanani-Kalia International's hawala network but does not eliminate it.",
+      "significance": "First major hit on the financial infrastructure. KKI routes used by D-Company, ISI-FICN, and Khalistani networks are disrupted. Javed Khanani continues operations from Karachi.",
+      "characters_involved": ["khanani_altaf", "khanani_javed", "dawood_ibrahim"]
+    },
+    {
+      "id": "film2_revenge_arc_authorised",
+      "type": "film",
+      "date_relative": "2015-2016",
+      "description": "Ajay Sanyal's Naya Bharat mandate authorises Film 2's operation: targeted accountability for 26/11 planners (Major Iqbal, Azam Cheema, Sajid Mir) and simultaneous dismantling of the financial infrastructure (FICN/Khanani, narco-Khalistan pipeline). Rizwan Shah is designated as primary operative.",
+      "film": 2, "act": 1,
+      "characters_involved": ["ajay_sanyal", "rizwan_shah", "hamza", "sushant_bansal"]
+    },
+    {
+      "id": "film2_isi_escalation",
+      "type": "film_implied",
+      "date_relative": "2015-2016",
+      "description": "With SP Aslam dead, Uzair partially suppressed, and India's strategic restraint era ending, Major Iqbal escalates — activating the FICN stockpile surge, the Punjab Khalistan narco-arms pipeline (Happy PHD), and preparation for a 26/11-style second strike. This is the threat Rizwan must neutralise.",
+      "film": 2, "act": 1,
+      "characters_involved": ["major_iqbal", "khanani_javed", "happy_phd", "dawood_ibrahim"]
+    },
+    {
+      "id": "real_2016_uzair_arrested",
+      "type": "real",
+      "date": "2016-01-01",
+      "description": "Uzair Baloch arrested by Pakistan military intelligence (MI) in Karachi. Accused of espionage for Iran's IRGC and India's RAW. The arrest effectively ends the Lyari PAC era — the last major Karachi gang structure is broken.",
+      "film_parallel": "Film 2 — Uzair's arrest is a background event showing the ISI cleaning house. Lyari's criminal infrastructure that Hamza infiltrated in Film 1 no longer exists in its original form.",
+      "characters_involved": ["uzair_baloch", "bade_sahab"]
+    },
+    {
+      "id": "real_2016_demonetisation",
+      "type": "real",
+      "date": "2016-11-08",
+      "description": "PM Modi announces demonetisation of ₹500 and ₹1000 notes at 8 PM. Effective midnight. All existing high-denomination notes cease to be legal tender. Over 86% of currency by value demonetised. D-Company/Khanani FICN stockpile rendered worthless. Estimated ₹2,000+ crore in FICN destroyed. Punjab drug network cash holdings wiped out simultaneously.",
+      "film_parallel": "Film 2 climax — the demonetisation is framed as Rizwan/Sanyal's coordinated financial strike, not just economic policy. The simultaneous Punjab operation rolls up the narco-Khalistan network while the FICN destruction removes the financial infrastructure.",
+      "causal_forward": ["real_2016_khanani_javed_death"],
+      "characters_involved": ["ajay_sanyal", "rizwan_shah", "khanani_javed", "dawood_ibrahim", "happy_phd"]
+    },
+    {
+      "id": "real_2016_khanani_javed_death",
+      "type": "real",
+      "date": "2016-12-04",
+      "description": "Javed Khanani dies in Karachi. Circumstances disputed — Pakistani press reported natural causes / cardiac arrest. Timing: 26 days after demonetisation, while Altaf Khanani is in US custody. Khanani-Kalia International's operational continuity is broken.",
+      "film_parallel": "Film 2 climax — the film likely depicts Javed's death as a kinetic intelligence operation, not natural causes. The timing is the film's point: demonetisation + intelligence op strike simultaneously.",
+      "characters_involved": ["khanani_javed", "khanani_altaf", "rizwan_shah"]
+    },
+    {
+      "id": "real_2018_pakistan_fatf_greylist",
+      "type": "real",
+      "date": "2018-06-01",
+      "description": "Pakistan placed on FATF (Financial Action Task Force) grey list for failure to act on terrorist financing and money laundering. Pakistan under obligation to demonstrate action against Hafiz Saeed (LeT), Masood Azhar (JeM), and the hawala networks. Pakistan makes token arrests (Hafiz Saeed detained 2019, convicted 2020) under FATF pressure.",
+      "significance": "Film 2's epilogue context: India's financial intelligence operations (modelled in the FICN arc) contributed evidence to the FATF case. The grey-listing is partial vindication of Rizwan's network takedown.",
+      "characters_involved": ["khanani_altaf", "dawood_ibrahim", "major_iqbal"]
+    },
+    {
+      "id": "real_2022_zahoor_mistry_killed",
+      "type": "real",
+      "date": "2022-03-01",
+      "description": "Abdul Latif alias Zahoor Mistry — one of the five IC-814 hijackers — killed in Karachi. Unclaimed hit. Method and perpetrator officially unknown. Indian intelligence widely believed responsible. He had lived freely in Karachi for 22 years after the hijacking.",
+      "film_parallel": "Film 2 — depicted as Rizwan's operation completing the IC-814 accountability mission that Film 1's Hamza began. The film makes the authorship explicit that real life kept deniable.",
+      "characters_involved": ["zahoor_mistry", "rizwan_shah", "hamza"]
+    },
+    {
+      "id": "real_2023_sajid_mir_conviction",
+      "type": "real",
+      "date": "2023-05-12",
+      "description": "Sajid Mir — 26/11 handler who was the voice on recordings coaching attackers, LeT's 'Wasi' — convicted by a Pakistani anti-terrorism court. Sentenced to 15+ years. Pakistan had previously 'declared Sajid Mir dead' (2022) to avoid FATF pressure, then was forced to 'resurrect' him and prosecute under US/FATF ultimatum. He is convicted in Pakistan, not extradited to India.",
+      "significance": "Sajid Mir's 'death and resurrection' is the single most emblematic example of Pakistan's duplicity on 26/11 accountability. The film's targets (Mir, Cheema) are still largely unpunished in reality — which is why Film 2's fictional accountability arc exists.",
+      "characters_involved": ["sajid_mir", "azam_cheema", "major_iqbal"]
+    }
+  ],
+  "real_persons_in_film_unchanged": [
+    {
+      "name": "Rehman Dakait",
+      "note": "Real name used unchanged. Real death (2009 police encounter) dramatised."
+    },
+    {
+      "name": "Uzair Baloch",
+      "note": "Real name used unchanged. Iran/ISI/RAW espionage links incorporated. Real 2016 arrest shown."
+    },
+    {
+      "name": "Azam Cheema",
+      "note": "Real LeT operative, 26/11 planner. Film names him directly as accountability target."
+    },
+    {
+      "name": "Sajid Mir",
+      "note": "Real 26/11 handler. Film names directly. Convicted in Pakistan 2023 only under FATF duress."
+    },
+    {
+      "name": "David Headley",
+      "note": "Real name used. FBI confession is the film's intelligence anchor for the ISI-LeT chain."
+    },
+    {
+      "name": "Ajmal Kasab",
+      "note": "Real name used. Real capture, trial, and 2012 execution depicted."
+    },
+    {
+      "name": "Arshad Pappu",
+      "note": "Real Lyari gang rival. Real 2013 beheading incorporated."
+    },
+    {
+      "name": "Baba Ladla",
+      "note": "Real Lyari commander. Real 2015 killing incorporated."
+    },
+    {
+      "name": "DGP Prashant Kumar",
+      "note": "Real UP DGP (2021+). Appears in Film 2 domestic enforcement context."
+    }
+  ],
+  "creative_liberties": [
+    "Most 'kills' of real terrorists in Film 2 are speculative — real deaths were in unclaimed/disputed circumstances; the film attributes authorship to Indian intelligence.",
+    "The film presents India's 26/11 intelligence failures as institutional failures, not individual — a narrative choice that exonerates the operative (Hamza) and indicts the system.",
+    "The Naya Bharat framing is explicitly hawkish/nationalist — reviewers have noted this is propaganda in service of a specific political worldview (BJP-era Indian assertiveness).",
+    "Demonetisation is presented as an intelligence operation rather than an economic policy decision — this is artistic license; the real demonetisation had complex motivations.",
+    "SP Chaudhry Aslam depicted more heroically than his real record warrants — the real LTF had documented human rights violations.",
+    "Javed Khanani's 2016 death attributed to intelligence operation in the film — real circumstances remain disputed.",
+    "Sajid Mir's Pakistan-only conviction (not India extradition) is elided — the film's justice is cinematic, not legal."
+  ]
+}

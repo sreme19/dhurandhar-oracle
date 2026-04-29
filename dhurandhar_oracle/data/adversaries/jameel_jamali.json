@@ -1,0 +1,44 @@
+{
+  "actor": "jameel_jamali",
+  "real_name": "Jameel Jamali (fictional name for a composite real figure)",
+  "real_life_composite": {
+    "nabil_gabol": "Lyari's MNA who had documented closeness to Rehman Dakait. Actually present in Lyari and active in Dakait's political protection during the gang wars.",
+    "altaf_hussain": "MQM founder running Karachi politics from London exile — provides the 'London-exile political-mafia' overtones for Jamali's political operation style.",
+    "ppp_lyari_nexus": "The PPP (Pakistan Peoples Party) relied heavily on Lyari's gang-controlled vote bank for decades. Jamali's PAP (Pakistani Awami Party) maps to PPP-MQM fusion."
+  },
+  "real_life_notes": "Represents Pakistani political class that deliberately used Lyari's criminal networks as electoral infrastructure — providing protection and political cover to gang leaders in exchange for guaranteed votes and violence against rivals. The Yalina scene exposing Jamali's collusion with Arshad Pappu (Dakait's rival) is rooted in real reporting about PPP-linked politicians playing both factions.",
+  "film_role": "Film 1 — senior politician of the Pakistani Awami Party (PAP) who provides Rehman Dakait with political cover and launders his criminal activity into the mainstream. His Arshad Pappu collusion is the political intelligence that Hamza needs to expose.",
+  "zarwari_reference": "The film also includes a character 'Aquib/Asif Ali Zarwari' — barely-disguised Asif Ali Zardari (husband of Benazir Bhutto, later President of Pakistan), whose PPP relied heavily on Lyari's gang-controlled vote bank. Zarwari sits above Jamali in the political hierarchy.",
+  "objective": "Maintain political power using Dakait's criminal network as electoral muscle; launder criminal activity into mainstream politics; play both Dakait and Pappu against each other for maximum control",
+  "capability": 7.5,
+  "trigger_threshold": 5.5,
+  "information_set": [
+    "pap_political_intelligence",
+    "dakait_relationship",
+    "pappu_back_channel",
+    "isi_liaison",
+    "london_mqm_contacts"
+  ],
+  "observable_actions": [
+    "deploy_political_cover",
+    "distance_from_dakait",
+    "arrange_meeting",
+    "leak_information_to_rivals",
+    "withdraw_patronage",
+    "expose_operative"
+  ],
+  "hidden_states": [
+    "committed_to_dakait",
+    "hedging_with_pappu",
+    "distancing_politically",
+    "hostile"
+  ],
+  "prospect_params": {
+    "lam": 1.9,
+    "gamma": 0.63,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "Low-moderate λ=1.9: political actors treat risks as manageable — they hedge rather than commit. Jamali will always have a back channel. He is the network's most slippery node."
+}

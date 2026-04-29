@@ -1,0 +1,53 @@
+{
+  "id": "ajay_sanyal",
+  "name": "Ajay Sanyal",
+  "portrayed_by": "R. Madhavan",
+  "real_life_parallel": "Ajit Doval (IB Director 2004-2005; National Security Advisor 2014-present)",
+  "side": "indian",
+  "capability_score": 8.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India",
+    "background": "Director of Intelligence Bureau (IB), India's domestic intelligence agency. Film 1 set during UPA era (2001-2008) when Doval was IB Director. Represents 'operational action' doctrine vs RAW's 'strategic patience'.",
+    "doctrine": "Proactive intelligence operations; direct action preference; institutional impatience with bureaucratic delays",
+    "film_1_role": "Hamza's primary handler; IB-RAW friction with Bhullar",
+    "film_2_role": "Elevated mandate under 'Naya Bharat'; expanded operational authority; Rizwan Shah's handler"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 1.0,
+      "trust_capital": 0.85,
+      "intelligence_depth": 0.90,
+      "network_strength": 0.80,
+      "exposure_risk": 0.10
+    },
+    "handler_style": "directive",
+    "strategic_orientation": "operational_action",
+    "institutional_influence": "high"
+  },
+  "faction": {
+    "primary": "Intelligence Bureau (IB)",
+    "reporting": "Union Home Ministry",
+    "subordinates": ["hamza", "rizwan_shah", "sushant_bansal"],
+    "counterparts": ["ks_bhullar (Film 1, friction)", "dgp_prashant_kumar (Film 2, coordination)"]
+  },
+  "institutional_tension": {
+    "with_ks_bhullar": "IB domestic focus vs RAW external focus; operational action vs strategic patience; jurisdictional overlap on transnational terror",
+    "resolution_film_2": "Sanyal's elevation under expanded mandate reduces friction through unified command"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Hamza tasking", "IB-RAW confrontation", "Naya Bharat mandate expansion", "Demonetisation coordination"]
+  },
+  "real_world_anchor": {
+    "ajit_doval": {
+      "ib_director": "2004-2005",
+      "nsa": "2014-present",
+      "background": "Kerala cadre IPS; intelligence operations specialist",
+      "significance": "First IB officer to become NSA; bridges institutional divides"
+    }
+  }
+}

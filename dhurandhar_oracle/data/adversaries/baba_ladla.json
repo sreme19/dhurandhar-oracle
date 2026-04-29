@@ -1,0 +1,35 @@
+{
+  "actor": "baba_ladla",
+  "real_name": "Baba Ladla (real name kept in film; also spelled 'Babla')",
+  "real_life_notes": "Another real Lyari kingpin who rose through the PAC's post-Dakait fragmentation. Baba Ladla was killed in 2015 in an encounter with police / rival faction — exact circumstances disputed. Part of the second tier of Lyari underworld that proliferated after Rehman Dakait's 2009 death.",
+  "film_role": "Film 1/2 — second-tier Lyari gang leader. Represents the succession chaos that followed Rehman Dakait's death. Relevant to Film 2's post-Dakait power vacuum context.",
+  "objective": "Carve out territory in post-Dakait Lyari; survive the PAC fragmentation",
+  "capability": 6.0,
+  "trigger_threshold": 4.5,
+  "information_set": [
+    "lyari_post_dakait_network",
+    "uzair_baloch_relations",
+    "police_contact_bribery"
+  ],
+  "observable_actions": [
+    "claim_dakait_territory",
+    "negotiate_with_uzair",
+    "bribe_police",
+    "eliminate_rival",
+    "hide"
+  ],
+  "hidden_states": [
+    "consolidating",
+    "aggressive",
+    "threatened",
+    "hiding"
+  ],
+  "real_death": "Killed 2015 — encounter with law enforcement or rival faction, exact attribution unclear.",
+  "prospect_params": {
+    "lam": 2.6,
+    "gamma": 0.63,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

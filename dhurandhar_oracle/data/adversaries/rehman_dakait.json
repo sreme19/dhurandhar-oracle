@@ -1,0 +1,40 @@
+{
+  "actor": "rehman_dakait",
+  "real_name": "Sardar Abdul Rehman Baloch",
+  "real_life_notes": "One of Karachi's most notorious crime lords. Born in Lyari. Presided over the People's Aman Committee (PAC) — a gang masquerading as a community peace group. Killed in a police encounter in 2009. Film name is IDENTICAL to the real name, unusual for a Bollywood production.",
+  "objective": "Consolidate criminal empire in Lyari; gain political legitimacy via Jamali and the Pakistani Awami Party; exploit FICN (Fake Indian Currency Note) networks with ISI patronage",
+  "capability": 8.5,
+  "trigger_threshold": 6.5,
+  "information_set": [
+    "lyari_street_informants",
+    "police_contacts_bribed",
+    "pap_political_intelligence",
+    "ficn_distribution_network"
+  ],
+  "observable_actions": [
+    "consolidate_lyari_territory",
+    "test_new_associate_loyalty",
+    "negotiate_with_jamali",
+    "activate_ficn_channel",
+    "eliminate_informant",
+    "withdraw_trust",
+    "expand_network_beyond_lyari",
+    "confront_ltf_pressure"
+  ],
+  "hidden_states": [
+    "trusting",
+    "probing",
+    "suspicious",
+    "hostile"
+  ],
+  "real_death_year": 2009,
+  "film_relevance_note": "Rehman is the primary target of Film 1. His ISI-linked FICN network and Jamali political cover are what Hamza must expose. His 2009 real-world death is incorporated into Film 1's climax — the oracle treats his elimination as a mission outcome node in the causal DAG.",
+  "prospect_params": {
+    "lam": 2.8,
+    "gamma": 0.62,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "High λ=2.8: Dakait overweights territorial losses relative to gains. He will escalate violently when his Lyari control is threatened even if the expected-value case for restraint is clear."
+}

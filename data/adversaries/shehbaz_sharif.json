@@ -1,0 +1,18 @@
+{
+  "id": "shehbaz_sharif",
+  "name": "Shehbaz Sharif",
+  "portrayed_by": "Fictionalized Pakistani PM archetype",
+  "real_life_parallel": "PM during Pahalgam, Sindoor (2024-present); Nawaz Sharif's brother",
+  "side": "pakistani",
+  "capability_score": 5.5,
+  "biography": {
+    "birth_year": 1951,
+    "origin": "Lahore, Pakistan (Sharif family)",
+    "background": "Prime Minister of Pakistan during Pahalgam massacre and Operation Sindoor (2024-present). Brother of Nawaz Sharif. Represents civilian leadership during military crisis.",
+    "film_relevance": "Part 4: Pakistani civilian face during Sindoor; counterpart to Modi"
+  },
+  "faction": {
+    "primary": "Pakistan Muslim League-Nawaz (PML-N)",
+    "key_relationships": ["asim_munir", "nawaz_sharif"]
+  }
+}

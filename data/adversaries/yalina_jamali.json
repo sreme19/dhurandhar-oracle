@@ -1,0 +1,40 @@
+{
+  "id": "yalina_jamali",
+  "name": "Yalina Jamali",
+  "portrayed_by": "Sara Arjun",
+  "real_life_parallel": "Fictional — Jameel Jamali's daughter; narrative device for information revelation",
+  "side": "unknown",
+  "capability_score": 4.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Karachi, Pakistan",
+    "background": "Daughter of Jameel Jamali. Unwitting source of intelligence on her father's criminal-political activities. Represents 'innocent bystander' vulnerability in intelligence operations — family members often reveal more than principals.",
+    "narrative_function": "Information leak vector; humanizes Jamali; reveals Jamali-Pappu collusion",
+    "film_1_role": null,
+    "film_2_role": "Information source; personal stakes"
+  },
+  "faction": {
+    "primary": "Jamali family",
+    "affiliations": [],
+    "chain_superior": "jameel_jamali (father)",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "information_vulnerability",
+    "motivation": "naivety_plus_loyalty_conflict",
+    "risk_profile": {
+      "lambda": 1.0,
+      "description": "Unaware of operational risk; no self-protection mechanisms"
+    },
+    "threat_capabilities": ["information_disclosure", "emotional_leverage"],
+    "intelligence_value": "Reveals Jamali's hedging with Arshad Pappu; family dynamics"
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2],
+    "key_scenes": ["Information revelation", "Jamali family dynamics"]
+  },
+  "oracle_note": "Non-playable (side='unknown', non-intelligence figure). Potential intelligence target for exploitation."
+}

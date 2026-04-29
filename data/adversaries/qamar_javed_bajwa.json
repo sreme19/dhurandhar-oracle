@@ -1,0 +1,20 @@
+{
+  "id": "qamar_javed_bajwa",
+  "name": "General Qamar Javed Bajwa",
+  "portrayed_by": "Fictionalized COAS archetype",
+  "real_life_parallel": "Pakistan Army Chief 2016-2022; Balakot, Pulwama, Article 370 era",
+  "side": "pakistani",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": 1960,
+    "origin": "Gujrat, Pakistan",
+    "background": "Chief of Army Staff, Pakistan Army (2016-2022). Military counterpart to Indian leadership during surgical strikes (2016), Balakot (2019), Article 370 abrogation. Promoted 'Bajwa Doctrine' of de-escalation with India while maintaining terror proxy pressure.",
+    "tenure_highlights": "Balakot crisis management; Kartarpur corridor opening; post-Article 370 tensions",
+    "extension_controversy": "3-year extension 2019; Imran Khan later claimed forced to grant it",
+    "film_relevance": "Part 3: Military adversary during strikes; institutional counterpart"
+  },
+  "faction": {
+    "primary": "Pakistan Army (COAS)",
+    "key_relationships": ["imran_khan", "faiz_hameed", "asim_munir"]
+  }
+}

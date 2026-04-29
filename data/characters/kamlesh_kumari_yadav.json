@@ -1,0 +1,44 @@
+{
+  "id": "kamlesh_kumari_yadav",
+  "name": "Constable Kamlesh Kumari Yadav",
+  "portrayed_by": "Shweta Shrivastav",
+  "real_life_parallel": "Kamlesh Kumari Yadav — CRPF martyr, 2001 Parliament attack",
+  "side": "indian",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": 1976,
+    "death_year": 2001,
+    "origin": "India",
+    "background": "CRPF (Central Reserve Police Force) constable posted at Parliament House security. First to spot terrorists entering Parliament premises on 13 December 2001. Despite being unarmed, challenged the attackers, buying critical time for security response.",
+    "sacrifice": "Shot dead by terrorists; her alert and resistance allowed Parliament security to mobilize, preventing terrorists from reaching the main building where MPs were in session",
+    "decoration": "Ashoka Chakra (posthumous) — India's highest peacetime gallantry award to a woman",
+    "film_1_role": "13 December 2001 Parliament attack sequence; martyrdom representation",
+    "film_2_role": null
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 1.0,
+      "trust_capital": 0.80,
+      "intelligence_depth": 0.30,
+      "network_strength": 0.50,
+      "exposure_risk": 1.0
+    },
+    "archetype": "frontline_security",
+    "sacrifice_type": "alert_and_resistance"
+  },
+  "historical_significance": {
+    "parliament_attack": {
+      "date": "2001-12-13",
+      "role": "First responder challenge; prevented deeper penetration",
+      "casualties": "5 terrorists, 6 police/security personnel including Kamlesh Kumari",
+      "consequence": "India-Pakistan military mobilization (Operation Parakram); Hamza infiltration rationale"
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1],
+    "key_scenes": ["Parliament attack sequence", "Martyrdom representation"]
+  },
+  "oracle_note": "Non-playable as query subject (deceased, security role not intelligence operative). Appears as historical context for 2001 Parliament attack motivation."
+}

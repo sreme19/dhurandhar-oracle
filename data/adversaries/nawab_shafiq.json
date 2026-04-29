@@ -1,0 +1,48 @@
+{
+  "id": "nawab_shafiq",
+  "name": "Nawab Shafiq",
+  "portrayed_by": "Mashhoor Amrohi",
+  "real_life_parallel": "Nawaz Sharif — Prime Minister 1990-1993, 1997-1999, 2013-2017; weakened post-Kargil",
+  "side": "unknown",
+  "capability_score": 6.0,
+  "biography": {
+    "birth_year": 1949,
+    "death_year": null,
+    "origin": "Lahore, Pakistan (Sharif family)",
+    "background": "Prime Minister of Pakistan during IC-814 hijacking (1999). Military-civilian friction context: overthrown by Musharraf coup October 1999. Represents civilian political leadership subordinated to military-ISI complex.",
+    "political_character": "Businessman-politician; civilian institutionalist; conflict with military establishment",
+    "film_1_role": "IC-814 context; Musharraf coup aftermath; civilian weakness representation",
+    "film_2_role": "Part 2 only — post-Kargil weakened leadership"
+  },
+  "faction": {
+    "primary": "Pakistan Muslim League (Nawaz)",
+    "affiliations": ["Civilian political establishment"],
+    "chain_superior": null,
+    "chain_subordinate": "civilian bureaucracy"
+  },
+  "adversary_model": {
+    "type": "civilian_leader",
+    "motivation": "political_survival",
+    "risk_profile": {
+      "lambda": 1.4,
+      "description": "Risk-averse for direct confrontation; focuses on institutional preservation"
+    },
+    "threat_capabilities": ["civilian_governance", "bureaucratic_influence", "limited_military_control"],
+    "intelligence_signature": {
+      "communications": "Formal governmental channels",
+      "pattern": "Visible weakness in military-ISI assertiveness periods",
+      "detection_difficulty": 0.3
+    }
+  },
+  "historical_context": {
+    "kargil_war_1999": "Conflict with military leadership over Kargil; contributed to coup",
+    "musharraf_coup": "October 12, 1999 — removed from power",
+    "ic_814": "PM during hijacking crisis; constrained by military-ISI influence"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1],
+    "key_scenes": ["IC-814 crisis", "Civilian weakness context"]
+  }
+}

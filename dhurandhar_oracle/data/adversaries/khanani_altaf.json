@@ -1,0 +1,43 @@
+{
+  "actor": "khanani_altaf",
+  "real_name": "Altaf Khanani — real name kept in film",
+  "real_life_notes": "Born 1961. One of the most notorious money launderers in the world. His Khanani & Kalia International (KKI) network serviced drug cartels, biker gangs, and terror outfits globally — using hawala and unofficial channels to route money between Pakistan, the Middle East, North America, Europe and Australia. KKI was designated by the US Treasury as a 'significant transnational criminal organisation'. Arrested 2015, extradited to the United States, convicted on laundering conspiracy, released 2020.",
+  "film_role": "Film 2 — the financial engine of Major Iqbal's network. Altaf Khanani's hawala routes are what sustain the ISI's terror financing after demonetisation disrupts the FICN system. His network's collapse is presented as the financial kill shot of Film 2.",
+  "objective": "Maintain global hawala/money laundering infrastructure; service terror financing clients; survive international law enforcement pressure",
+  "capability": 8.0,
+  "trigger_threshold": 5.5,
+  "information_set": [
+    "global_hawala_routes",
+    "isi_financial_directives",
+    "us_treasury_watchlist",
+    "fatf_monitoring_status"
+  ],
+  "observable_actions": [
+    "activate_hawala_channel",
+    "restructure_financial_routes",
+    "move_funds_offshore",
+    "destroy_records",
+    "negotiate_with_isi"
+  ],
+  "hidden_states": [
+    "operational",
+    "under_us_scrutiny",
+    "restructuring",
+    "arrested"
+  ],
+  "real_timeline": {
+    "operational_peak": "2000s–2015",
+    "arrested": "2015",
+    "extradited_to_us": "2015",
+    "convicted": "2016",
+    "released": "2020"
+  },
+  "demonetisation_impact": "India's 8 November 2016 demonetisation made the FICN stockpiles KKI managed for ISI worthless overnight. The film frames this as a kinetic financial strike — the hawala routes stalled, balance sheets imploded. Javed Khanani died on 4 December 2016, weeks later.",
+  "prospect_params": {
+    "lam": 1.7,
+    "gamma": 0.62,
+    "alpha": 0.91,
+    "beta": 0.87,
+    "ref": 0.0
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "hamza",
+  "name": "Hamza Ali Mazari / Jaskirat Singh Rangi",
+  "portrayed_by": "Ranveer Singh",
+  "real_life_parallel": "Composite of Indian deep-cover operatives; Major Mohit Sharma AC infiltration methodology (Iftikhar Bhatt alias, Torkham route)",
+  "side": "indian",
+  "capability_score": 9.2,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India (cover identity: Pakistani/Lyari)",
+    "background": "Indian intelligence deep-cover operative embedded in Karachi's Lyari criminal-political complex. Dual identity: Hamza Ali Mazari (Pakistani cover) / Jaskirat Singh Rangi (real). Infiltrated via Torkham border crossing with fabricated identity documentation.",
+    "training": "Para-SF (Special Forces), intelligence tradecraft, cultural immersion, Urdu/Sindhi language, criminal network navigation",
+    "film_1_role": "Primary protagonist; infiltration of Rehman Dakait's PAC network",
+    "film_2_role": "Continued operations; mentor to Rizwan Shah; Punjab narco-jihad penetration"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 0.85,
+      "trust_capital": 0.80,
+      "intelligence_depth": 0.90,
+      "network_strength": 0.75,
+      "exposure_risk": 0.35
+    },
+    "primary_skills": ["deep_cover_maintenance", "criminal_network_infiltration", "violence_credibility", "intelligence_exfiltration", "handler_coordination"],
+    "vulnerabilities": ["dual_identity_stress", "moral_complicity_cost", "isolation_from_home_base", "adversary_counterintelligence"]
+  },
+  "faction": {
+    "true_allegiance": "Indian Intelligence (IB/RAW joint operation)",
+    "cover_affiliation": "Peoples' Aman Committee (PAC) / Rehman Dakait network",
+    "handler_chain": "hamza → ajay_sanyal (IB) / ks_bhullar (RAW Film 1) → sushant_bansal (Film 2)"
+  },
+  "adversary_relationships": {
+    "rehman_dakait": "Target of infiltration; criminal patron",
+    "major_iqbal": "Ultimate adversary; ISI handler of 26/11",
+    "jameel_jamali": "Political-criminal bridge; intelligence source target",
+    "uzair_baloch": "Successor to Dakait; Film 2 adversary"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Lyari infiltration", "Dakait trust-building", "26/11 intelligence gathering", "Punjab arc coordination"]
+  },
+  "historical_inspiration": {
+    "major_mohit_sharma": {
+      "name": "Major Mohit Sharma AC",
+      "alias": "Iftikhar Bhatt",
+      "infiltration": "Hizbul Mujahideen",
+      "death": "21 March 2009, Kupwara",
+      "decoration": "Ashoka Chakra (posthumous)"
+    },
+    "operational_notes": "Torkham infiltration route; Ashoka Chakra citation notes 'exceptional courage in infiltrating terrorist organization'"
+  },
+  "oracle_query_types": [
+    "what_could_have_done_faster",
+    "optimal_strategy",
+    "mole_detection_support",
+    "coalition_building"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ajmal_kasab",
+  "name": "Ajmal Kasab",
+  "portrayed_by": "Dalvinder Saini",
+  "real_life_parallel": "Real Ajmal Kasab — only 26/11 attacker captured alive; executed 21 Nov 2012",
+  "side": "pakistani",
+  "capability_score": 4.5,
+  "biography": {
+    "birth_year": 1987,
+    "death_year": 2012,
+    "origin": "Faridkot, Pakistan Punjab",
+    "background": "Only 26/11 attacker captured alive. Pakistani national from Punjab village. Joined LeT seeking money/identity; became suicide attacker. Captured at Chhatrapati Shivaji Terminus after killing spree.",
+    "capture": "Photographed alive with weapon; provided initial confession; trial in India",
+    "execution": "21 November 2012, Yerwada Jail, Pune — hanged in secret; buried on jail premises",
+    "film_1_role": "26/11 foot soldier; capture representation",
+    "film_2_role": "Justice limited — planners remain free"
+  },
+  "faction": {
+    "primary": "Lashkar-e-Taiba (LeT) — foot soldier tier",
+    "affiliations": ["Sajid Mir (handler)"],
+    "chain_superior": "sajid_mir",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "suicide_foot_soldier",
+    "motivation": "martyr_indoctrination_plus_economic",
+    "risk_profile": {
+      "lambda": 3.5,
+      "description": "Willing martyr; high indoctrination; minimal survival instinct"
+    },
+    "threat_capabilities": ["mass_shooting", "suicide_operations", "public_terror"],
+    "capture_value": "Revealed Pakistani origins; LeT training; confessed operational details"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [3],
+    "key_scenes": ["26/11 attack", "CST massacre", "Capture"]
+  }
+}

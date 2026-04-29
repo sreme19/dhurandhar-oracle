@@ -1,0 +1,42 @@
+{
+  "actor": "abdul_bhuttovi",
+  "film_actor": "Sanjay Mehta",
+  "real_name": "Abdul Salam Bhuttavi (real-world parallel)",
+  "real_life_notes": "Abdul Salam Bhuttavi is one of the co-founders of Lashkar-e-Taiba (LeT), alongside Hafiz Muhammad Saeed and Zafar Iqbal. Bhuttavi served as LeT's acting chief when Saeed was detained. He is an Islamic scholar from Jhang who provided the religious ideological framework for LeT's operations. UN-listed terrorist. Based in Muridke, Pakistan.",
+  "film_role": "Film 2 — represents the religious ideological backbone of the LeT network that Major Iqbal operationalises. While Major Iqbal is the ISI military handler, Abdul Bhuttovi represents the theological authority that legitimises LeT operations and recruits.",
+  "objective": "Provide religious legitimacy to LeT operations; maintain Muridke headquarters; continue recruitment through madrassas; resist international pressure on LeT",
+  "capability": 6.0,
+  "trigger_threshold": 5.0,
+  "information_set": [
+    "let_ideological_network",
+    "muridke_headquarters",
+    "madrassa_recruitment_pipeline",
+    "pakistan_interior_ministry_protection"
+  ],
+  "observable_actions": [
+    "issue_religious_fatwa",
+    "recruit_through_madrassa",
+    "coordinate_with_hafiz_saeed",
+    "provide_safe_passage",
+    "withdraw_to_muridke_compound"
+  ],
+  "hidden_states": [
+    "actively_recruiting",
+    "dormant_under_pressure",
+    "operational",
+    "providing_cover"
+  ],
+  "let_founding_context": {
+    "founded": "1987 (as affiliate of Markaz al-Dawah wal-Irshad)",
+    "co_founders": ["Hafiz Muhammad Saeed", "Zafar Iqbal", "Abdullah Yusuf Azzam"],
+    "bhuttavi_role": "Acting chief and religious authority",
+    "26_11_role": "LeT's operational arm executed 26/11 under ISI direction from Major Iqbal"
+  },
+  "prospect_params": {
+    "lam": 2.0,
+    "gamma": 0.60,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

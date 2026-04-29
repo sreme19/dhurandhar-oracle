@@ -1,0 +1,18 @@
+{
+  "id": "rajnath_singh",
+  "name": "Rajnath Singh",
+  "portrayed_by": "Fictionalized Defence Minister archetype",
+  "real_life_parallel": "Defence Minister (2019-2024); coordinated Balakot and Sindoor",
+  "side": "indian",
+  "capability_score": 7.0,
+  "biography": {
+    "birth_year": 1951,
+    "origin": "Uttar Pradesh, India",
+    "background": "Defence Minister of India during Balakot (2019) and through Sindoor-era military posture. Former Home Minister. Political heavyweight coordinating military-diplomatic interface.",
+    "film_relevance": "Part 3: Balakot coordination. Part 4: Sindoor-era defence posture."
+  },
+  "faction": {
+    "primary": "Government of India (Defence Ministry)",
+    "key_relationships": ["narendra_modi", "bipin_rawat", "cds_chiefs"]
+  }
+}

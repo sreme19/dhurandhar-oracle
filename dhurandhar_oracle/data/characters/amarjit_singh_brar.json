@@ -1,0 +1,40 @@
+{
+  "actor": "amarjit_singh_brar",
+  "film_actor": "Vijender Singh",
+  "real_name": "Composite — possibly references multiple Punjab figures",
+  "real_life_notes": "The name 'Amarjit Singh Brar' is a common Punjabi Sikh name (Brar is a prominent Jat Sikh clan). In the context of Dhurandhar's Punjab/Khalistan subplot (Film 2), this character likely represents one of two archetypes: (1) A Punjab Police or intelligence official who is either compromised by the ISI-Khalistani network or is a genuine counter-terrorism operative working the Khalistan threat — mapping to figures like SSP Ajit Singh Sandhu (the Punjab Police officer who investigated the Punjab militancy era and died in 2000 in disputed circumstances) or DGP K.P.S. Gill who crushed the Khalistan insurgency in the 1980s-90s; OR (2) A Punjab-based criminal-political figure connected to the drug network that funds Khalistani operations — the Haryana-Punjab drug corridor has been extensively documented since 2014.",
+  "film_role": "Film 2 — Punjab subplot operative. Vijender Singh (the boxing champion turned actor-politician) being cast suggests a physically imposing, action-oriented role. Most likely: a Punjab Police STF (Special Task Force) officer or a compromised Punjab law enforcement figure who is either Hamza/Rizwan's asset in the Punjab counter-Khalistan operation, or an antagonist who is ISI-compromised within the Punjab Police.",
+  "side": "unknown",
+  "objective": "Unclear without full film context — if law enforcement: neutralise Punjab drug-arms pipeline; if compromised: protect Khalistani-ISI network within Punjab",
+  "capability": 6.5,
+  "trigger_threshold": 4.0,
+  "information_set": [
+    "punjab_police_intelligence",
+    "khalistan_network_punjab",
+    "drug_network_punjab_haryana",
+    "isi_punjab_operations"
+  ],
+  "observable_actions": [
+    "conduct_punjab_police_operation",
+    "share_intelligence_with_ib",
+    "intercept_drug_arms_shipment",
+    "protect_compromised_network",
+    "confront_khalistani_operative"
+  ],
+  "hidden_states": [
+    "active_law_enforcement",
+    "compromised",
+    "running_double",
+    "under_isi_pressure"
+  ],
+  "casting_note": "Vijender Singh's background as a boxing champion and BJP politician (MP from West Delhi 2019, switched to INC 2023) brings a specific physical and political energy to the role. His casting in a Punjab-linked character is consistent with his Haryana/Punjab background.",
+  "brar_clan_context": "The Brar Jat Sikh clan has deep roots in Punjab and Haryana. The name is associated with both Punjab Police families and with figures in Punjab's 1980s-90s militancy era on both sides.",
+  "oracle_note": "Classified side='unknown' pending film confirmation. If he is Indian law enforcement acting in good faith, he could be reclassified side='indian' and made a playable oracle target. The ambiguity is intentional — the Dhurandhar series consistently portrays India's domestic law enforcement as unreliable partners for IB/RAW operations.",
+  "prospect_params": {
+    "lam": 2.2,
+    "gamma": 0.64,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

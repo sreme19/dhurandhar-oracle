@@ -1,0 +1,49 @@
+{
+  "id": "devavrat_kapoor",
+  "name": "Devavrat Kapoor",
+  "portrayed_by": "Akash Khurana",
+  "real_life_parallel": "Jaswant Singh (Minister of External Affairs 1998-2002; flew to Kandahar during IC-814 crisis)",
+  "side": "indian",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India",
+    "background": "Minister of External Affairs during IC-814 hijacking crisis (1999). Representative of political leadership faced with no-win hostage scenario. Accompanied terrorists to Kandahar as part of exchange delegation.",
+    "political_context": "NDA government under Vajpayee; intense public pressure for hostage release; strategic cost of terrorist release not fully apparent at time",
+    "film_1_role": "Act 1 political context; IC-814 crisis decision-making; establishes terror infrastructure release consequences",
+    "film_2_role": null
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 1.0,
+      "trust_capital": 0.60,
+      "intelligence_depth": 0.40,
+      "network_strength": 0.70,
+      "exposure_risk": 0.10
+    },
+    "decision_style": "political_consensus",
+    "strategic_orientation": "diplomatic_resolution",
+    "institutional_influence": "high (policy level)"
+  },
+  "faction": {
+    "primary": "Government of India (Ministry of External Affairs)",
+    "reporting": "Prime Minister",
+    "subordinates": [],
+    "counterparts": ["ajay_sanyal", "ks_bhullar"]
+  },
+  "historical_decision": {
+    "ic_814_crisis": {
+      "date": "1999-12-24 to 1999-12-31",
+      "decision": "Exchange 3 terrorists (Masood Azhar, Omar Sheikh, Mushtaq Zargar) for 155 hostages",
+      "consequences": "Released terrorists founded JeM and continued operations; long-term security cost debate ongoing",
+      "personal_role": "Accompanied released terrorists to Kandahar; visible symbol of Indian capitulation"
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1],
+    "key_scenes": ["IC-814 crisis decision", "Kandahar exchange delegation"]
+  }
+}

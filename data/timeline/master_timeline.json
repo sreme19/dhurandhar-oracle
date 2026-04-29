@@ -1,0 +1,332 @@
+{
+  "timeline_version": "3.0.0",
+  "last_updated": "2024-01-15",
+  "project": "dhurandhar-oracle",
+  "description": "Master timeline for Dhurandhar universe — real-world anchor events (1999-2026) with film creative liberties noted. Covers Parts 1-4 and expanded universe.",
+  "date_range": {
+    "start": "1999-12-24",
+    "end": "2025-11-10"
+  },
+  "events": [
+    {
+      "date": "1999-12-24",
+      "event": "IC-814 Hijacking",
+      "real_world": "Indian Airlines Flight 814 hijacked by Harkat-ul-Mujahideen; landed Kandahar; passengers released in exchange for Masood Azhar, Omar Sheikh, Mushtaq Zargar",
+      "film_relevance": "Film 1 opening; establishes terror infrastructure release",
+      "characters_involved": ["zahoor_mistry", "ibrahim_athar", "devavrat_kapoor"]
+    },
+    {
+      "date": "1999-10-12",
+      "event": "Musharraf Coup",
+      "real_world": "General Pervez Musharraf ousts Nawaz Sharif in military coup; brings Pakistan Army-ISI complex to direct power",
+      "film_relevance": "Context for institutionalized ISI-terror nexus; Nawab Shafiq weakened",
+      "characters_involved": ["nawab_shafiq", "general_shamshad_hassan"]
+    },
+    {
+      "date": "1999-05-07",
+      "event": "Kargil War Begins",
+      "real_world": "Pakistan Army/ISI infiltrates Indian positions across LOC; first shots",
+      "film_relevance": "Context for Indo-Pak military tension; Nawaz Sharif unaware initially",
+      "characters_involved": ["nawab_shafiq", "ks_bhullar"]
+    },
+    {
+      "date": "2000-01-01",
+      "event": "A.S. Dulat RAW Chief Appointment",
+      "real_world": "A.S. Dulat becomes RAW Chief (1999-2000); advocates 'strategic patience'",
+      "film_relevance": "KS Bhullar character anchor; institutional tension setup",
+      "characters_involved": ["ks_bhullar"]
+    },
+    {
+      "date": "2001-12-13",
+      "event": "Parliament Attack",
+      "real_world": "JeM and LeT attack Indian Parliament; 5 terrorists, 6 police killed; India mobilizes (Operation Parakram)",
+      "film_relevance": "Mission trigger for Operation Lyari; Ajay Sanyal era (Doval parallel)",
+      "characters_involved": ["ajay_sanyal", "azam_cheema", "ks_bhullar"]
+    },
+    {
+      "date": "2002-08-01",
+      "event": "Post-Parliament Crisis De-escalation",
+      "real_world": "Operation Parakram ends without war; exposes intelligence gaps",
+      "film_relevance": "Context for Hamza infiltration necessity",
+      "characters_involved": ["ajay_sanyal", "ks_bhullar"]
+    },
+    {
+      "date": "2004-01-01",
+      "event": "Ajit Doval IB Director Appointment",
+      "real_world": "Ajit Doval becomes IB Director; operational action focus",
+      "film_relevance": "Ajay Sanyal character anchor; contrast with Bhullar",
+      "characters_involved": ["ajay_sanyal"]
+    },
+    {
+      "date": "2008-11-26",
+      "event": "26/11 Mumbai Attacks",
+      "real_world": "LeT attacks across Mumbai; 166 killed; Major Iqbal/David Headley planning",
+      "film_relevance": "Central film event; Hamza potential prevention; Sajid Mir/Azam Cheema/Ajmal Kasab",
+      "characters_involved": ["major_iqbal", "sajid_mir", "azam_cheema", "david_headley", "ajmal_kasab", "hamza"]
+    },
+    {
+      "date": "2009-01-09",
+      "event": "Rehman Dakait Killed",
+      "real_world": "Sardar Abdul Rehman Baloch killed in police encounter; Uzair succeeds",
+      "film_relevance": "Dhurandhar Film 1 midpoint; power vacuum creation",
+      "characters_involved": ["rehman_dakait", "uzair_baloch"]
+    },
+    {
+      "date": "2009-03-21",
+      "event": "Major Mohit Sharma KIA",
+      "real_world": "Major Mohit Sharma (Iftikhar Bhatt alias) killed Kupwara; Ashoka Chakra posthumous",
+      "film_relevance": "Hamza character primary inspiration; sacrifice anchor",
+      "characters_involved": ["hamza"]
+    },
+    {
+      "date": "2010-01-01",
+      "event": "David Headley Interrogations",
+      "real_world": "Headley interrogated by FBI/Indian agencies; names Major Iqbal as ISI handler",
+      "film_relevance": "Confirms ISI-terror nexus; Major Iqbal elevation",
+      "characters_involved": ["david_headley", "major_iqbal"]
+    },
+    {
+      "date": "2012-11-21",
+      "event": "Ajmal Kasab Executed",
+      "real_world": "Only 26/11 attacker captured hanged at Yerwada Jail",
+      "film_relevance": "Limited justice; planners remain protected",
+      "characters_involved": ["ajmal_kasab"]
+    },
+    {
+      "date": "2013-03-01",
+      "event": "Arshad Pappu Beheaded",
+      "real_world": "Arshad Pappu (Lyari rival) beheaded by Rehman/Uzair network",
+      "film_relevance": "Lyari criminal warfare escalation; Jamali hedging failure",
+      "characters_involved": ["arshad_pappu", "rehman_dakait", "uzair_baloch", "jameel_jamali"]
+    },
+    {
+      "date": "2013-01-16",
+      "event": "Chaudhry Aslam Killed",
+      "real_world": "SP Chaudhry Aslam Khan killed in TTP bombing",
+      "film_relevance": "SP Aslam character arc end; Karachi police vulnerability",
+      "characters_involved": ["sp_choudhary_aslam"]
+    },
+    {
+      "date": "2015-01-01",
+      "event": "Baba Ladla Killed",
+      "real_world": "Lyari kingpin Baba Ladla killed in encounter",
+      "film_relevance": "Lyari criminal consolidation under Uzair",
+      "characters_involved": ["baba_ladla", "uzair_baloch"]
+    },
+    {
+      "date": "2015-01-01",
+      "event": "Khanani Altaf Arrested",
+      "real_world": "Altaf Khanani arrested; KKI designated 'significant transnational criminal organization'",
+      "film_relevance": "Financial network disruption; Khanani Javed continues",
+      "characters_involved": ["khanani_altaf", "khanani_javed"]
+    },
+    {
+      "date": "2016-11-08",
+      "event": "Demonetisation",
+      "real_world": "India demonetises ₹500 and ₹1000 notes at 8 PM; 86% currency value voided",
+      "film_relevance": "Dhurandhar 2 climax; kinetic financial strike on FICN/narco networks",
+      "characters_involved": ["ajay_sanyal", "khanani_altaf", "khanani_javed", "dawood_ibrahim"]
+    },
+    {
+      "date": "2016-12-04",
+      "event": "Khanani Javed Dies",
+      "real_world": "Javed Khanani dies (natural/assassinated/suicide disputed); 26 days post-demonetisation",
+      "film_relevance": "Demonetisation impact; network decapitation",
+      "characters_involved": ["khanani_javed", "khanani_altaf"]
+    },
+    {
+      "date": "2018-06-01",
+      "event": "FATF Grey-Listing Pakistan",
+      "real_world": "Financial Action Task Force places Pakistan on grey list; pressure on terror financing",
+      "film_relevance": "Context for Sajid Mir 'resurrection'",
+      "characters_involved": ["sajid_mir", "major_iqbal"]
+    },
+    {
+      "date": "2020-01-01",
+      "event": "Khanani Altaf Released",
+      "real_world": "Altaf Khanani released after extradition; network rebuilds",
+      "film_relevance": "Resilience of financial infrastructure",
+      "characters_involved": ["khanani_altaf"]
+    },
+    {
+      "date": "2022-03-01",
+      "event": "Zahoor Mistry Killed",
+      "real_world": "Abdul Latif (Mistry) killed in Karachi; Crescent Furniture cover",
+      "film_relevance": "Long-delayed justice; cyclical revenge closure",
+      "characters_involved": ["zahoor_mistry", "hamza"]
+    },
+    {
+      "date": "2023-05-01",
+      "event": "Sajid Mir Resurrected",
+      "real_world": "Sajid Mir sentenced (FATF pressure) after years of Pakistan claiming he was dead",
+      "film_relevance": "Phantom handler finally produced",
+      "characters_involved": ["sajid_mir"]
+    },
+    {
+      "date": "2016-07-08",
+      "event": "Burhan Wani Killed",
+      "real_world": "Hizbul commander Burhan Wani killed in Tral encounter; triggers months of Kashmir unrest",
+      "film_relevance": "Part 3 opening: Radicalization backdrop; youth militancy surge",
+      "characters_involved": ["burhan_wani"]
+    },
+    {
+      "date": "2016-09-18",
+      "event": "Uri Attack",
+      "real_world": "JeM fedayeen storm Army brigade HQ; 19 soldiers killed; deadliest Kashmir attack on forces in decades",
+      "film_relevance": "Part 3: Surgical strikes trigger; military vulnerability",
+      "characters_involved": ["masood_azhar"]
+    },
+    {
+      "date": "2016-09-28",
+      "event": "Surgical Strikes",
+      "real_world": "Indian Para SF cross LoC; hit JeM launchpads in PoK; first acknowledged ground operation since 1971",
+      "film_relevance": "Part 3 first-act climax; punitive deterrence doctrine established",
+      "characters_involved": ["bipin_rawat", "ajit_doval"]
+    },
+    {
+      "date": "2017-06-18",
+      "event": "Doklam Standoff Begins",
+      "real_world": "India-China 73-day eyeball-to-eyeball at Bhutan tri-junction; second front opening",
+      "film_relevance": "Part 3: China as emerging adversary; Galwan prelude",
+      "characters_involved": []
+    },
+    {
+      "date": "2018-02-10",
+      "event": "Sunjuwan Attack",
+      "real_world": "JeM strikes Army camp in Jammu; keeps JeM thread warm before Pulwama",
+      "film_relevance": "Part 3: Sustained threat continuity",
+      "characters_involved": ["masood_azhar"]
+    },
+    {
+      "date": "2019-02-14",
+      "event": "Pulwama Attack",
+      "real_world": "Adil Ahmad Dar suicide bombs CRPF convoy; 40 killed; JeM claims responsibility",
+      "film_relevance": "Part 3: Balakot catalyst; deadliest Kashmir attack",
+      "characters_involved": ["adil_ahmad_dar", "masood_azhar"]
+    },
+    {
+      "date": "2019-02-26",
+      "event": "Balakot Air Strike",
+      "real_world": "IAF Mirage 2000s strike JeM camp at Balakot, Khyber Pakhtunkhwa; first air crossing of border since 1971",
+      "film_relevance": "Part 3 centerpiece; air warfare spectacle; escalation threshold",
+      "characters_involved": ["bipin_rawat", "masood_azhar"]
+    },
+    {
+      "date": "2019-02-27",
+      "event": "Abhinandan Captured",
+      "real_world": "Wing Commander Abhinandan Varthaman shot down over PoK; captured; held 60 hours",
+      "film_relevance": "Part 3: Capture-return drama; international pressure; cinematic centerpiece",
+      "characters_involved": ["abhinandan_varthaman"]
+    },
+    {
+      "date": "2019-08-05",
+      "event": "Article 370 Abrogation",
+      "real_world": "J&K special status revoked; bifurcated into two Union Territories; full constitutional integration",
+      "film_relevance": "Part 3 triumphal closer; Sanyal/Doval doctrine culmination",
+      "characters_involved": ["narendra_modi", "amit_shah", "ajit_doval"]
+    },
+    {
+      "date": "2020-06-15",
+      "event": "Galwan Clash",
+      "real_world": "Hand-to-hand combat at 14,000ft; 20 Indian soldiers killed including Colonel Santosh Babu; deadliest since 1967",
+      "film_relevance": "Part 4 opening; China as second adversary; Santosh Babu sacrifice",
+      "characters_involved": ["colonel_santosh_babu"]
+    },
+    {
+      "date": "2021-08-15",
+      "event": "Taliban Takeover Afghanistan",
+      "real_world": "Kabul falls; Pakistan's 'strategic depth' realized but disrupted; regional balance shift",
+      "film_relevance": "Part 4: Sanyal 'chickens coming home' monologue context",
+      "characters_involved": []
+    },
+    {
+      "date": "2021-12-08",
+      "event": "CDS Rawat Killed",
+      "real_world": "General Bipin Rawat, first CDS, killed in helicopter crash near Coonoor",
+      "film_relevance": "Part 4 emotional inflection; institutional setback",
+      "characters_involved": ["bipin_rawat"]
+    },
+    {
+      "date": "2022-03-01",
+      "event": "Zahoor Mistry Killed (Mystery Killings Pattern)",
+      "real_world": "IC-814 hijacker shot in Karachi; first of pattern of India's most-wanted dying in Pakistan",
+      "film_relevance": "Part 4: Implicit Hamza covert operations; justice without attribution",
+      "characters_involved": ["zahoor_mistry"]
+    },
+    {
+      "date": "2022-04-10",
+      "event": "Imran Khan Ousted",
+      "real_world": "PM Imran Khan removed via no-confidence vote; military establishment reasserts control",
+      "film_relevance": "Part 4: Adversary instability; civilian leadership collapse",
+      "characters_involved": ["imran_khan", "qamar_javed_bajwa"]
+    },
+    {
+      "date": "2023-05-09",
+      "event": "Imran Khan Arrested",
+      "real_world": "Arrested on corruption charges; nationwide protests; military cracks down",
+      "film_relevance": "Part 4: Pakistani internal collapse continues",
+      "characters_involved": ["imran_khan"]
+    },
+    {
+      "date": "2023-06-18",
+      "event": "Hardeep Nijjar Killed",
+      "real_world": "Khalistani separatist killed in Canada; triggers India-Canada diplomatic crisis",
+      "film_relevance": "Part 4: Continuation of Punjab/Khalistan arc from Part 2",
+      "characters_involved": []
+    },
+    {
+      "date": "2024-06-09",
+      "event": "Reasi Pilgrim Bus Attack",
+      "real_world": "Terrorists fire on pilgrim bus in J&K; 9 killed; terror thread in Modi 3.0",
+      "film_relevance": "Part 4: Sustained threat despite Article 370",
+      "characters_involved": []
+    },
+    {
+      "date": "2025-04-10",
+      "event": "Tahawwur Rana Extradited",
+      "real_world": "26/11 co-conspirator handed over by US after years of legal battles; NIA custody",
+      "film_relevance": "Part 4: Closure beat; ties to Part 1's 26/11; justice delayed but delivered",
+      "characters_involved": ["tahawwur_rana", "david_headley"]
+    },
+    {
+      "date": "2025-04-22",
+      "event": "Pahalgam Massacre",
+      "real_world": "TRF gunmen kill 26 tourists at Baisaran meadow; deadliest civilian attack since 26/11",
+      "film_relevance": "Part 4: Opening tragedy; Sindoor catalyst; TRF white-collar terror",
+      "characters_involved": ["sheikh_sajjad_gul", "sajid_saifullah_jatt"]
+    },
+    {
+      "date": "2025-04-23",
+      "event": "Indus Waters Treaty Suspended",
+      "real_world": "India puts 1960 treaty in abeyance; diplomatic act of war",
+      "film_relevance": "Part 4: Pre-Sindoor diplomatic escalation",
+      "characters_involved": []
+    },
+    {
+      "date": "2025-05-07",
+      "event": "Operation Sindoor",
+      "real_world": "Indian strikes on 9 terror sites across Pakistan/PoK; largest aerial engagement in 50+ years; US-brokered ceasefire May 10",
+      "film_relevance": "Part 4 climactic set-piece; title-justifying revenge; franchise culmination",
+      "characters_involved": ["narendra_modi", "ajit_doval", "asim_munir", "masood_azhar", "hafiz_saeed"]
+    },
+    {
+      "date": "2025-11-10",
+      "event": "Red Fort Car Bombing",
+      "real_world": "Dr. Umar Un Nabi's JeM cell bombs Red Fort area; 15 killed; vengeance for Sindoor",
+      "film_relevance": "Part 4 epilogue; grim reminder war continues; Part 5 setup",
+      "characters_involved": ["umar_un_nabi"]
+    }
+  ],
+  "creative_liberties": [
+    "Timeline compression: Hamza's infiltration (2001+) overlaps with events actually spanning decades",
+    "Character consolidation: Multiple real Lyari operatives consolidated into single figures (Shakeel Commando)",
+    "Demonetisation: Portrayed as targeted intelligence operation; actual policy had broader economic scope",
+    "26/11 Prevention: Hamza potentially could have gathered actionable intel; actual Indian intelligence was fragmented",
+    "Khanani Javed Death: Immediate post-demonetisation link implied causality; actual circumstances disputed"
+  ],
+  "film_1_span": "1999 (IC-814) through 2009 (Dakait death, Major Sharma KIA)",
+  "film_2_span": "2013-2022 (Pappu beheading through Mistry killing, Punjab arc, demonetisation)",
+  "film_3_span": "2016-2019 (Burhan Wani through Article 370; Surgical Strikes, Balakot, Abhinandan)",
+  "film_4_span": "2020-2025 (Galwan through Red Fort; Pahalgam, Sindoor, white-collar terror epilogue)",
+  "oracle_expansion": "Parts 3-4 encyclopedia created for agent reference; real-world events 2016-2025 documented for potential franchise continuation"
+}

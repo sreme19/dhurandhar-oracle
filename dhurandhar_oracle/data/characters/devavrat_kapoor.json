@@ -1,0 +1,31 @@
+{
+  "id": "devavrat_kapoor",
+  "name": "Devavrat Kapoor, Minister of External Affairs",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "External Affairs Minister (UPA era) — political authority over IC-814 negotiations",
+  "films": [1],
+  "cover_identity": null,
+  "real_life_inspiration": "Jaswant Singh — actual External Affairs Minister under PM Vajpayee who personally flew to Kandahar on 31 December 1999 with the three released terrorists (Masood Azhar, Omar Sheikh, Mushtaq Zargar) to secure the IC-814 hostages.",
+  "inspiration_notes": {
+    "jaswant_singh_parallel": "Jaswant Singh's decision to personally accompany the released terrorists to Kandahar was one of the most controversial decisions in modern Indian foreign policy. Critics called it capitulation; Vajpayee government argued 176 hostage lives justified the compromise.",
+    "film_treatment": "The film depicts Kapoor as the man who 'delivered' the terrorists — presenting this through Ajay Sanyal's eyes as the original sin that enabled the 2001 Parliament attack and ultimately the 26/11 network. This is historically contested but represents the hawkish reading of the event.",
+    "criticism_in_film": "Sanyal is shown silently furious during and after the Kandahar negotiation — establishing his 'frustrated patriot' arc that drives the entire duology.",
+    "real_jaswant_singh": "Jaswant Singh died in 2020 after a long illness. He defended his Kandahar decision in his memoirs as the only possible choice given the circumstances."
+  },
+  "oracle_role": "Not a playable operative. Represents the political constraint on Indian intelligence operations in the UPA era — the institutional friction that Sanyal is shown navigating around.",
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 2.0,
+      "intelligence_depth": 4.0,
+      "network_strength": 7.0,
+      "exposure_risk": 0.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "negotiate_kandahar_hostage_release"},
+    {"film": 1, "act": 1, "action": "authorise_terrorist_release"}
+  ],
+  "adversary_model": null
+}

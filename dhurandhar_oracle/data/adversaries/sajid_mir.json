@@ -1,0 +1,37 @@
+{
+  "actor": "sajid_mir",
+  "real_name": "Sajid Mir (real name kept in film)",
+  "real_life_notes": "Real LeT handler and primary planner of the 26/11 attacks. His voice was identified by FBI on recordings communicating with the 10 attackers during the attacks. Was 'declared dead' by Pakistani authorities in 2022 in a transparent attempt to avoid FATF (Financial Action Task Force) blacklisting — then quietly 'resurrected' and sentenced in May 2023 to 15 years on terror financing charges after US pressure. His documented role as a 26/11 handler is unambiguous.",
+  "film_role": "Film 2 target — Sajid Mir's voice on real attack recordings is depicted in the film as irrefutable evidence. His elimination is part of the revenge arc.",
+  "objective": "Avoid accountability; continue operational planning under ISI cover; leverage Pakistan's legal ambiguity as protection",
+  "capability": 8.0,
+  "trigger_threshold": 6.5,
+  "information_set": [
+    "26_11_network_structure",
+    "isi_deep_protection",
+    "international_legal_processes",
+    "fatf_vulnerability"
+  ],
+  "observable_actions": [
+    "maintain_false_death_cover",
+    "communicate_with_handlers",
+    "relay_operational_intelligence",
+    "go_dark",
+    "activate_legal_protection"
+  ],
+  "hidden_states": [
+    "supposedly_dead_cover",
+    "active_planning",
+    "isi_protected",
+    "exposed"
+  ],
+  "real_status": "Sentenced May 2023, 15 years, by a Pakistani anti-terrorism court — under US pressure and FATF threat. Widely seen as cosmetic accountability.",
+  "fatf_context": "Pakistan was grey-listed by FATF from 2018–2022 partly due to failure to prosecute 26/11 planners. Mir's 'resurrection' and prosecution was a direct FATF compliance move.",
+  "prospect_params": {
+    "lam": 1.6,
+    "gamma": 0.58,
+    "alpha": 0.90,
+    "beta": 0.86,
+    "ref": 0.0
+  }
+}

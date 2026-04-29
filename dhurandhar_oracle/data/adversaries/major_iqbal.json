@@ -1,0 +1,42 @@
+{
+  "actor": "major_iqbal",
+  "real_name_composite": "Ilyas Kashmiri + 'Major Iqbal' (ISI handler in David Headley's 26/11 confessions)",
+  "real_life_notes": {
+    "ilyas_kashmiri": "HuJI commander and global LeT-affiliated operative. Linked to the 2008 Mumbai attacks and multiple India-targeted plots. Killed in a US drone strike in FATA, June 2011.",
+    "major_iqbal_26_11": "Named by David Headley (Daood Gilani) in his FBI confession as the ISI handler who helped plan the 26/11 Mumbai attacks. Pakistan has never acknowledged his existence officially.",
+    "film_composite": "The film merges both into 'Major Iqbal, ISI' — the ISI handler who is the strategic mind behind the Karachi-Lyari-ISI terror nexus that Hamza is tasked to dismantle."
+  },
+  "objective": "Maintain the Karachi-Lyari-ISI terror financing network; coordinate cross-border attacks on India; preserve ISI deniability",
+  "capability": 9.0,
+  "trigger_threshold": 7.5,
+  "information_set": [
+    "isi_field_reports",
+    "dacait_network_updates",
+    "ib_raw_detection_capabilities",
+    "deep_cover_operative_profiles"
+  ],
+  "observable_actions": [
+    "activate_ficn_channel",
+    "issue_operational_orders",
+    "meet_jamali_politically",
+    "expose_indian_operative",
+    "activate_26_11_planners",
+    "order_safehouse_sweep",
+    "withdraw_to_deep_cover"
+  ],
+  "hidden_states": [
+    "dormant",
+    "monitoring",
+    "coordinating",
+    "executing_attack"
+  ],
+  "oracle_threat_note": "Major Iqbal is the primary adversary in Film 2. He is the 'end boss' whose exposure is the mission's final objective. High capability (9.0) with excellent information about Indian intelligence methods — the most dangerous actor in the Stackelberg model.",
+  "prospect_params": {
+    "lam": 1.4,
+    "gamma": 0.55,
+    "alpha": 0.90,
+    "beta": 0.85,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "Low λ=1.4: ISI operatives treat all outcomes as opportunities (low reference point). Iqbal is close to risk-neutral, making him highly unpredictable — he will accept high-risk operations where others would not."
+}

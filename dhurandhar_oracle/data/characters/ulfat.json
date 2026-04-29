@@ -1,0 +1,30 @@
+{
+  "id": "ulfat",
+  "name": "Ulfat",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Rehman Dakait's wife — Lyari matriarch",
+  "films": [1],
+  "actor": "Saumya Tandon",
+  "cover_identity": null,
+  "real_life_inspiration": "Represents Rehman Dakait's real wife. Real Rehman Dakait did have a family in Lyari. The film uses Ulfat to humanise Rehman and show the domestic cost of the criminal empire — her presence grounds the gang war in human consequence rather than pure crime drama.",
+  "inspiration_notes": {
+    "narrative_function": "Ulfat is the moral witness to Rehman's world. Her character likely plays a role in scenes where the human cost of the gang war and the ISI patronage system becomes visible — women and families are the silent casualties of the Lyari conflict.",
+    "real_context": "Rehman Dakait's family remained in Lyari after his 2009 death. The People's Aman Committee's criminal empire created devastating civilian consequences — thousands displaced, hundreds killed in the gang war years.",
+    "oracle_classification": "Non-playable. No adversary model. Relevant to belief_node context — her wellbeing is a pressure lever that adversaries (Dakait's rivals, ISI) could use against Rehman."
+  },
+  "state_by_act": {
+    "film1_act2": {
+      "cover_integrity": 9.0,
+      "trust_capital": 8.0,
+      "intelligence_depth": 3.0,
+      "network_strength": 5.0,
+      "exposure_risk": 3.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "present_in_lyari_household"},
+    {"film": 1, "act": 2, "action": "witness_gang_territory_conflict"}
+  ],
+  "adversary_model": null
+}

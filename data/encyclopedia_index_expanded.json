@@ -1,0 +1,264 @@
+{
+  "index_version": "2.0.0",
+  "last_updated": "2024-01-15",
+  "project": "dhurandhar-oracle-expanded",
+  "description": "Expanded encyclopedia for Dhurandhar Parts 3-4 universe (2016-2026). Real-world figures for potential franchise continuation.",
+  "statistics": {
+    "total_characters": 65,
+    "parts_1_2_characters": 42,
+    "parts_3_4_new_characters": 23,
+    "part_3_only": 12,
+    "part_4_only": 11,
+    "indian_side": 18,
+    "pakistani_side": 32,
+    "neutral_unknown": 15
+  },
+  "characters_part_3_4": [
+    {
+      "character_id": "narendra_modi",
+      "reel_name": "PM (likely fictionalized archetype)",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Narendra Modi (PM 2014-present)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 8.5,
+      "primary_layer": "political",
+      "role": "PM; Balakot, Article 370, Sindoor decision-maker"
+    },
+    {
+      "character_id": "amit_shah",
+      "reel_name": "Home Minister",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Amit Shah (Home Minister 2019-present)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 7.5,
+      "primary_layer": "political",
+      "role": "Home Minister; Article 370 architect"
+    },
+    {
+      "character_id": "ajit_doval",
+      "reel_name": "NSA (Ajay Sanyal continuation)",
+      "portrayed_by": "Likely R. Madhavan continued",
+      "real_life_parallel": "Ajit Doval (NSA 2014-present)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 9.0,
+      "primary_layer": "indian",
+      "role": "NSA; Modi-Doval doctrine architect"
+    },
+    {
+      "character_id": "bipin_rawat",
+      "reel_name": "CDS (fictionalized)",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "General Bipin Rawat (CDS 2020-2021)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 8.0,
+      "primary_layer": "indian",
+      "role": "CDS; killed 2021 crash; Part 4 inflection"
+    },
+    {
+      "character_id": "abhinandan_varthaman",
+      "reel_name": "Wing Commander (fictionalized)",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Wing Commander Abhinandan Varthaman",
+      "side": "indian",
+      "films": [3],
+      "capability_score": 7.5,
+      "primary_layer": "indian",
+      "role": "IAF pilot; captured-returned; Part 3 centerpiece"
+    },
+    {
+      "character_id": "colonel_santosh_babu",
+      "reel_name": "Colonel (fictionalized)",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Colonel Santosh Babu MVC (Galwan martyr)",
+      "side": "indian",
+      "films": [4],
+      "capability_score": 8.5,
+      "primary_layer": "indian",
+      "role": "16 Bihar CO; Galwan sacrifice; Part 4 opening"
+    },
+    {
+      "character_id": "colonel_sofiya_qureshi",
+      "reel_name": "Colonel Qureshi",
+      "portrayed_by": "Fictionalized or real",
+      "real_life_parallel": "Colonel Sofiya Qureshi (Sindoor briefer)",
+      "side": "indian",
+      "films": [4],
+      "capability_score": 7.0,
+      "primary_layer": "indian",
+      "role": "Sindoor press briefing; public face"
+    },
+    {
+      "character_id": "rajnath_singh",
+      "reel_name": "Defence Minister",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Rajnath Singh (Defence Minister 2019-2024)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 7.0,
+      "primary_layer": "political",
+      "role": "Defence Minister; Balakot, Sindoor coordination"
+    },
+    {
+      "character_id": "s_jaishankar",
+      "reel_name": "External Affairs Minister",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "S. Jaishankar (EAM 2019-present)",
+      "side": "indian",
+      "films": [3, 4],
+      "capability_score": 7.0,
+      "primary_layer": "political",
+      "role": "Diplomatic framing for strikes"
+    },
+    {
+      "character_id": "vikram_misri",
+      "reel_name": "Foreign Secretary",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Vikram Misri (Foreign Secretary; Sindoor briefer)",
+      "side": "indian",
+      "films": [4],
+      "capability_score": 6.5,
+      "primary_layer": "political",
+      "role": "Sindoor diplomatic briefings"
+    },
+    {
+      "character_id": "imran_khan",
+      "reel_name": "Pakistani PM (fictionalized)",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Imran Khan (PM 2018-2022)",
+      "side": "pakistani",
+      "films": [3, 4],
+      "capability_score": 5.5,
+      "primary_layer": "political",
+      "role": "PM; ousted 2022; arrested 2023"
+    },
+    {
+      "character_id": "qamar_javed_bajwa",
+      "reel_name": "Pakistani COAS",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "General Qamar Javed Bajwa (COAS 2016-2022)",
+      "side": "pakistani",
+      "films": [3, 4],
+      "capability_score": 7.5,
+      "primary_layer": "isi",
+      "role": "Pakistan Army Chief; Balakot, Pulwama era"
+    },
+    {
+      "character_id": "asim_munir",
+      "reel_name": "Pakistani COAS",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "General Asim Munir (COAS 2022-present)",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 7.5,
+      "primary_layer": "isi",
+      "role": "Current COAS; Sindoor adversary"
+    },
+    {
+      "character_id": "masood_azhar",
+      "reel_name": "Masood Azhar",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "JeM chief; Pulwama mastermind; Sindoor target",
+      "side": "pakistani",
+      "films": [3, 4],
+      "capability_score": 8.0,
+      "primary_layer": "terror",
+      "role": "JeM founder; Bahawalpur strike target"
+    },
+    {
+      "character_id": "hafiz_saeed",
+      "reel_name": "Hafiz Saeed",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "LeT founder; 26/11 mastermind; Muridke target",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 8.0,
+      "primary_layer": "terror",
+      "role": "LeT chief; TRF proxy control; Sindoor target"
+    },
+    {
+      "character_id": "burhan_wani",
+      "reel_name": "Burhan Wani",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "Hizbul commander; killed 2016; radicalization trigger",
+      "side": "pakistani",
+      "films": [3],
+      "capability_score": 6.5,
+      "primary_layer": "terror",
+      "role": "Kashmir youth militancy poster boy"
+    },
+    {
+      "character_id": "adil_ahmad_dar",
+      "reel_name": "Adil Ahmad Dar",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "Pulwama suicide bomber; 22-year-old Kashmiri",
+      "side": "pakistani",
+      "films": [3],
+      "capability_score": 5.0,
+      "primary_layer": "terror",
+      "role": "Pulwama attacker; Balakot catalyst"
+    },
+    {
+      "character_id": "sheikh_sajjad_gul",
+      "reel_name": "Sheikh Sajjad Gul",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "TRF founder; Pahalgam mastermind",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 7.0,
+      "primary_layer": "terror",
+      "role": "LeT proxy; white-collar terror architect"
+    },
+    {
+      "character_id": "tahawwur_rana",
+      "reel_name": "Tahawwur Rana",
+      "portrayed_by": "Likely real name retained",
+      "real_life_parallel": "26/11 co-conspirator; extradited April 2025",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 5.0,
+      "primary_layer": "terror",
+      "role": "Headley associate; extradited; justice closure"
+    },
+    {
+      "character_id": "umar_un_nabi",
+      "reel_name": "Dr. Umar Un Nabi",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Red Fort bomber (Nov 2025); doctor-terrorist",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 5.5,
+      "primary_layer": "terror",
+      "role": "Faridabad JeM cell; white-collar terror epilogue"
+    },
+    {
+      "character_id": "shehbaz_sharif",
+      "reel_name": "Pakistani PM",
+      "portrayed_by": "Fictionalized",
+      "real_life_parallel": "Shehbaz Sharif (PM 2024-present)",
+      "side": "pakistani",
+      "films": [4],
+      "capability_score": 5.5,
+      "primary_layer": "political",
+      "role": "PM during Sindoor"
+    }
+  ],
+  "context_doctrines_part_3_4": [
+    "surgical_strikes_doctrine",
+    "balakot_doctrine",
+    "article_370_abrogation",
+    "galwan_clash",
+    "operation_sindoor",
+    "mystery_killings_pakistan",
+    "pahalgam_massacre"
+  ],
+  "connective_threads": {
+    "doctrine_evolution": "Strategic restraint (pre-2016) → Surgical strikes (2016) → Balakot (2019) → Sindoor (2025)",
+    "hamza_arc": "Implicit covert operations 2022-2024 (mystery killings); mentor to new generation post-Sindoor",
+    "adversary_rebranding": "LeT → TRF proxy; traditional militancy → white-collar terror",
+    "pakistani_instability": "Civilian leadership collapse; Imran ouster/arrest; military reassertion"
+  }
+}

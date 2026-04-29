@@ -1,0 +1,40 @@
+{
+  "id": "asp_omar_haider_ditta",
+  "name": "ASP Omar Haider Ditta",
+  "portrayed_by": "Aditya Uppal",
+  "real_life_parallel": "Omar Shahid Hamid — real Karachi police officer turned novelist ('The Prisoner', 'The Party Worker')",
+  "side": "unknown",
+  "capability_score": 5.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Karachi, Sindh Police",
+    "background": "Assistant Superintendent of Police in Karachi. Real-world parallel Omar Shahid Hamid was police officer before becoming celebrated novelist writing about Karachi's criminal-political complex.",
+    "operational_style": "Intelligence-led; nuanced understanding of Karachi's layered power structures",
+    "literary_parallel": "Omar Shahid Hamid's novels provide ethnographic insight into Karachi's political-criminal world",
+    "film_1_role": "Karachi police intelligence perspective",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Sindh Police",
+    "affiliations": ["Karachi police intelligence"],
+    "chain_superior": "SP Choudhary Aslam / Police hierarchy",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "intelligent_observer",
+    "motivation": "law_enforcement_plus_understanding",
+    "risk_profile": {
+      "lambda": 1.5,
+      "description": "Analytical risk assessment; less aggressive than Aslam"
+    },
+    "threat_capabilities": ["intelligence_analysis", "pattern_recognition", "network_mapping"],
+    "hamza_implication": "Potential to detect anomalies in Lyari networks; analytical threat"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2],
+    "key_scenes": ["Police intelligence briefing", "Karachi network analysis"]
+  }
+}

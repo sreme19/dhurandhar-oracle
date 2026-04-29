@@ -1,0 +1,39 @@
+{
+  "id": "sushant_bansal",
+  "name": "Sushant Bansal, Dy. IB Director",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "Deputy IB Director — Sanyal's operational deputy and Film 2 primary handler",
+  "films": [2],
+  "actor": "Manav Gohil",
+  "cover_identity": null,
+  "real_life_inspiration": "Composite/fictional. Represents the institutional machinery beneath Sanyal that carries out the Film 2 operational mandate. No single real-world parallel — likely a stand-in for the unnamed IB/RAW deputies who execute Doval-era covert doctrine.",
+  "inspiration_notes": {
+    "role_in_film2": "Sushant Bansal is the new addition in Film 2. With Sanyal elevated under the Naya Bharat mandate, Bansal handles the day-to-day operational management of the revenge arc — coordinating Hamza and Rizwan Shah's field operations.",
+    "institutional_function": "In the Stackelberg hierarchy: Sanyal is the leader (commits to strategy), Bansal is the operational executor (translates strategy into field orders), Hamza/Rizwan are the on-ground responders. Bansal's role as middle layer is critical — he is the information broker between political direction and field reality.",
+    "oracle_classification": "Playable in Film 2 turning points where the question is 'what orders should Bansal give Hamza/Rizwan?' rather than direct operative action."
+  },
+  "state_by_act": {
+    "film2_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 7.0,
+      "intelligence_depth": 8.0,
+      "network_strength": 8.5,
+      "exposure_risk": 0.5
+    },
+    "film2_act3": {
+      "cover_integrity": 10.0,
+      "trust_capital": 7.5,
+      "intelligence_depth": 9.0,
+      "network_strength": 8.5,
+      "exposure_risk": 1.0
+    }
+  },
+  "observable_history": [
+    {"film": 2, "act": 1, "action": "receive_sanyal_operational_brief"},
+    {"film": 2, "act": 1, "action": "deploy_rizwan_to_karachi"},
+    {"film": 2, "act": 2, "action": "coordinate_khanani_network_targeting"},
+    {"film": 2, "act": 3, "action": "authorise_mistry_operation"}
+  ],
+  "adversary_model": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "rizwan_shah",
+  "name": "Rizwan Shah",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "RAW operative — Hamza's right-hand man in Film 2",
+  "films": [2],
+  "cover_identity": null,
+  "real_life_inspiration": "Pure composite — no specific real-world parallel. Represents the younger generation of post-2014 'Naya Bharat' operatives authorised to act offensively under the new doctrine.",
+  "inspiration_notes": {
+    "archetype": "The film uses Rizwan as a contrast to Hamza's decade-long patient deep-cover approach. Rizwan represents the post-2014 offensive posture — less patience, more direct action, authorised by the new political mandate.",
+    "relationship_to_hamza": "Right-hand operative. Not a replacement — they work in tandem in Film 2's revenge arc, each handling different threads of the Major Iqbal / 26/11 planner targeting operation."
+  },
+  "state_by_act": {
+    "film2_act1": {
+      "cover_integrity": 8.5,
+      "trust_capital": 4.0,
+      "intelligence_depth": 5.5,
+      "network_strength": 6.5,
+      "exposure_risk": 2.5
+    },
+    "film2_act2": {
+      "cover_integrity": 7.0,
+      "trust_capital": 5.5,
+      "intelligence_depth": 7.0,
+      "network_strength": 6.5,
+      "exposure_risk": 5.0
+    },
+    "film2_act3": {
+      "cover_integrity": 6.0,
+      "trust_capital": 7.0,
+      "intelligence_depth": 8.5,
+      "network_strength": 6.0,
+      "exposure_risk": 7.0
+    }
+  },
+  "observable_history": [
+    {"film": 2, "act": 1, "action": "receive_operational_briefing"},
+    {"film": 2, "act": 1, "action": "establish_karachi_network"},
+    {"film": 2, "act": 2, "action": "track_khanani_hawala_network"},
+    {"film": 2, "act": 3, "action": "coordinate_mistry_operation"}
+  ],
+  "adversary_model": null
+}

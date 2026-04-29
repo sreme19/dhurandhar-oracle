@@ -1,0 +1,29 @@
+{
+  "id": "yalina_jamali",
+  "name": "Yalina Jamali",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Daughter of Jameel Jamali — emotional anchor / possible double allegiance",
+  "films": [1, 2],
+  "cover_identity": null,
+  "real_life_inspiration": "Weakly grounded. Multiple reports suggest a loose inspiration from Maheen Gabol (daughter of Pakistani politician Nabil Gabol), but director Aditya Dhar has stated the film is not a biopic and characters are dramatised. Yalina is functionally fictional — a narrative device for emotional anchoring and to deliver the plot point of exposing Jamali's collusion with Arshad Pappu.",
+  "inspiration_notes": {
+    "community_note": "A Reddit user pointed out that if Yalina is based on Maheen Gabol, the age doesn't track (she was already in politics around 2006, in her mid-20s, not 18 as depicted).",
+    "narrative_function": "Yalina is the film's only major character designed for romance — she humanises the Pakistani milieu and provides the internal Jamali family fracture that exposes the political nexus. The scene where she reveals Jamali's Arshad Pappu collusion is the film's key political intelligence revelation.",
+    "oracle_classification": "side='unknown' — Yalina is not an operative and not a pure adversary. She is a source of high-VoI intelligence (Jamali's internal dealings) but also a cover-integrity risk if the relationship with Hamza is discovered."
+  },
+  "state_by_act": {
+    "film1_act2": {
+      "cover_integrity": 9.5,
+      "trust_capital": 3.0,
+      "intelligence_depth": 7.5,
+      "network_strength": 6.0,
+      "exposure_risk": 0.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 2, "action": "meet_hamza"},
+    {"film": 1, "act": 3, "action": "reveal_jamali_pappu_collusion"}
+  ],
+  "adversary_model": null
+}

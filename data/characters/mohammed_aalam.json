@@ -1,0 +1,46 @@
+{
+  "id": "mohammed_aalam",
+  "name": "Mohammed Aalam",
+  "portrayed_by": "Vijay Raaz",
+  "real_life_parallel": "Sleeper handler archetype — Lyari juice shop cover; mole status UNCONFIRMED",
+  "side": "indian",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India (deep cover: Karachi Lyari)",
+    "background": "Indian intelligence sleeper handler embedded in Lyari. Cover identity: juice shop owner — classic 'observation post' providing legitimate presence and daily intelligence collection. Long-term resident handler supporting rotating operatives.",
+    "cover": "Lyari juice shop — high-foot-traffic location; observation hub; communication node",
+    "mole_status": "UNCONFIRMED — high HMM belief-gap uncertainty; possible compromise indicators but no definitive proof",
+    "film_1_role": "Hamza's local handler/support; potential mole tension",
+    "film_2_role": "Continued presence; loyalty question resolution"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 0.70,
+      "trust_capital": 0.55,
+      "intelligence_depth": 0.75,
+      "network_strength": 0.65,
+      "exposure_risk": 0.50
+    },
+    "primary_skills": ["long_term_cover", "local_network_knowledge", "handler_coordination", "observation_tradecraft"],
+    "vulnerabilities": ["isolation_stress", "mole_suspicion", "long_term_exposure"]
+  },
+  "faction": {
+    "primary": "Indian Intelligence (sleeper handler)",
+    "reporting": "hamza (operational) / ajay_sanyal (ultimate)",
+    "cover_affiliation": "Lyari juice shop owner"
+  },
+  "mole_indicators": {
+    "status": "UNCONFIRMED",
+    "belief_gap": "High uncertainty",
+    "false_positive_possible": true,
+    "hmm_treatment": "High belief gap triggers HMM mole detection protocols; no definitive resolution"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Juice shop meetings", "Hamza support", "Mole suspicion tension"]
+  }
+}

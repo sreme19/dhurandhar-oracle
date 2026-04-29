@@ -1,0 +1,38 @@
+{
+  "actor": "bade_sahab",
+  "real_name": "UNNAMED in film — points unmistakably to General Ashfaq Parvez Kayani, COAS Pakistan 2007-2013",
+  "real_life_notes": "The film's most pointed accusation. When Major Iqbal confirms the 26/11 plot has the blessing of 'Bade Sahab' (Big Boss), he is referencing the authority that controls the entire military-terror nexus. In 2008 context, this is General Ashfaq Parvez Kayani — Chief of Army Staff (COAS) of Pakistan from 2007-2013. The film never names him, but the pointing is unmistakable given the explicit ISI-26/11 framing throughout.",
+  "film_role": "Film 1 Act 3 — the unseen authority whose blessing Major Iqbal references when confirming the 26/11 attack is authorised. Represents the thesis that 26/11 was state-sponsored at the highest level of the Pakistani military establishment.",
+  "objective": "Maintain Pakistan Army's strategic depth through proxy terror; ensure deniability; use non-state actors as an instrument of state policy against India",
+  "capability": 10.0,
+  "trigger_threshold": 9.5,
+  "information_set": [
+    "full_isi_network",
+    "india_pak_diplomatic_channels",
+    "us_relationship_leverage",
+    "nuclear_deterrence_calculations"
+  ],
+  "observable_actions": [
+    "give_final_blessing",
+    "deny_involvement",
+    "offer_cosmetic_cooperation",
+    "protect_major_iqbal",
+    "invoke_nuclear_deterrence"
+  ],
+  "hidden_states": [
+    "authorised_operation",
+    "maintaining_deniability",
+    "managing_blowback"
+  ],
+  "oracle_note": "Bade Sahab is the highest-capability, highest-trigger-threshold actor in the entire network. The oracle treats him as an environmental constant — his existence sets the upper bound of the adversary system. He is not a direct target in either film but is the structural reason Major Iqbal can operate with impunity.",
+  "real_status": "General Kayani retired 2013. No public accountability for 26/11. India has formally requested his questioning; Pakistan has denied all such requests.",
+  "directorial_choice": "Aditya Dhar deliberately does not name him — this maintains legal deniability while ensuring the audience understands the implication. It is the film's most politically loaded choice.",
+  "prospect_params": {
+    "lam": 1.2,
+    "gamma": 0.50,
+    "alpha": 0.92,
+    "beta": 0.85,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "λ=1.2, near risk-neutral. Institutional actors at this level treat threats as manageable variables, not personal losses. Extremely difficult to deter through cost-imposition — institutional continuity transcends individual outcomes."
+}

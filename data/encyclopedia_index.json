@@ -1,0 +1,383 @@
+{
+  "index_version": "1.1.0",
+  "last_updated": "2024-01-15",
+  "project": "dhurandhar-oracle",
+  "description": "Complete character and entity encyclopedia for Dhurandhar (2025) — both films. Reel characters mapped to real-world anchors with capability scores, sides, and primary operational layers.",
+  "statistics": {
+    "total_characters": 42,
+    "film_1_only": 15,
+    "film_2_only": 16,
+    "both_films": 11,
+    "indian_side": 9,
+    "pakistani_side": 24,
+    "unknown_neutral": 9
+  },
+  "characters": [
+    {
+      "character_id": "hamza",
+      "reel_name": "Hamza Ali Mazari / Jaskirat Singh Rangi",
+      "portrayed_by": "Ranveer Singh",
+      "real_life_parallel": "Composite — Major Mohit Sharma AC infiltration methodology",
+      "side": "indian",
+      "films": [1, 2],
+      "capability_score": 9.2,
+      "primary_layer": "indian",
+      "role": "Deep-cover operative; protagonist"
+    },
+    {
+      "character_id": "ajay_sanyal",
+      "reel_name": "Ajay Sanyal",
+      "portrayed_by": "R. Madhavan",
+      "real_life_parallel": "Ajit Doval (IB Director 2004-2005; NSA from 2014)",
+      "side": "indian",
+      "films": [1, 2],
+      "capability_score": 8.5,
+      "primary_layer": "indian",
+      "role": "IB Director; strategic handler"
+    },
+    {
+      "character_id": "ks_bhullar",
+      "reel_name": "K.S. Bhullar",
+      "portrayed_by": "Ali Raza Namdar",
+      "real_life_parallel": "A.S. Dulat (RAW Chief 1999-2000)",
+      "side": "indian",
+      "films": [1],
+      "capability_score": 7.5,
+      "primary_layer": "indian",
+      "role": "RAW Chief; strategic patience doctrine"
+    },
+    {
+      "character_id": "rizwan_shah",
+      "reel_name": "Rizwan Shah",
+      "portrayed_by": "R. Madhavan",
+      "real_life_parallel": "Pure composite — no single real-world parallel; Hamza's right-hand in Film 2",
+      "side": "indian",
+      "films": [2],
+      "capability_score": 7.8,
+      "primary_layer": "indian",
+      "role": "Film 2 operative; Punjab arc lead"
+    },
+    {
+      "character_id": "mohammed_aalam",
+      "reel_name": "Mohammed Aalam",
+      "portrayed_by": "Vijay Raaz",
+      "real_life_parallel": "Sleeper handler archetype — Lyari juice shop cover; mole status UNCONFIRMED",
+      "side": "indian",
+      "films": [1, 2],
+      "capability_score": 6.5,
+      "primary_layer": "indian",
+      "role": "Sleeper handler; potential mole"
+    },
+    {
+      "character_id": "devavrat_kapoor",
+      "reel_name": "Devavrat Kapoor",
+      "portrayed_by": "Akash Khurana",
+      "real_life_parallel": "Jaswant Singh (EAM who flew to Kandahar with terrorists, IC-814 crisis)",
+      "side": "indian",
+      "films": [1],
+      "capability_score": 5.0,
+      "primary_layer": "indian",
+      "role": "Film 1 Act 1; political leadership"
+    },
+    {
+      "character_id": "sushant_bansal",
+      "reel_name": "Sushant Bansal",
+      "portrayed_by": "Manav Gohil",
+      "real_life_parallel": "Deputy IB Director — composite; supports Sanyal in Film 2",
+      "side": "indian",
+      "films": [2],
+      "capability_score": 6.0,
+      "primary_layer": "indian",
+      "role": "Film 2 deputy; operational support"
+    },
+    {
+      "character_id": "dgp_prashant_kumar",
+      "reel_name": "DGP Prashant Kumar",
+      "portrayed_by": "Himanshu Gokhani",
+      "real_life_parallel": "Real UP DGP; India domestic enforcement liaison",
+      "side": "indian",
+      "films": [2],
+      "capability_score": 5.5,
+      "primary_layer": "indian",
+      "role": "State police coordination; Film 2"
+    },
+    {
+      "character_id": "rehman_dakait",
+      "reel_name": "Rehman Dakait",
+      "portrayed_by": "Akshaye Khanna",
+      "real_life_parallel": "Sardar Abdul Rehman Baloch (born 1979, killed 2009)",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 8.0,
+      "primary_layer": "criminal",
+      "role": "Lyari kingpin; Film 1 adversary"
+    },
+    {
+      "character_id": "major_iqbal",
+      "reel_name": "Major Iqbal",
+      "portrayed_by": "Arjun Rampal",
+      "real_life_parallel": "Ilyas Kashmiri + real Major Iqbal (Headley confessions); ISI S-Wing",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 9.0,
+      "primary_layer": "isi",
+      "role": "ISI handler; 26/11 planner; Film 2 end boss"
+    },
+    {
+      "character_id": "uzair_baloch",
+      "reel_name": "Uzair Baloch",
+      "portrayed_by": "Danish Pandor",
+      "real_life_parallel": "Real Uzair Baloch — Rehman's successor, Iran IRGC + ISI dual allegiance",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 7.0,
+      "primary_layer": "criminal",
+      "role": "Film 2 Lyari power; arrested 2016"
+    },
+    {
+      "character_id": "jameel_jamali",
+      "reel_name": "Jameel Jamali",
+      "portrayed_by": "Rakesh Bedi",
+      "real_life_parallel": "Nabil Gabol + Altaf Hussain — MQM political-criminal nexus",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 7.5,
+      "primary_layer": "political",
+      "role": "PPP+MQM (PAP); Zarwari subordinate"
+    },
+    {
+      "character_id": "zahoor_mistry",
+      "reel_name": "Zahoor Mistry",
+      "portrayed_by": "Vivek Sinha",
+      "real_life_parallel": "Abdul Latif — IC-814 hijacker; Crescent Furniture alias; killed Karachi 1 March 2022",
+      "side": "pakistani",
+      "films": [1],
+      "capability_score": 6.0,
+      "primary_layer": "terror",
+      "role": "IC-814 hijacker; film opening"
+    },
+    {
+      "character_id": "dawood_ibrahim",
+      "reel_name": "Dawood Ibrahim",
+      "portrayed_by": "Danish Iqbal",
+      "real_life_parallel": "Real Dawood Ibrahim — D-Company chief, 1993 Bombay bombings",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 9.5,
+      "primary_layer": "criminal",
+      "role": "D-Company chief; FICN network; ISI protection"
+    },
+    {
+      "character_id": "azam_cheema",
+      "reel_name": "Azam Cheema",
+      "portrayed_by": "Vinod Tharani",
+      "real_life_parallel": "Real Azam Cheema — LeT 26/11 planner; never prosecuted in Pakistan",
+      "side": "pakistani",
+      "films": [1],
+      "capability_score": 7.0,
+      "primary_layer": "terror",
+      "role": "LeT operational planner"
+    },
+    {
+      "character_id": "sajid_mir",
+      "reel_name": "Sajid Mir",
+      "portrayed_by": "Faiz Khan",
+      "real_life_parallel": "Real Sajid Mir — 26/11 handler, voice on recordings, 'declared dead' then resurrected 2023",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 7.5,
+      "primary_layer": "terror",
+      "role": "LeT handler; phantom status"
+    },
+    {
+      "character_id": "david_headley",
+      "reel_name": "David Headley",
+      "portrayed_by": "Carl Andrew Harte",
+      "real_life_parallel": "Real David Headley — 35-year US sentence; named Major Iqbal as ISI handler",
+      "side": "pakistani",
+      "films": [1],
+      "capability_score": 6.5,
+      "primary_layer": "terror",
+      "role": "Surveillance/ reconnaissance; intelligence anchor"
+    },
+    {
+      "character_id": "ajmal_kasab",
+      "reel_name": "Ajmal Kasab",
+      "portrayed_by": "Dalvinder Saini",
+      "real_life_parallel": "Real Ajmal Kasab — only 26/11 attacker captured; hanged 21 Nov 2012",
+      "side": "pakistani",
+      "films": [1],
+      "capability_score": 4.5,
+      "primary_layer": "terror",
+      "role": "26/11 foot soldier; captured"
+    },
+    {
+      "character_id": "bade_sahab",
+      "reel_name": "Bade Sahab",
+      "portrayed_by": "Diljit Dosanjh",
+      "real_life_parallel": "Unnamed — General Ashfaq Kayani (COAS 2007-2013)",
+      "side": "pakistani",
+      "films": [1, 2],
+      "capability_score": 9.8,
+      "primary_layer": "isi",
+      "role": "ISI institutional ceiling; Major Iqbal's handler"
+    },
+    {
+      "character_id": "khanani_altaf",
+      "reel_name": "Khanani (Altaf)",
+      "portrayed_by": "Mushtaq Naika",
+      "real_life_parallel": "Real Altaf Khanani — KKI 'significant transnational criminal organization' (US Treasury)",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 8.0,
+      "primary_layer": "criminal",
+      "role": "Money laundering; hawala; FICN network"
+    },
+    {
+      "character_id": "khanani_javed",
+      "reel_name": "Khanani (Javed)",
+      "portrayed_by": "Ankit Sagar",
+      "real_life_parallel": "Real Javed Khanani — died 4 Dec 2016 (26 days post-demonetisation)",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 7.5,
+      "primary_layer": "criminal",
+      "role": "FICN/demonetisation nexus; Film 2 financial climax"
+    },
+    {
+      "character_id": "happy_phd",
+      "reel_name": "Happy PhD",
+      "portrayed_by": "Amandeep Singh",
+      "real_life_parallel": "Harmeet Singh — Khalistani militant; ISI's Punjab third-front",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 6.5,
+      "primary_layer": "terror",
+      "role": "Punjab narco-jihad; diaspora Canada"
+    },
+    {
+      "character_id": "sp_choudhary_aslam",
+      "reel_name": "SP Choudhary Aslam",
+      "portrayed_by": "Sanjay Dutt",
+      "real_life_parallel": "Chaudhry Aslam Khan — real killed 9 Jan 2014 TTP bombing",
+      "side": "unknown",
+      "films": [1, 2],
+      "capability_score": 7.0,
+      "primary_layer": "neutral",
+      "role": "Karachi police — tactical wildcard; cover-integrity risk"
+    },
+    {
+      "character_id": "yalina_jamali",
+      "reel_name": "Yalina Jamali",
+      "portrayed_by": "Sara Arjun",
+      "real_life_parallel": "Fictional — narrative device; reveals Jamali collusion",
+      "side": "unknown",
+      "films": [2],
+      "capability_score": 4.0,
+      "primary_layer": "neutral",
+      "role": "Information source; non-playable"
+    },
+    {
+      "character_id": "aquib_ali_zarwari",
+      "reel_name": "Aquib Ali Zarwari",
+      "portrayed_by": "Sanjay Mehndiratta",
+      "real_life_parallel": "Asif Ali Zardari — PPP Lyari vote bank patron",
+      "side": "unknown",
+      "films": [1, 2],
+      "capability_score": 7.5,
+      "primary_layer": "political",
+      "role": "Above Jamali; political ceiling"
+    },
+    {
+      "character_id": "nawab_shafiq",
+      "reel_name": "Nawab Shafiq",
+      "portrayed_by": "Mashhoor Amrohi",
+      "real_life_parallel": "Nawaz Sharif — PM during IC-814; post-Kargil weakened",
+      "side": "unknown",
+      "films": [1],
+      "capability_score": 6.0,
+      "primary_layer": "political",
+      "role": "Political context; civilian face"
+    },
+    {
+      "character_id": "shakeel_commando",
+      "reel_name": "Shakeel Commando",
+      "portrayed_by": "Vikram Bhambri",
+      "real_life_parallel": "Likely real Lyari operative — PAC-trained enforcer tier",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 6.5,
+      "primary_layer": "criminal",
+      "role": "Rehman's tactical commander; precision operations"
+    },
+    {
+      "character_id": "yasir_arafat_film",
+      "reel_name": "Yasir Arafat",
+      "portrayed_by": "Abhay Arora",
+      "real_life_parallel": "Named after militant, NOT Palestinian leader — ISI deniable proxy",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 5.5,
+      "primary_layer": "terror",
+      "role": "International militant cover; false flag operations"
+    },
+    {
+      "character_id": "amarjit_singh_brar",
+      "reel_name": "Amarjit Singh Brar",
+      "portrayed_by": "Vijender Singh",
+      "real_life_parallel": "Khalistani militant recycled into narco-terror operations",
+      "side": "pakistani",
+      "films": [2],
+      "capability_score": 5.0,
+      "primary_layer": "terror",
+      "role": "Punjab in-state coordinator; infiltration bridge"
+    }
+  ],
+  "context_doctrines": [
+    {
+      "id": "narco_jihad_doctrine",
+      "name": "Narco-Jihad Operational Doctrine",
+      "type": "strategic_doctrine",
+      "primary_layers": ["criminal", "terror", "isi"],
+      "film_relevance": 2
+    },
+    {
+      "id": "ficn_network",
+      "name": "FICN (Fake Indian Currency Notes) Network",
+      "type": "financial_weapon_system",
+      "primary_layers": ["criminal", "isi"],
+      "film_relevance": 2
+    },
+    {
+      "id": "ib_vs_raw_friction",
+      "name": "IB vs RAW Institutional Friction",
+      "type": "institutional_dynamics",
+      "primary_layers": ["indian"],
+      "film_relevance": 1
+    },
+    {
+      "id": "punjab_khalistan_arc",
+      "name": "Punjab Khalistan Arc / Third Front Doctrine",
+      "type": "geopolitical_strategy",
+      "primary_layers": ["terror", "isi"],
+      "film_relevance": 2
+    }
+  ],
+  "fictional_composites_group": {
+    "id": "fictional_punjab_cast",
+    "description": "Fictional Punjab arc characters — representative archetypes",
+    "characters": ["gurbaaz_singh_pinda", "prabhneet_singh", "veena", "balwinder_sandhu", "balwant", "mla_sukhwinder", "faizal", "uzair_wife"]
+  },
+  "oracle_query_rules": {
+    "playable_sides": ["indian"],
+    "playable_characters": ["hamza", "ajay_sanyal", "ks_bhullar", "rizwan_shah", "mohammed_aalam", "devavrat_kapoor", "sushant_bansal", "dgp_prashant_kumar"],
+    "non_playable_sides": ["pakistani", "unknown"],
+    "query_types": [
+      "what_could_have_done_faster",
+      "what_to_do_next",
+      "optimal_strategy",
+      "mole_detection",
+      "coalition_analysis"
+    ]
+  }
+}

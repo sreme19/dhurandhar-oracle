@@ -1,0 +1,39 @@
+{
+  "id": "shirani_ahmad_baloch",
+  "name": "Shirani Ahmad Baloch",
+  "portrayed_by": "Bimal Oberoi",
+  "real_life_parallel": "Loosely tied to Balochistan Liberation Army (BLA) leadership — third-side actor",
+  "side": "unknown",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Balochistan, Pakistan",
+    "background": "Balochistan Liberation Army (BLA) linked figure. Represents third-side actor — neither Indian intelligence asset nor ISI-criminal nexus participant. Baloch separatist with own agenda.",
+    "political_stance": "Baloch independence; anti-Pakistan state; not pro-India either",
+    "film_1_role": "Third-side complexity; potential intelligence source or complication",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Balochistan Liberation Army (BLA) — associated",
+    "affiliations": ["Baloch separatist networks"],
+    "chain_superior": null,
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "third_side_actor",
+    "motivation": "baloch_independence",
+    "risk_profile": {
+      "lambda": 2.5,
+      "description": "Revolutionary commitment; high risk acceptance"
+    },
+    "threat_capabilities": ["insurgency", "separatist_mobilization", "anti_state_operations"],
+    "intelligence_value": "BLA insights; Pakistan internal conflict intelligence"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2],
+    "key_scenes": ["Third-side representation", "Balochistan context"]
+  }
+}

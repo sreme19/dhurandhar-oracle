@@ -1,0 +1,39 @@
+{
+  "actor": "ibrahim_athar",
+  "real_name": "Ibrahim Athar (real name kept in film)",
+  "real_life_notes": "Brother of Masood Azhar (JeM founder). Along with his brother Abdul Rauf Azhar and brother-in-law Yusuf Azhar, was involved in planning the IC-814 hijacking. The Athar-Azhar family forms the operational core of JeM. Ibrahim Athar coordinated from Pakistan during the hijacking. UN-designated terrorist.",
+  "film_role": "Film 1 opening — Ibrahim Athar is part of the IC-814 hijack planning network. His presence in the Kandahar sequence connects the 1999 event to the broader JeM-ISI nexus that Hamza is later deployed to dismantle.",
+  "objective": "Continue JeM operations; maintain ISI patronage; avenge Masood Azhar's original imprisonment",
+  "capability": 7.0,
+  "trigger_threshold": 5.5,
+  "information_set": [
+    "jem_operational_network",
+    "isi_deep_channels",
+    "masood_azhar_directives"
+  ],
+  "observable_actions": [
+    "plan_operation",
+    "coordinate_with_isi",
+    "relay_masood_azhar_orders",
+    "activate_pakistan_network",
+    "go_dark"
+  ],
+  "hidden_states": [
+    "dormant",
+    "planning",
+    "operational",
+    "compromised"
+  ],
+  "family_network": {
+    "masood_azhar": "Brother — JeM founder, released IC-814",
+    "abdul_rauf_azhar": "Brother — also IC-814 planner",
+    "yusuf_azhar": "Brother-in-law — IC-814 planner"
+  },
+  "prospect_params": {
+    "lam": 2.2,
+    "gamma": 0.62,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

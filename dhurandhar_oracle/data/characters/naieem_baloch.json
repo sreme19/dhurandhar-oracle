@@ -1,0 +1,35 @@
+{
+  "id": "naieem_baloch",
+  "name": "Naieem Baloch",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Rehman Dakait's eldest son — succession heir",
+  "films": [1, 2],
+  "cover_identity": null,
+  "real_life_inspiration": "Rehman Dakait's real eldest son. After Rehman's 2009 death, the PAC fragmented between Uzair Baloch and other family/gang figures. Naieem represents the blood-succession claim to the Dakait criminal empire.",
+  "inspiration_notes": {
+    "succession_context": "Rehman Dakait did have sons. After his death, the Lyari criminal landscape fragmented significantly — Uzair Baloch took operational control but the Dakait family's symbolic authority remained. Naieem's role in Film 2 is likely navigating this post-Dakait inheritance.",
+    "film2_relevance": "As Film 2 deals with the post-Dakait power vacuum and Uzair Baloch's succession, Naieem represents the tension between family blood claim and operational control. He is a potential Shapley high-value swing vote — his allegiance (to Uzair, to ISI, or to the Khanani network) significantly affects coalition stability."
+  },
+  "state_by_act": {
+    "film1_act3": {
+      "cover_integrity": 8.0,
+      "trust_capital": 5.0,
+      "intelligence_depth": 3.0,
+      "network_strength": 5.5,
+      "exposure_risk": 4.0
+    },
+    "film2_act1": {
+      "cover_integrity": 7.0,
+      "trust_capital": 4.0,
+      "intelligence_depth": 3.5,
+      "network_strength": 4.5,
+      "exposure_risk": 5.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 3, "action": "witness_father_death"},
+    {"film": 2, "act": 1, "action": "contest_uzair_succession"}
+  ],
+  "adversary_model": null
+}

@@ -1,0 +1,32 @@
+{
+  "id": "galwan_clash",
+  "name": "Galwan Valley Clash (2020)",
+  "type": "border_conflict",
+  "description": "Deadliest India-China clash since 1967. Hand-to-hand combat at 14,000 feet resulting in 20 Indian deaths including Colonel Santosh Babu. Opens 'China as second adversary' thread for Dhurandhar universe.",
+  "date": "2020-06-15",
+  "location": "Galwan Valley, Ladakh (Line of Actual Control)",
+  "background": {
+    "context": "Ongoing standoff since May 2020; China objected to Indian road construction near LAC",
+    "doklam_precedent": "2017 Doklam standoff foreshadowed this confrontation"
+  },
+  "incident": {
+    "trigger": "Indian CO Colonel Babu went to remove Chinese tent erected in disengagement zone",
+    "escalation": "PLA troops ambushed; reinforcements arrived; hand-to-hand combat with improvised weapons (metal rods, clubs, barbed wire-wrapped sticks)",
+    "duration": "6-8 hours of fighting in darkness",
+    "casualties": "20 Indian soldiers killed; 76 injured; Chinese casualties disputed (claimed 4; estimates 35-45)"
+  },
+  "indian_martyrs": {
+    "colonel_santosh_babu": "CO 16 Bihar; Maha Vir Chakra (posthumous); killed attempting de-escalation then fighting",
+    "others": "Havildar Palani, Sepoy Gurunathan, etc. — hand-to-hand combat deaths"
+  },
+  "strategic_significance": {
+    "china_front": "Establishes China as secondary adversary in Dhurandhar universe",
+    "doklam_galwan_arc": "Part 4 opens two-front strategic challenge",
+    "tactical_change": "No firearms per LAC agreements; brutal hand-to-hand combat",
+    "aftermath": "Massive troop buildup; Ladakh militarization; infrastructure race"
+  },
+  "film_relevance": {
+    "part_4": "Opening act; China adversary introduction; Santosh Babu sacrifice centerpiece",
+    "visual_element": "High-altitude combat; night fighting; primitive weapons at 14,000ft"
+  }
+}

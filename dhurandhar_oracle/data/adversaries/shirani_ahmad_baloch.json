@@ -1,0 +1,37 @@
+{
+  "actor": "shirani_ahmad_baloch",
+  "film_actor": "Bimal Oberoi",
+  "real_name": "BLA leader figure — partially real name",
+  "real_life_notes": "Represents Balochistan Liberation Army (BLA) leadership. The BLA is a Baloch separatist militant group that has operated against Pakistan's state. The relationship between BLA and Indian intelligence is complex — Pakistani authorities have repeatedly alleged Indian RAW support for BLA, while India denies it. The film navigates this carefully: Shirani is likely depicted as an anti-Pakistan actor whose interests partially align with Hamza's mission but who is not under Indian direction.",
+  "film_role": "Film 1/2 — represents the Baloch separatist dimension of Karachi's complex political landscape. Rehman Dakait (a Baloch) and the BLA occupy overlapping Lyari territory. Shirani's character creates the tension between criminal-ISI networks (Dakait) and separatist-ISI targets (BLA).",
+  "objective": "Baloch self-determination; undermine Pakistani state authority; maintain BLA presence in Karachi's Baloch community; navigate ISI/criminal pressure",
+  "capability": 6.0,
+  "trigger_threshold": 4.5,
+  "information_set": [
+    "bla_network_in_karachi",
+    "baloch_community_intelligence",
+    "isi_anti_bla_operations",
+    "india_contact_allegations"
+  ],
+  "observable_actions": [
+    "mobilise_baloch_community",
+    "confront_isi_pressure",
+    "coordinate_bla_operations",
+    "negotiate_with_dakait_territory",
+    "go_underground"
+  ],
+  "hidden_states": [
+    "operational",
+    "under_isi_pressure",
+    "negotiating_territory",
+    "dormant"
+  ],
+  "oracle_note": "Shirani is a 'third-side' actor — he is neither on the Indian side nor part of the ISI-Dakait nexus. His presence adds complexity to the SNA power graph: he is a node that the oracle should weight differently from the ISI-criminal network.",
+  "prospect_params": {
+    "lam": 2.4,
+    "gamma": 0.66,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

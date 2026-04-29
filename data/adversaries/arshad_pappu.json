@@ -1,0 +1,39 @@
+{
+  "id": "arshad_pappu",
+  "name": "Arshad Pappu",
+  "portrayed_by": "Ashwin Dhar",
+  "real_life_parallel": "Real Arshad Pappu — rival Lyari gang leader; beheaded 2013",
+  "side": "pakistani",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": 2013,
+    "origin": "Lyari, Karachi",
+    "background": "Rival Lyari gang leader opposing Rehman Dakait's PAC dominance. Traditional gang leader without PAC's political sophistication. Hedging relationship with Jamali (who played both sides) provided temporary protection.",
+    "criminal_model": "Traditional gang rivalry vs PAC's political-criminal hybrid",
+    "film_1_role": "Rival to Rehman; Jamali hedging object",
+    "film_2_role": "Referenced as killed; beheading demonstrates PAC brutality"
+  },
+  "faction": {
+    "primary": "Pappu gang (Lyari rival)",
+    "affiliations": ["Temporary Jamali hedge"],
+    "chain_superior": null,
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "rival_gang_leader",
+    "motivation": "territorial_survival",
+    "risk_profile": {
+      "lambda": 2.3,
+      "description": "High risk; violent death expected in Lyari power struggles"
+    },
+    "threat_capabilities": ["rival_territorial_control", "hedging_maneuvers"],
+    "fate": "Beheaded 2013 by Rehman/Uzair network"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2],
+    "key_scenes": ["Rival gang context", "Jamali hedging demonstration"]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ulfat",
+  "name": "Ulfat",
+  "portrayed_by": "Saumya Tandon",
+  "real_life_parallel": "Rehman Dakait's real wife",
+  "side": "unknown",
+  "capability_score": 2.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Wife of Rehman Dakait. Family figure in PAC leadership household. Peripheral to criminal operations but privy to domestic context and stress indicators.",
+    "narrative_function": "Humanizes Rehman; family vulnerability; cover integrity consideration for Hamza",
+    "film_1_role": "Dakait family domestic context",
+    "film_2_role": "Widow reference"
+  },
+  "faction": {
+    "primary": "Dakait family",
+    "affiliations": ["PAC by marriage"],
+    "chain_superior": "rehman_dakait (husband)",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "family_non_combatant",
+    "motivation": "family_survival",
+    "risk_profile": {
+      "lambda": 0.9,
+      "description": "Dependent on husband's power; vulnerable to his downfall"
+    },
+    "threat_capabilities": [],
+    "intelligence_value": "Rehman stress indicators; family dynamics"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Dakait domestic life", "Family vulnerability"]
+  }
+}

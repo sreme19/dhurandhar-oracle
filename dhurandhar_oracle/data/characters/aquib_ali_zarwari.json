@@ -1,0 +1,31 @@
+{
+  "id": "aquib_ali_zarwari",
+  "name": "Aquib Ali Zarwari",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Senior PPP-equivalent politician — sits above Jamali in the political hierarchy",
+  "films": [1, 2],
+  "actor": "Sanjay Mehndiratta",
+  "cover_identity": null,
+  "real_life_inspiration": "Barely-disguised Asif Ali Zardari — husband of Benazir Bhutto, PPP co-chairman, and President of Pakistan (2008–2013). The name 'Zarwari' is a single-letter variant of 'Zardari'. His PPP relied heavily on Lyari's gang-controlled vote bank for decades.",
+  "inspiration_notes": {
+    "zardari_parallel": "Asif Ali Zardari is one of Pakistan's most powerful political figures. His PPP's relationship with Lyari's criminal networks is well-documented — Lyari reliably delivered PPP votes in exchange for political protection of gang operations. This was an open secret in Pakistani politics.",
+    "bhutto_dynasty_context": "Zardari became President after the assassination of Benazir Bhutto (December 2007) and the PPP's subsequent 2008 election victory. His presidency (2008-2013) coincides exactly with the Film 1 Act 3 / 26/11 era, making him the political patron-in-chief of Lyari's criminal network at the time of the Mumbai attacks.",
+    "film_function": "Zarwari represents the apex of the political protection racket — above Jamali, he is why Jamali can operate with impunity. He is the reason the Dakait-Jamali link is politically protected at the highest level.",
+    "oracle_note": "Highest-capability political actor on the Pakistani civilian side. Not an active adversary (no operational role) but the structural condition that enables all the political-criminal nexus below him. In SNA terms: the highest-betweenness political node."
+  },
+  "state_by_act": {
+    "film1_act3": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.0,
+      "intelligence_depth": 7.0,
+      "network_strength": 10.0,
+      "exposure_risk": 0.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 3, "action": "provide_top_cover_for_jamali"},
+    {"film": 2, "act": 1, "action": "manage_political_fallout_post_dakait"}
+  ],
+  "adversary_model": null
+}

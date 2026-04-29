@@ -1,0 +1,21 @@
+{
+  "id": "imran_khan",
+  "name": "Imran Khan",
+  "portrayed_by": "Fictionalized Pakistani PM archetype",
+  "real_life_parallel": "PM 2018-2022; ousted April 2022; arrested 2023; political collapse symbol",
+  "side": "pakistani",
+  "capability_score": 5.5,
+  "biography": {
+    "birth_year": 1952,
+    "origin": "Lahore, Pakistan",
+    "background": "Prime Minister of Pakistan during Balakot (2019) and Article 370 fallout. Ousted via no-confidence April 2022. Arrested May 2023 on corruption charges. Represents Pakistani civilian leadership subordination to military establishment.",
+    "pm_tenure": "2018-2022 — 'Naya Pakistan' rhetoric; military ultimately controlled security policy",
+    "ousting": "April 2022 — no-confidence vote; allegations of army orchestration",
+    "arrest": "May 2023 — Toshakhana case; subsequent imprisonment",
+    "film_relevance": "Part 3: PM during Balakot crisis. Part 4: Ouster/arrest as adversary instability."
+  },
+  "faction": {
+    "primary": "Pakistan Tehreek-e-Insaf (PTI)",
+    "conflict_with": "qamar_javed_bajwa / asim_munir (military establishment)"
+  }
+}

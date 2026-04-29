@@ -1,0 +1,25 @@
+{
+  "id": "bipin_rawat",
+  "name": "General Bipin Rawat",
+  "portrayed_by": "Fictionalized — CDS archetype",
+  "real_life_parallel": "Army Chief 2016-2019; India's first CDS 2020-2021; killed December 2021 helicopter crash",
+  "side": "indian",
+  "capability_score": 8.0,
+  "biography": {
+    "birth_year": 1958,
+    "death_year": 2021,
+    "origin": "Uttarakhand, India",
+    "background": "Army Chief during 2016 surgical strikes and Uri response. Became India's first Chief of Defence Staff (CDS) in 2020. Killed in helicopter crash near Coonoor, Tamil Nadu, December 2021.",
+    "military_philosophy": "Muscular counter-terrorism; 'surgical strike' advocacy; integration of services",
+    "film_relevance": "Part 3: Surgical strikes, Balakot. Part 4: Death as emotional inflection point."
+  },
+  "faction": {
+    "primary": "Indian Army → Chief of Defence Staff",
+    "key_operations": ["surgical_strikes_2016", "balakot_2019"]
+  },
+  "death": {
+    "date": "2021-12-08",
+    "circumstances": "Mil Mi-17V5 helicopter crash near Coonoor; 13 killed including CDS, wife, staff",
+    "impact": "Setback to CDS institutionalization; emotional resonance"
+  }
+}

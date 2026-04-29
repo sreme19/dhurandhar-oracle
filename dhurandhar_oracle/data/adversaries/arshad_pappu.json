@@ -1,0 +1,35 @@
+{
+  "actor": "arshad_pappu",
+  "real_name": "Arshad Pappu (real name kept in film)",
+  "real_life_notes": "Real Lyari gangster who led the rival faction against Rehman Dakait's People's Aman Committee. Arshad Pappu and Rehman Dakait were the two poles of Lyari's gang war from 2004-2013. Arshad Pappu was kidnapped and beheaded in 2013 — the Lyari underworld's most notorious killing of that era. Jamali's collusion with Pappu (exposed by Yalina in the film) is rooted in real PPP-linked politicians playing both Lyari factions against each other for votes.",
+  "film_role": "Film 1 — rival gang leader. The scene where Yalina Jamali reveals Jameel Jamali's collusion with Pappu against Dakait is the film's key political intelligence revelation — Jamali is hedging between both criminal factions to maintain political control.",
+  "objective": "Control Lyari territory; displace Rehman Dakait; leverage political patronage from PPP faction",
+  "capability": 7.0,
+  "trigger_threshold": 5.5,
+  "information_set": [
+    "lyari_rival_intel",
+    "ppp_political_contacts",
+    "dakait_weak_points"
+  ],
+  "observable_actions": [
+    "attack_dakait_territory",
+    "negotiate_with_jamali",
+    "expand_drug_network",
+    "eliminate_rival",
+    "withdraw_to_safe_area"
+  ],
+  "hidden_states": [
+    "consolidating",
+    "aggressive",
+    "negotiating",
+    "exposed"
+  ],
+  "real_death": "Beheaded 2013 — attributed to rival gang faction. Lyari's most notorious killing of that period.",
+  "prospect_params": {
+    "lam": 3.0,
+    "gamma": 0.61,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

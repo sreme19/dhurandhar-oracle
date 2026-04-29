@@ -1,0 +1,45 @@
+{
+  "id": "zahoor_mistry",
+  "name": "Zahoor Mistry",
+  "portrayed_by": "Vivek Sinha",
+  "real_life_parallel": "Abdul Latif — real IC-814 hijacker; Crescent Furniture alias; killed Karachi 1 March 2022",
+  "side": "pakistani",
+  "capability_score": 6.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": 2022,
+    "origin": "Kashmir/Pakistan",
+    "background": "One of five hijackers of Indian Airlines Flight 814 (December 1999). Operated under alias 'Crescent Furniture' in Karachi. Lived openly in Pakistan for 22+ years despite being named in Indian charges. Killed in Karachi March 2022.",
+    "hijacking_role": "HM/AZH hijacking team member; released with other terrorists",
+    "karachi_life": "Lived openly under alias; Pakistani state protection despite international notoriety",
+    "death": "March 1, 2022 — killed in Karachi; circumstances disputed (criminal dispute vs targeted elimination)",
+    "film_1_role": "Opening sequence; IC-814 hijacker; long-delayed justice",
+    "film_2_role": "Death as closure; cyclical revenge"
+  },
+  "faction": {
+    "primary": "Harkat-ul-Mujahideen (HuM) / Jaish-e-Mohammed (JeM, post-release)",
+    "affiliations": ["Ibrahim Athar (fellow hijacker)", "Masood Azhar (released leader)"],
+    "chain_superior": "masood_azhar",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "terror_veteran",
+    "motivation": "jihad_plus_impunity",
+    "risk_profile": {
+      "lambda": 2.0,
+      "description": "Assumed state protection; lived openly; died in criminal dispute"
+    },
+    "threat_capabilities": ["hijacking_veteran", "terror_logistics", "karachi_networks"],
+    "intelligence_signature": {
+      "alias": "Crescent Furniture",
+      "location": "Karachi (open residence)",
+      "detection_difficulty": 0.2
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1, 3],
+    "key_scenes": ["IC-814 hijacking opening", "Karachi residence", "2022 death"]
+  }
+}

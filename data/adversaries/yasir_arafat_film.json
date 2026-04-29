@@ -1,0 +1,46 @@
+{
+  "id": "yasir_arafat_film",
+  "name": "Yasir Arafat",
+  "portrayed_by": "Abhay Arora",
+  "real_life_parallel": "Named after Yasir Arafat (PLO figure), NOT the Palestinian leader — likely composite of ISI-funded 'international militant' archetypes used for plausible deniability",
+  "side": "pakistani",
+  "capability_score": 5.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Unknown — claimed Palestinian/PLO lineage (fabricated cover)",
+    "background": "ISI asset using manufactured international militant identity. The 'Yasir Arafat' name is deliberate misdirection — evokes Palestinian cause to confuse attribution. Actual origins likely Pakistani or Afghan.",
+    "role": "Cutout for operations requiring 'foreign fighter' cover. Provides ISI with deniable proxy for transnational terror coordination."
+  },
+  "faction": {
+    "primary": "ISI (S-Wing / external operations)",
+    "affiliations": ["Major Iqbal operational network", "Lashkar-e-Taiba coordination"],
+    "chain_superior": "major_iqbal",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "deniable_proxy",
+    "motivation": "financial_plus_ideology_cover",
+    "risk_profile": {
+      "lambda": 1.8,
+      "description": "Moderate risk appetite — accepts operational danger but prioritizes escape routes. Professional mercenary mentality under ideological cover."
+    },
+    "threat_capabilities": ["international_coordination", "false_flag_operations", "attribution_confusion", "transit_logistics"],
+    "intelligence_signature": {
+      "communications": "Uses diplomatic-adjacent channels when possible — ISI provides cover credentials",
+      "pattern": "Movement precedes major LeT operations by 2-4 weeks; presence correlates with 'internationalized' attacks",
+      "detection_difficulty": 0.75
+    }
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Narco-jihad corridor activation", "Punjab infiltration operations"]
+  },
+  "real_world_notes": {
+    "verification_status": "SPECULATIVE — Name is clearly theatrical; represents documented ISI practice of manufacturing 'international' credentials for assets",
+    "historical_insight": "ISI historically used foreign militant identities for deniability: 'Yasir Arafat' as name likely references PLO training camps in Pakistan (1970s-80s) that actually existed, but applied to fabricated persona.",
+    "creative_liberties": "Character likely dramatizes multiple composite 'Arab'/international figures ISI claimed were involved in attacks — often later debunked as Pakistani nationals with fake IDs."
+  }
+}

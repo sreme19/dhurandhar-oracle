@@ -1,0 +1,40 @@
+{
+  "actor": "khanani_javed",
+  "real_name": "Javed Khanani — real name kept in film",
+  "real_life_notes": "Altaf Khanani's brother and operational partner in the Khanani money laundering network. Operated within Karachi's financial underworld as the Pakistan-side executor of the hawala operations. Died on 4 December 2016 in Karachi — reportedly fell from the fourth floor of an under-construction building. Manner of death disputed: accident, suicide, or targeted killing. The timing — 26 days after India's demonetisation on 8 November 2016 — is the basis for the film's central thesis about demonetisation as a financial-kinetic weapon.",
+  "film_role": "Film 2 — Javed is the on-the-ground Karachi operator of the Khanani network. His death in December 2016 is depicted in the film as either a consequence of the financial collapse triggered by demonetisation or as a targeted operation. The film likely presents it as the latter.",
+  "objective": "Execute day-to-day hawala operations; maintain ISI financial relationships; manage Karachi-side FICN distribution",
+  "capability": 6.5,
+  "trigger_threshold": 5.0,
+  "information_set": [
+    "karachi_hawala_network",
+    "ficn_distribution_contacts",
+    "isi_financial_handlers"
+  ],
+  "observable_actions": [
+    "execute_hawala_transfer",
+    "distribute_ficn",
+    "restructure_after_demonetisation",
+    "contact_isi_financial_handler",
+    "attempt_escape"
+  ],
+  "hidden_states": [
+    "operational",
+    "financial_pressure",
+    "desperate",
+    "eliminated"
+  ],
+  "real_death": {
+    "date": "2016-12-04",
+    "circumstances": "Fell from fourth floor of an under-construction building in Karachi. Officially: accident or suicide. Speculation: targeted killing linked to FICN network collapse post-demonetisation.",
+    "context": "26 days after India's demonetisation. His death created speculation about 'financial pressure and unsustainable liabilities' on the hawala network."
+  },
+  "demonetisation_link": "The film's thesis: demonetisation on 8 November 2016 didn't just shock Indian citizens — it ruptured the financial arteries of Pakistan's covert operators. The high-quality FICN stockpiles suddenly became worthless. Javed's death is presented as the human consequence of this financial disruption.",
+  "prospect_params": {
+    "lam": 2.3,
+    "gamma": 0.63,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

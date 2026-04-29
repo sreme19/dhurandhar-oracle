@@ -1,0 +1,27 @@
+{
+  "id": "ajit_doval",
+  "name": "Ajit Doval",
+  "portrayed_by": "Continues as 'Ajay Sanyal' (R. Madhavan) or new actor",
+  "real_life_parallel": "National Security Advisor (2014-present); architect of Modi-Doval doctrine",
+  "side": "indian",
+  "capability_score": 9.0,
+  "biography": {
+    "birth_year": 1945,
+    "origin": "Kerala, India (IPS)",
+    "background": "National Security Advisor throughout 2014-2025. Architect of 'Modi-Doval doctrine' — shift to proactive/punitive counter-terrorism. Coordinated surgical strikes, Balakot, Sindoor. Bridge between political leadership and operational agencies.",
+    "doctrine": "Defensive offense; proactive defense; punitive deterrence",
+    "evolution_from_film_2": "From IB Director (2004-05) to NSA with expanded mandate",
+    "film_relevance": "Parts 3-4: Central strategist; operational coordinator; doctrine articulator"
+  },
+  "faction": {
+    "primary": "National Security Council (NSA)",
+    "operational_control": "Coordinates IB, RAW, military intelligence",
+    "key_relationships": ["narendra_modi", "amit_shah", "cds_chiefs", "raw_chiefs"]
+  },
+  "key_operations": {
+    "surgical_strikes_2016": "Strategic coordination",
+    "balakot_2019": "Target selection; escalation management",
+    "article_370": "Intelligence preparation; security lockdown planning",
+    "sindoor_2025": "Operation architect; multi-service coordination"
+  }
+}

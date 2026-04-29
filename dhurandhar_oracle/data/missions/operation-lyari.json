@@ -1,0 +1,74 @@
+{
+  "id": "operation-lyari",
+  "codename": "DHURANDHAR",
+  "trigger": "2001 Indian Parliament attack by JeM — itself enabled by Masood Azhar's release in IC-814 (1999). Ajay Sanyal (IB Director) authorises operation to map and dismantle the Karachi-Lyari-ISI nexus responsible.",
+  "operative_primary": "hamza",
+  "real_name_operative": "Jaskirat Singh Rangi",
+  "handler_strategic": "ajay_sanyal",
+  "handler_field": "mohammed_aalam",
+  "objective_film1": "Infiltrate Rehman Dakait's Lyari criminal network; expose the Dakait-Jamali political link; map the ISI FICN (fake Indian currency) distribution network; gather actionable intelligence on the terror financing chain connecting Lyari → JeM/LeT → ISI → planned attacks on India.",
+  "objective_film2": "Avenge 26/11. Locate and neutralise Major Iqbal (ISI handler) and 26/11 planners (Azam Cheema, Sajid Mir) who were protected under Pakistan's state apparatus. Operate under 'Naya Bharat' / 'ghar mein ghusna' political mandate.",
+  "era": {
+    "film1": "2001–2009 (UPA/strategic restraint era)",
+    "film2": "2014–2022 (NDA/Naya Bharat era)"
+  },
+  "real_world_parallel": "Composite of real events: IC-814 (1999), 2001 Parliament attack, real Lyari gang wars, LTF operations, 26/11 (2008), Operation Lyari (2012), deaths of various 26/11-linked individuals (2022+)",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Infiltration",
+      "film": 1,
+      "acts": [1],
+      "trigger_event": "real_2001_jem_parliament_attack",
+      "description": "Jaskirat Singh Rangi (as Hamza Ali Mazari) enters Pakistan via Torkham. Establishes cover in Lyari, Karachi. Makes contact with field handler Mohammed Aalam. First intelligence reports sent to Ajay Sanyal.",
+      "key_turning_points": [],
+      "real_world_anchor": "2001–2002"
+    },
+    {
+      "phase": 2,
+      "name": "Trust Building",
+      "film": 1,
+      "acts": [2],
+      "trigger_event": "film1_hamza_enters_via_torkham",
+      "description": "Hamza deepens cover by embedding in Dakait's gang periphery. LTF pressure (from SP Aslam) begins creating cover-integrity risk. Hamza must navigate both Dakait's paranoia and LTF raids.",
+      "key_turning_points": ["dakait-first-meeting"],
+      "real_world_anchor": "2004–2008",
+      "cpm_bottleneck_note": "This phase is the CPM bottleneck. Dakait's trust-building took significantly longer than optimal because Hamza was operating without parallel support on the Jamali political-intelligence track."
+    },
+    {
+      "phase": 3,
+      "name": "Intelligence Extraction",
+      "film": 1,
+      "acts": [3],
+      "trigger_event": "real_2008_ltf_formed",
+      "description": "Hamza extracts the Dakait-Jamali-ISI FICN link. 26/11 happens while Hamza is still in field — he has partial intel that wasn't acted on. Dakait is killed (2009 police encounter). Hamza is extracted.",
+      "key_turning_points": [],
+      "real_world_anchor": "2008–2009",
+      "26_11_intel_failure_note": "The film's central tragedy: Hamza had intel on the 26/11 network. The CPM analysis would show that if the Jamali political-intelligence track had been parallelised earlier (Phase 2), the warning could have reached Sanyal 3–6 weeks faster — potentially before 26/11."
+    },
+    {
+      "phase": 4,
+      "name": "The Revenge (Film 2)",
+      "film": 2,
+      "acts": [1, 2, 3],
+      "trigger_event": "real_2014_nda2_elected",
+      "description": "Post-2014, under Naya Bharat mandate. Sanyal authorises targeting Major Iqbal and the 26/11 planners. Uzair Baloch (Rehman's successor) is a new target/asset. Zahoor Mistry (IC-814 hijacker, still in Karachi) is a target. SP Aslam's death (2014) removes the last Pakistani check on the ISI network.",
+      "key_turning_points": [],
+      "real_world_anchor": "2014–2022",
+      "_TODO": "Confirm Film 2 turning points once Rizwan Shah's role is clarified. Is he Hamza's partner, his replacement, or a new operative working a parallel track?"
+    }
+  ],
+  "adversary_network_map": {
+    "description": "The full Karachi-Lyari-ISI nexus Hamza is mapping",
+    "nodes": {
+      "rehman_dakait":      {"layer": "criminal",   "connects_to": ["jameel_jamali", "major_iqbal", "uzair_baloch", "zahoor_mistry"]},
+      "jameel_jamali":      {"layer": "political",  "connects_to": ["rehman_dakait", "major_iqbal"]},
+      "major_iqbal":        {"layer": "isi",        "connects_to": ["rehman_dakait", "jameel_jamali", "zahoor_mistry", "azam_cheema", "sajid_mir"]},
+      "uzair_baloch":       {"layer": "criminal",   "connects_to": ["rehman_dakait", "major_iqbal"]},
+      "zahoor_mistry":      {"layer": "operational","connects_to": ["major_iqbal", "rehman_dakait"]},
+      "azam_cheema":        {"layer": "isi_let",    "connects_to": ["major_iqbal", "sajid_mir"]},
+      "sajid_mir":          {"layer": "isi_let",    "connects_to": ["major_iqbal", "azam_cheema"]}
+    },
+    "oracle_note": "This full network map is used by intel_network_node (SNA) to compute betweenness centrality. Major Iqbal has the highest betweenness — he is the broker connecting ISI to criminal, political, and operational layers. Removing him collapses the network."
+  }
+}

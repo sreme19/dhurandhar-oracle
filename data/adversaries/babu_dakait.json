@@ -1,0 +1,39 @@
+{
+  "id": "babu_dakait",
+  "name": "Babu Dakait",
+  "portrayed_by": "Asif Ali Haider Khan",
+  "real_life_parallel": "Mohammad Daddal — real Pathan gang patriarch, Rehman's estranged father",
+  "side": "pakistani",
+  "capability_score": 6.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": 2009,
+    "origin": "Lyari, Karachi (Pathan community)",
+    "background": "Pathan gang patriarch; father of Rehman Dakait (Abdul Rehman Baloch). Old-guard Lyari criminal displaced by Rehman's PAC transformation. Estranged from son due to generational/criminal model conflicts.",
+    "criminal_model": "Traditional ethnic gang structure vs Rehman's PAC political-criminal hybrid",
+    "film_1_role": "Referenced as predecessor; generational conflict context",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Old-guard Pathan gang",
+    "affiliations": ["Traditional Lyari criminal networks"],
+    "chain_superior": null,
+    "chain_subordinate": "rehman_dakait (estranged son)"
+  },
+  "adversary_model": {
+    "type": "displaced_elder",
+    "motivation": "legacy_plus_honor",
+    "risk_profile": {
+      "lambda": 1.5,
+      "description": "Declining power; moderate risk; generational displacement"
+    },
+    "threat_capabilities": ["residual_loyalty_networks", "generational_authority"],
+    "intelligence_value": "Historical context for Rehman's rise"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1, 2],
+    "key_scenes": ["Generational reference", "Pre-PAC era context"]
+  }
+}

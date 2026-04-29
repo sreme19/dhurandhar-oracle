@@ -1,0 +1,19 @@
+{
+  "id": "sheikh_sajjad_gul",
+  "name": "Sheikh Sajjad Gul",
+  "portrayed_by": "Likely retain real name",
+  "real_life_parallel": "TRF founder; named Pahalgam mastermind; 2025 attack architect",
+  "side": "pakistani",
+  "capability_score": 7.0,
+  "biography": {
+    "origin": "Srinagar, J&K",
+    "background": "Founder of The Resistance Front (TRF), LeT proxy organization for plausible deniability. Named as mastermind of Pahalgam massacre (April 22, 2025). Architect of 'white-collar terror' approach using educated recruits.",
+    "trf_strategy": "Rebrand LeT operations as 'indigenous' resistance; avoid FATF scrutiny; educated urban recruits",
+    "pahalgam_role": "Operational planning; target selection; handler coordination",
+    "film_relevance": "Part 4: Pahalgam architect; TRF proxy strategy; Sindoor target"
+  },
+  "faction": {
+    "primary": "The Resistance Front (TRF) — LeT proxy",
+    "handler": "sajid_saifullah_jatt (LeT South Kashmir chief)"
+  }
+}

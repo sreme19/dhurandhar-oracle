@@ -1,0 +1,53 @@
+{
+  "id": "ks_bhullar",
+  "name": "K.S. Bhullar",
+  "portrayed_by": "Ali Raza Namdar",
+  "real_life_parallel": "A.S. Dulat (RAW Chief 1999-2000; author 'The Spy Chronicles')",
+  "side": "indian",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India",
+    "background": "Research and Analysis Wing (RAW) Special Secretary/Chief. Film 1 representative of external intelligence service. Advocate of 'strategic patience' and negotiated solutions vs direct action.",
+    "doctrine": "Strategic patience; intelligence over operations; negotiation and managed outcomes preferred to kinetic solutions",
+    "film_1_role": "RAW institutional representative; friction with Sanyal's IB operationalism",
+    "film_2_presence": "Character not continued; reflects real Dulat retirement"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 1.0,
+      "trust_capital": 0.75,
+      "intelligence_depth": 0.85,
+      "network_strength": 0.70,
+      "exposure_risk": 0.10
+    },
+    "handler_style": "analytical",
+    "strategic_orientation": "strategic_patience",
+    "institutional_influence": "moderate (declining in Film 1 through institutional friction)"
+  },
+  "faction": {
+    "primary": "Research and Analysis Wing (RAW)",
+    "reporting": "Prime Minister's Office (via Cabinet Secretariat)",
+    "subordinates": ["hamza (RAW coordination line)"],
+    "counterparts": ["ajay_sanyal (friction)"]
+  },
+  "institutional_tension": {
+    "with_ajay_sanyal": "RAW external focus vs IB domestic focus; strategic patience vs operational action; credit/blame allocation disputes",
+    "operational_consequence": "Intelligence flow friction; Hamza receives potentially conflicting guidance"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["RAW-IB confrontation", "Strategic patience argument", "Operational approval delays"]
+  },
+  "real_world_anchor": {
+    "as_dulat": {
+      "raw_chief": "1999-2000",
+      "doctrine": "Strategic patience; Kashmir negotiation advocacy",
+      "public_profile": "Post-retirement openness; 'The Spy Chronicles' with Aditya Sinha",
+      "controversy": "Criticized by operationalist faction for excessive negotiation preference"
+    }
+  }
+}

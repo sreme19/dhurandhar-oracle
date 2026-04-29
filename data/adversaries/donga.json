@@ -1,0 +1,38 @@
+{
+  "id": "donga",
+  "name": "Donga",
+  "portrayed_by": "Naveen Kaushik",
+  "real_life_parallel": "Rehman Dakait's lieutenant — real-world figure in Lyari PAC hierarchy",
+  "side": "pakistani",
+  "capability_score": 5.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Lieutenant in Rehman Dakait's PAC network. Mid-level criminal operative handling day-to-day enforcement and logistics. Below Shakeel Commando in tactical capability but more integrated into ongoing operations.",
+    "role_in_pac": "Operational lieutenant; Rehman's direct subordinate",
+    "film_1_role": "PAC operations; Hamza interaction",
+    "film_2_role": "Continued under Uzair or displaced"
+  },
+  "faction": {
+    "primary": "Peoples' Aman Committee (PAC)",
+    "affiliations": ["Rehman Dakait inner circle"],
+    "chain_superior": "rehman_dakait",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "criminal_lieutenant",
+    "motivation": "loyalty_plus_enrichment",
+    "risk_profile": {
+      "lambda": 2.0,
+      "description": "Accepts criminal lifestyle risks; moderate danger tolerance"
+    },
+    "threat_capabilities": ["enforcement", "logistics", "territorial_control"]
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["PAC operations", "Rehman's team"]
+  }
+}

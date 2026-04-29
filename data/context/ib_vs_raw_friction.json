@@ -1,0 +1,66 @@
+{
+  "id": "ib_vs_raw_friction",
+  "name": "IB vs RAW Institutional Friction (India)",
+  "alternate_names": ["Intelligence Bureau vs Research and Analysis Wing", "Domestic-External Intelligence Turf War", "Indian Intelligence Community Rivalry"],
+  "type": "institutional_dynamics",
+  "description": "Persistent bureaucratic and operational rivalry between India's two primary intelligence agencies: Intelligence Bureau (IB, domestic focus, under Home Ministry) and Research and Analysis Wing (RAW, external focus, under Cabinet Secretariat). This friction creates intelligence gaps, operational inefficiencies, and security vulnerabilities — particularly in transnational threats where domestic-external boundaries blur.",
+  "organizational_structure": {
+    "intelligence_bureau": {
+      "established": "1887 (as Central Special Branch), post-Independence 1947",
+      "legal_basis": "Indian Police Service cadre, no statutory charter",
+      "reporting": "Union Home Ministry",
+      "primary_mandate": "Domestic intelligence, counter-intelligence, counter-terrorism within India",
+      "director_appointment": "Senior IPS officer, typically with state/territorial policing background"
+    },
+    "raw": {
+      "established": "1968 (post-1962 Sino-Indian war failure)",
+      "legal_basis": "Executive order, no parliamentary legislation",
+      "reporting": "Prime Minister's Office (via Cabinet Secretariat)",
+      "primary_mandate": "Foreign intelligence, external security, counter-terrorism outside India",
+      "director_appointment": "Senior IPS or specialized intelligence cadre; historically includes military intelligence"
+    }
+  },
+  "sources_of_friction": {
+    "jurisdictional_overlap": "Transnational terror (Pakistan-based groups attacking India) falls into gap; IB claims domestic aftermath, RAW claims foreign origin",
+    "resource_competition": "Budget allocations, technical assets, human sources",
+    "cadre_differences": "IB traditional police intelligence culture vs RAW 'operational' culture; mutual professional disdain",
+    "information_hoarding": "Both agencies classify intelligence to protect sources/methods, creating national-level blind spots",
+    "bureaucratic_incentives": "Credit for success, blame avoidance for failure — inter-agency coordination risks both"
+  },
+  "historical_manifestations": [
+    {"period": "1984-1994", "incident": "Punjab insurgency coordination failures", "consequence": "Khalistani groups exploited intelligence gaps between state police, IB, and RAW border operations"},
+    {"period": "1999", "incident": "Kargil War intelligence failure", "consequence": "RAW criticized for not detecting Pakistani infiltration; IB role in domestic early warning unclear"},
+    {"period": "2001", "incident": "Parliament attack (13 Dec)", "consequence": "JeM external planning (RAW jurisdiction) converged with Delhi domestic cell (IB) — coordination gaps documented"},
+    {"period": "2008", "incident": "26/11 Mumbai attacks", "consequence": "External planning in Pakistan (RAW) and maritime insertion (coastal IB/Coast Guard coordination failure)"},
+    {"period": "2014-present", "incident": "Post-Doval NSA elevation", "consequence": "NSA coordinates both agencies; institutional friction persists but operational coordination reportedly improved"}
+  ],
+  "key_personalities": {
+    "ajit_doval": {
+      "role": "IB Director 2004-2005, NSA 2014-present",
+      "significance": "First IB officer to become NSA; theoretically bridges IB-RAW gap; represents IB institutional interests at highest level"
+    },
+    "as_dulat": {
+      "role": "RAW Chief 1999-2000",
+      "significance": "Advocate of 'strategic patience' and negotiation (Kashmir); represents RAW's intelligence-first vs action-first divide"
+    },
+    "ks_bhullar_character": {
+      "film_role": "RAW Chief in Dhurandhar universe",
+      "real_anchor": "A.S. Dulat — institutional friction with IB Director Sanyal (Doval parallel) in Film 1"
+    },
+    "ajay_sanyal_character": {
+      "film_role": "IB Director",
+      "real_anchor": "Ajit Doval as IB Director — operational vs strategic intelligence tension with Bhullar"
+    }
+  },
+  "film_relevance": {
+    "dhurandhar_1_tension": "KS Bhullar (RAW) vs Ajay Sanyal (IB) — institutional friction subplot. Bhullar 'strategic patience' vs Sanyal 'operational action'.",
+    "dhurandhar_2_resolution": "Naya Bharat mandate expansion — Sanyal elevated, coordination mechanism imposed",
+    "operational_consequence": "Hamza's infiltration faces dual oversight friction; intelligence may not flow optimally between IB domestic sources and RAW operational support",
+    "narrative_function": "Realistic institutional constraint on protagonist; explains why Indian response isn't perfectly coordinated"
+  },
+  "oracle_implications": {
+    "for_hamza": "Dual reporting creates cover-integrity risk; inconsistent handler instructions possible",
+    "for_rizwan": "Sanyal's elevation in Film 2 may provide clearer chain of command; opportunity for more decisive action",
+    "optimization_insight": "Pipeline should recommend single-point command structure to reduce agency friction"
+  }
+}

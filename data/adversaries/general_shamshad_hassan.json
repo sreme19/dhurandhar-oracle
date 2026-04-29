@@ -1,0 +1,38 @@
+{
+  "id": "general_shamshad_hassan",
+  "name": "General Shamshad Hassan",
+  "portrayed_by": "Raj Zutshi",
+  "real_life_parallel": "Loose composite of senior Pakistani Army generals (Hamid Gul, Musharraf, Kayani elements)",
+  "side": "pakistani",
+  "capability_score": 8.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan Army",
+    "background": "Senior Pakistani Army general representing military-ISI institutional complex. Composite of multiple real figures: Hamid Gul (ISI DG, Islamist sympathies), Pervez Musharraf (coup leader, military ruler), Ashfaq Kayani (institutional continuity).",
+    "institutional_role": "Military face of policy; civilian political oversight (post-Musharraf model)",
+    "film_1_role": "Military context; institutional backdrop",
+    "film_2_role": "Continued military-ISI representation"
+  },
+  "faction": {
+    "primary": "Pakistan Army / ISI",
+    "affiliations": ["Military establishment", "Civilian political oversight"],
+    "chain_superior": null,
+    "chain_subordinate": "major_iqbal (operational level)"
+  },
+  "adversary_model": {
+    "type": "military_institutional",
+    "motivation": "state_policy",
+    "risk_profile": {
+      "lambda": 1.2,
+      "description": "Institutional risk-minimization; delegates operational risk"
+    },
+    "threat_capabilities": ["institutional_authority", "policy_direction", "operational_authorization"]
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2],
+    "key_scenes": ["Military-ISI context", "Institutional authority"]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "surgical_strikes_doctrine",
+  "name": "Surgical Strikes Doctrine (2016)",
+  "type": "strategic_doctrine",
+  "description": "Paradigm shift from strategic restraint to punitive deterrence. Cross-LoC operations by Indian Special Forces in response to Uri attack, establishing new threshold for retaliation.",
+  "trigger_event": {
+    "date": "2016-09-18",
+    "event": "Uri attack — 19 Indian soldiers killed by JeM fedayeen"
+  },
+  "operation_details": {
+    "date": "2016-09-28 to 2016-09-29",
+    "units": "Indian Army Para SF (4th/9th/10th battalions)",
+    "target": "JeM launchpads across Line of Control in PoK",
+    "casualties_claimed": "30-50 terrorists killed; Indian sources claim significant damage"
+  },
+  "strategic_significance": {
+    "threshold_crossing": "First acknowledged cross-LoC ground operation since 1971",
+    "deterrence_signal": "Changed cost-benefit calculus for Pakistan-based terror",
+    "precedent": "Established template for subsequent Balakot (2019) and Sindoor (2025)"
+  },
+  "film_relevance": {
+    "part_3": "First-act climax; Dhar's familiar territory (directed Uri: The Surgical Strike 2019)",
+    "protagonist_role": "Hamza/Jaskirat potentially embedded for intelligence/targeting"
+  }
+}

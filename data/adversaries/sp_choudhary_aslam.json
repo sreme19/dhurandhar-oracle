@@ -1,0 +1,45 @@
+{
+  "id": "sp_choudhary_aslam",
+  "name": "SP Choudhary Aslam",
+  "portrayed_by": "Sanjay Dutt",
+  "real_life_parallel": "Chaudhry Aslam Khan — real Sindh Police 'encounter specialist'; killed 9 Jan 2014 TTP suicide attack",
+  "side": "unknown",
+  "capability_score": 7.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": 2014,
+    "origin": "Karachi, Sindh Police",
+    "background": "Sindh Police SP (Superintendent of Police) specializing in 'encounter' operations against terrorists and criminals. Famous for aggressive anti-TTP and anti-criminal operations. Killed in TTP suicide bombing targeting his convoy.",
+    "operational_style": "Direct action; encounter killings; minimal judicial process",
+    "tactical_capability": "High — urban counter-terrorism specialist",
+    "film_1_role": "Karachi police presence; Hamza cover-integrity risk",
+    "film_2_role": "Death referenced; police vulnerability demonstration"
+  },
+  "faction": {
+    "primary": "Sindh Police",
+    "affiliations": ["Pakistan law enforcement", "Anti-TTP operations"],
+    "chain_superior": "Sindh Police hierarchy",
+    "chain_subordinate": "Police tactical teams"
+  },
+  "adversary_model": {
+    "type": "neutral_high_capability",
+    "motivation": "law_enforcement",
+    "risk_profile": {
+      "lambda": 2.0,
+      "description": "High risk acceptance; targets terrorists and criminals indiscriminately"
+    },
+    "threat_capabilities": ["urban_counter_terrorism", "encounter_operations", "intelligence_led_policing"],
+    "hamza_implication": "Would arrest/kill Hamza if cover blown; not India-targeting but cover-integrity threat",
+    "intelligence_signature": {
+      "pattern": "Aggressive movement to raid locations; minimal warning",
+      "detection_difficulty": 0.4
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Police encounter operations", "Lyari operations", "Death sequence"]
+  },
+  "oracle_note": "Non-playable as query subject (side='unknown', Pakistani law enforcement). Major adversary-model factor for Hamza's exposure risk."
+}

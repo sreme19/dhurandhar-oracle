@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dhurandhar-oracle"
+version = "0.1.0"
+description = "Dhurandhar intelligence oracle — POMDP, CPM/PERT, Value of Information, Stackelberg via LangGraph"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40.0",
+    "langgraph>=0.2.0",
+    "langchain-core>=0.3.0",
+    "networkx>=3.3",
+    "numpy>=1.26",
+    "pydantic>=2.6",
+    "typer>=0.12",
+    "rich>=13.7",
+    "scipy>=1.13",
+    "requests>=2.32",
+    "beautifulsoup4>=4.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.1", "ruff>=0.4", "pytest-cov>=5.0"]
+
+[project.scripts]
+dhurandhar-oracle = "dhurandhar_oracle.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dhurandhar_oracle*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

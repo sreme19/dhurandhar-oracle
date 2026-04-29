@@ -1,0 +1,116 @@
+{
+  "group": "fictional_punjab_cast",
+  "description": "Supporting fictional and composite characters in Dhurandhar Film 2's Punjab/Khalistan subplot. These characters dramatise the ISI-Khalistan-narco pipeline that connects Karachi's Khanani hawala network to Punjab's drug-arms corridor. None have single direct real-world parallels — they are composite constructions from documented typologies in Punjab's militancy and drug crisis.",
+  "film": 2,
+  "arc": "Punjab-Khalistan subplot — the domestic India dimension of the ISI's third-front strategy",
+  "characters": [
+    {
+      "actor": "gurbaaz_singh_pinda",
+      "real_name": "Fictional composite",
+      "role_type": "Khalistani recruit / ground operative",
+      "film_role": "Young Punjab Sikh radicalised through the ISI-Happy PHD pipeline. 'Pinda' (village nickname — common in Punjab) suggests rural background. Represents the supply side of Khalistan recruitment: economically marginalised Punjab youth caught between the drug crisis and Khalistani recruiters offering money and ideology. His arc likely mirrors the documented phenomenon of Punjab youth being recruited through social media, Canada diaspora networks, and Pakistan-based handlers.",
+      "real_life_parallel": "Composite of multiple young Punjab men recruited by Khalistani networks in the 2015-2023 period. The NIA has documented dozens of such recruitments through the ISI-BKI-Gurpatwant Pannun network.",
+      "side": "adversary",
+      "capability": 3.5,
+      "trigger_threshold": 2.5,
+      "objective": "Execute assigned Khalistani operations; earn money for family; maintain Canada diaspora connection as exit route",
+      "prospect_params": {
+        "lam": 3.0,
+        "gamma": 0.72,
+        "alpha": 0.80,
+        "beta": 0.92,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "prabhneet_singh",
+      "real_name": "Fictional composite",
+      "role_type": "Punjab drug network middleman",
+      "film_role": "The narco-link character — connects Punjab's heroin distribution network to the arms purchases that fund Khalistani operations. Prabhneet represents the well-documented phenomenon of Punjab drug dealers who become unwitting or willing logistics nodes in the ISI's narco-jihad pipeline. His character bridges the civilian drug crisis (Punjab's opioid epidemic) with the strategic weaponisation of that crisis by Pakistani intelligence.",
+      "real_life_parallel": "Composite drawn from Punjab Police narcotics cases 2015-2022. The Shiromani Akali Dal drug nexus investigations and subsequent trials documented similar middlemen who didn't know they were funding Khalistani ops.",
+      "side": "adversary",
+      "capability": 4.0,
+      "trigger_threshold": 3.0,
+      "objective": "Move drug consignments; handle cash conversion through hawala; avoid Punjab Police STF; stay clear of direct violence",
+      "prospect_params": {
+        "lam": 2.8,
+        "gamma": 0.68,
+        "alpha": 0.83,
+        "beta": 0.89,
+        "ref": 0.0
+      }
+    },
+    {
+      "actor": "veena",
+      "real_name": "Fictional",
+      "role_type": "Narrative device — female character in Punjab subplot",
+      "film_role": "Likely plays a civilian caught in the Khalistan network — either as a family member of a radicalised recruit (Gurbaaz/Pinda's sister or wife) or as a counter-narrative voice representing normal Punjab civilian life disrupted by the Khalistani violence and drug crisis. Dhurandhar's pattern (from yalina_jamali, shabnam in the main plot) uses female characters as emotional anchors and information-bridge figures.",
+      "real_life_parallel": "Fictional — represents the human cost dimension of Punjab's documented drug epidemic and Khalistani violence on ordinary families.",
+      "side": "civilian",
+      "capability": 2.0,
+      "trigger_threshold": 6.0,
+      "objective": "Protect family; navigate institutional failure of Punjab Police; survive the convergence of drug network and Khalistani violence"
+    },
+    {
+      "actor": "balwinder_sandhu",
+      "real_name": "Fictional composite",
+      "role_type": "Punjab Police — corrupt or compromised officer",
+      "film_role": "The institutional corruption layer in Punjab's counter-Khalistan operations. Balwinder Sandhu likely represents the documented phenomenon of Punjab Police officers on the payroll of drug networks — a problem so severe it triggered multiple official inquiries. His character creates the structural obstacle: even when Indian intelligence (Hamza/Rizwan) has good intel on the Punjab narco-jihad pipeline, Punjab Police internal corruption makes domestic enforcement impossible.",
+      "real_life_parallel": "Multiple Punjab Police officers have been arrested for drug network involvement since 2016. The Zora Commission and subsequent STF operations documented systemic compromise at sub-inspector and inspector levels.",
+      "side": "adversary",
+      "capability": 5.0,
+      "trigger_threshold": 3.5,
+      "objective": "Protect drug network contacts within Punjab Police; earn from both sides; avoid STF/NIA oversight; maintain plausible deniability"
+    },
+    {
+      "actor": "balwant",
+      "real_name": "Fictional composite",
+      "role_type": "Old-guard Punjab militant / Khalistan veteran",
+      "film_role": "The generational contrast character — a veteran of the original 1980s-90s Khalistan insurgency who either (a) has been reactivated by the ISI's new Khalistani push via Happy PHD's network, or (b) represents the older cadre that is sceptical of the ISI's new social-media-era Khalistani operation. His presence grounds the Film 2 Punjab arc in the original insurgency history, connecting 1984/1985/1993 to the 2016 present.",
+      "real_life_parallel": "Composite of Babbar Khalsa International veterans who survived the 1990s crackdown and have been documented in Pakistan/Canada in subsequent decades.",
+      "side": "adversary",
+      "capability": 5.5,
+      "trigger_threshold": 4.5,
+      "objective": "Revive Khalistan cause under ISI patronage; pass operational knowledge to new recruits; extract financial support from diaspora"
+    },
+    {
+      "actor": "mla_sukhwinder",
+      "real_name": "Fictional composite",
+      "role_type": "Compromised Punjab MLA",
+      "film_role": "The political corruption layer — a Member of the Punjab Legislative Assembly whose constituency drug money has been channelled through the narco-jihad network. MLA Sukhwinder represents the documented nexus between Punjab's political class and its drug economy. His character enables the Dhurandhar narrative to show how ISI's narco-jihad pipeline has penetrated India's democratic institutions, not just its criminal underworld.",
+      "real_life_parallel": "Multiple Punjab MLAs across parties have faced drug nexus allegations. The Enforcement Directorate and NIA have filed charges against several political figures in Punjab drug network investigations since 2017.",
+      "side": "adversary",
+      "capability": 6.0,
+      "trigger_threshold": 5.0,
+      "objective": "Protect constituency-level drug network that funds his political operations; avoid NIA/ED investigation; maintain ISI link through drug money channel"
+    },
+    {
+      "actor": "faizal",
+      "real_name": "Fictional composite",
+      "role_type": "ISI cut-out in Punjab — likely Muslim identity, cross-border facilitator",
+      "film_role": "The cross-border logistics operative — Faizal's name suggests Pakistani/Muslim identity, likely a cross-border operative who facilitates the movement of drugs, arms, and hawala money across the Punjab border (Attari-Wagah corridor or cattle-smuggling routes). He is Happy PHD's India-side contact, the human bridge between ISI's Pakistan-based Khalistani handlers and the Punjab ground network.",
+      "real_life_parallel": "BSF and Punjab Police have documented ISI-affiliated operatives using cattle smuggling and border crossing networks for drug-arms-hawala movement. Several individuals with exactly this profile have been arrested in Amritsar, Gurdaspur, and Ferozepur districts.",
+      "side": "adversary",
+      "capability": 5.5,
+      "trigger_threshold": 3.5,
+      "objective": "Move drug consignments across Punjab border; deliver arms shipments to Khalistani network; pass hawala funds to Happy PHD's India contacts; avoid BSF and Punjab Police"
+    },
+    {
+      "actor": "uzairs_wife",
+      "real_name": "Fictional — wife of Uzair Baloch",
+      "role_type": "Supporting character — Lyari political household",
+      "film_role": "Uzair Baloch's wife appears in the Karachi sections of Film 2 — the post-Dakait power transition period. Her character likely serves as an indicator of Uzair's domestic status during his Iran/ISI dual-allegiance phase and his eventual arrest (2016). In Dhurandhar's pattern of using wives/female characters as information anchors (cf. Ulfat for Rehman, Shabnam for Jamali), she may reveal Uzair's operational decisions through domestic narrative.",
+      "real_life_notes": "Uzair Baloch's real family life is documented in Pakistani press — he was publicly active in Lyari's political scene before his 2016 military intelligence detention. The film's version is a fictional rendering.",
+      "side": "unknown",
+      "capability": 2.0,
+      "trigger_threshold": 7.0,
+      "objective": "Protect family; maintain Lyari household stability; navigate Uzair's dangerous dual allegiances"
+    }
+  ],
+  "arc_summary": "The Punjab cast collectively dramatises India's most acute domestic security vulnerability as of 2016: the ISI's successful weaponisation of Punjab's opioid epidemic as a second front. The Afghan heroin → Pakistan → Punjab border → distribution → cash → hawala → arms → Khalistani ops pipeline is the Film 2 complement to the Karachi FICN/demonetisation arc. Both are dismantled simultaneously by Hamza/Rizwan's network — the demonetisation strike hits FICN (D-Company/Khanani), while the Punjab operation rolls up the narco-jihad pipeline (Happy PHD/Faizal/Gurbaaz).",
+  "real_world_grounding": {
+    "punjab_drug_crisis": "Punjab's opioid epidemic (heroin/synthetic drugs) is documented — estimated 2.3 million drug users in Punjab as of 2015 (PGIMER study). Afghan heroin is the dominant supply chain.",
+    "isi_khalistan_revival": "Post-2012, ISI significantly increased support for Khalistan separatism as a strategic pressure tool on India. The creation of Sikhs For Justice (SFJ) and Gurpatwant Pannun's network in Canada/UK is the diaspora dimension.",
+    "narco_jihad_doctrine": "See data/context/narco_jihad_doctrine.json for full doctrine entry."
+  }
+}

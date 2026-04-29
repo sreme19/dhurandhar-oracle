@@ -1,0 +1,27 @@
+{
+  "id": "abhinandan_varthaman",
+  "name": "Wing Commander Abhinandan Varthaman",
+  "portrayed_by": "Likely fictionalized pilot character",
+  "real_life_parallel": "IAF pilot shot down over PoK 27 Feb 2019; captured and returned 60 hours later",
+  "side": "indian",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": 1983,
+    "origin": "Tamil Nadu, India",
+    "background": "Indian Air Force MiG-21 Bison pilot. Shot down Pakistani F-16 before his own aircraft was downed by a missile over PoK on 27 February 2019. Captured by Pakistan Army, held for 60 hours. Released on 1 March 2019 under international pressure.",
+    "capture_details": "Parachuted into PoK; assaulted by mob before army rescue; viral videos of custody",
+    "return": "Handed over at Wagah-Attari border; became national icon",
+    "viral_element": "Mustache, calm demeanor in custody videos; 'cups of tea' video",
+    "decoration": "Vir Chakra (2019)",
+    "film_relevance": "Part 3 centerpiece: Balakot aftermath; capture-return drama"
+  },
+  "faction": {
+    "primary": "Indian Air Force (51 Squadron, 'Sword Arms')"
+  },
+  "capture_sequence": {
+    "27_feb_2019": "MiG-21 downed during dogfight post-Balakot",
+    "custody": "Pakistan Army prevented mob lynching; interrogation videos released",
+    "international_pressure": "Geneva Conventions; Trump mentioned role",
+    "1_mar_2019": "Released at Wagah; 'instrument of peace' Pakistani framing"
+  }
+}

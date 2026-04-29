@@ -1,0 +1,32 @@
+{
+  "actor": "david_headley",
+  "real_name": "David Coleman Headley (born Daood Sayed Gilani) — real name kept in film",
+  "real_life_notes": "Pakistani-American LeT operative who conducted pre-attack reconnaissance of Mumbai targets for 26/11. Named 'Major Iqbal' as his ISI handler in FBI confessions. Pleaded guilty in Chicago in 2010; sentenced to 35 years in 2013. His confessions are the primary documented source linking ISI to 26/11 and naming specific handlers.",
+  "film_role": "Headley's FBI confession is the documentary chain that establishes the 'Major Iqbal' character's existence. The film uses him as the evidence bridge between the ISI network and the on-screen intelligence operation.",
+  "objective": "N/A — depicted in historical context, not as an active Film 2 adversary. His confession is the intelligence that validates the operation.",
+  "capability": 5.0,
+  "trigger_threshold": 9.0,
+  "information_set": [
+    "isi_handler_identities",
+    "26_11_planning_details",
+    "let_network_structure"
+  ],
+  "observable_actions": [
+    "provide_fbi_testimony",
+    "identify_major_iqbal",
+    "detail_26_11_planning"
+  ],
+  "hidden_states": [
+    "in_us_custody",
+    "cooperating"
+  ],
+  "real_status": "Serving 35-year sentence in US federal prison. Has given extensive depositions to Indian investigators via video conference.",
+  "oracle_note": "Headley is not an active adversary in the film's timeline — his role is as the intelligence anchor that makes 'Major Iqbal' a traceable real target. His testimony is the VoI-maximising intelligence that opens up Major Iqbal's network.",
+  "prospect_params": {
+    "lam": 2.0,
+    "gamma": 0.65,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

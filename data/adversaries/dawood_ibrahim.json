@@ -1,0 +1,45 @@
+{
+  "id": "dawood_ibrahim",
+  "name": "Dawood Ibrahim",
+  "portrayed_by": "Danish Iqbal",
+  "real_life_parallel": "Real Dawood Ibrahim — D-Company chief; 1993 Bombay bombings mastermind; Karachi-based under ISI protection",
+  "side": "pakistani",
+  "capability_score": 9.5,
+  "biography": {
+    "birth_year": 1955,
+    "death_year": null,
+    "origin": "Mumbai, India (exiled to Karachi)",
+    "background": "Founder and leader of D-Company, transnational criminal-terror conglomerate. Mastermind of 1993 Bombay bombings (257 killed). Based in Karachi since 1993 under ISI protection. UN-designated global terrorist.",
+    "empire": "D-Company: narcotics, arms trafficking, FICN distribution, hawala, real estate, Bollywood financing",
+    "state_protection": "ISI provides safe haven in Karachi; D-Company serves as operational proxy",
+    "film_1_role": "Criminal infrastructure context",
+    "film_2_role": "D-Company-FICN-narco nexus; demonetisation target"
+  },
+  "faction": {
+    "primary": "D-Company",
+    "affiliations": ["ISI coordination", "Khanani network (financial)", "LeT (operational)"],
+    "chain_superior": "isi_protection",
+    "chain_subordinate": ["khanani_altaf", "khanani_javed", "dawood_network_operatives"]
+  },
+  "adversary_model": {
+    "type": "transnational_criminal_terror_chief",
+    "motivation": "power_plus_survival_plus_profit",
+    "risk_profile": {
+      "lambda": 1.3,
+      "description": "Institutionalized protection; takes business risks not personal exposure risks"
+    },
+    "threat_capabilities": ["terror_infrastructure", "financial_networks", "logistics", "state_protection", "transnational_operations"],
+    "intelligence_signature": {
+      "location": "Karachi (Clifton area)",
+      "communications": "Multi-layered; family trusted couriers; minimal electronic exposure",
+      "pattern": "Remains invisible; operates through lieutenants; occasional audio intercepts",
+      "detection_difficulty": 0.9
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["D-Company infrastructure", "FICN network", "Demonetisation impact"]
+  }
+}

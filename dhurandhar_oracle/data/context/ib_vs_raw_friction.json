@@ -1,0 +1,81 @@
+{
+  "context": "ib_vs_raw_friction",
+  "formal_name": "IB vs RAW Institutional Turf War",
+  "description": "The structural tension between India's two primary intelligence services — the Intelligence Bureau (IB, domestic) and the Research and Analysis Wing (RAW, external) — that shapes every decision in the Dhurandhar films. Understanding this friction is essential for the oracle because it explains why Hamza operates with the constraints he does, and why KS Bhullar (RAW) and Ajay Sanyal (IB) are not always pulling in the same direction.",
+  "institutional_profiles": {
+    "ib": {
+      "full_name": "Intelligence Bureau",
+      "reporting_line": "Ministry of Home Affairs (MHA)",
+      "mandate": "Domestic intelligence — internal security, counter-terrorism inside India, surveillance of foreign intelligence operations on Indian soil",
+      "director_title": "Director, Intelligence Bureau (DIB)",
+      "film_representative": "Ajay Sanyal (Sanjay Kapoor) — IB Director; Ajit Doval parallel",
+      "strengths": "Deep penetration of domestic networks; extensive informant base across India; direct line to Home Ministry and PM's Office",
+      "weaknesses": "No formal overseas operational mandate; cannot legally run assets abroad; dependent on RAW for cross-border intelligence",
+      "culture": "Bureaucratic conservatism; consensus-driven; wary of high-risk unilateral operations that could cause diplomatic incidents"
+    },
+    "raw": {
+      "full_name": "Research and Analysis Wing",
+      "reporting_line": "Cabinet Secretariat (directly under PM)",
+      "mandate": "External intelligence — foreign intelligence collection, covert operations abroad, counter-ISI, strategic intelligence",
+      "director_title": "Secretary (Research) — or in common usage, RAW Chief",
+      "film_representative": "KS Bhullar (Gulshan Grover) — RAW Chief; A.S. Dulat parallel",
+      "strengths": "Overseas operational capability; direct PM access; ability to run agents in Pakistan, Bangladesh, Afghanistan without Home Ministry oversight",
+      "weaknesses": "Limited domestic mandate; historically weaker HUMINT in Pakistan compared to IB's informant networks",
+      "culture": "Operationally aggressive (in tradition); protective of assets; resistant to sharing intelligence that would expose sources/methods"
+    }
+  },
+  "friction_points": {
+    "jurisdiction": {
+      "description": "Hamza's Lyari infiltration sits in a grey zone: it is an operation INSIDE Pakistan (RAW's turf) targeting a network that threatens India DOMESTICALLY (IB's turf)",
+      "film_manifestation": "KS Bhullar's 'strategic patience' doctrine (don't burn the asset for short-term gains) conflicts with Ajay Sanyal's urgency (26/11 is coming, we need to act now)",
+      "real_parallel": "The 2008 26/11 attacks were partly attributed to an IB-RAW intelligence-sharing failure — each had partial information that, if combined, might have enabled a warning"
+    },
+    "asset_ownership": {
+      "description": "When Hamza (an IB-run operative) develops intelligence that is cross-border in nature, RAW claims operational primacy. IB resists because Hamza is their asset.",
+      "film_tension": "Bhullar wants Hamza to stay deep and gather long-term strategic intelligence on ISI's Pakistan-based networks. Sanyal wants to use the intelligence immediately to prevent the next attack.",
+      "real_parallel": "A.S. Dulat's 'The Spy Chronicles' explicitly describes this tension — RAW's long-game approach vs IB's immediate threat-mitigation focus"
+    },
+    "information_hoarding": {
+      "description": "Both agencies historically withheld intelligence from each other to protect sources and maintain institutional leverage",
+      "film_manifestation": "Mohammed Aalam's mole suspicion — is the information leak coming from IB's chain or RAW's chain? Neither agency is willing to expose its own potential compromise to the other.",
+      "real_parallel": "Multiple post-mortem reports on 26/11 (including the Ram Pradhan Committee) cited poor intelligence sharing between IB, RAW, and state police as a structural failure"
+    },
+    "operational_philosophy": {
+      "ib_approach": "Hamza should be used to build a comprehensive network map of ISI's Karachi infrastructure — long-term strategic asset",
+      "raw_approach": "Extract Hamza before he is burned; use the intelligence to run discrete operations; don't risk losing the source",
+      "conflict": "In Film 1, both approaches are partially right and partially wrong — Hamza stays too long (nearly burned) but the intelligence proves decisive"
+    },
+    "political_masters": {
+      "ib": "Home Ministry → typically controlled by different political faction within coalition governments (e.g., 2001-2004: L.K. Advani as Home Minister)",
+      "raw": "PM's office — direct PM oversight means RAW's priorities align with PM's foreign policy",
+      "film_relevance": "Film 2's Naya Bharat mandate represents a PM-level decision to expand IB's mandate beyond domestic boundaries — functionally resolving the turf war by giving Sanyal/IB authority over the cross-border operation"
+    }
+  },
+  "historical_failures_attributed_to_friction": [
+    {
+      "event": "IC-814 hijacking (December 1999)",
+      "friction_point": "IB had intelligence on Masood Azhar's network; RAW had intelligence on the hijack planning. Neither shared comprehensively with the other or with aviation security.",
+      "outcome": "Hijacking succeeded; three terrorists (including Masood Azhar) released"
+    },
+    {
+      "event": "2001 Parliament attack (December 2001)",
+      "friction_point": "IB-RAW intelligence gap on JeM-LeT coordination; state police not in the loop",
+      "outcome": "Attack partially succeeded; 9 security personnel killed"
+    },
+    {
+      "event": "26/11 Mumbai attacks (November 2008)",
+      "friction_point": "IB had FICN/drug network intelligence; RAW had some Pakistan-side intelligence on LeT's maritime planning; neither had the full picture; state ATS was running separate investigation",
+      "outcome": "166 killed; worst single terrorist attack on Indian soil"
+    }
+  ],
+  "film_resolution": {
+    "film_1": "The friction is unresolved — Bhullar's patience doctrine wins; Hamza stays; 26/11 happens anyway",
+    "film_2": "Ajay Sanyal's Naya Bharat mandate functionally supersedes the friction — IB leads the integrated operation with RAW in a support role; the institutional lesson of 26/11 has been internalised",
+    "real_parallel": "Post-2014, Ajit Doval as NSA created a new structure where the NSA-PMO axis cut through the IB-RAW turf war — Doval had been IB Director and understood both institutions. The National Intelligence Grid (NATGRID) and Multi-Agency Centre (MAC) were partly designed to force information-sharing."
+  },
+  "oracle_implications": {
+    "hamza_queries": "When the oracle analyses what Hamza 'could have done faster,' the IB-RAW friction is a structural bottleneck — not just personal decisions but institutional constraints. CPM analysis should weight IB-RAW approval cycles as task dependencies.",
+    "rizwan_queries": "Rizwan operates in the Film 2 context where the friction is partially resolved. His operational freedom is greater — but the oracle should model residual RAW resistance to IB-led cross-border operations as a background risk.",
+    "belief_node": "The HMM mole detection should consider whether a leak is institutional (IB-RAW channel) rather than individual — the Mohammed Aalam suspicion may be a false positive masking an institutional leak."
+  }
+}

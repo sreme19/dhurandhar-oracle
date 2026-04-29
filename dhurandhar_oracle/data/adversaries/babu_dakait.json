@@ -1,0 +1,31 @@
+{
+  "actor": "babu_dakait",
+  "real_name": "Mohammad Daddal (Rehman Dakait's father — 'Babu Dakait' in film)",
+  "real_life_notes": "Rehman Dakait's father, a Karachi underworld figure himself — Rehman grew up inside a criminal household. The film names him 'Babu Dakait' and depicts the intra-family power struggle where Rehman consolidates control, with a wedding-attack sequence dramatising the real power dynamics. Rehman reportedly committed his first killings at around 13 and eventually presided over the PAC after displacing his father's generation.",
+  "film_role": "Film 1 Act 1 — represents the old-guard Lyari criminal order that Rehman displaces. The wedding-attack-and-stone-killing scene is a dramatised version of the real generational power transfer in Lyari.",
+  "objective": "Maintain old-guard criminal authority; resist Rehman's consolidation",
+  "capability": 5.0,
+  "trigger_threshold": 4.0,
+  "information_set": [
+    "lyari_old_guard_network",
+    "family_criminal_contacts"
+  ],
+  "observable_actions": [
+    "assert_authority",
+    "negotiate_with_rivals",
+    "confront_rehman"
+  ],
+  "hidden_states": [
+    "dominant",
+    "challenged",
+    "displaced"
+  ],
+  "real_notes": "Rehman's real father was named Mohammad Daddal. The 'killing his own mother' implication in the film tracks real reportage about Rehman's extreme consolidation methods, though officially undocumented.",
+  "prospect_params": {
+    "lam": 2.8,
+    "gamma": 0.65,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

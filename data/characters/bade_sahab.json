@@ -1,0 +1,49 @@
+{
+  "id": "bade_sahab",
+  "name": "Bade Sahab",
+  "portrayed_by": "Diljit Dosanjh",
+  "real_life_parallel": "Unnamed — General Ashfaq Kayani (COAS 2007-2013; ISI DG 2004-2007)",
+  "side": "pakistani",
+  "capability_score": 9.8,
+  "biography": {
+    "birth_year": 1952,
+    "death_year": null,
+    "origin": "Pakistan Army (Kayani clan)",
+    "background": "'Bade Sahab' — unnamed institutional ceiling of ISI. Represents Pakistan Army Chief/ISI DG level authority. Real-world parallel General Ashfaq Kayani: ISI Director General 2004-2007, Chief of Army Staff 2007-2013.",
+    "institutional_role": "ISI institutional ceiling; authorizes Major Iqbal's operations; conflict resolution between ISI-criminal-terror network partners",
+    "policy_authority": "Strategic terror policy; Pakistan's 'deep state' personified",
+    "film_1_role": "Ultimate institutional adversary; Major Iqbal's handler",
+    "film_2_role": "Continued institutional authority"
+  },
+  "faction": {
+    "primary": "Pakistan Army / ISI (institutional apex)",
+    "affiliations": ["Military establishment", "Civilian government oversight"],
+    "chain_superior": null,
+    "chain_subordinate": "major_iqbal"
+  },
+  "adversary_model": {
+    "type": "institutional_apex",
+    "motivation": "state_policy_plus_institutional_preservation",
+    "risk_profile": {
+      "lambda": 1.2,
+      "description": "Institutional risk-minimization; absolute deniability; delegates all operational risk"
+    },
+    "threat_capabilities": ["strategic_authorization", "resource_allocation", "conflict_resolution", "institutional_protection", "diplomatic_immunity"],
+    "intelligence_signature": {
+      "visibility": "Near-zero direct exposure; institutional footprint only",
+      "pattern": "Policy correlation with operations; no direct communication",
+      "detection_difficulty": 0.95
+    }
+  },
+  "stackelberg_position": {
+    "role": "Leader in leader-follower hierarchy",
+    "commitment_value": "Sets policy framework that Major Iqbal executes; strategic advantage through first-mover commitment",
+    "operational_implication": "Indian response must anticipate Bade Sahab-level strategic adjustments"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Major Iqbal reporting", "Institutional authority demonstration", "Policy authorization"]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "actor": "yasir_arafat_film",
+  "film_actor": "Abhay Arora",
+  "real_name": "Film character named after a militant — not the Palestinian leader",
+  "naming_note": "The character name 'Yasir Arafat' in the film does NOT refer to Yasser Arafat (1929-2004), Chairman of the PLO/Palestinian Authority. The film's naming is a deliberate reference to Pakistani jihadist culture: naming sons after Palestinian and pan-Islamic figures was common in militant circles in Pakistan through the 1980s-2000s. 'Yasir Arafat' as a Pakistani name appears in multiple LeT and JeM operative lists. The film uses this to signal the character's jihadist ideological roots without making him a specific real-world individual.",
+  "real_life_notes": "Composite character — represents the middle-tier Pakistani militant who has been ideologically formed by the Afghan jihad era (1980s), indoctrinated through Muridke-style madrassa pipelines, and deployed operationally by LeT/JeM into the ISI's Karachi infrastructure. This archetype is heavily documented: fighters who are not household-name leaders but constitute the operational backbone of Pakistani militant groups.",
+  "film_role": "Film 1/2 — ISI-linked militant operative; likely connected to either the LeT network (Azam Cheema/Bhuttovi chain) or the Karachi-based JeM infrastructure (Zahoor Mistry/Ibrahim Athar chain). His role is mid-level operational: couriers, safe house management, logistics for militant movement — the unglamorous connective tissue that makes terror operations possible.",
+  "objective": "Execute ISI-assigned operational tasks; maintain militant safe house network; facilitate movement of operatives and materiel; avoid Indian and Western surveillance",
+  "capability": 5.0,
+  "trigger_threshold": 3.5,
+  "information_set": [
+    "karachi_safe_house_network",
+    "militant_movement_routes",
+    "isi_tasking_chain",
+    "let_jeM_operational_overlap"
+  ],
+  "observable_actions": [
+    "manage_safe_house",
+    "courier_operational_materiel",
+    "facilitate_operative_transit",
+    "conduct_surveillance_on_target",
+    "go_dark_after_operation"
+  ],
+  "hidden_states": [
+    "active_tasking",
+    "in_transit",
+    "lying_low",
+    "under_indian_surveillance"
+  ],
+  "ideological_formation": {
+    "naming_tradition": "Named after pan-Islamic figure — common in Pakistani jihadist families from 1980s-90s",
+    "indoctrination_pathway": "Madrassa → LeT/JeM Muridke-style camp → ISI operational deployment",
+    "motivation": "Mix of religious ideology, financial incentive, and organisational loyalty — not a true believer martyr (that's Kasab's archetype); rather a careerist operative"
+  },
+  "prospect_params": {
+    "lam": 2.8,
+    "gamma": 0.68,
+    "alpha": 0.85,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

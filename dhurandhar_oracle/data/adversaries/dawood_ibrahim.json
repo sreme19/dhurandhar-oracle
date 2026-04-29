@@ -1,0 +1,59 @@
+{
+  "actor": "dawood_ibrahim",
+  "film_actor": "Danish Iqbal",
+  "real_name": "Dawood Ibrahim Kaskar — real name kept in film",
+  "real_life_notes": "Born 1955, Dongri, Mumbai. India's most wanted criminal and global terrorist. Fled India after the 1993 Bombay bombings (which he masterminded) and has lived in Karachi under ISI protection ever since. His D-Company operates as the world's most sophisticated criminal-terror hybrid: drug trafficking (Afghan heroin), gold smuggling, hawala money laundering, contract killing, and terror financing — all under ISI patronage.",
+  "film_role": "Film 2 — D-Company is the financial infrastructure backbone that connects the Khanani hawala network to ISI terror financing. Dawood's network is the pre-existing pipeline through which FICN, drug money, and arms move. Film 2's demonetisation arc specifically targets the D-Company/Khanani FICN stockpile that becomes worthless overnight on 8 November 2016.",
+  "objective": "Maintain Karachi base and ISI protection; run D-Company's global criminal empire; ensure India never successfully extradites him; keep India-Pakistan diplomatic tension alive as his protection shield",
+  "capability": 9.5,
+  "trigger_threshold": 8.0,
+  "information_set": [
+    "global_d_company_network",
+    "isi_deep_protection",
+    "india_extradition_attempts",
+    "karachi_criminal_landscape",
+    "khanani_hawala_interface",
+    "tiger_memon_whereabouts"
+  ],
+  "observable_actions": [
+    "activate_d_company_financial_channel",
+    "coordinate_with_major_iqbal",
+    "deploy_ficn_stockpile",
+    "relocate_to_safe_house",
+    "use_diplomatic_cover",
+    "counter_indian_surveillance",
+    "activate_tiger_memon"
+  ],
+  "hidden_states": [
+    "karachi_operations",
+    "dubai_financial_routing",
+    "under_surveillance",
+    "relocating"
+  ],
+  "d_company_network": {
+    "description": "D-Company is the connective tissue between the criminal, terror, and financial layers of the adversary network",
+    "key_connections": {
+      "major_iqbal": "ISI handler — D-Company operates under ISI protection in exchange for terror logistics",
+      "khanani_altaf": "Hawala partner — KKI routes D-Company money globally",
+      "tiger_memon": "1993 Bombay bombings co-mastermind; brother-in-law by marriage into Dawood's network",
+      "azam_cheema": "LeT link — D-Company provides logistics support to LeT operations",
+      "zahoor_mistry": "JeM link — IC-814 network overlaps with D-Company's Karachi infrastructure"
+    }
+  },
+  "1993_bombings_context": {
+    "event": "12 March 1993, serial bomb blasts across Bombay, 257 killed",
+    "dawood_role": "Mastermind — used D-Company logistics network to smuggle RDX into India via sea",
+    "pakistan_complicity": "ISI provided the RDX and planning support. The 1993 bombings established the template for every subsequent ISI-criminal-terror collaboration the film depicts",
+    "film_relevance": "Film 2 frames the 1993 attacks as the original crime that established the D-Company-ISI nexus Hamza is ultimately dismantling 23 years later"
+  },
+  "demonetisation_impact": "D-Company's FICN operation was one of the primary targets of the 8 November 2016 demonetisation. High-denomination counterfeit notes became worthless overnight — estimated to have disrupted hundreds of crores worth of D-Company's FICN stockpile.",
+  "real_status": "As of 2024, officially living in Karachi under ISI protection. Pakistan denies his presence. India has listed him in every extradition request. US Treasury OFAC-designated. Interpol Red Notice. UN Security Council-listed under Resolution 1267.",
+  "prospect_params": {
+    "lam": 1.3,
+    "gamma": 0.52,
+    "alpha": 0.93,
+    "beta": 0.87,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "λ=1.3 — extremely low loss aversion for a criminal of this scale. Dawood has been in exile since 1993 — over 30 years — and has built an entire identity around asymmetric risk-taking. He treats territorial loss as the cost of doing business and institutional continuity as the only goal."
+}

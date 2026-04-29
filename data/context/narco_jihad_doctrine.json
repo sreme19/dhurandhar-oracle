@@ -1,0 +1,63 @@
+{
+  "id": "narco_jihad_doctrine",
+  "name": "Narco-Jihad Operational Doctrine",
+  "alternate_names": ["Punjab Narco-Terror Nexus", "Afghan-Pakistan-India Drug Corridor"],
+  "type": "strategic_doctrine",
+  "description": "Systematic use of narcotics trafficking to finance, facilitate, and destabilize target regions — specifically combining Afghan heroin production with Pakistani ISI coordination and Indian Punjab distribution networks to fund terrorist operations and degrade social fabric.",
+  "origins": {
+    "geographic": "Afghanistan (production) → Pakistan (logistics/ISI coordination) → India (distribution/destabilization)",
+    "historical_roots": "Evolution from 1980s Afghan mujahideen drug trade through 1990s Taliban opium taxation to post-9/11 systematic ISI weaponization",
+    "ideological_framing": "Jihad through economic warfare — destroying enemy society through addiction while funding armed operations"
+  },
+  "operational_structure": {
+    "upstream": {
+      "location": "Afghanistan (Helmand, Kandahar provinces)",
+      "actors": ["Taliban protection/taxation", "Afghan drug processors", "Border crossing facilitators"],
+      "commodity": "Raw opium → processed heroin"
+    },
+    "midstream": {
+      "location": "Pakistan (FATA, Balochistan, Karachi)",
+      "actors": ["ISI S-Wing coordination", "D-Company logistics", "Khanani network financial clearing", "Lyari criminal networks (PAC/Peoples Aman Committee)"],
+      "functions": ["Refinement", "Packaging", "Financial laundering", "Cross-border coordination", "Weapons procurement exchange"]
+    },
+    "downstream": {
+      "location": "Indian Punjab, Delhi, Mumbai",
+      "actors": ["Khalistani militant fronts (Happy PhD network)", "Local distributors (Gurbaaz Singh tier)", "Corrupt political protection (MLA tier)"],
+      "destination": "End-user sales fund weapons purchases, militant recruitment, operational infrastructure"
+    }
+  },
+  "financial_flow": {
+    "heroin_value_multiplication": "10-20x from Afghan border to Indian retail",
+    "revenue_allocation": {
+      "operational_funding": 0.35,
+      "handler_network": 0.25,
+      "corruption_protection": 0.20,
+      "reinvestment": 0.15,
+      "personal_enrichment": 0.05
+    },
+    "laundering_mechanisms": ["Khanani network hawala", "D-Company front companies", "Real estate in Pakistan/UAE", "FICN (Fake Indian Currency Notes) recycling"]
+  },
+  "timeline_key_events": [
+    {"year": 1980, "event": "Soviet invasion creates mujahideen-drug nexus", "significance": "Origin of institutionalized drug-terror linkage"},
+    {"year": 1994, "event": "Taliban emergence — initial opium suppression then systematic taxation", "significance": "Organized state-level drug revenue extraction"},
+    {"year": 2001, "event": "9/11 aftermath — trafficking routes through Pakistan institutionalize", "significance": "ISI gains systematic control over logistics"},
+    {"year": 2008, "event": "Punjab opioid crisis accelerates", "significance": "Indian target society destabilization measurable"},
+    {"year": 2016, "event": "Demonetisation (8 Nov) — financial disruption to FICN/narco networks", "significance": "Kinetic countermeasure; Khanani Javed dies 26 days later"}
+  ],
+  "intelligence_indicators": [
+    "Cross-border movement of agricultural equipment (concealment)",
+    "Seasonal labor migration patterns with anomalous routes",
+    "Sikh diaspora financial flows exceeding community norms",
+    "Simultaneous drug seizures and weapons cache discoveries",
+    "Khalistani rhetoric revival correlated with harvest seasons"
+  ],
+  "countermeasures_documented": {
+    "indian": ["Border fencing enhancement", "Punjab Police narcotics bureau activation", "Demonetisation (financial strike)", "ED/IB hawala tracking"],
+    "effectiveness": "Partial — disrupted but not eliminated; doctrine adapts through alternative channels (cryptocurrency, gold, trade-based laundering)"
+  },
+  "film_relevance": {
+    "dhurandhar_2_arc": "Central operational threat — Rizwan Shah's mission includes penetrating this network",
+    "key_characters": ["happy_phd", "amarjit_singh_brar", "faizal", "gurbaaz_singh_pinda"],
+    "climax_connection": "Demonetisation financial strike (Part 2 climax) directly targets this doctrine's financial infrastructure"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "narendra_modi",
+  "name": "Narendra Modi",
+  "portrayed_by": "Fictionalized — likely unnamed PM archetype",
+  "real_life_parallel": "Prime Minister of India (2014-present); central to all retaliatory decisions 2016-2025",
+  "side": "indian",
+  "capability_score": 8.5,
+  "biography": {
+    "birth_year": 1950,
+    "origin": "Gujarat, India",
+    "background": "Prime Minister of India throughout 2016-2025 period. Central decision-maker for Uri surgical strikes (2016), Balakot airstrike (2019), Operation Sindoor (2025). Represents 'Modi-Doval security doctrine' shift from strategic restraint to punitive deterrence.",
+    "doctrine": "Punitive deterrence; 'new India' muscular response; political ownership of military retaliation",
+    "film_relevance": "Part 3: Uri, Balakot, Article 370. Part 4: Galwan, Sindoor."
+  },
+  "faction": {
+    "primary": "Government of India (Prime Minister)",
+    "key_colleagues": ["amit_shah", "ajit_doval", "rajnath_singh"]
+  },
+  "key_decisions": {
+    "surgical_strikes_2016": "Authorized cross-LoC Para SF strikes post-Uri",
+    "balakot_2019": "Authorized IAF strike deep inside Pakistan post-Pulwama",
+    "article_370_2019": "Revoked J&K special status; bifurcated into UTs",
+    "operation_sindoor_2025": "Authorized missile/air strikes on 9 terror sites across Pakistan/PoK post-Pahalgam"
+  },
+  "oracle_note": "Non-playable as operative (political leadership). Appears as authorization node in strategic decision trees."
+}

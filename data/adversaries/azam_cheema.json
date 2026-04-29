@@ -1,0 +1,44 @@
+{
+  "id": "azam_cheema",
+  "name": "Azam Cheema",
+  "portrayed_by": "Vinod Tharani",
+  "real_life_parallel": "Real Azam Cheema — Lashkar-e-Taiba intelligence chief; 26/11 planner; never prosecuted in Pakistan",
+  "side": "pakistani",
+  "capability_score": 7.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan (LeT/Muridke-based)",
+    "background": "Lashkar-e-Taiba intelligence chief and operational planner. Key figure in 26/11 Mumbai attacks planning. Despite being named in Indian and international investigations, never prosecuted in Pakistan.",
+    "operational_role": "Intelligence coordination; target selection; logistics planning",
+    "impunity": "Continues to operate in Pakistan despite 26/11 attribution; reflects state protection",
+    "film_1_role": "26/11 planning adversary",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Lashkar-e-Taiba (LeT)",
+    "affiliations": ["ISI coordination (Major Iqbal)", "Sajid Mir operational team"],
+    "chain_superior": "major_iqbal (ISI handler)",
+    "chain_subordinate": "attack_operatives"
+  },
+  "adversary_model": {
+    "type": "terror_intelligence_chief",
+    "motivation": "jihad_plus_state_patronage",
+    "risk_profile": {
+      "lambda": 1.5,
+      "description": "Operates with impunity in Pakistan; risk is operational not legal"
+    },
+    "threat_capabilities": ["terror_intelligence", "target_analysis", "logistics_planning", "operational_security"],
+    "intelligence_signature": {
+      "location": "Muridke (LeT HQ)",
+      "pattern": "Coordinates with ISI S-Wing; planning precedes major attacks by months",
+      "detection_difficulty": 0.7
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["26/11 planning", "LeT-ISI coordination"]
+  }
+}

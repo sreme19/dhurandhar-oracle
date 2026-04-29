@@ -1,0 +1,22 @@
+{
+  "id": "adil_ahmad_dar",
+  "name": "Adil Ahmad Dar",
+  "portrayed_by": "Fictionalized or real; suicide bomber archetype",
+  "real_life_parallel": "Pulwama suicide bomber; 22-year-old Kashmiri; killed 40 CRPF",
+  "side": "pakistani",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": 1997,
+    "death_year": 2019,
+    "origin": "Pulwama, J&K, India",
+    "background": "22-year-old Kashmiri who carried out suicide bombing of CRPF convoy on Jammu-Srinagar highway February 14, 2019. R explosives-laden SUV into bus; 40 personnel killed. JeM claimed responsibility.",
+    "profile": "Former mason; joined militancy 2018; video before attack showed weapons; 'taking revenge for oppression'",
+    "vehicle": "Mahindra Scorpio packed with 300kg explosives",
+    "impact": "Deadliest attack on Indian forces in Kashmir in decades; triggered Balakot response",
+    "film_relevance": "Part 3: Pulwama attack; Balakot catalyst; martyrdom video"
+  },
+  "faction": {
+    "primary": "Jaish-e-Mohammed (JeM)",
+    "handler": "jem_operatives"
+  }
+}

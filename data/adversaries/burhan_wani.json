@@ -1,0 +1,22 @@
+{
+  "id": "burhan_wani",
+  "name": "Burhan Muzaffar Wani",
+  "portrayed_by": "Likely retain real name; poster boy militant archetype",
+  "real_life_parallel": "Hizbul Mujahideen commander; killed July 2016; triggered Kashmir unrest",
+  "side": "pakistani",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": 1994,
+    "death_year": 2016,
+    "origin": "Tral, J&K, India",
+    "background": "Hizbul Mujahideen commander who became social media poster boy for new generation militancy in Kashmir. Avoided direct violence for years, building online following. Killed in encounter July 8, 2016.",
+    "social_media": "Facebook/YouTube videos without mask; viral following; 'new militancy' symbol",
+    "death_impact": "Killing triggered months of unrest, stone-pelting, curfews, pellet injuries; 100+ civilian deaths",
+    "successor": "Zakir Musa (killed 2019); Riyaz Naikoo (killed 2020)",
+    "film_relevance": "Part 3 opening: Radicalization backdrop; youth militant recruitment; Zakir Musa arc"
+  },
+  "faction": {
+    "primary": "Hizbul Mujahideen",
+    "affiliation": "Pakistan-based handlers"
+  }
+}

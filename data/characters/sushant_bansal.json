@@ -1,0 +1,41 @@
+{
+  "id": "sushant_bansal",
+  "name": "Sushant Bansal",
+  "portrayed_by": "Manav Gohil",
+  "real_life_parallel": "Fictional composite — Deputy IB Director archetype; operational support specialist",
+  "side": "indian",
+  "capability_score": 6.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India",
+    "background": "Deputy Director, Intelligence Bureau. Film 2 character supporting Sanyal's expanded mandate. Operational logistics, coordination, and secondary handler functions.",
+    "doctrine": "Administrative excellence; operational support; institutional continuity",
+    "film_1_role": null,
+    "film_2_role": "Deputy to Sanyal; Rizwan Shah operational coordination; demonetisation logistics"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 1.0,
+      "trust_capital": 0.70,
+      "intelligence_depth": 0.60,
+      "network_strength": 0.65,
+      "exposure_risk": 0.15
+    },
+    "handler_style": "supportive",
+    "strategic_orientation": "operational_execution",
+    "institutional_influence": "moderate"
+  },
+  "faction": {
+    "primary": "Intelligence Bureau (IB)",
+    "reporting": "ajay_sanyal",
+    "subordinates": ["rizwan_shah (coordination line)"],
+    "counterparts": ["dgp_prashant_kumar"]
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Rizwan tasking support", "Demonetisation coordination", "Punjab arc logistics"]
+  }
+}

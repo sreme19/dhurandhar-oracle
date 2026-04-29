@@ -1,0 +1,46 @@
+{
+  "id": "ajay_sanyal",
+  "name": "Ajay Sanyal",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "IB Director (Intelligence Bureau) — Hamza's strategic handler",
+  "films": [1, 2],
+  "cover_identity": null,
+  "real_life_inspiration": "Ajit Doval — India's current National Security Advisor, former IB Director, and the so-called 'Godfather of Indian covert operations'. Spent years undercover in Pakistan himself in the 1980s–90s.",
+  "inspiration_notes": {
+    "ajit_doval_parallel": "Doval was IB Director from 2004-2005 before becoming NSA under Modi (2014–present). Known for orchestrating real covert ops including the 1988 Maldives counter-coup. The film uses 'IB Director' rather than NSA to place the story in the 2001-2008 UPA era.",
+    "godfather_of_covert_ops": "Doval is credited with personally supervising India's Karachi network in the 1990s — the film externalises this as Sanyal actively running Hamza.",
+    "era_note": "In the film's timeline (triggered by the 2001 Parliament attack), Sanyal as IB Director is consistent with the UPA-era institutional structure. Part 2's 'Naya Bharat' framing implies Sanyal may gain more power post-2014."
+  },
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 8.5,
+      "intelligence_depth": 9.0,
+      "network_strength": 9.5,
+      "exposure_risk": 0.5
+    },
+    "film1_act3": {
+      "cover_integrity": 10.0,
+      "trust_capital": 8.5,
+      "intelligence_depth": 9.5,
+      "network_strength": 9.0,
+      "exposure_risk": 1.5
+    },
+    "film2_act1": {
+      "cover_integrity": 10.0,
+      "trust_capital": 9.0,
+      "intelligence_depth": 9.8,
+      "network_strength": 9.5,
+      "exposure_risk": 0.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "authorise_operation_dhurandhar"},
+    {"film": 1, "act": 1, "action": "deploy_hamza_via_torkham"},
+    {"film": 1, "act": 2, "action": "issue_standing_orders"},
+    {"film": 1, "act": 3, "action": "approve_exfil"},
+    {"film": 2, "act": 1, "action": "authorise_phase_2_revenge_arc"}
+  ],
+  "adversary_model": null
+}

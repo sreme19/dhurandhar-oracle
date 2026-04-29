@@ -1,0 +1,95 @@
+{
+  "network": "ficn_network",
+  "formal_name": "Fake Indian Currency Notes (FICN) Network",
+  "description": "ISI's counterfeit Indian currency operation — a financial weapon designed to simultaneously fund militant operations inside India and destabilise the Indian economy through inflation and currency trust erosion.",
+  "classification": "Hybrid financial weapon: both operational cash for terrorists AND strategic economic warfare instrument",
+  "history": {
+    "origin": "1990s — ISI began FICN operations after the 1993 Bombay bombings established D-Company as a willing logistics partner. Early FICN was printed in Pakistan using offset presses.",
+    "scale_up": "2000s — ISI upgraded to intaglio printing (the same technique used for real currency), producing near-undetectable high-denomination notes. The 2009-2016 period saw peak FICN production.",
+    "printing_locations": "Primarily Karachi (D-Company facilities under ISI oversight); secondary printing in Nepal (documented by Indian intelligence); tertiary sources in Bangladesh and UAE",
+    "denominations": {
+      "primary": "₹1000 and ₹500 notes (highest denomination before 2016 demonetisation)",
+      "logic": "High-denomination notes maximise economic disruption per note printed and are harder to check in bulk cash transactions",
+      "post_demonetisation": "ISI attempted to pivot to ₹2000 notes (introduced 8 Nov 2016) but the security features were significantly upgraded, making forgery substantially harder"
+    }
+  },
+  "production_chain": {
+    "printing": "ISI intelligence infrastructure in Karachi; exact locations classified but RBI forensic analysis of seized FICN traces paper quality to Pakistani state printing",
+    "quality_control": "Near-intaglio quality since 2005; detectable only by UV + magnetic ink scanners, not naked eye",
+    "packaging": "Bundled in standard RBI packaging (∓perfect forgery of official bank-note packets); shipped as legitimate trade cargo"
+  },
+  "distribution_network": {
+    "tier_1_international": {
+      "actor": "D-Company (Dawood Ibrahim Kaskar)",
+      "mechanism": "D-Company's Karachi logistics infrastructure receives FICN from ISI printing and packages for international distribution",
+      "routes": [
+        "Karachi → Dubai → India (via hawala networks and Gulf NRI remittances)",
+        "Karachi → Nepal → Indian border (Nepal has open border with India)",
+        "Karachi → Bangladesh → Northeast India corridor"
+      ]
+    },
+    "tier_2_hawala": {
+      "actor": "Khanani-Kalia International (KKI)",
+      "mechanism": "KKI provides the hawala conversion layer — FICN enters India alongside legitimate hawala remittances, mixed in to avoid detection",
+      "kki_advantage": "KKI's legitimate money transfer business provides cover — FICN bundled with real cash movements is harder to detect at the hawala delivery point"
+    },
+    "tier_3_india_entry": {
+      "routes": {
+        "west_coast": "Sea route — small dhows from Karachi/Makran coast landing in Gujarat (same route as 1993 RDX smuggling)",
+        "north_punjab": "Attari-Wagah and cattle-smuggling border crossings (also the narco-jihad drug route)",
+        "northeast": "Bangladesh border — Tripura, Mizoram, Assam (more porous, easier transit)",
+        "nepal": "Open Nepal-India border — no customs checks; Nepal is the easiest FICN entry corridor"
+      },
+      "ground_distributors": "Hawala operators in border towns; street-level distributors inject FICN into local cash economy"
+    },
+    "tier_4_circulation": {
+      "mechanism": "FICN circulates through cash-intensive informal economy: vegetable markets, small traders, rural areas with low banking penetration",
+      "impact": "Each FICN note in circulation removes an equivalent real note's purchasing power from the legitimate economy — cumulative effect is inflationary pressure and currency trust erosion"
+    }
+  },
+  "scale_estimates": {
+    "annual_injection": "Estimates vary: RBI 2013 report cited ₹400-700 crore annually; intelligence estimates suggest higher",
+    "total_stockpile_2016": "Pre-demonetisation FICN stockpile held by D-Company and Khanani networks estimated at ₹2,000-4,000 crore in face value",
+    "demonetisation_wipeout": "On 8 November 2016, all ₹500 and ₹1000 notes were demonetised. FICN notes in those denominations became instantly worthless. FICN holders could not exchange them at banks (scrutiny would expose them). Estimated ₹2,000+ crore in D-Company/KKI FICN holdings were destroyed overnight."
+  },
+  "demonetisation_as_kinetic_strike": {
+    "official_rationale": "Government cited black money elimination, terrorist financing disruption, and digital economy push",
+    "intelligence_rationale": "IB's Ajay Sanyal / Ajit Doval had advocated FICN disruption through currency replacement as early as 2012. The November 2016 timing coincided with Khanani Javed's death (4 December 2016 — 26 days later) and Uzair Baloch's arrest (2016) — suggesting coordinated pressure on the network",
+    "film_framing": "Dhurandhar Film 2 presents demonetisation not as economic policy but as the culmination of Rizwan/Sanyal's multi-year financial intelligence operation — the moment when IB's map of the FICN network was used to design a strike that would render the entire stockpile worthless simultaneously",
+    "strategic_effect": "Beyond the FICN wipeout, demonetisation disrupted the operational cash reserves of every ISI-linked network in India that held large-denomination cash: D-Company dealers, Khalistani fund caches, LeT safe houses, Kashmiri militant funding nodes"
+  },
+  "film_characters_in_network": [
+    {
+      "actor": "dawood_ibrahim",
+      "role": "FICN production and tier-1 international distribution"
+    },
+    {
+      "actor": "khanani_altaf",
+      "role": "Tier-2 hawala conversion and international routing"
+    },
+    {
+      "actor": "khanani_javed",
+      "role": "Operational FICN distribution in Karachi; death 4 Dec 2016"
+    },
+    {
+      "actor": "rehman_dakait",
+      "role": "Film 1 — ground distribution in Lyari; PAC uses FICN as operational cash"
+    },
+    {
+      "actor": "major_iqbal",
+      "role": "ISI handler overseeing FICN as strategic weapon; Film 2 end boss"
+    },
+    {
+      "actor": "uzair_baloch",
+      "role": "Post-Rehman Lyari FICN distribution; arrested 2016"
+    }
+  ],
+  "rbi_countermeasures": [
+    "UV detection mandates at all bank teller stations",
+    "Magnetic ink authentication",
+    "Security thread upgrades in 2005-series notes",
+    "Star series replacement notes for detected FICN",
+    "Coordination with IB on FICN seizure forensics",
+    "2016 demonetisation — the definitive countermeasure"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "actor": "shakeel_commando",
+  "film_actor": "Vikram Bhambri",
+  "real_name": "Shakeel alias 'Commando' — likely real Lyari operative",
+  "real_life_notes": "Shakeel 'Commando' is a name associated with real Lyari gang operatives — the Lyari criminal ecosystem produced many fighters with military-style nicknames who served as enforcers for Rehman Dakait's gang. The 'Commando' sobriquet indicates a specialised armed enforcer role distinct from the gang's political or financial operators. Pakistani press records reference several Lyari individuals by this alias in the context of targeted killings and gang warfare. The character likely draws on multiple real Lyari shooters who served the Dakait network.",
+  "film_role": "Film 1 — street-level enforcer in Rehman Dakait's Lyari Gang. Shakeel Commando is the operational muscle: he executes the gang's violence on the ground, coordinates with lower-tier operatives, and acts as the bridge between Rehman's political-criminal leadership and the rank-and-file street fighters. His presence in the Lyari sequences grounds the gang's violence in day-to-day brutality rather than strategic abstraction.",
+  "objective": "Execute gang violence on Rehman's orders; maintain street-level Lyari control; suppress rival gang incursions; ensure no Dakait territory is ceded to Pappu or Baba Ladla",
+  "capability": 5.5,
+  "trigger_threshold": 3.0,
+  "information_set": [
+    "lyari_street_network",
+    "dakait_enforcement_chain",
+    "rival_gang_movements",
+    "police_contact_schedules"
+  ],
+  "observable_actions": [
+    "execute_targeted_killing",
+    "intimidate_witnesses",
+    "enforce_territory_boundary",
+    "coordinate_street_fighters",
+    "go_underground_after_operation"
+  ],
+  "hidden_states": [
+    "active_enforcement",
+    "lying_low",
+    "on_specific_contract",
+    "compromised"
+  ],
+  "lyari_enforcement_context": {
+    "role_in_hierarchy": "Below Rehman and Uzair; above street recruits — middle-tier operational commander",
+    "specialisation": "Targeted killings, intimidation operations, territorial enforcement",
+    "post_rehman_status": "After Rehman's 2009 killing, figures like Shakeel would have been absorbed into Uzair Baloch's reorganised gang or gone freelance as contract shooters"
+  },
+  "prospect_params": {
+    "lam": 3.2,
+    "gamma": 0.70,
+    "alpha": 0.82,
+    "beta": 0.90,
+    "ref": 0.0
+  },
+  "prospect_note": "High λ (loss aversion) — street enforcers face immediate physical risk and react viscerally to territorial loss or gang hierarchy threat. High γ (probability weighting) reflects overestimation of small risks (police raids, rival ambushes) common in street-level operators."
+}

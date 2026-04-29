@@ -1,0 +1,44 @@
+{
+  "id": "aquib_ali_zarwari",
+  "name": "Aquib Ali Zarwari",
+  "portrayed_by": "Sanjay Mehndiratta",
+  "real_life_parallel": "Asif Ali Zardari — President of Pakistan 2008-2013, PPP co-chairman, Lyari patronage",
+  "side": "unknown",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": 1955,
+    "death_year": null,
+    "origin": "Sindh, Pakistan (Bhutto family connection)",
+    "background": "President of Pakistan (film timeline parallel to Zardari presidency 2008-2013). Ultimate political patron of Lyari through PPP vote bank and patronage networks. Above Jamali in the political hierarchy; provides institutional cover for Lyari criminal-political complex.",
+    "political_character": "Survivor politician; corruption allegations; maintains PPP-Sindh-Lyari patronage chain",
+    "film_1_role": "Political ceiling for Jamali; institutional context for Pakistan-side operations",
+    "film_2_role": "Continued presidency context"
+  },
+  "faction": {
+    "primary": "Pakistan People's Party (PPP) — national leadership",
+    "affiliations": ["Sindhi political establishment", "Lyari vote bank patronage"],
+    "chain_superior": null,
+    "chain_subordinate": "jameel_jamali"
+  },
+  "adversary_model": {
+    "type": "institutional_ceiling",
+    "motivation": "political_survival_plus_enrichment",
+    "risk_profile": {
+      "lambda": 1.3,
+      "description": "Highly institutional; delegates all operational risk; maintains deniability"
+    },
+    "threat_capabilities": ["institutional_protection", "resource_allocation", "diplomatic_cover", "intelligence_service_influence"],
+    "intelligence_signature": {
+      "communications": "Formal presidential channels; indirect criminal network communication through Jamali",
+      "pattern": "Minimal direct contact with criminal elements; distance maintained for deniability",
+      "detection_difficulty": 0.85
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2],
+    "key_scenes": ["Political protection context", "Jamali reporting line"]
+  },
+  "oracle_note": "Non-playable as query subject (side='unknown', political figure not intelligence operative). Appears as adversary model ceiling and contextual framing."
+}

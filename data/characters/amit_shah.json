@@ -1,0 +1,19 @@
+{
+  "id": "amit_shah",
+  "name": "Amit Shah",
+  "portrayed_by": "Fictionalized — likely unnamed Home Minister archetype",
+  "real_life_parallel": "Home Minister (2019-present); Article 370 abrogation architect",
+  "side": "indian",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": 1964,
+    "origin": "Gujarat, India",
+    "background": "Home Minister of India. Key architect of Article 370 abrogation (August 2019). Oversees internal security, IB, NIA. Political strategist coordinating security policy with Modi.",
+    "domain": "Internal security; intelligence coordination; Kashmir policy",
+    "film_relevance": "Part 3: Article 370 execution. Part 4: Internal security during Sindoor."
+  },
+  "faction": {
+    "primary": "Government of India (Home Ministry)",
+    "key_relationships": ["narendra_modi", "ajit_doval", "tapan_kumar_deka"]
+  }
+}

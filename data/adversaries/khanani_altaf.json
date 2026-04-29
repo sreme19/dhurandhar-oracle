@@ -1,0 +1,50 @@
+{
+  "id": "khanani_altaf",
+  "name": "Altaf Khanani",
+  "portrayed_by": "Mushtaq Naika",
+  "real_life_parallel": "Real Altaf Khanani — co-founder Khanani & Kalia International; US-sanctioned money launderer",
+  "side": "pakistani",
+  "capability_score": 8.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan (Karachi-based)",
+    "background": "Co-founder of Khanani & Kalia International (KKI), a global money laundering and hawala operation. Designated 'significant transnational criminal organization' by US Treasury. Arrested 2015, extradited, released 2020.",
+    "criminal_enterprise": "Global hawala network; FICN (Fake Indian Currency Notes) distribution; narco-financing; terror funding facilitation",
+    "network_scope": "Pakistan, UAE, Africa, South Asia — billions in annual flows",
+    "film_1_role": null,
+    "film_2_role": "Financial network adversary; demonetisation target"
+  },
+  "faction": {
+    "primary": "Khanani & Kalia International (KKI)",
+    "affiliations": ["D-Company coordination", "ISI financial operations", "FICN network"],
+    "chain_superior": null,
+    "chain_subordinate": "khanani_javed (brother/operational partner)"
+  },
+  "adversary_model": {
+    "type": "financial_network_chief",
+    "motivation": "profit_plus_state_coordination",
+    "risk_profile": {
+      "lambda": 1.6,
+      "description": "Business risk-tolerant; legal risk managed through political protection"
+    },
+    "threat_capabilities": ["global_hawala", "ficn_distribution", "terror_financing", "money_laundering", "sanctions_evasion"],
+    "intelligence_signature": {
+      "communications": "Financial coding; trade-based laundering; minimal electronic finance trails",
+      "pattern": "Cross-border cash movement correlates with terror operations; real estate investments in Pakistan/UAE",
+      "detection_difficulty": 0.75
+    }
+  },
+  "timeline": {
+    "arrest": "2015",
+    "extradition": "To US/UAE",
+    "release": "2020",
+    "network_resilience": "Continued operations through residual infrastructure and Javed until demonetisation"
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Financial network operations", "Demonetisation impact"]
+  }
+}

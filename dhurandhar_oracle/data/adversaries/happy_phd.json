@@ -1,0 +1,38 @@
+{
+  "actor": "happy_phd",
+  "film_actor": "Amandeep Singh",
+  "real_name": "Harmeet Singh (alias 'Happy PHD') — real name kept in film",
+  "real_life_notes": "Harmeet Singh, known as 'Happy PHD', is a Khalistani militant operative associated with Babbar Khalsa International (BKI) or related Sikh separatist groups operating from Pakistan and Canada. The 'PHD' nickname reportedly refers to his academic background. He is part of the ISI-sponsored Khalistani network that Pakistan has used as a third front against India alongside Kashmir and the Northeast.",
+  "film_role": "Film 2 — the Punjab/Khalistan subplot. Happy PHD represents ISI's strategic use of Khalistani militancy as a destabilisation tool against India. Film 2 connects the Karachi-ISI network to the Punjab drug-arms pipeline that funds and arms Khalistani groups. His arc ties together the Khanani financial network with the domestic India threat.",
+  "objective": "Continue Khalistan movement under ISI patronage; exploit Punjab's drug network for arms financing; maintain Pakistan-Canada diaspora mobilisation",
+  "capability": 6.5,
+  "trigger_threshold": 4.5,
+  "information_set": [
+    "khalistan_diaspora_network",
+    "isi_punjab_handler",
+    "punjab_drug_arms_pipeline",
+    "india_domestic_intelligence_gaps"
+  ],
+  "observable_actions": [
+    "mobilise_khalistan_diaspora",
+    "activate_punjab_drug_network",
+    "coordinate_arms_supply",
+    "recruit_in_punjab",
+    "go_dark_in_canada"
+  ],
+  "hidden_states": [
+    "operational_planning",
+    "mobilising",
+    "dormant_in_diaspora",
+    "under_surveillance"
+  ],
+  "narco_jihad_link": "Happy PHD's network is the Punjab arm of the narco-jihad pipeline: Afghan heroin → Punjab drug network → arms purchases → Khalistani violence. The ISI uses the same Khanani hawala channels to fund Happy PHD that it uses for Karachi-based LeT operations.",
+  "real_context": "Indian intelligence has tracked multiple Khalistani operatives operating from Pakistan and Canada. Several assassination plots against Indian officials in Western countries have been attributed to ISI-Khalistani collaborations. The 2023 Hardeep Singh Nijjar killing in Canada became a diplomatic flashpoint, with Canada alleging Indian government involvement — the film's 'Naya Bharat' revenge arc is precisely this kind of operation.",
+  "prospect_params": {
+    "lam": 2.5,
+    "gamma": 0.64,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

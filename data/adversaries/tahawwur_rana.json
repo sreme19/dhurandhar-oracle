@@ -1,0 +1,21 @@
+{
+  "id": "tahawwur_rana",
+  "name": "Tahawwur Hussain Rana",
+  "portrayed_by": "Likely retain real name",
+  "real_life_parallel": "26/11 co-conspirator; extradited from US April 2025; closure beat",
+  "side": "pakistani",
+  "capability_score": 5.0,
+  "biography": {
+    "birth_year": 1961,
+    "origin": "Pakistan; Canadian citizen; US resident",
+    "background": "Pakistani-Canadian businessman and former military doctor. 26/11 co-conspirator who provided cover for David Headley's reconnaissance. Convicted in US (2011) but acquitted of direct terrorism charges. Extradited to India April 2025 after years of legal battles.",
+    "26_11_role": "Provided immigration cover to Headley; allowed use of his Chicago-based immigration business as front",
+    "headley_connection": "Childhood friend; 'Rana's company = Headley's cover'",
+    "extradition": "April 2025 — after Trump administration pressure; arrived Delhi; NIA custody",
+    "film_relevance": "Part 4: Extradition as closure beat; ties back to Part 1's 26/11; justice delayed but delivered"
+  },
+  "faction": {
+    "primary": "LeT/ISI coordination (associate)",
+    "associate": "david_headley"
+  }
+}

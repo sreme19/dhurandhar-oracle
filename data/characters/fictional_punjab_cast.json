@@ -1,0 +1,84 @@
+{
+  "cast_group": "fictional_punjab_arc",
+  "description": "Composite and fictional characters created to dramatize the Punjab narco-jihad subplot in Dhurandhar 2. These figures represent social and operational archetypes in the Indian Punjab drug-terror network rather than specific documented individuals.",
+  "characters": [
+    {
+      "id": "gurbaaz_singh_pinda",
+      "name": "Gurbaaz Singh 'Pinda'",
+      "type": "fictional_composite",
+      "archetype": "Local Punjab drug distributor — mid-level node between cross-border suppliers and street dealers",
+      "narrative_function": "Humanizes the demand side of narco-jihad; shows how Afghan heroin corrupts ordinary Punjab youth into terror support infrastructure",
+      "capability_estimate": 3.5,
+      "side": "unknown"
+    },
+    {
+      "id": "prabhneet_singh",
+      "name": "Prabhneet Singh",
+      "type": "fictional_composite",
+      "archetype": "Punjab police officer / intelligence source — caught between duty and community",
+      "narrative_function": "Represents Indian state's ground-level counter-narcotics challenge; potential asset or liability",
+      "capability_estimate": 4.5,
+      "side": "indian"
+    },
+    {
+      "id": "veena",
+      "name": "Veena",
+      "type": "fictional_composite",
+      "archetype": "Family member affected by drug network — victim perspective",
+      "narrative_function": "Emotional stakes; demonstrates societal damage motivating counter-operations",
+      "capability_estimate": 1.5,
+      "side": "unknown"
+    },
+    {
+      "id": "balwinder_sandhu",
+      "name": "Balwinder Sandhu",
+      "type": "fictional_composite",
+      "archetype": "Former athlete/military figure fallen into drug trade — 'wasted potential' symbol",
+      "narrative_function": "Represents how narco-jihad specifically targets disciplined/authoritative figures for corruption or elimination",
+      "capability_estimate": 4.0,
+      "side": "unknown"
+    },
+    {
+      "id": "balwant",
+      "name": "Balwant",
+      "type": "fictional_composite",
+      "archetype": "Enforcer/protection for drug network — street-level muscle",
+      "narrative_function": "Operational threat to Indian protagonists; disposable opposition",
+      "capability_estimate": 3.0,
+      "side": "unknown"
+    },
+    {
+      "id": "mla_sukhwinder",
+      "name": "MLA Sukhwinder",
+      "type": "fictional_composite",
+      "archetype": "Political patronage for drug network — corrupt elected official",
+      "narrative_function": "Shows political protection layer; explains why police operations face systemic obstacles",
+      "capability_estimate": 5.0,
+      "side": "unknown"
+    },
+    {
+      "id": "faizal",
+      "name": "Faizal",
+      "type": "fictional_composite",
+      "archetype": "Cross-border courier/ facilitator — Pakistani side logistics",
+      "narrative_function": "Operational connector; demonstrates network span from Karachi to Amritsar",
+      "capability_estimate": 4.0,
+      "side": "pakistani"
+    },
+    {
+      "id": "uzair_wife",
+      "name": "Uzair's Wife",
+      "type": "fictional_composite",
+      "archetype": "Family leverage point — humanizes Uzair Baloch beyond criminal network",
+      "narrative_function": "Adds personal dimension to adversary; potential leverage or vulnerability",
+      "capability_estimate": 1.0,
+      "side": "unknown"
+    }
+  ],
+  "real_world_anchor": {
+    "pattern_documented": true,
+    "historical_basis": "Punjab opioid crisis (2010s-present), systematic ISI narco-terror operations, documented Khalistani-Pakistani ISI coordination",
+    "verification_status": "REPRESENTATIVE — Individual figures fictional but social/operational patterns fully documented"
+  },
+  "oracle_note": "These characters are NOT playable as query subjects (side≠'indian' for most, or fictional composites). They may appear as intelligence targets, network nodes, or adversary model references only."
+}

@@ -1,0 +1,33 @@
+{
+  "actor": "ajmal_kasab",
+  "real_name": "Mohammed Ajmal Amir Kasab — real name kept in film",
+  "real_life_notes": "The only 26/11 attacker captured alive. Pakistani national from Faridkot, Punjab, Pakistan. Hanged on 21 November 2012 in Pune's Yerwada Jail after a prolonged legal process. His capture was unique — his testimony, CCTV footage (Victoria Terminus attack), and DNA evidence formed the prosecutorial backbone of India's case against Pakistan's ISI nexus.",
+  "film_role": "Film 1 Act 3 — Kasab is depicted during the 26/11 attack sequence. His capture provides the documentary evidence thread that Sanyal pursues in Film 2.",
+  "objective": "Execute LeT operational orders; die as a martyr",
+  "capability": 6.5,
+  "trigger_threshold": 3.0,
+  "information_set": [
+    "let_attack_orders",
+    "karachi_training_details",
+    "handler_communications"
+  ],
+  "observable_actions": [
+    "execute_attack",
+    "surrender",
+    "provide_testimony"
+  ],
+  "hidden_states": [
+    "operational",
+    "captured",
+    "testifying"
+  ],
+  "real_status": "Hanged 21 November 2012, Yerwada Jail, Pune. His trial produced the most comprehensive documentation of ISI's 26/11 role available in the public record.",
+  "prospect_params": {
+    "lam": 3.5,
+    "gamma": 0.55,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  },
+  "loss_aversion_note": "Extremely high λ=3.5 — indoctrinated operative who has been trained to overweight martyrdom gains and discount survival losses. Classical high-risk-tolerance framing."
+}

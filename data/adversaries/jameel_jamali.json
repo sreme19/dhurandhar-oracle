@@ -1,0 +1,47 @@
+{
+  "id": "jameel_jamali",
+  "name": "Jameel Jamali",
+  "portrayed_by": "Rakesh Bedi",
+  "real_life_parallel": "Nabil Gabol + Altaf Hussain — PPP politician from Lyari, MQM influence; political-criminal bridge",
+  "side": "pakistani",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Pakistan People's Party (PPP) politician representing Lyari constituency. Political-criminal bridge figure: maintains PPP vote bank control through patronage of criminal networks (Rehman Dakait, PAC), while providing political protection and access to state resources.",
+    "political_model": "Patron-client relations with criminal networks; hedging between rivals (Rehman vs Arshad Pappu)",
+    "film_1_role": "Political patron for Rehman Dakait; Sanyal/Bhullar intelligence target; Yalina's father",
+    "film_2_role": "Continued political presence; post-Dakait power adjustment"
+  },
+  "faction": {
+    "primary": "Pakistan People's Party (PPP) — Lyari constituency",
+    "affiliations": ["Peoples' Aman Committee (PAC)", "PPP Karachi network"],
+    "chain_superior": "aquib_ali_zarwari (Zardari parallel)",
+    "chain_subordinate": "rehman_dakait (criminal client)"
+  },
+  "adversary_model": {
+    "type": "political_patron",
+    "motivation": "electoral_power_plus_enrichment",
+    "risk_profile": {
+      "lambda": 1.6,
+      "description": "Risk-tolerant for political gain; avoids direct physical danger; delegates violence"
+    },
+    "threat_capabilities": ["state_resource_access", "political_protection", "electoral_mobilization", "intelligence_on_police"],
+    "intelligence_signature": {
+      "communications": "Official PPP channels mixed with courier-based criminal coordination",
+      "pattern": "Surge in Lyari visits before elections; public appearances timed to distance from criminal incidents",
+      "detection_difficulty": 0.5
+    }
+  },
+  "family": {
+    "daughter": "yalina_jamali (information vulnerability)",
+    "wife": "shabnam"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Rehman Dakait meetings", "Political protection provision", "Yalina information leak"]
+  }
+}

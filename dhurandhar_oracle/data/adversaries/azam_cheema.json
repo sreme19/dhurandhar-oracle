@@ -1,0 +1,35 @@
+{
+  "actor": "azam_cheema",
+  "real_name": "Azam Cheema (real name kept in film)",
+  "real_life_notes": "Real Lashkar-e-Taiba (LeT) operative and one of the primary planners of the 2008 Mumbai attacks. Named in David Headley's confessions as a key 26/11 coordinator. Never prosecuted in Pakistan. Operates under ISI patronage.",
+  "film_role": "Film 2 target — one of the 26/11 planners that Hamza and Rizwan are tasked to locate and neutralise under the Naya Bharat revenge arc.",
+  "objective": "Continue LeT operational planning against India; maintain ISI patronage; avoid Indian intelligence targeting",
+  "capability": 7.5,
+  "trigger_threshold": 6.0,
+  "information_set": [
+    "isi_protection_network",
+    "let_safe_house_locations",
+    "indian_intelligence_methods"
+  ],
+  "observable_actions": [
+    "relocate_safe_house",
+    "meet_major_iqbal",
+    "coordinate_sleeper_cell",
+    "go_dark",
+    "activate_counter_surveillance"
+  ],
+  "hidden_states": [
+    "dormant_isi_protected",
+    "operational_planning",
+    "evading_targeting",
+    "compromised"
+  ],
+  "real_status": "As of 2024, whereabouts unclear. Never officially prosecuted in Pakistan. UNSC-listed terrorist.",
+  "prospect_params": {
+    "lam": 1.8,
+    "gamma": 0.60,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

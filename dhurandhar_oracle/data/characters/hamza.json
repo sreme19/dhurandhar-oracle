@@ -1,0 +1,49 @@
+{
+  "id": "hamza",
+  "name": "Hamza Ali Mazari",
+  "real_name": "Jaskirat Singh Rangi",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "RAW / IB deep-cover operative",
+  "films": [1, 2],
+  "cover_identity": "Hamza Ali Mazari — Karachi local, Lyari criminal associate",
+  "infiltration_route": "India → Afghanistan → Torkham border crossing → Pakistan (classic RAW deep-cover route)",
+  "real_life_inspiration": "Major Mohit Sharma (Ashok Chakra, posthumous) — RAW operative who infiltrated Lashkar-e-Taiba networks under the alias 'Iftikhar Bhatt'; killed in action 2009. Composite also draws on general RAW Para-SF deep-cover archetypes for Pakistan operations.",
+  "inspiration_notes": {
+    "major_mohit_sharma": "Entered LeT as 'Iftikhar Bhatt', gathered actionable intel, was eventually exposed and killed. Awarded Ashok Chakra posthumously — India's highest peacetime gallantry award.",
+    "cover_parallel": "Both Hamza/Jaskirat and Mohit Sharma used Muslim identity covers to embed inside Pakistani criminal/terror networks. Both operated without any official acknowledgement from Indian government."
+  },
+  "state_by_act": {
+    "film1_act1": {
+      "cover_integrity": 9.5,
+      "trust_capital": 1.5,
+      "intelligence_depth": 0.5,
+      "network_strength": 5.0,
+      "exposure_risk": 1.5
+    },
+    "film1_act2": {
+      "cover_integrity": 7.8,
+      "trust_capital": 5.2,
+      "intelligence_depth": 4.1,
+      "network_strength": 5.0,
+      "exposure_risk": 4.5
+    },
+    "film1_act3": {
+      "cover_integrity": 5.5,
+      "trust_capital": 7.8,
+      "intelligence_depth": 7.5,
+      "network_strength": 4.0,
+      "exposure_risk": 7.5
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "enter_via_torkham"},
+    {"film": 1, "act": 1, "action": "establish_cover"},
+    {"film": 1, "act": 1, "action": "contact_field_handler_aalam"},
+    {"film": 1, "act": 2, "action": "infiltrate_lyari_gang_periphery"},
+    {"film": 1, "act": 2, "action": "build_trust_dakait"},
+    {"film": 1, "act": 3, "action": "extract_dakait_jamali_political_link"},
+    {"film": 1, "act": 3, "action": "request_exfil"}
+  ],
+  "adversary_model": null
+}

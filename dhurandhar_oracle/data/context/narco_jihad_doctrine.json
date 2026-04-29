@@ -1,0 +1,85 @@
+{
+  "doctrine": "narco_jihad",
+  "formal_name": "Narco-Jihad Pipeline Doctrine",
+  "description": "Pakistan's strategic weaponisation of drug trafficking as a funding and destabilisation mechanism for jihadi operations against India. The doctrine merges two instruments — narcotics revenue and jihadist violence — into a single self-financing, deniable offensive capability.",
+  "historical_origin": {
+    "era": "1980s Afghan-Soviet War",
+    "mechanism": "CIA-ISI collaboration channelled Afghan mujahideen through Pakistan's NWFP/FATA regions. ISI, under General Akhtar Abdur Rahman and later Hamid Gul, permitted and facilitated opium cultivation as a revenue source for mujahideen operations. This established the ISI-narco symbiosis that outlasted the Soviet war.",
+    "post_1989_evolution": "After Soviet withdrawal, ISI redirected the same mujahideen networks eastward against India — Kashmir and Punjab. The drug revenue infrastructure was repurposed: Afghan heroin → Karachi → D-Company → India instead of Afghanistan → CIA proxy forces."
+  },
+  "pipeline_structure": {
+    "stage_1_production": {
+      "geography": "Helmand, Kandahar, Nangarhar provinces (Afghanistan)",
+      "actors": "Afghan warlords, Taliban (post-1994), former mujahideen commanders",
+      "product": "Opium → heroin (processed in Nangarhar labs)"
+    },
+    "stage_2_transit": {
+      "geography": "FATA/KPK → Quetta → Karachi",
+      "actors": "Haqqani network, TTP-affiliated smugglers, ISI cut-outs, Baloch smuggling clans",
+      "mechanism": "Truck convoys through Balochistan (Quetta-Karachi highway); sea routes from Karachi port; Torkham border (same route Hamza uses for infiltration — dual-use corridor)"
+    },
+    "stage_3_distribution_karachi": {
+      "actors": "D-Company (Dawood Ibrahim), Khanani-Kalia International (KKI), Rehman Dakait's Lyari network, Uzair Baloch post-2009",
+      "mechanism": "Karachi port as distribution hub; D-Company ships via Dubai, UAE, East Africa; domestic distribution through Lyari gang network",
+      "financial_instrument": "Hawala conversion — KKI routes drug proceeds globally; FICN used as a parallel currency layer"
+    },
+    "stage_4_india_penetration": {
+      "geography": "Punjab border (Attari-Wagah, Ferozepur, Gurdaspur cattle-smuggling routes); Gujarat coast (sea route for larger consignments)",
+      "actors": "Faizal-archetype cross-border facilitators; BSF-compromised personnel; Punjab drug distributors (Prabhneet-archetype)",
+      "destination": "Punjab retail drug market → cash generation → hawala back to KKI"
+    },
+    "stage_5_weapons_arm": {
+      "mechanism": "Drug cash → arms purchases → Punjab Khalistani network",
+      "actors": "Happy PHD (Harmeet Singh), ISI Punjab handler, Gurbaaz-archetype recruits",
+      "weapons_sourcing": "Cheap AK-47s from Afghanistan via the same Karachi pipeline; Pakistani-origin pistols through Attari border; occasional IEDs",
+      "objective": "Fund and arm Khalistani operations inside India; create domestic security pressure forcing India to divert resources from LOC"
+    }
+  },
+  "financial_instruments": {
+    "hawala": {
+      "primary_network": "Khanani-Kalia International (KKI)",
+      "mechanism": "Drug proceeds → KKI Karachi → correspondent hawala networks in Dubai, UK, Canada → delivery in Indian rupees or dollars to Khalistan diaspora",
+      "demonetisation_impact": "November 8, 2016 demonetisation disrupted the rupee cash layer of the pipeline — hawala networks dependent on high-denomination INR notes lost liquidity overnight"
+    },
+    "ficn": {
+      "description": "Fake Indian Currency Notes — counterfeit INR printed by ISI's intelligence printing infrastructure, distributed through D-Company/KKI",
+      "denominations": "Primarily ₹500 and ₹1000 (pre-2016); shift to ₹2000 attempted post-demonetisation",
+      "dual_function": "Both economic destabilisation tool AND operational cash for militant operations inside India",
+      "demonetisation_wipeout": "The November 2016 demonetisation of ₹500/₹1000 notes rendered the entire FICN stockpile worthless — estimated hundreds of crores in D-Company/Khanani FICN became waste paper overnight"
+    }
+  },
+  "strategic_purpose": {
+    "primary": "Bleed India — force India to spend disproportionate resources on domestic security while Pakistan avoids direct military confrontation",
+    "secondary": "Self-financing covert operations — drug revenue allows ISI to run operations off-budget, invisible to civilian government oversight",
+    "tertiary": "Social destabilisation — Punjab's drug epidemic is both a revenue source AND a strategic goal; an addicted population is a radicalisation pool",
+    "fourth": "Deniability — criminal infrastructure provides perfect cover; ISI can deny any direct link to terrorist acts because the operational chain runs through D-Company and Lyari gang intermediaries"
+  },
+  "india_countermeasures": {
+    "operational": [
+      "IB infiltration of Lyari criminal network (Hamza's Film 1 mission)",
+      "RAW tracking of D-Company's Karachi infrastructure",
+      "NIA money laundering prosecutions (Khanani indictment 2015)",
+      "BSF Attari border interdiction operations",
+      "Punjab Police STF drug network busts (compromised by internal corruption)"
+    ],
+    "strategic": [
+      "Demonetisation (8 November 2016) — targeted FICN stockpile",
+      "FATF grey-listing pressure on Pakistan (2018, 2022) — forced KKI/D-Company operational complications",
+      "US Treasury OFAC designation of Khanani network",
+      "Diplomatic isolation of Pakistan post-26/11"
+    ],
+    "film_resolution": "Dhurandhar Film 2 frames the demonetisation as a kinetic intelligence strike — not just economic policy but a precisely calibrated blow to the narco-jihad pipeline's financial layer, executed simultaneously with Rizwan's Punjab operation rolling up the ground network."
+  },
+  "film_relevance": {
+    "film_1": "Narco-jihad is the background infrastructure Hamza discovers while infiltrating Lyari. Rehman Dakait's FICN operation is the ground-level manifestation. Film 1 establishes the pipeline; does not yet target it.",
+    "film_2": "Rizwan Shah and the expanded Naya Bharat mandate directly target the narco-jihad pipeline's two pressure points: FICN (demonetisation) and arms-Khalistan (Punjab operation). The simultaneous takedown is the Film 2 resolution."
+  },
+  "key_references": [
+    "Narco Terrorism — B. Raman (2005, Institute for Topical Studies)",
+    "The Spy Chronicles — A.S. Dulat and Asad Durrani (2018) — both authors acknowledge the narco-ISI nexus",
+    "US Treasury OFAC designation of Khanani-Kalia International (2012, 2015)",
+    "UNODC World Drug Report 2015-2020 — Afghan heroin production data",
+    "Punjab Opioid Survey — PGIMER Chandigarh (2015)",
+    "NIA Chargesheet — Attari border drug-arms cases (2016-2019)"
+  ]
+}

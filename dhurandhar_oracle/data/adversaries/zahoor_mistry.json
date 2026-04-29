@@ -1,0 +1,36 @@
+{
+  "actor": "zahoor_mistry",
+  "real_name": "Abdul Latif (alias: Zahoor Ibrahim / 'Zahoor Mistry')",
+  "real_life_notes": "One of the five hijackers of IC-814 (Indian Airlines Flight 814, December 1999). Known by multiple aliases. Eventually based in Karachi. Killed in an unclaimed hit in Karachi in 2022 — method and perpetrator officially unknown. The film's opening hijack negotiation scene in Kandahar is directly inspired by IC-814.",
+  "objective": "Execute terror operations for JeM/LeT handlers; maintain Karachi safe harbour for regional jihadi networks",
+  "capability": 6.0,
+  "trigger_threshold": 4.5,
+  "information_set": [
+    "jem_operational_network",
+    "karachi_safe_houses",
+    "kandahar_negotiation_outcome"
+  ],
+  "observable_actions": [
+    "activate_sleeper_cell",
+    "facilitate_arms_transfer",
+    "protect_safe_house",
+    "provide_false_identity",
+    "disappear_into_cover",
+    "attack"
+  ],
+  "hidden_states": [
+    "dormant",
+    "activated",
+    "operational",
+    "compromised"
+  ],
+  "film_relevance": "Zahoor appears in Film 1 as a link between the IC-814 legacy (opening scene) and the Lyari network that Hamza is infiltrating — he bridges the 1999 hijack plot to the 2008 attack network.",
+  "real_death_notes": "Killed Karachi 2022, unclaimed. The film likely depicts this as an Indian intelligence operation, consistent with its hawkish narrative.",
+  "prospect_params": {
+    "lam": 2.5,
+    "gamma": 0.60,
+    "alpha": 0.88,
+    "beta": 0.88,
+    "ref": 0.0
+  }
+}

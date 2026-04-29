@@ -1,0 +1,73 @@
+{
+  "context": "punjab_khalistan_arc",
+  "formal_name": "ISI's Khalistan Revival Strategy — Punjab Third Front",
+  "description": "Pakistan's strategic use of Sikh separatism as a third destabilisation front against India (alongside Kashmir and the Northeast), dramatically intensified from 2012 onwards. The Punjab arc in Dhurandhar Film 2 dramatises this doctrine through the ISI-Happy PHD-narco network chain.",
+  "historical_phases": {
+    "phase_1_original_insurgency": {
+      "period": "1984-1993",
+      "trigger": "Operation Blue Star (June 1984) — Indian Army stormed Golden Temple to flush out Jarnail Singh Bhindranwale; Indira Gandhi assassination by Sikh bodyguards (October 1984); anti-Sikh riots aftermath",
+      "peak": "1988-1992 — Khalistan insurgency at maximum intensity; Punjab Police under K.P.S. Gill ran extrajudicial counter-insurgency campaign",
+      "isi_role": "ISI provided sanctuary, training, weapons, and funds to Khalistani militant groups — primarily Babbar Khalsa International (BKI), Khalistan Liberation Force (KLF), and Khalistan Commando Force (KCF)",
+      "suppression": "By 1993, Punjab Police/CRPF counter-insurgency had broken the insurgency's military capacity. Most surviving leaders fled to Pakistan, Canada, UK.",
+      "isi_logic": "Punjab insurgency forced India to deploy 100,000+ security personnel domestically, reducing pressure on Kashmir front"
+    },
+    "phase_2_dormancy": {
+      "period": "1993-2012",
+      "description": "Insurgency suppressed but diaspora organisations maintained symbolic Khalistan politics in Canada, UK, USA, Germany. ISI maintained contact with BKI remnants in Pakistan.",
+      "isi_activity": "Low-level — occasional weapons consignment, small-scale funding. No active armed campaign.",
+      "significant_events": [
+        "Jagtar Singh Hawara convicted for Beant Singh assassination (1995 Punjab CM)",
+        "BKI declared a terrorist organisation in India, UK, Canada, USA",
+        "Diaspora referendum politics in UK (2000s)"
+      ]
+    },
+    "phase_3_revival": {
+      "period": "2012-present",
+      "trigger": "Multiple factors: (1) Arab Spring showed diaspora social media can mobilise political movements; (2) India-Pakistan relationship deterioration post-2008 26/11; (3) ISI's increased investment in asymmetric warfare tools; (4) Punjab's opioid epidemic creating radicalisation pool",
+      "isi_strategy": "Fuse the narco pipeline (already running) with Khalistani radicalism. Use diaspora social media (Canada/UK) to radicalise Punjab youth. Use drug money to fund arms.",
+      "key_isi_asset": "Happy PHD (Harmeet Singh) — based in Pakistan, diaspora network in Canada, operational contacts in Punjab",
+      "diaspora_organisations": [
+        "Sikhs For Justice (SFJ) — led by Gurpatwant Singh Pannun (Canadian/US citizen)",
+        "Babbar Khalsa International — Pakistan-based remnants, diaspora Canadian chapter",
+        "Dal Khalsa — moderate political wing used as recruitment entry point"
+      ]
+    }
+  },
+  "isi_operational_doctrine": {
+    "three_fronts": {
+      "kashmir": "Primary front — 35 years of investment; LeT/JeM/HM operational infrastructure",
+      "northeast": "Secondary front — ULFA, NSCN; weaker ISI presence but exploited",
+      "punjab_khalistan": "Third front — revived as pressure valve when Kashmir operations draw too much international attention"
+    },
+    "narco_khalistan_fusion": {
+      "logic": "Punjab's drug epidemic (1.5-2.3 million users by 2015) creates: (1) abundant criminal distribution networks ISI can co-opt; (2) economically marginalised youth susceptible to recruitment; (3) legitimate grievance narrative (government failure on drugs) that Khalistan narrative can exploit",
+      "implementation": "Same hawala channels (KKI) that move FICN also move drug proceeds. Same border crossing networks that run heroin also run arms. Khalistani groups receive weapons as payment-in-kind for drug distribution services.",
+      "happy_phd_role": "ISI's integrated node — he is simultaneously a Khalistani political mobiliser (diaspora Canada) and a narco-arms logistics coordinator (Punjab ground network). His arrest or neutralisation would collapse both dimensions."
+    },
+    "social_media_radicalisation": {
+      "platforms": "Facebook, Instagram, encrypted messaging (Telegram, WhatsApp)",
+      "method": "Glorification of Bhindranwale, 1984 Blue Star anniversary content, anti-India Hindu nationalist framing, claims of Sikh persecution",
+      "target": "Punjab youth aged 18-30; primarily rural; affected by drug crisis or economic migration to Canada/UK",
+      "radicalism_to_violence_pipeline": "Social media exposure → diaspora contact → Pakistan virtual training → India ground ops (weapons cache, surveillance, eventually attacks)"
+    }
+  },
+  "film_2_narrative_elements": {
+    "hamza_rizwan_arc": "Rizwan Shah identifies the Punjab narco-khalistan network as the Film 2 domestic mission. The intelligence chain runs: Lyari FICN (Dawood) → Khanani hawala → Happy PHD → Punjab ground network (Faizal, Gurbaaz, Prabhneet) → MLA Sukhwinder political cover",
+    "demonetisation_link": "The November 2016 demonetisation disrupts the Punjab drug cash pipeline simultaneously with the FICN stockpile. The drug networks' cash holdings in high-denomination notes are also wiped out, temporarily breaking the arms-purchasing chain.",
+    "naya_bharat_mandate": "Ajay Sanyal's Film 2 mandate — the Naya Bharat doctrine — explicitly targets both the external (ISI, Karachi) and domestic (Punjab) dimensions of the threat simultaneously. This represents the post-26/11 Indian intelligence doctrine: no more 'strategic patience' (Bhullar's Film 1 doctrine), only integrated offensive intelligence operations."
+  },
+  "real_world_developments": {
+    "2023_nijjar_killing": {
+      "event": "Hardeep Singh Nijjar, designated terrorist (India) and Khalistan independence activist, killed in Surrey, British Columbia, Canada, 18 June 2023",
+      "canada_allegation": "Canadian PM Justin Trudeau alleged Indian government agents were involved — created India-Canada diplomatic crisis",
+      "india_position": "Denied involvement; pointed to Nijjar's documented terrorist activities and ISI links",
+      "film_relevance": "Dhurandhar's 'Naya Bharat' revenge arc — operations targeting ISI-Khalistani figures overseas — is precisely the doctrine the Nijjar case suggests India may have developed. The film (2025) predates but narratively prefigures this controversy."
+    },
+    "nsa_goldilocks_problem": "India's intelligence services face a paradox: aggressive enough to neutralise threats (Naya Bharat doctrine) but every such operation creates diplomatic crises that ISI exploits. Film 2's resolution implies India chose aggression."
+  },
+  "oracle_implications": {
+    "rizwan_queries": "The Punjab arc is Rizwan Shah's primary Film 2 mission. VoI ranking should weight Happy PHD's network as highest-value intelligence target — understanding the Faizal/Gurbaaz/Prabhneet network topology is the key insight that enables the simultaneous demonetisation + Punjab ops double strike.",
+    "critical_path": "The CPM analysis of Film 2 should identify the Happy PHD → Faizal → Punjab ground network chain as a separate parallel critical path from the Karachi FICN chain. Rizwan can work both simultaneously if the coalition is properly structured.",
+    "stackelberg": "Happy PHD is a Stackelberg follower in the ISI hierarchy (Major Iqbal → Happy PHD). The Stackelberg solution: Rizwan should commit to the demonetisation strike first (publicly, via government announcement), which forces Happy PHD to immediately move resources — making his movements observable and rolling up the ground network."
+  }
+}

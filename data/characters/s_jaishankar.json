@@ -1,0 +1,17 @@
+{
+  "id": "s_jaishankar",
+  "name": "S. Jaishankar",
+  "portrayed_by": "Fictionalized External Affairs Minister archetype",
+  "real_life_parallel": "External Affairs Minister (2019-present); diplomatic framing of strikes",
+  "side": "indian",
+  "capability_score": 7.0,
+  "biography": {
+    "birth_year": 1955,
+    "origin": "Tamil Nadu, India (IFS)",
+    "background": "External Affairs Minister; former Foreign Secretary. Architect of diplomatic framing for Balakot, Article 370, and Sindoor. Articulates 'terror sanctuaries' narrative internationally.",
+    "film_relevance": "Part 3-4: Diplomatic dimension; international justification for strikes"
+  },
+  "faction": {
+    "primary": "Government of India (External Affairs Ministry)"
+  }
+}

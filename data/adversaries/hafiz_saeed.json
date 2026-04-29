@@ -1,0 +1,22 @@
+{
+  "id": "hafiz_saeed",
+  "name": "Hafiz Muhammad Saeed",
+  "portrayed_by": "Likely retain real name (franchise pattern)",
+  "real_life_parallel": "LeT founder; 26/11 mastermind; jailed 2020 but operationally relevant; FATF pressure",
+  "side": "pakistani",
+  "capability_score": 8.0,
+  "biography": {
+    "birth_year": 1950,
+    "origin": "Punjab, Pakistan",
+    "background": "Founder of Lashkar-e-Taiba (LeT) and Jamaat-ud-Dawa (JuD). Mastermind of 26/11 Mumbai attacks (2008). UN-designated terrorist. Jailed February 2020 on terror financing charges (FATF pressure) but operational control continued through proxies.",
+    "26_11_role": "Chief planner; operational oversight; ISI coordination through Sajid Mir",
+    "proxy_rebranding": "TRF (The Resistance Front) as LeT proxy for plausible deniability",
+    "son": "Hafiz Talha Saeed — designated terrorist 2025; successor planning",
+    "film_relevance": "Part 1: 26/11 architect. Part 4: Sindoor target (Muridke Markaz); proxy operations through TRF."
+  },
+  "faction": {
+    "primary": "Lashkar-e-Taiba / Jamaat-ud-Dawa",
+    "headquarters": "Muridke, Punjab (Markaz-e-Taiba)",
+    "proxies": ["trf", "talha_saeed"]
+  }
+}

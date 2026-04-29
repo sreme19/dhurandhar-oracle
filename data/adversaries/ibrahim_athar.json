@@ -1,0 +1,40 @@
+{
+  "id": "ibrahim_athar",
+  "name": "Ibrahim Athar",
+  "portrayed_by": "Rajesh Sangwan",
+  "real_life_parallel": "Ibrahim Athar — chief IC-814 hijacker; brother of Masood Azhar",
+  "side": "pakistani",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan (Bahawalpur)",
+    "background": "Chief hijacker of Indian Airlines Flight 814 (December 1999). Brother of Masood Azhar (JeM founder, released in exchange). Core Jaish-e-Mohammed (JeM) operational figure.",
+    "family_connection": "Masood Azhar's brother; JeM as family enterprise",
+    "hijacking_role": "Leader of hijacking team; negotiated with Indian government; demanded Masood Azhar release",
+    "post_release": "Operated within JeM; remained in Pakistan; never prosecuted",
+    "film_1_role": "IC-814 hijacking leader; Masood Azhar's brother",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Jaish-e-Mohammed (JeM)",
+    "affiliations": ["Masood Azhar (brother/founder)", "IC-814 hijacker network"],
+    "chain_superior": "masood_azhar",
+    "chain_subordinate": "zahoor_mistry (fellow hijacker)"
+  },
+  "adversary_model": {
+    "type": "terror_operational_leader",
+    "motivation": "jihad_plus_family",
+    "risk_profile": {
+      "lambda": 2.2,
+      "description": "High risk acceptance; family-ideological commitment"
+    },
+    "threat_capabilities": ["hijacking_leadership", "je_m_operations", "terror_coordination"]
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1],
+    "key_scenes": ["IC-814 hijacking", "Negotiations", "Masood Azhar release"]
+  }
+}

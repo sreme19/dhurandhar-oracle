@@ -1,0 +1,46 @@
+{
+  "id": "shakeel_commando",
+  "name": "Shakeel Commando",
+  "portrayed_by": "Vikram Bhambri",
+  "real_life_parallel": "Likely real Lyari operative — specific historical figure unconfirmed; composite of PAC-trained commando-level enforcers in Rehman Dakait's inner circle",
+  "side": "pakistani",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Lyari, Karachi",
+    "background": "Former PAC (Peoples' Aman Committee) military-trained enforcer. The 'Commando' suffix indicates formal paramilitary training — likely via FC (Frontier Corps) or similar internal security force — distinguishing him from street-level muscle.",
+    "role": "Tactical field commander for high-risk operations requiring disciplined violence. Rehman Dakait's preferred instrument when precision matters over brute force."
+  },
+  "faction": {
+    "primary": "Peoples' Aman Committee (PAC)",
+    "affiliations": ["Rehman Dakait inner circle", "Lyari criminal-political complex"],
+    "chain_superior": "rehman_dakait",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "tactical_enforcer",
+    "motivation": "loyalty_to_chief",
+    "risk_profile": {
+      "lambda": 2.2,
+      "description": "Trained risk-taker — accepts high physical danger but not suicidal. Professional self-preservation instinct keeps him effective."
+    },
+    "threat_capabilities": ["close_quarters_assault", "tactical_coordination", "target_acquisition", "disposal_operations"],
+    "intelligence_signature": {
+      "communications": "Minimal electronic footprint — uses Rehman's couriers",
+      "pattern": "Appearance correlates with planned enforcement actions 48-72 hours later",
+      "detection_difficulty": 0.6
+    }
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["Punjab arc enforcement operations", "Potential Hamza-Rizwan confrontation"]
+  },
+  "real_world_notes": {
+    "verification_status": "PARTIAL — 'Commando' designation suggests composite archetype rather than single documented figure",
+    "historical_insight": "Lyari's PAC maintained several levels of enforcers: street muscle (disposable), middle managers (Baba Ladla tier), and 'commando' tier for sensitive operations. This character represents that elite tier.",
+    "creative_liberties": "Consolidated into single named figure for narrative clarity; in reality, Dakait likely rotated through multiple trained operatives without individual prominence."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "dgp_prashant_kumar",
+  "name": "DGP Prashant Kumar",
+  "nationality": "Indian",
+  "side": "indian",
+  "role": "Director General of Police (UP) — Indian domestic law enforcement liaison",
+  "films": [2],
+  "actor": "Himanshu Gokhani",
+  "cover_identity": null,
+  "real_life_inspiration": "Prashant Kumar — real IPS officer and former UP DGP. Known for high-profile operations against organised crime in Uttar Pradesh.",
+  "inspiration_notes": {
+    "real_prashant_kumar": "A real IPS (Indian Police Service) officer who served as UP DGP. Unlike most characters in the film who are disguised, the film uses his actual name — consistent with Aditya Dhar's pattern of keeping real names for Pakistani adversaries AND for certain Indian law enforcement figures who are sympathetic to the hawkish narrative.",
+    "film_role": "In Film 2, DGP Kumar represents the Indian domestic enforcement arm that coordinates with IB when the Khanani FICN network's India-side distribution chain is being dismantled. His role bridges the Karachi operation to the UP/Punjab domestic nexus.",
+    "punjab_khalistani_arc": "The Punjab/Khalistan subplot in Film 2 connects the Happy PHD (Harmeet Singh) Khalistani network to the Karachi-ISI supply chain. DGP Kumar is the Indian law enforcement face of tackling this domestic end of the network."
+  },
+  "state_by_act": {
+    "film2_act2": {
+      "cover_integrity": 10.0,
+      "trust_capital": 6.0,
+      "intelligence_depth": 7.5,
+      "network_strength": 8.0,
+      "exposure_risk": 0.0
+    }
+  },
+  "observable_history": [
+    {"film": 2, "act": 2, "action": "brief_ib_on_ficn_domestic_network"},
+    {"film": 2, "act": 3, "action": "coordinate_domestic_network_dismantling"}
+  ],
+  "adversary_model": null
+}

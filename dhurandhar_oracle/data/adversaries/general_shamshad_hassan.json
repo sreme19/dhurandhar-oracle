@@ -1,0 +1,39 @@
+{
+  "actor": "general_shamshad_hassan",
+  "film_actor": "Raj Zutshi",
+  "real_name": "Pakistani military figure — composite",
+  "real_life_notes": "General Shamshad Hassan is the name of a real Pakistani diplomat (Foreign Secretary 1997-2000, during Nawaz Sharif's government and the IC-814 period), but the film's character is depicted as a Pakistani military general — suggesting the film is either using the name as coincidence or conflating the diplomat with a military figure. Most likely a composite of General Hamid Gul (former ISI chief, the ideological godfather of the jihadi-military nexus) and General Pervez Musharraf (COAS 1998-2007, Chief Executive/President).",
+  "real_life_composites": {
+    "hamid_gul": "ISI chief 1987-1989. Credited with building the Afghan mujahideen network. Never abandoned his belief in strategic use of jihadists against India. Ideologically closest to the 'military-jihad nexus' the film depicts.",
+    "pervez_musharraf": "COAS during Kargil (1999), seized power in coup (October 1999), President until 2008. Officially condemned 26/11 but was simultaneously running ISI operations. His era is the exact timeline of Film 1.",
+    "ashfaq_kayani": "COAS 2007-2013 — the 'Bade Sahab' era. Most directly responsible for the 26/11 period."
+  },
+  "film_role": "Film 1 — Pakistani military authority that provides the institutional cover for Major Iqbal's operations. General Shamshad Hassan is the on-screen military face that interacts with Pakistani political figures (Nawab Shafiq) while Bade Sahab operates in the shadows.",
+  "objective": "Maintain Pakistani military's strategic depth doctrine; protect ISI's jihadist assets; manage political-military relationship",
+  "capability": 9.0,
+  "trigger_threshold": 8.5,
+  "information_set": [
+    "isi_full_operational_picture",
+    "india_pakistan_military_balance",
+    "political_civilian_government_status"
+  ],
+  "observable_actions": [
+    "brief_nawab_shafiq",
+    "protect_major_iqbal",
+    "deny_isi_involvement",
+    "invoke_nuclear_deterrence",
+    "manage_international_pressure"
+  ],
+  "hidden_states": [
+    "operational_sponsorship",
+    "managing_deniability",
+    "under_international_pressure"
+  ],
+  "prospect_params": {
+    "lam": 1.3,
+    "gamma": 0.52,
+    "alpha": 0.92,
+    "beta": 0.86,
+    "ref": 0.0
+  }
+}

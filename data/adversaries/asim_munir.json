@@ -1,0 +1,20 @@
+{
+  "id": "asim_munir",
+  "name": "General Asim Munir",
+  "portrayed_by": "Fictionalized current COAS archetype",
+  "real_life_parallel": "Pakistan Army Chief 2022-present; Pahalgam/Sindoor era adversary",
+  "side": "pakistani",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": 1968,
+    "origin": "Rawalpindi, Pakistan",
+    "background": "Current Chief of Army Staff (since November 2022). Military adversary during Pahalgam massacre (April 2025) and Operation Sindoor (May 2025). DG ISI before COAS appointment.",
+    "pre-coa_career": "DG ISI; Quartermaster General; military intelligence background",
+    "current_tenure": "Pahalgam/Sindoor crisis; Red Fort bombing aftermath; internal security focus",
+    "film_relevance": "Part 4: Primary military adversary; Sindoor counterpart"
+  },
+  "faction": {
+    "primary": "Pakistan Army (COAS)",
+    "key_relationships": ["shehbaz_sharif", "dg_ispr"]
+  }
+}

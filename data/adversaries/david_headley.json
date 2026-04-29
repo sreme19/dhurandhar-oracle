@@ -1,0 +1,40 @@
+{
+  "id": "david_headley",
+  "name": "David Headley",
+  "portrayed_by": "Carl Andrew Harte",
+  "real_life_parallel": "Real David Coleman Headley — Pakistani-American 26/11 scout; 35-year US sentence",
+  "side": "pakistani",
+  "capability_score": 6.5,
+  "biography": {
+    "birth_year": 1960,
+    "death_year": null,
+    "origin": "Pakistan (birth Daood Gilani); US (naturalized citizen)",
+    "background": "Pakistani-American who conducted surveillance for 26/11 Mumbai attacks. LeT operative with ISI coordination. Arrested 2009; cooperated with US/Indian investigators; named Major Iqbal as ISI handler.",
+    "operational_role": "Surveillance; target reconnaissance; logistics; video documentation",
+    "plea_bargain": "Cooperation in exchange for avoiding India extradition; 35-year US sentence",
+    "film_1_role": "26/11 reconnaissance; intelligence anchor character",
+    "film_2_role": null
+  },
+  "faction": {
+    "primary": "Lashkar-e-Taiba (LeT) + ISI coordination",
+    "affiliations": ["Major Iqbal (ISI handler)", "Sajid Mir (LeT handler)"],
+    "chain_superior": "major_iqbal (ISI) / sajid_mir (LeT)",
+    "chain_subordinate": null
+  },
+  "adversary_model": {
+    "type": "surveillance_operative",
+    "motivation": "jihad_plus_state_coordination",
+    "risk_profile": {
+      "lambda": 1.6,
+      "description": "Accepted surveillance risks; passport travel cover; captured but cooperated"
+    },
+    "threat_capabilities": ["target_surveillance", "video_documentation", "logistics_reconnaissance", "american_passport_cover"],
+    "intelligence_value": "Named Major Iqbal; provided detailed 26/11 planning insights"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [2],
+    "key_scenes": ["Mumbai surveillance", "LeT-ISI coordination evidence"]
+  }
+}

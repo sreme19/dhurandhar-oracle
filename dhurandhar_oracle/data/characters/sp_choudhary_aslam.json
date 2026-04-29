@@ -1,0 +1,53 @@
+{
+  "id": "sp_choudhary_aslam",
+  "name": "SP Chaudhary Aslam 'The Jinn'",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Karachi counter-terror officer / Lyari Task Force commander — complex neutral",
+  "films": [1, 2],
+  "cover_identity": null,
+  "real_life_inspiration": "Chaudhry Aslam Khan — Karachi's most feared counter-terror officer, commanded the Lyari Task Force, personally led raids on Rehman Dakait's network. Killed in a January 2014 suicide bombing on his convoy (claimed by TTP). Known as 'The Jinn' on the streets.",
+  "inspiration_notes": {
+    "real_death": "Chaudhry Aslam was killed 9 January 2014 when a suicide bomber targeted his vehicle on Karachi's Lyari expressway. Tehrik-e-Taliban Pakistan (TTP) claimed responsibility.",
+    "lyari_task_force": "The real LTF was formed in 2008 specifically to take on the Lyari gang wars. Aslam led brutal operations against Rehman Dakait and Uzair Baloch's factions.",
+    "film_complexity": "In the film, Aslam is neither purely an ally nor an obstacle for Hamza. He is fighting the same criminal network Hamza has infiltrated. But he is Pakistani law enforcement — if he discovers an Indian RAW operative on his patch, he would almost certainly arrest or eliminate Hamza, regardless of shared objectives.",
+    "oracle_classification": "side='unknown' — Aslam is a tactical wildcard. The oracle models him as a NEUTRAL adversary: not targeting India, but his investigations into Lyari's criminal network create cover-integrity risk for Hamza. High capability (8.5), low predictability."
+  },
+  "oracle_role_note": "Not a playable operative (Pakistani national). Modelled as a 'neutral high-capability actor' in the alliance_snapshot — in_coalition=false, but betrayal_history=0. His death in the film (mirroring the real 2014 bombing) may be a turning point in Film 2.",
+  "state_by_act": {
+    "film1_act2": {
+      "cover_integrity": 10.0,
+      "trust_capital": 0.0,
+      "intelligence_depth": 8.5,
+      "network_strength": 9.0,
+      "exposure_risk": 0.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 1, "action": "form_lyari_task_force"},
+    {"film": 1, "act": 2, "action": "raid_lyari_gang_periphery"},
+    {"film": 1, "act": 3, "action": "investigate_outsiders_in_lyari"}
+  ],
+  "adversary_model": {
+    "actor": "sp_choudhary_aslam",
+    "objective": "Eliminate Lyari's criminal networks — will inadvertently threaten Hamza's cover in the process",
+    "capability": 8.5,
+    "trigger_threshold": 4.0,
+    "information_set": ["lyari_street_informants", "police_records", "gang_activity_reports"],
+    "observable_actions": [
+      "increase_police_presence",
+      "raid_gang_safehouse",
+      "investigate_outsiders",
+      "arrest_gang_members",
+      "back_off_politically"
+    ],
+    "hidden_states": ["routine_patrol", "active_investigation", "closing_in", "politically_blocked"],
+    "prospect_params": {
+      "lam": 1.5,
+      "gamma": 0.70,
+      "alpha": 0.88,
+      "beta": 0.88,
+      "ref": 0.0
+    }
+  }
+}

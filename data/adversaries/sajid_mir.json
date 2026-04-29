@@ -1,0 +1,50 @@
+{
+  "id": "sajid_mir",
+  "name": "Sajid Mir",
+  "portrayed_by": "Faiz Khan",
+  "real_life_parallel": "Real Sajid Mir — chief 26/11 planner; 'declared dead' by Pakistan then resurrected 2023; convicted under FATF pressure",
+  "side": "pakistani",
+  "capability_score": 7.5,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan (LeT)",
+    "background": "Chief planner of 26/11 Mumbai attacks. Voice on recordings coordinating with attackers. Pakistan claimed he was dead for years to avoid accountability. Resurrected and convicted in 2023 under FATF grey-list pressure.",
+    "phantom_status": "Years of Pakistan claiming 'killed' or 'missing' while actually protected",
+    "conviction": "May 2023 — anti-terrorism court sentencing (FATF-driven)",
+    "film_1_role": "26/11 handler; phantom adversary",
+    "film_2_role": "Continued impunity context"
+  },
+  "faction": {
+    "primary": "Lashkar-e-Taiba (LeT)",
+    "affiliations": ["Major Iqbal ISI coordination", "Azam Cheema planning team"],
+    "chain_superior": "major_iqbal",
+    "chain_subordinate": "ajmal_kasab (foot soldier handler)"
+  },
+  "adversary_model": {
+    "type": "terror_handler_phantom",
+    "motivation": "jihad_plus_state_protection",
+    "risk_profile": {
+      "lambda": 1.3,
+      "description": "Highly protected; operates with assumed impunity until FATF pressure"
+    },
+    "threat_capabilities": ["attack_coordination", "handler_operations", "voice_direction", "recruitment"],
+    "intelligence_signature": {
+      "voice": "Distinctive recordings during 26/11 (landline coordination)",
+      "pattern": "Visible before attacks, 'disappears' after; protected by ISI",
+      "detection_difficulty": 0.8
+    }
+  },
+  "timeline": {
+    "26_11": "2008 — Voice on phone with attackers",
+    "declared_dead": "Multiple Pakistan claims 2010s",
+    "resurrection": "2023 — Produced in court under FATF pressure",
+    "conviction": "May 2023 — Anti-terrorism court sentencing"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [2, 3],
+    "key_scenes": ["26/11 voice coordination", "Phantom status", "Impunity representation"]
+  }
+}

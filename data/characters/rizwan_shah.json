@@ -1,0 +1,50 @@
+{
+  "id": "rizwan_shah",
+  "name": "Rizwan Shah",
+  "portrayed_by": "R. Madhavan",
+  "real_life_parallel": "Pure composite — no single real-world parallel; Hamza's right-hand operative in Film 2",
+  "side": "indian",
+  "capability_score": 7.8,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "India",
+    "background": "Indian intelligence operative working under Hamza's mentorship in Film 2. Assigned to Punjab narco-jihad arc as secondary protagonist. Represents 'next generation' operative trained by Hamza's experience.",
+    "training": "Intelligence tradecraft, Punjab cultural context, narcotics investigation, counter-terrorism",
+    "film_1_role": null,
+    "film_2_role": "Primary operative protagonist; Punjab narco-jihad infiltration; demonetisation coordination"
+  },
+  "operative_model": {
+    "five_dimensions": {
+      "cover_integrity": 0.75,
+      "trust_capital": 0.70,
+      "intelligence_depth": 0.75,
+      "network_strength": 0.65,
+      "exposure_risk": 0.40
+    },
+    "primary_skills": ["punjab_network_infiltration", "narco_terror_tracking", "hamza_doctrine_internalized", "next_generation_tradecraft"],
+    "handler_relationship": "hamza (mentor)"
+  },
+  "faction": {
+    "primary": "Indian Intelligence (IB under expanded mandate)",
+    "reporting": "ajay_sanyal / sushant_bansal (operational); hamza (field mentor)",
+    "subordinates": [],
+    "counterparts": ["hamza", "dgp_prashant_kumar"]
+  },
+  "mission_film_2": {
+    "primary": "Punjab narco-jihad penetration",
+    "targets": ["happy_phd", "amarjit_singh_brar", "gurbaaz_singh_pinda"],
+    "coordination": "Cross-border with Hamza; domestic with Punjab/UP police"
+  },
+  "film_presence": {
+    "film_1": false,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Punjab infiltration", "Happy PhD network penetration", "Demonetisation arc coordination"]
+  },
+  "oracle_query_types": [
+    "what_to_do_next",
+    "optimal_strategy",
+    "voi_intelligence_priorities"
+  ]
+}

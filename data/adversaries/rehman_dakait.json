@@ -1,0 +1,44 @@
+{
+  "id": "rehman_dakait",
+  "name": "Rehman Dakait",
+  "portrayed_by": "Akshaye Khanna",
+  "real_life_parallel": "Sardar Abdul Rehman Baloch — real Lyari don (born 1979, killed 2009)",
+  "side": "pakistani",
+  "capability_score": 8.0,
+  "biography": {
+    "birth_year": 1979,
+    "death_year": 2009,
+    "origin": "Lyari, Karachi",
+    "background": "Born Sardar Abdul Rehman Baloch. Son of Mohammad Daddal (Babu Dakait), from whom he inherited criminal foundations. Transformed fragmented Lyari gangs into Peoples' Aman Committee (PAC) — political-criminal hybrid with PPP patronage. Killed in police encounter 2009.",
+    "criminal_enterprise": "Extortion, arms trafficking, political violence, FICN distribution through Karachi network",
+    "political_relations": "PPP patronage through Jamali; PAC as vote bank muscle",
+    "film_1_role": "Primary criminal adversary; Hamza infiltration target; killed midpoint",
+    "film_2_role": "Referenced as predecessor; Uzair succession context"
+  },
+  "faction": {
+    "primary": "Peoples' Aman Committee (PAC)",
+    "affiliations": ["PPP Lyari network", "D-Company coordination", "ISI tactical cooperation"],
+    "chain_superior": "jameel_jamali (political patron)",
+    "chain_subordinate": ["uzair_baloch (successor)", "donga", "siyahi", "shakeel_commando"]
+  },
+  "adversary_model": {
+    "type": "criminal_kingpin",
+    "motivation": "power_plus_enrichment",
+    "risk_profile": {
+      "lambda": 2.0,
+      "description": "High risk acceptance; violent lifestyle; expects violent death"
+    },
+    "threat_capabilities": ["urban_warfare", "political_mobilization", "intimidation_networks", "arms_access", "territorial_control"],
+    "intelligence_signature": {
+      "communications": "Mix of encrypted mobile and courier-based for sensitive coordination",
+      "pattern": "Movement correlates with political events and territorial disputes",
+      "detection_difficulty": 0.55
+    }
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": false,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["Lyari control", "Hamza trust evaluation", "PAC operations", "Death encounter"]
+  }
+}

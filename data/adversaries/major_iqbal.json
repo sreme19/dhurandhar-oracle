@@ -1,0 +1,56 @@
+{
+  "id": "major_iqbal",
+  "name": "Major Iqbal",
+  "portrayed_by": "Arjun Rampal",
+  "real_life_parallel": "Composite: 'Major Iqbal' (David Headley's ISI handler per FBI affidavits) + Ilyas Kashmiri (militant commander)",
+  "side": "pakistani",
+  "capability_score": 9.0,
+  "biography": {
+    "birth_year": null,
+    "death_year": null,
+    "origin": "Pakistan (ISI S-Wing)",
+    "background": "ISI S-Wing (external operations) officer. Named by David Headley as his ISI handler. Mastermind of 26/11 Mumbai attacks planning. Combines institutional ISI sophistication with militant operational experience.",
+    "operational_style": "Strategic planning; surrogate terrorism; institutional protection",
+    "institutional_position": "Direct link to Bade Sahab (Kayani parallel); satphone coordination during 26/11",
+    "film_1_role": "Ultimate adversary; 26/11 planning; institutional ceiling",
+    "film_2_role": "Continued end-game adversary; escalation target"
+  },
+  "faction": {
+    "primary": "Inter-Services Intelligence (ISI) — S-Wing (external operations)",
+    "affiliations": ["LeT coordination", "D-Company operational interface"],
+    "chain_superior": "bade_sahab (General Kayani parallel)",
+    "chain_subordinate": ["sajid_mir", "azam_cheema", "david_headley"]
+  },
+  "adversary_model": {
+    "type": "isi_strategic_planner",
+    "motivation": "state_policy_plus_institutional",
+    "risk_profile": {
+      "lambda": 1.4,
+      "description": "Near risk-neutral — institutional protection enables high-risk operations without personal exposure"
+    },
+    "threat_capabilities": ["strategic_terror_planning", "surrogate_operations", "international_coordination", "institutional_deniability"],
+    "intelligence_signature": {
+      "communications": "Secure ISI channels; satphone for urgent coordination (26/11)",
+      "pattern": "Movement correlates with major LeT operations; minimal direct field presence",
+      "detection_difficulty": 0.85
+    }
+  },
+  "major_operations": {
+    "26_11_mumbai": {
+      "role": "Strategic planner; coordination; Headley handler",
+      "satphone": "Direct coordination with attackers during siege",
+      "institutional_cover": "ISI S-Wing protection"
+    }
+  },
+  "bade_sahab_link": {
+    "relationship": "Direct report to Bade Sahab (Kayani parallel)",
+    "institutional_ceiling": "Operational authority derived from Army Chief/ISI DG patronage",
+    "commitment_value": "Stackelberg leader-follower: Bade Sahab sets policy, Major Iqbal executes"
+  },
+  "film_presence": {
+    "film_1": true,
+    "film_2": true,
+    "acts_appearing": [1, 2, 3],
+    "key_scenes": ["26/11 planning", "Headley coordination", "Satphone sequences", "Bade Sahab reporting"]
+  }
+}

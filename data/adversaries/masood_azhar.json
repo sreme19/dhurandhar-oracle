@@ -1,0 +1,21 @@
+{
+  "id": "masood_azhar",
+  "name": "Masood Azhar",
+  "portrayed_by": "Likely retain real name (franchise pattern)",
+  "real_life_parallel": "Jaish-e-Mohammed founder; released IC-814 1999; Pulwama mastermind; Bahawalpur strike target",
+  "side": "pakistani",
+  "capability_score": 8.0,
+  "biography": {
+    "birth_year": 1968,
+    "origin": "Bahawalpur, Pakistan",
+    "background": "Founder of Jaish-e-Mohammed (JeM), released in Kandahar exchange (IC-814, 1999). Mastermind of Pulwama attack (2019). HQ at Bahawalpur Markaz. Brother Ibrahim Athar was IC-814 hijacker. Son Hammad Azhar briefly arrested 2019.",
+    "ic_814": "Released December 1999; founded JeM weeks later",
+    "pulwama": "Claimed responsibility February 2019; 40 CRPF killed",
+    "sindoor_target": "Bahawalpur Markaz hit during Operation Sindoor May 2025; brother Abdul Rauf Asghar (operational head) reportedly killed",
+    "film_relevance": "Part 3: Pulwama architect. Part 4: Sindoor target; family killed in strikes."
+  },
+  "faction": {
+    "primary": "Jaish-e-Mohammed (JeM)",
+    "family": ["ibrahim_athar (brother)", "abdul_rauf_asghar (brother)", "hammad_azhar (son)"]
+  }
+}

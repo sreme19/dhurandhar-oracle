@@ -1,0 +1,28 @@
+{
+  "id": "shabnam",
+  "name": "Shabnam",
+  "nationality": "Pakistani",
+  "side": "unknown",
+  "role": "Jameel Jamali's wife — political household insider",
+  "films": [1],
+  "actor": "Gitikka Ganju Dhar",
+  "cover_identity": null,
+  "real_life_inspiration": "Likely fictional or loosely composite — no specific documented real-world parallel to Nabil Gabol or Altaf Hussain's wives that maps cleanly. Serves as a narrative device for scenes within the Jamali political household.",
+  "inspiration_notes": {
+    "narrative_function": "Shabnam's presence in the Jamali household allows scenes that reveal political family dynamics — potentially including moments where Yalina and Shabnam's relationship illuminates Jamali's personal vulnerabilities.",
+    "oracle_note": "Like Ulfat, Shabnam is a non-playable context character. She may provide background intelligence through her observable position in the Jamali household."
+  },
+  "state_by_act": {
+    "film1_act2": {
+      "cover_integrity": 9.5,
+      "trust_capital": 7.0,
+      "intelligence_depth": 2.5,
+      "network_strength": 4.0,
+      "exposure_risk": 1.0
+    }
+  },
+  "observable_history": [
+    {"film": 1, "act": 2, "action": "present_in_jamali_household"}
+  ],
+  "adversary_model": null
+}
