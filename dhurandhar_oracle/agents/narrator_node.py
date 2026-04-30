@@ -49,27 +49,82 @@ def narrator_node(state: DhurandharState) -> dict:
     warnings: list[str] = []
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    mode = state.get("mode", "turning_point")
 
     if api_key:
-        narrative = _claude_narrative(state, api_key)
+        narrative = _claude_narrative(state, api_key, mode)
     else:
         warnings.append("narrator_node: ANTHROPIC_API_KEY not set — using template fallback")
-        narrative = _template_narrative(state)
+        if mode == "forward":
+            narrative = _template_forward(state)
+        elif mode == "rewrite":
+            narrative = _template_rewrite(state)
+        else:
+            narrative = _template_narrative(state)
 
     return {"narrative": narrative, "errors": errors, "warnings": warnings}
 
 
-def _claude_narrative(state: DhurandharState, api_key: str) -> str:
-    """Call Claude to generate the war-room briefing."""
+_FORWARD_SYSTEM = """\
+You are a RAW strategic-analysis writer producing a long-form briefing on
+the projected post-Dhurandhar-2 career arc of an Indian intelligence
+operative. The arc is anchored to real 2025-2026 events (Pahalgam, Operation
+Sindoor, mystery killings, Khalistan diaspora dynamics).
+
+You receive a structured trace containing:
+  - the operative's macro-arc (events, available macro-actions)
+  - a real-world context summary per event
+  - two trajectories: 'predicted' (canonical extrapolation) and 'prescribed'
+    (oracle's optimal policy)
+  - a 5d objective delta + scalar score delta between the two
+  - flag is_speculative_real_figure: if true, banner the output
+
+Produce a structured narrative grouped by year. For each year, name the
+events covered, the predicted vs prescribed action divergence, and the
+strategic logic. Close with a "what could have been done better" synthesis
+keyed to the score delta and the 5d objective changes. Tone: confident,
+professional, suitable for a senior strategic-affairs audience. No emojis.
+If is_speculative_real_figure, prepend: '[SPECULATIVE — projection of a real
+public figure].'
+"""
+
+_REWRITE_SYSTEM = """\
+You are a RAW counterfactual analyst producing a within-canon rewrite of an
+operative's Dhurandhar 1+2 arc. You receive turning points in chronological
+order, the actually-taken action per TP, the prescribed alternate action,
+the per-TP Q-value delta, and cumulative state hand-off.
+
+Produce a structured rewrite: per-act commentary on what changed and why,
+and a closing synthesis on cumulative outcome shift. Tone: professional,
+clipped, no preamble.
+"""
+
+
+def _claude_narrative(state: DhurandharState, api_key: str, mode: str) -> str:
+    """Call Claude to generate the briefing for the active mode."""
     import anthropic
 
-    trace = _build_trace(state)
-    client = anthropic.Anthropic(api_key=api_key)
+    if mode == "forward":
+        system = _FORWARD_SYSTEM
+        trace  = _build_forward_trace(state)
+    elif mode == "rewrite":
+        system = _REWRITE_SYSTEM
+        trace  = _build_rewrite_trace(state)
+    else:
+        system = _SYSTEM_PROMPT
+        trace  = _build_trace(state)
 
+    brief = state.get("brief", False)
+    model = "claude-haiku-4-5-20251001" if brief else "claude-sonnet-4-6"
+    max_tokens = 1024 if brief else 2048
+    if state.get("markdown"):
+        system = system + "\nFormat the response as Markdown with H2/H3 headings; LinkedIn-paste-friendly."
+
+    client = anthropic.Anthropic(api_key=api_key)
     msg = client.messages.create(
-        model=_MODEL,
-        max_tokens=1024,
-        system=_SYSTEM_PROMPT,
+        model=model,
+        max_tokens=max_tokens,
+        system=system,
         messages=[{"role": "user", "content": trace}],
     )
     return msg.content[0].text
@@ -148,6 +203,104 @@ def _template_narrative(state: DhurandharState) -> str:
         ]
 
     return "\n".join(lines)
+
+
+def _template_forward(state: DhurandharState) -> str:
+    """Markdown-friendly fallback for project-forward mode (no API key)."""
+    fp = state.get("forward_projection")
+    operative = state.get("operative", "UNKNOWN")
+    if not fp:
+        return f"FORWARD PROJECTION: {operative} — no projection produced."
+    md = state.get("markdown", False)
+    h2 = "## " if md else ""
+    h3 = "### " if md else ""
+    out: list[str] = []
+    if fp.is_speculative_real_figure:
+        out.append("[SPECULATIVE — projection of a real public figure]\n")
+    out.append(f"{h2}Forward projection: {operative}")
+    out.append(f"Horizon: {fp.arc_start} → {fp.horizon_until}")
+    out.append("")
+    out.append(f"{h3}Predicted trajectory (canonical extrapolation)")
+    for s in fp.predicted.steps:
+        out.append(f"- {s.event_date} · {s.event_label}: {s.action_label} → {s.status_after}")
+    out.append(f"Final status: {fp.predicted.final_status}  ·  scalar score: {fp.predicted.scalar_score:.2f}")
+    out.append("")
+    out.append(f"{h3}Prescribed trajectory (oracle-optimal)")
+    for s in fp.prescribed.steps:
+        out.append(f"- {s.event_date} · {s.event_label}: {s.action_label} → {s.status_after}")
+    out.append(f"Final status: {fp.prescribed.final_status}  ·  scalar score: {fp.prescribed.scalar_score:.2f}")
+    out.append("")
+    out.append(f"{h3}Score delta: +{fp.scalar_score_delta:.2f}")
+    od = fp.objective_delta
+    out.append(f"- mission_yield Δ      = {od.mission_yield:+.2f}")
+    out.append(f"- strategic_impact Δ   = {od.strategic_impact:+.2f}")
+    out.append(f"- personal_cost Δ      = {od.personal_cost:+.2f}  (negative = better)")
+    out.append(f"- network_durability Δ = {od.network_durability:+.2f}")
+    out.append(f"- attribution_risk Δ   = {od.attribution_risk:+.2f}  (negative = better)")
+    if fp.key_divergence_event:
+        out.append(f"\nKey divergence event: {fp.key_divergence_event}")
+    return "\n".join(out)
+
+
+def _template_rewrite(state: DhurandharState) -> str:
+    ar = state.get("arc_rewrite")
+    operative = state.get("operative", "UNKNOWN")
+    if not ar:
+        return f"ARC REWRITE: {operative} — no rewrite produced."
+    md = state.get("markdown", False)
+    h2 = "## " if md else ""
+    h3 = "### " if md else ""
+    out: list[str] = []
+    out.append(f"{h2}Arc rewrite: {operative}")
+    out.append("")
+    out.append(f"{h3}Per-turning-point counterfactual")
+    for s in ar.steps:
+        marker = " [SAME]" if s.actual_action == s.prescribed_action else ""
+        out.append(f"- {s.turning_point_id}: actual={s.actual_action}  prescribed={s.prescribed_action}  ΔQ={s.q_delta:+.3f}{marker}")
+    out.append(f"\nCumulative ΔQ: {ar.cumulative_q_delta:+.3f}")
+    od = ar.objective_delta
+    out.append("")
+    out.append(f"{h3}5d career objective delta")
+    out.append(f"- mission_yield Δ      = {od.mission_yield:+.2f}")
+    out.append(f"- strategic_impact Δ   = {od.strategic_impact:+.2f}")
+    out.append(f"- personal_cost Δ      = {od.personal_cost:+.2f}  (negative = better)")
+    out.append(f"- network_durability Δ = {od.network_durability:+.2f}")
+    out.append(f"- attribution_risk Δ   = {od.attribution_risk:+.2f}  (negative = better)")
+    return "\n".join(out)
+
+
+def _build_forward_trace(state: DhurandharState) -> str:
+    import json
+    fp = state.get("forward_projection")
+    arc = state.get("macro_arc")
+    summaries = state.get("context_summaries", [])
+    payload = {
+        "operative": state.get("operative"),
+        "arc": arc.model_dump() if arc else None,
+        "context_summaries": summaries,
+        "forward_projection": fp.model_dump() if fp else None,
+    }
+
+    def default(obj):
+        if hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        return str(obj)
+    return json.dumps(payload, default=default, indent=2)
+
+
+def _build_rewrite_trace(state: DhurandharState) -> str:
+    import json
+    ar = state.get("arc_rewrite")
+    payload = {
+        "operative": state.get("operative"),
+        "arc_rewrite": ar.model_dump() if ar else None,
+    }
+
+    def default(obj):
+        if hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        return str(obj)
+    return json.dumps(payload, default=default, indent=2)
 
 
 def _build_trace(state: DhurandharState) -> str:

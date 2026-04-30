@@ -18,12 +18,15 @@ from typing import Annotated, Optional, TypedDict
 from dhurandhar_oracle.schemas import (
     AdversaryModel,
     AllianceEdge,
+    ArcRewrite,
     BeliefGap,
     CausalDAG,
     CentralityScores,
     CriticalPathResult,
+    ForwardProjection,
     HMMResult,
     IntelligenceTarget,
+    MacroArc,
     MissionTask,
     OperativeState,
     POOMDPResult,
@@ -84,6 +87,19 @@ class DhurandharState(TypedDict, total=False):
 
     # ── narrator_node ─────────────────────────────────────────────────────────
     narrative: str
+
+    # ── Forward / rewrite mode inputs & outputs ───────────────────────────────
+    mode:                    str               # "turning_point" | "forward" | "rewrite"
+    horizon_until:           str               # ISO date, used by forward mode
+    forced_event_action:     Optional[dict]    # {"event_id": "...", "action_id": "..."}
+    forced_tp_action:        Optional[dict]    # {"turning_point_id": "...", "action_id": "..."}
+    brief:                   bool              # narrator brevity flag
+    markdown:                bool              # narrator output format flag
+
+    macro_arc:               MacroArc          # forward mode input
+    context_summaries:       list[dict]        # event_id → context bullet lines
+    forward_projection:      ForwardProjection # forward mode output
+    arc_rewrite:             ArcRewrite        # rewrite mode output
 
     # ── Pipeline bookkeeping — Annotated so parallel branches can both write ──
     errors:   Annotated[list[str], operator.add]

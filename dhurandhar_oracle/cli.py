@@ -22,7 +22,8 @@ from rich.panel import Panel
 from rich import print as rprint
 
 from dhurandhar_oracle.graph import oracle_graph
-from dhurandhar_oracle.io.loader import list_turning_points, list_characters
+from dhurandhar_oracle.forward_graph import forward_graph
+from dhurandhar_oracle.io.loader import list_turning_points, list_characters, list_macro_arcs
 from dhurandhar_oracle.data_quality import run_data_quality_audit, backfill_missing_outcomes
 
 app     = typer.Typer(help="Dhurandhar intelligence oracle — POMDP, CPM, VoI, Stackelberg")
@@ -136,6 +137,65 @@ def list_characters_cmd() -> None:
             c.cover_identity or "—",
         )
     console.print(t)
+
+
+@app.command("project-forward")
+def project_forward_cmd(
+    operative:    str  = typer.Argument(..., help="Operative ID (must be Indian-side and have a post-D2 macro-arc)"),
+    until:        str  = typer.Option("today", "--until",  help="ISO date (YYYY-MM-DD) horizon; default = today"),
+    force_event:  Optional[str] = typer.Option(None, "--force-event-response",
+                                               help="Force a (event_id:action_id) override on the prescribed trajectory"),
+    brief:        bool = typer.Option(False, "--brief",    help="Use Haiku for a shorter narrative"),
+    markdown:     bool = typer.Option(False, "--markdown", help="Render narrative as Markdown"),
+    no_narrative: bool = typer.Option(False, "--no-narrative", help="Skip Claude narrative"),
+    output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
+) -> None:
+    """Project an Indian-side operative's career forward against real 2025-2026 events."""
+    from datetime import date
+    if until == "today":
+        until = date.today().isoformat()
+
+    forced = None
+    if force_event:
+        if ":" not in force_event:
+            rprint("[red]--force-event-response must be event_id:action_id[/red]")
+            raise typer.Exit(2)
+        ev, ac = force_event.split(":", 1)
+        forced = {"event_id": ev.strip(), "action_id": ac.strip()}
+
+    initial_state = {
+        "operative":            operative,
+        "mode":                 "forward",
+        "horizon_until":        until,
+        "forced_event_action":  forced,
+        "brief":                brief,
+        "markdown":             markdown,
+        "errors":   [], "warnings": [],
+    }
+
+    with console.status(f"[bold green]Projecting {operative} forward to {until}…"):
+        result = forward_graph.invoke(initial_state)
+
+    if result.get("errors"):
+        for e in result["errors"]:
+            rprint(f"[bold red]ERROR:[/bold red] {e}")
+        raise typer.Exit(1)
+    for w in result.get("warnings", []):
+        rprint(f"[yellow]WARNING:[/yellow] {w}")
+
+    if output_json:
+        def _default(obj):
+            if hasattr(obj, "model_dump"):
+                return obj.model_dump()
+            return str(obj)
+        typer.echo(json.dumps(result, default=_default, indent=2))
+        return
+
+    _print_forward(result)
+    if not no_narrative and result.get("narrative"):
+        console.print(Panel(result["narrative"],
+                            title="Forward Projection — Strategic Brief",
+                            border_style="cyan"))
 
 
 @app.command("audit-data")
@@ -275,6 +335,40 @@ def _print_shapley(result: dict) -> None:
         risk    = "[red]HIGH[/red]" if defect > 0.5 else "[green]LOW[/green]"
         t.add_row(actor, f"{phi:.3f}", f"{defect:.3f}", risk)
     console.print(t)
+
+
+def _print_forward(result: dict) -> None:
+    fp = result.get("forward_projection")
+    if not fp:
+        return
+    if fp.is_speculative_real_figure:
+        rprint("[yellow][SPECULATIVE — projection of a real public figure][/yellow]")
+    rprint(f"[bold]Forward projection:[/bold] {fp.operative}    "
+           f"horizon {fp.arc_start} → {fp.horizon_until}")
+    t = Table(title="Trajectory comparison")
+    t.add_column("Event")
+    t.add_column("Predicted action")
+    t.add_column("Prescribed action")
+    t.add_column("Status (prescribed)")
+    pred_by_id = {s.event_id: s for s in fp.predicted.steps}
+    for s in fp.prescribed.steps:
+        pred = pred_by_id.get(s.event_id)
+        pred_label = pred.action_label if pred else "—"
+        marker = " ←" if pred and pred.chosen_action != s.chosen_action else ""
+        t.add_row(s.event_date + " " + s.event_label[:30],
+                  pred_label, s.action_label + marker, s.status_after)
+    console.print(t)
+    rprint(f"  Predicted scalar score:  {fp.predicted.scalar_score:+.2f}  "
+           f"(final status: {fp.predicted.final_status})")
+    rprint(f"  Prescribed scalar score: {fp.prescribed.scalar_score:+.2f}  "
+           f"(final status: {fp.prescribed.final_status})")
+    rprint(f"  Δ score: [bold green]+{fp.scalar_score_delta:.2f}[/bold green]")
+    od = fp.objective_delta
+    rprint(f"  Objective Δ: yield={od.mission_yield:+.2f}  impact={od.strategic_impact:+.2f}  "
+           f"cost={od.personal_cost:+.2f}  network={od.network_durability:+.2f}  "
+           f"attribution={od.attribution_risk:+.2f}")
+    if fp.key_divergence_event:
+        rprint(f"  Key divergence: [cyan]{fp.key_divergence_event}[/cyan]")
 
 
 def _print_simulation(result: dict) -> None:
