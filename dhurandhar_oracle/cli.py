@@ -199,6 +199,50 @@ def project_forward_cmd(
                             border_style="cyan"))
 
 
+@app.command("suggest")
+def suggest_cmd(
+    mode: str = typer.Option("forward", "--mode", help="forward | rewrite"),
+) -> None:
+    """List ranked Indian-side operatives suitable for the chosen mode."""
+    from dhurandhar_oracle.agents.suggestion_node import suggest as _suggest
+    try:
+        out = _suggest(mode)
+    except ValueError as exc:
+        rprint(f"[red]{exc}[/red]")
+        raise typer.Exit(2)
+
+    if out["mode"] == "forward":
+        _render_table("Ready (has authored macro-arc)", out["ready"])
+        if out["unready_fictional"]:
+            _render_table("Fictional — needs macro-arc authored", out["unready_fictional"])
+        if out["speculative"]:
+            _render_table("Real public figures — projection is speculative",
+                          out["speculative"], speculative=True)
+    else:
+        _render_table("Eligible for rewrite-arc (has turning points)", out["eligible"])
+        if out["ineligible"]:
+            _render_table("No turning points authored", out["ineligible"])
+
+
+def _render_table(title: str, rows: list, speculative: bool = False) -> None:
+    if not rows:
+        return
+    t = Table(title=title)
+    t.add_column("ID")
+    t.add_column("Name")
+    t.add_column("Role")
+    t.add_column("Films")
+    t.add_column("TPs")
+    t.add_column("Tier")
+    for r in rows:
+        flag = " [speculative]" if speculative else ""
+        t.add_row(r["id"], r["name"], r["role"][:40],
+                  ",".join(map(str, r["films"])),
+                  str(r["n_tps"]),
+                  r["archetype"] + flag)
+    console.print(t)
+
+
 @app.command("rewrite-arc")
 def rewrite_arc_cmd(
     operative:    str  = typer.Argument(..., help="Indian-side operative whose D1+D2 arc to rewrite"),
