@@ -37,3 +37,6 @@ target-version = "py311"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "slow: end-to-end tests that take >30s (e.g. full POMDP-per-TP rewrite-arc run)",
+]

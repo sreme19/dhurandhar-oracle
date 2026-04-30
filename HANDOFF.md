@@ -69,11 +69,25 @@ You should see a list of commands including `run`, `project-forward`,
 
 ## Step 4 — Run the unit tests (no API key needed)
 
+> **Important:** Step 3 (`pip install -e ".[dev]"`) MUST have completed
+> first. If you run `pytest` before installing, you'll see
+> `ModuleNotFoundError: No module named 'langgraph'` — that's not a
+> code bug, it's the install step missing.
+
 ```bash
-python -m pytest tests/test_career_mdp.py tests/test_forward_pipeline.py -v
+python -m pytest tests -v
 ```
 
-Expected: **8 passed**. If anything fails, stop and tell me.
+Expected: **10 passed**. (5 fast career-MDP tests + 3 forward-pipeline +
+2 rewrite-pipeline including a slow ~30s end-to-end run on Hamza.)
+
+To skip the slow test:
+
+```bash
+python -m pytest tests -v -m "not slow"
+```
+
+If anything fails, stop and tell me.
 
 ---
 
@@ -208,7 +222,10 @@ output. The likely culprits are:
 
 - **Step 3 install fails on `langgraph`** → upgrade pip first:
   `pip install --upgrade pip` then retry Step 3.
-- **Step 4 tests fail** → unexpected; paste the failure output.
+- **Step 4 fails with `ModuleNotFoundError: No module named 'langgraph'`** →
+  Step 3 was skipped or didn't complete. Run Step 3, then re-run Step 4.
+- **Step 4 tests fail with anything other than the langgraph error** →
+  unexpected; paste the failure output.
 - **Step 7 returns "ANTHROPIC_API_KEY not set" warning** → Step 6 didn't
   take effect. Re-run the verify command in Step 6.
 - **Step 7 returns 401 / authentication error** → key is wrong or not
