@@ -1,0 +1,42 @@
+{
+  "id": "mystery_killings_pakistan",
+  "name": "Mystery Killings in Pakistan (2022-2024)",
+  "type": "covert_elimination_pattern",
+  "description": "Series of India's most-wanted terrorists and militants dying under suspicious circumstances on Pakistani soil. Pattern suggests covert Indian operations without official attribution — perfect Hamza/Jaskirat arc material.",
+  "timeline": [
+    {
+      "date": "2022-03-01",
+      "target": "Zahoor Mistry (IC-814 hijacker)",
+      "location": "Karachi",
+      "circumstances": "Shot dead; Crescent Furniture cover; 22 years post-hijacking"
+    },
+    {
+      "date": "2023",
+      "target": "Sajid Mir (26/11 planner)",
+      "location": "Pakistani custody",
+      "circumstances": "Reportedly poisoned in jail; previous 'resurrection' 2023"
+    },
+    {
+      "date": "2023",
+      "target": "Paramjit Singh Panjwar (Khalistan Commando Force)",
+      "location": "Lahore",
+      "circumstances": "Shot by unknown gunmen; 'targeted killing pattern'"
+    },
+    {
+      "date": "2024",
+      "target": "Multiple Hizbul/JeM commanders",
+      "location": "PoK/Pakistan",
+      "circumstances": "Car bombs, shootings, 'unknown assailants'"
+    }
+  ],
+  "pattern_analysis": {
+    "attribution": "None claimed by India; 'plausible deniability' maintained",
+    "methods": "Gunmen, poison, car bombs — not airstrikes (avoid escalation)",
+    "targets": "26/11 plotters, IC-814 hijackers, Khalistani militants, Kashmiri commanders",
+    "implication": "Sustained covert campaign; Hamza/Jaskirat operational continuity 2022-2024"
+  },
+  "film_relevance": {
+    "part_4": "Implicit Hamza operations 2022-2024; 'justice delivered' without overt attribution",
+    "narrative_function": "Shows continuing covert war between overt strikes; protagonist's off-screen work"
+  }
+}

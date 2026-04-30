@@ -1,0 +1,30 @@
+{
+  "id": "balakot_doctrine",
+  "name": "Balakot Air Strike Doctrine (2019)",
+  "type": "strategic_doctrine",
+  "description": "IAF aerial strike deep inside Pakistan's Khyber Pakhtunkhwa province — first air force crossing of international border since 1971. Response to Pulwama suicide bombing.",
+  "trigger_event": {
+    "date": "2019-02-14",
+    "event": "Pulwama attack — Adil Ahmad Dar rams CRPF convoy, 40 killed"
+  },
+  "operation_details": {
+    "date": "2019-02-26",
+    "time": "0330 hours",
+    "aircraft": "12 Mirage 2000s with Spice 2000/Storm Shadow munitions",
+    "target": "JeM seminary/training facility at Balakot, Khyber Pakhtunkhwa",
+    "location": "80km inside Pakistan, beyond PoK (international border crossed)",
+    "package": "Escort: Su-30MKI, AWACS, IL-78 tankers, Heron drones"
+  },
+  "pakistani_response": {
+    "27_february": "PAF retaliatory strikes across LoC; F-16 vs MiG-21 dogfight",
+    "abhinandan": "Wing Commander Abhinandan Varthaman shot down, captured, released 60 hours later"
+  },
+  "strategic_significance": {
+    "escalation_threshold": "Crossed international border by air; established new retaliation ceiling",
+    "deterrence_evolution": "From ground (Surgical Strikes 2016) to air (Balakot 2019) to integrated (Sindoor 2025)",
+    "pakistani_learning": "Demonstrated Indian willingness to escalate despite nuclear threshold concerns"
+  },
+  "film_relevance": {
+    "part_3": "Central set-piece; aerial warfare spectacle; Abhinandan capture-return drama"
+  }
+}

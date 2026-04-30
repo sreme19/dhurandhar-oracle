@@ -1,0 +1,77 @@
+{
+  "operative": "ks_bhullar",
+  "arc_start": "2025-12-15",
+  "description": "Post-D2 forward arc for K.S. Bhullar — RAW Special Secretary, Dulat-composite institutional skeptic. His arc is about institutional restraint vs. kinetic-doctrine alignment, not field operations.",
+  "initial_status": "active",
+  "initial_objective": {
+    "mission_yield":      5.0,
+    "strategic_impact":   6.0,
+    "personal_cost":      2.5,
+    "network_durability": 7.5,
+    "attribution_risk":   3.5
+  },
+  "is_speculative_real_figure": false,
+
+  "actions": [
+    {
+      "id": "block_kinetic_doctrine",
+      "label": "Counsel restraint — block kinetic doctrine",
+      "description": "Use institutional weight to slow Sanyal's Naya Bharat kinetic push. Lower attribution risk, lower mission yield.",
+      "objective_delta": {"mission_yield": -0.2, "strategic_impact": 0.4, "personal_cost": -0.2, "network_durability": 1.0, "attribution_risk": -1.4},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.0, "extracted": 0.005, "retired": 0.005}
+    },
+    {
+      "id": "back_kinetic_doctrine",
+      "label": "Endorse kinetic doctrine",
+      "description": "Switch position — support Naya Bharat kinetic operations. Higher mission yield, higher attribution risk.",
+      "objective_delta": {"mission_yield": 1.0, "strategic_impact": 1.4, "personal_cost": 0.2, "network_durability": 0.4, "attribution_risk": 1.4},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.001, "extracted": 0.005, "retired": 0.004}
+    },
+    {
+      "id": "back_channel_diplomacy",
+      "label": "Open Track-II back channel with Pakistan",
+      "description": "Use Dulat-style back-channel network to de-escalate. Trades short-term mission yield for long-term durability.",
+      "objective_delta": {"mission_yield": -0.4, "strategic_impact": 0.8, "personal_cost": -0.4, "network_durability": 1.6, "attribution_risk": -1.0},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.001, "extracted": 0.005, "retired": 0.004}
+    },
+    {
+      "id": "publish_doctrine_critique",
+      "label": "Publish (semi-public) doctrine critique",
+      "description": "Use memoir / op-ed channel to push institutional view. Some attribution exposure but builds long-term credibility.",
+      "objective_delta": {"mission_yield": 0.0, "strategic_impact": 0.6, "personal_cost": 0.2, "network_durability": 0.4, "attribution_risk": 0.4},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.0, "extracted": 0.005, "retired": 0.005}
+    },
+    {
+      "id": "advise_pahalgam_calibration",
+      "label": "Advise calibrated post-Pahalgam response",
+      "description": "Push for measured kinetic-plus-diplomatic response rather than maximalist Sindoor.",
+      "objective_delta": {"mission_yield": 0.6, "strategic_impact": 1.2, "personal_cost": 0.0, "network_durability": 0.6, "attribution_risk": 0.4},
+      "transition_probs": {"active": 0.995, "killed": 0.0, "blown": 0.0, "extracted": 0.003, "retired": 0.002}
+    },
+    {
+      "id": "retire_to_advisory",
+      "label": "Retire to elder-statesman advisory role",
+      "description": "Step back from operational influence to long-term advisory/strategic role.",
+      "objective_delta": {"mission_yield": 0.0, "strategic_impact": 0.4, "personal_cost": -0.8, "network_durability": 1.0, "attribution_risk": -0.6},
+      "transition_probs": {"active": 0.0, "killed": 0.0, "blown": 0.0, "extracted": 0.05, "retired": 0.95}
+    }
+  ],
+
+  "events": [
+    {"id": "b1_post_d2_close", "date": "2025-12-15", "label": "Post-D2 doctrinal review", "context_ref": "ib_vs_raw_friction",
+     "description": "RAW-IB friction recurs as Sanyal pushes Naya Bharat further. Bhullar's institutional position needed.",
+     "available_actions": ["block_kinetic_doctrine","back_kinetic_doctrine","back_channel_diplomacy"]},
+    {"id": "b2_isi_pressure", "date": "2026-01-20", "label": "ISI pressure peaks", "context_ref": "mystery_killings_pakistan",
+     "description": "ISI's CI sweep pushes back-channel actors. Time-window for Track-II vs hardening.",
+     "available_actions": ["back_channel_diplomacy","block_kinetic_doctrine","publish_doctrine_critique"]},
+    {"id": "b3_diaspora_pressure", "date": "2026-02-25", "label": "Diaspora radicalisation surge", "context_ref": "punjab_khalistan_arc",
+     "description": "Canadian/UK diaspora question becomes hot.",
+     "available_actions": ["back_channel_diplomacy","block_kinetic_doctrine","publish_doctrine_critique"]},
+    {"id": "b4_pahalgam", "date": "2026-04-22", "label": "Pahalgam attack", "context_ref": "pahalgam_massacre",
+     "description": "Hard pressure on every restraint argument.",
+     "available_actions": ["advise_pahalgam_calibration","back_kinetic_doctrine","block_kinetic_doctrine"]},
+    {"id": "b5_sindoor_window", "date": "2026-04-29", "label": "Sindoor planning window", "context_ref": "operation_sindoor",
+     "description": "Last chance to influence the doctrine commit.",
+     "available_actions": ["advise_pahalgam_calibration","retire_to_advisory","back_channel_diplomacy"]}
+  ]
+}

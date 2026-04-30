@@ -26,5 +26,7 @@
     {"film": 2, "act": 2, "action": "brief_ib_on_ficn_domestic_network"},
     {"film": 2, "act": 3, "action": "coordinate_domestic_network_dismantling"}
   ],
-  "adversary_model": null
+  "adversary_model": null,
+  "is_real_public_figure": true,
+  "archetype": "public_figure"
 }

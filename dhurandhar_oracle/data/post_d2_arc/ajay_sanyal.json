@@ -1,0 +1,83 @@
+{
+  "operative": "ajay_sanyal",
+  "arc_start": "2025-12-15",
+  "description": "Post-D2 forward arc for Ajay Sanyal — IB Director composite of Ajit Doval. Strategic-handler role, not field operative; decisions are doctrinal and resourcing rather than tactical.",
+  "initial_status": "active",
+  "initial_objective": {
+    "mission_yield":      6.5,
+    "strategic_impact":   8.0,
+    "personal_cost":      3.0,
+    "network_durability": 7.0,
+    "attribution_risk":   5.5
+  },
+  "is_speculative_real_figure": false,
+  "notes": "Sanyal's macro-actions are doctrinal posture decisions — what RAW/IB doctrine to commit to and which fronts to escalate. Mortality is essentially zero; the real risk dimensions are reputational/political (mapped to attribution_risk) and institutional (network_durability).",
+
+  "actions": [
+    {
+      "id": "expand_naya_bharat_doctrine",
+      "label": "Push Naya Bharat into kinetic doctrine",
+      "description": "Codify offensive cross-border doctrine; expand IB external mandate further. High strategic impact, raises attribution risk.",
+      "objective_delta": {"mission_yield": 1.0, "strategic_impact": 2.0, "personal_cost": 0.4, "network_durability": 0.5, "attribution_risk": 1.6},
+      "transition_probs": {"active": 0.99, "killed": 0.001, "blown": 0.001, "extracted": 0.005, "retired": 0.003}
+    },
+    {
+      "id": "rebuild_pakistan_humint",
+      "label": "Invest in long-term Pakistan HUMINT rebuild",
+      "description": "Multi-year capability investment — reseed RAW/IB Pakistan networks post-Hamza. Slow yield, huge network durability.",
+      "objective_delta": {"mission_yield": 0.4, "strategic_impact": 1.0, "personal_cost": 0.0, "network_durability": 2.4, "attribution_risk": 0.2},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.001, "extracted": 0.005, "retired": 0.004}
+    },
+    {
+      "id": "consolidate_domestic_ct",
+      "label": "Consolidate domestic CT (Punjab + J&K)",
+      "description": "Shift balance toward internal security tightening. Lower attribution risk, lower strategic ceiling.",
+      "objective_delta": {"mission_yield": 0.6, "strategic_impact": 0.5, "personal_cost": -0.2, "network_durability": 1.0, "attribution_risk": -0.6},
+      "transition_probs": {"active": 0.995, "killed": 0.0, "blown": 0.0, "extracted": 0.003, "retired": 0.002}
+    },
+    {
+      "id": "diaspora_pressure_campaign",
+      "label": "Pressure diaspora host nations diplomatically",
+      "description": "Use government channels to push Canada/UK/US on Khalistan-funding actors. Lower attribution risk than kinetic ops, slower payoff.",
+      "objective_delta": {"mission_yield": 0.5, "strategic_impact": 1.2, "personal_cost": 0.0, "network_durability": 0.4, "attribution_risk": -0.4},
+      "transition_probs": {"active": 0.998, "killed": 0.0, "blown": 0.0, "extracted": 0.001, "retired": 0.001}
+    },
+    {
+      "id": "authorize_kinetic_pahalgam_response",
+      "label": "Authorise post-Pahalgam kinetic strikes",
+      "description": "Sign off on Sindoor-style cross-border operation. Maximum strategic impact, maximum attribution risk.",
+      "objective_delta": {"mission_yield": 1.6, "strategic_impact": 2.4, "personal_cost": 0.6, "network_durability": 0.0, "attribution_risk": 2.0},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.001, "extracted": 0.005, "retired": 0.004}
+    },
+    {
+      "id": "graceful_succession",
+      "label": "Plan graceful institutional succession",
+      "description": "Begin handover to deputy (Sushant Bansal). Locks in network durability; ends Sanyal's active arc.",
+      "objective_delta": {"mission_yield": 0.0, "strategic_impact": 0.4, "personal_cost": -0.6, "network_durability": 1.2, "attribution_risk": -0.2},
+      "transition_probs": {"active": 0.0, "killed": 0.0, "blown": 0.0, "extracted": 0.1, "retired": 0.9}
+    }
+  ],
+
+  "events": [
+    {"id": "s1_post_d2_close", "date": "2025-12-15", "label": "Post-D2 doctrinal review",
+     "context_ref": "narco_jihad_doctrine",
+     "description": "Punjab op concluded; doctrinal review underway. Sanyal sets next phase posture.",
+     "available_actions": ["expand_naya_bharat_doctrine","rebuild_pakistan_humint","consolidate_domestic_ct"]},
+    {"id": "s2_isi_pressure_2026", "date": "2026-01-20", "label": "ISI counter-intel pressure peaks",
+     "context_ref": "mystery_killings_pakistan",
+     "description": "Hamza/Rizwan exposure rising; Sanyal must decide whether to invest in HUMINT rebuild or consolidate domestically.",
+     "available_actions": ["rebuild_pakistan_humint","consolidate_domestic_ct","expand_naya_bharat_doctrine"]},
+    {"id": "s3_diaspora_pressure", "date": "2026-02-25", "label": "Diaspora radicalisation surge",
+     "context_ref": "punjab_khalistan_arc",
+     "description": "Canada/UK diaspora becomes a primary issue; choose between diplomatic pressure and continued kinetic doctrine push.",
+     "available_actions": ["diaspora_pressure_campaign","expand_naya_bharat_doctrine","consolidate_domestic_ct"]},
+    {"id": "s4_pahalgam", "date": "2026-04-22", "label": "Pahalgam attack",
+     "context_ref": "pahalgam_massacre",
+     "description": "TRF attack on civilians forces immediate doctrinal posture decision.",
+     "available_actions": ["authorize_kinetic_pahalgam_response","diaspora_pressure_campaign","consolidate_domestic_ct"]},
+    {"id": "s5_sindoor_window", "date": "2026-04-29", "label": "Operation Sindoor planning",
+     "context_ref": "operation_sindoor",
+     "description": "Final doctrinal commitment before kinetic phase begins.",
+     "available_actions": ["authorize_kinetic_pahalgam_response","diaspora_pressure_campaign","graceful_succession","rebuild_pakistan_humint"]}
+  ]
+}

@@ -15,7 +15,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from dhurandhar_oracle.schemas import CharacterProfile, OutcomeEntry, TurningPoint
+from dhurandhar_oracle.schemas import CharacterProfile, MacroArc, OutcomeEntry, TurningPoint
 
 _DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -73,6 +73,31 @@ def list_turning_points(operative: str) -> list[TurningPoint]:
         except Exception:
             continue
     return result
+
+
+def load_macro_arc(operative_id: str) -> MacroArc:
+    """Load and validate a post-D2 macro-arc from data/post_d2_arc/<id>.json."""
+    path = _DATA_DIR / "post_d2_arc" / f"{operative_id}.json"
+    if not path.exists():
+        raise FileNotFoundError(f"Macro-arc not found: {path}")
+    raw = json.loads(path.read_text())
+    return MacroArc.model_validate(raw)
+
+
+def load_context(context_id: str) -> dict:
+    """Load a real-world context file from data/context/<id>.json (raw dict)."""
+    path = _DATA_DIR / "context" / f"{context_id}.json"
+    if not path.exists():
+        raise FileNotFoundError(f"Context not found: {path}")
+    return json.loads(path.read_text())
+
+
+def list_macro_arcs() -> list[str]:
+    """Return all operative IDs that have an authored post-D2 macro-arc."""
+    arc_dir = _DATA_DIR / "post_d2_arc"
+    if not arc_dir.exists():
+        return []
+    return sorted(p.stem for p in arc_dir.glob("*.json"))
 
 
 def list_characters(side_filter: str | None = None) -> list[CharacterProfile]:

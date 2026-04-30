@@ -1,0 +1,77 @@
+{
+  "operative": "sushant_bansal",
+  "arc_start": "2025-12-15",
+  "description": "Post-D2 forward arc for Sushant Bansal — Deputy IB Director, Sanyal's operational deputy. Career-arc tension is whether he becomes the next-generation Naya Bharat owner or remains executor.",
+  "initial_status": "active",
+  "initial_objective": {
+    "mission_yield":      5.5,
+    "strategic_impact":   5.0,
+    "personal_cost":      3.0,
+    "network_durability": 6.0,
+    "attribution_risk":   4.5
+  },
+  "is_speculative_real_figure": false,
+
+  "actions": [
+    {
+      "id": "execute_naya_bharat_ops",
+      "label": "Execute Naya Bharat field ops",
+      "description": "Continue running the operational tempo Sanyal sets — Punjab, Karachi liaison, diaspora.",
+      "objective_delta": {"mission_yield": 1.2, "strategic_impact": 0.6, "personal_cost": 0.4, "network_durability": 0.6, "attribution_risk": 0.8},
+      "transition_probs": {"active": 0.99, "killed": 0.001, "blown": 0.005, "extracted": 0.003, "retired": 0.001}
+    },
+    {
+      "id": "claim_doctrinal_authorship",
+      "label": "Claim doctrinal authorship of next phase",
+      "description": "Step up — propose own doctrinal frame ('post-Naya-Bharat'). Higher strategic impact, higher institutional risk.",
+      "objective_delta": {"mission_yield": 0.4, "strategic_impact": 1.6, "personal_cost": 0.4, "network_durability": 0.4, "attribution_risk": 0.6},
+      "transition_probs": {"active": 0.99, "killed": 0.0, "blown": 0.001, "extracted": 0.005, "retired": 0.004}
+    },
+    {
+      "id": "rebuild_punjab_unit",
+      "label": "Rebuild dedicated IB Punjab unit",
+      "description": "Institutional investment — durable Punjab CT capacity inside IB.",
+      "objective_delta": {"mission_yield": 0.6, "strategic_impact": 0.6, "personal_cost": 0.0, "network_durability": 1.6, "attribution_risk": -0.2},
+      "transition_probs": {"active": 0.998, "killed": 0.0, "blown": 0.0, "extracted": 0.001, "retired": 0.001}
+    },
+    {
+      "id": "field_observation_tour",
+      "label": "Lead field observation tour (Karachi/UAE)",
+      "description": "Personally validate field assets — high yield via direct observation, high field exposure.",
+      "objective_delta": {"mission_yield": 1.4, "strategic_impact": 0.5, "personal_cost": 0.8, "network_durability": 0.4, "attribution_risk": 0.8},
+      "transition_probs": {"active": 0.94, "killed": 0.015, "blown": 0.025, "extracted": 0.015, "retired": 0.005}
+    },
+    {
+      "id": "coordinate_pahalgam_response",
+      "label": "Coordinate operational response to Pahalgam",
+      "description": "Run the IB side of Sindoor build-up — kinetic targeting and HUMINT confirmation.",
+      "objective_delta": {"mission_yield": 1.6, "strategic_impact": 1.4, "personal_cost": 0.4, "network_durability": 0.4, "attribution_risk": 1.2},
+      "transition_probs": {"active": 0.99, "killed": 0.001, "blown": 0.005, "extracted": 0.003, "retired": 0.001}
+    },
+    {
+      "id": "promote_to_director",
+      "label": "Position for promotion to IB Director",
+      "description": "Available only at end of horizon — formal succession to Sanyal's seat.",
+      "objective_delta": {"mission_yield": 0.0, "strategic_impact": 1.0, "personal_cost": -0.4, "network_durability": 1.0, "attribution_risk": 0.0},
+      "transition_probs": {"active": 0.95, "killed": 0.0, "blown": 0.0, "extracted": 0.025, "retired": 0.025}
+    }
+  ],
+
+  "events": [
+    {"id": "n1_post_d2_close", "date": "2025-12-15", "label": "Post-D2 institutional review", "context_ref": null,
+     "description": "Decision: continue executing Sanyal's plan vs. claim own doctrinal frame.",
+     "available_actions": ["execute_naya_bharat_ops","claim_doctrinal_authorship","rebuild_punjab_unit"]},
+    {"id": "n2_isi_pressure", "date": "2026-01-20", "label": "ISI counter-intel sweep", "context_ref": "mystery_killings_pakistan",
+     "description": "Asset network pressured; tour or hold pattern?",
+     "available_actions": ["field_observation_tour","execute_naya_bharat_ops","rebuild_punjab_unit"]},
+    {"id": "n3_diaspora_pressure", "date": "2026-02-25", "label": "Diaspora surge", "context_ref": "punjab_khalistan_arc",
+     "description": "Punjab dimension intensifies.",
+     "available_actions": ["rebuild_punjab_unit","execute_naya_bharat_ops","claim_doctrinal_authorship"]},
+    {"id": "n4_pahalgam", "date": "2026-04-22", "label": "Pahalgam attack", "context_ref": "pahalgam_massacre",
+     "description": "Operational response coordination falls to Bansal.",
+     "available_actions": ["coordinate_pahalgam_response","execute_naya_bharat_ops","rebuild_punjab_unit"]},
+    {"id": "n5_sindoor_window", "date": "2026-04-29", "label": "Sindoor planning", "context_ref": "operation_sindoor",
+     "description": "Final operational ramp; succession positioning opens.",
+     "available_actions": ["coordinate_pahalgam_response","promote_to_director","claim_doctrinal_authorship"]}
+  ]
+}

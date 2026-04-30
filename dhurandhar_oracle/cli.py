@@ -22,7 +22,9 @@ from rich.panel import Panel
 from rich import print as rprint
 
 from dhurandhar_oracle.graph import oracle_graph
-from dhurandhar_oracle.io.loader import list_turning_points, list_characters
+from dhurandhar_oracle.forward_graph import forward_graph
+from dhurandhar_oracle.rewrite_graph import rewrite_graph
+from dhurandhar_oracle.io.loader import list_turning_points, list_characters, list_macro_arcs
 from dhurandhar_oracle.data_quality import run_data_quality_audit, backfill_missing_outcomes
 
 app     = typer.Typer(help="Dhurandhar intelligence oracle — POMDP, CPM, VoI, Stackelberg")
@@ -136,6 +138,162 @@ def list_characters_cmd() -> None:
             c.cover_identity or "—",
         )
     console.print(t)
+
+
+@app.command("project-forward")
+def project_forward_cmd(
+    operative:    str  = typer.Argument(..., help="Operative ID (must be Indian-side and have a post-D2 macro-arc)"),
+    until:        str  = typer.Option("today", "--until",  help="ISO date (YYYY-MM-DD) horizon; default = today"),
+    force_event:  Optional[str] = typer.Option(None, "--force-event-response",
+                                               help="Force a (event_id:action_id) override on the prescribed trajectory"),
+    brief:        bool = typer.Option(False, "--brief",    help="Use Haiku for a shorter narrative"),
+    markdown:     bool = typer.Option(False, "--markdown", help="Render narrative as Markdown"),
+    no_narrative: bool = typer.Option(False, "--no-narrative", help="Skip Claude narrative"),
+    output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
+) -> None:
+    """Project an Indian-side operative's career forward against real 2025-2026 events."""
+    from datetime import date
+    if until == "today":
+        until = date.today().isoformat()
+
+    forced = None
+    if force_event:
+        if ":" not in force_event:
+            rprint("[red]--force-event-response must be event_id:action_id[/red]")
+            raise typer.Exit(2)
+        ev, ac = force_event.split(":", 1)
+        forced = {"event_id": ev.strip(), "action_id": ac.strip()}
+
+    initial_state = {
+        "operative":            operative,
+        "mode":                 "forward",
+        "horizon_until":        until,
+        "forced_event_action":  forced,
+        "brief":                brief,
+        "markdown":             markdown,
+        "errors":   [], "warnings": [],
+    }
+
+    with console.status(f"[bold green]Projecting {operative} forward to {until}…"):
+        result = forward_graph.invoke(initial_state)
+
+    if result.get("errors"):
+        for e in result["errors"]:
+            rprint(f"[bold red]ERROR:[/bold red] {e}")
+        raise typer.Exit(1)
+    for w in result.get("warnings", []):
+        rprint(f"[yellow]WARNING:[/yellow] {w}")
+
+    if output_json:
+        def _default(obj):
+            if hasattr(obj, "model_dump"):
+                return obj.model_dump()
+            return str(obj)
+        typer.echo(json.dumps(result, default=_default, indent=2))
+        return
+
+    _print_forward(result)
+    if not no_narrative and result.get("narrative"):
+        console.print(Panel(result["narrative"],
+                            title="Forward Projection — Strategic Brief",
+                            border_style="cyan"))
+
+
+@app.command("suggest")
+def suggest_cmd(
+    mode: str = typer.Option("forward", "--mode", help="forward | rewrite"),
+) -> None:
+    """List ranked Indian-side operatives suitable for the chosen mode."""
+    from dhurandhar_oracle.agents.suggestion_node import suggest as _suggest
+    try:
+        out = _suggest(mode)
+    except ValueError as exc:
+        rprint(f"[red]{exc}[/red]")
+        raise typer.Exit(2)
+
+    if out["mode"] == "forward":
+        _render_table("Ready (has authored macro-arc)", out["ready"])
+        if out["unready_fictional"]:
+            _render_table("Fictional — needs macro-arc authored", out["unready_fictional"])
+        if out["speculative"]:
+            _render_table("Real public figures — projection is speculative",
+                          out["speculative"], speculative=True)
+    else:
+        _render_table("Eligible for rewrite-arc (has turning points)", out["eligible"])
+        if out["ineligible"]:
+            _render_table("No turning points authored", out["ineligible"])
+
+
+def _render_table(title: str, rows: list, speculative: bool = False) -> None:
+    if not rows:
+        return
+    t = Table(title=title)
+    t.add_column("ID")
+    t.add_column("Name")
+    t.add_column("Role")
+    t.add_column("Films")
+    t.add_column("TPs")
+    t.add_column("Tier")
+    for r in rows:
+        flag = " [speculative]" if speculative else ""
+        t.add_row(r["id"], r["name"], r["role"][:40],
+                  ",".join(map(str, r["films"])),
+                  str(r["n_tps"]),
+                  r["archetype"] + flag)
+    console.print(t)
+
+
+@app.command("rewrite-arc")
+def rewrite_arc_cmd(
+    operative:    str  = typer.Argument(..., help="Indian-side operative whose D1+D2 arc to rewrite"),
+    force_tp:     Optional[str] = typer.Option(None, "--force-tp",
+                                               help="Force a (turning_point:action) override"),
+    brief:        bool = typer.Option(False, "--brief",    help="Use Haiku for shorter narrative"),
+    markdown:     bool = typer.Option(False, "--markdown", help="Render as Markdown"),
+    no_narrative: bool = typer.Option(False, "--no-narrative", help="Skip Claude narrative"),
+    output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
+) -> None:
+    """Counterfactually rewrite an Indian operative's arc across films 1+2."""
+    forced = None
+    if force_tp:
+        if ":" not in force_tp:
+            rprint("[red]--force-tp must be turning_point:action[/red]")
+            raise typer.Exit(2)
+        tp, ac = force_tp.split(":", 1)
+        forced = {"turning_point_id": tp.strip(), "action_id": ac.strip()}
+
+    initial_state = {
+        "operative":         operative,
+        "mode":              "rewrite",
+        "forced_tp_action":  forced,
+        "brief":             brief,
+        "markdown":          markdown,
+        "errors":   [], "warnings": [],
+    }
+
+    with console.status(f"[bold green]Rewriting {operative}'s arc — this runs the POMDP per turning point…"):
+        result = rewrite_graph.invoke(initial_state)
+
+    if result.get("errors"):
+        for e in result["errors"]:
+            rprint(f"[bold red]ERROR:[/bold red] {e}")
+        raise typer.Exit(1)
+    for w in result.get("warnings", []):
+        rprint(f"[yellow]WARNING:[/yellow] {w}")
+
+    if output_json:
+        def _default(obj):
+            if hasattr(obj, "model_dump"):
+                return obj.model_dump()
+            return str(obj)
+        typer.echo(json.dumps(result, default=_default, indent=2))
+        return
+
+    _print_rewrite(result)
+    if not no_narrative and result.get("narrative"):
+        console.print(Panel(result["narrative"],
+                            title="Arc Rewrite — Counterfactual Brief",
+                            border_style="cyan"))
 
 
 @app.command("audit-data")
@@ -275,6 +433,67 @@ def _print_shapley(result: dict) -> None:
         risk    = "[red]HIGH[/red]" if defect > 0.5 else "[green]LOW[/green]"
         t.add_row(actor, f"{phi:.3f}", f"{defect:.3f}", risk)
     console.print(t)
+
+
+def _print_forward(result: dict) -> None:
+    fp = result.get("forward_projection")
+    if not fp:
+        return
+    if fp.is_speculative_real_figure:
+        rprint("[yellow][SPECULATIVE — projection of a real public figure][/yellow]")
+    rprint(f"[bold]Forward projection:[/bold] {fp.operative}    "
+           f"horizon {fp.arc_start} → {fp.horizon_until}")
+    t = Table(title="Trajectory comparison")
+    t.add_column("Event")
+    t.add_column("Predicted action")
+    t.add_column("Prescribed action")
+    t.add_column("Status (prescribed)")
+    pred_by_id = {s.event_id: s for s in fp.predicted.steps}
+    for s in fp.prescribed.steps:
+        pred = pred_by_id.get(s.event_id)
+        pred_label = pred.action_label if pred else "—"
+        marker = " ←" if pred and pred.chosen_action != s.chosen_action else ""
+        t.add_row(s.event_date + " " + s.event_label[:30],
+                  pred_label, s.action_label + marker, s.status_after)
+    console.print(t)
+    rprint(f"  Predicted scalar score:  {fp.predicted.scalar_score:+.2f}  "
+           f"(final status: {fp.predicted.final_status})")
+    rprint(f"  Prescribed scalar score: {fp.prescribed.scalar_score:+.2f}  "
+           f"(final status: {fp.prescribed.final_status})")
+    rprint(f"  Δ score: [bold green]+{fp.scalar_score_delta:.2f}[/bold green]")
+    od = fp.objective_delta
+    rprint(f"  Objective Δ: yield={od.mission_yield:+.2f}  impact={od.strategic_impact:+.2f}  "
+           f"cost={od.personal_cost:+.2f}  network={od.network_durability:+.2f}  "
+           f"attribution={od.attribution_risk:+.2f}")
+    if fp.key_divergence_event:
+        rprint(f"  Key divergence: [cyan]{fp.key_divergence_event}[/cyan]")
+
+
+def _print_rewrite(result: dict) -> None:
+    ar = result.get("arc_rewrite")
+    if not ar:
+        return
+    rprint(f"[bold]Arc rewrite:[/bold] {ar.operative}")
+    t = Table(title="Per-turning-point counterfactual")
+    t.add_column("Turning point")
+    t.add_column("Actual")
+    t.add_column("Prescribed")
+    t.add_column("Q(actual)")
+    t.add_column("Q(prescribed)")
+    t.add_column("ΔQ")
+    for s in ar.steps:
+        marker = " [SAME]" if s.actual_action == s.prescribed_action else ""
+        t.add_row(s.turning_point_id, s.actual_action, s.prescribed_action + marker,
+                  f"{s.actual_q_value:.3f}", f"{s.prescribed_q_value:.3f}",
+                  f"{s.q_delta:+.3f}")
+    console.print(t)
+    rprint(f"  Cumulative ΔQ: [bold green]{ar.cumulative_q_delta:+.3f}[/bold green]")
+    rprint(f"  Final state — baseline:   {ar.final_state_baseline.model_dump()}")
+    rprint(f"  Final state — prescribed: {ar.final_state_prescribed.model_dump()}")
+    od = ar.objective_delta
+    rprint(f"  5d career objective Δ: yield={od.mission_yield:+.2f}  impact={od.strategic_impact:+.2f}  "
+           f"cost={od.personal_cost:+.2f}  network={od.network_durability:+.2f}  "
+           f"attribution={od.attribution_risk:+.2f}")
 
 
 def _print_simulation(result: dict) -> None:

@@ -289,6 +289,63 @@ class ObservableActionEntry(BaseModel):
     action: str
 
 
+class LongHorizonObjective(BaseModel):
+    """
+    5-dimensional objective vector used by the multi-year career-arc solvers
+    (project-forward and rewrite-arc). Distinct from the per-turning-point
+    OperativeState — this captures lifetime/strategic outcomes, not field state.
+
+    Convention: higher is better for mission_yield, strategic_impact,
+    network_durability. Lower is better for personal_cost and attribution_risk.
+    The career MDP applies sign convention internally via per-operative weights.
+    """
+    mission_yield:       float = Field(..., ge=0, le=10,
+                                       description="Cumulative actionable intelligence / operational success")
+    strategic_impact:    float = Field(..., ge=0, le=10,
+                                       description="Geopolitical / doctrinal impact of the operative's career")
+    personal_cost:       float = Field(..., ge=0, le=10,
+                                       description="Toll on operative — psychological, identity, life-risk (lower is better)")
+    network_durability:  float = Field(..., ge=0, le=10,
+                                       description="How well the handler/asset network survives across the career")
+    attribution_risk:    float = Field(..., ge=0, le=10,
+                                       description="Risk of operation/operative being attributed to India (lower is better)")
+
+
+class ObjectiveDelta(BaseModel):
+    """
+    Signed change to a LongHorizonObjective vector. Same fields, but no
+    [0, 10] bounds — values can be negative (action reduces personal_cost,
+    attribution_risk, etc.).
+    """
+    mission_yield:       float = 0.0
+    strategic_impact:    float = 0.0
+    personal_cost:       float = 0.0
+    network_durability:  float = 0.0
+    attribution_risk:    float = 0.0
+
+
+class LongHorizonWeights(BaseModel):
+    """
+    Per-operative weights that the career-arc solver uses to collapse the
+    5d LongHorizonObjective into a scalar score. Must sum to 1.0 (validated).
+    Negative-direction dimensions (personal_cost, attribution_risk) are
+    handled in the solver via fixed sign convention; weights are magnitudes.
+    """
+    mission_yield:       float = Field(0.30, ge=0, le=1)
+    strategic_impact:    float = Field(0.25, ge=0, le=1)
+    personal_cost:       float = Field(0.15, ge=0, le=1)
+    network_durability:  float = Field(0.15, ge=0, le=1)
+    attribution_risk:    float = Field(0.15, ge=0, le=1)
+
+    @model_validator(mode="after")
+    def weights_sum_to_one(self) -> "LongHorizonWeights":
+        s = (self.mission_yield + self.strategic_impact + self.personal_cost
+             + self.network_durability + self.attribution_risk)
+        if abs(s - 1.0) > 1e-3:
+            raise ValueError(f"LongHorizonWeights must sum to 1.0, got {s:.3f}")
+        return self
+
+
 class CharacterProfile(BaseModel):
     """
     Master character record.
@@ -308,6 +365,18 @@ class CharacterProfile(BaseModel):
     state_by_act:         dict[str, OperativeState]   # "film1_act2" → state
     observable_history:   list[ObservableActionEntry] = Field(default_factory=list)
     adversary_model:      Optional[AdversaryModel] = None
+    is_real_public_figure: bool = Field(
+        False,
+        description="If True, project-forward narratives are flagged as speculative."
+    )
+    archetype:            Literal["fictional_operative", "public_figure", "support_actor"] = Field(
+        "fictional_operative",
+        description="Used by suggest CLI to tier candidates."
+    )
+    long_horizon_objective_weights: Optional[LongHorizonWeights] = Field(
+        None,
+        description="Per-operative weights for the career-arc objective. None → use solver defaults."
+    )
 
     @model_validator(mode="after")
     def cover_identity_only_for_undercover(self) -> "CharacterProfile":
@@ -332,3 +401,139 @@ class OutcomeEntry(BaseModel):
     owner:             Optional[str] = None
     updated_at:        Optional[str] = Field(None, description="ISO timestamp for last data revision")
     schema_version:    str = Field("1.1.0", description="Data schema version for outcomes")
+
+
+# ── Career-arc model (project-forward + rewrite-arc) ───────────────────────────
+
+CareerTerminalStatus = Literal["active", "killed", "blown", "extracted", "retired"]
+
+
+class MacroAction(BaseModel):
+    """
+    A coarse-grained career decision the operative could make in response
+    to a real-world event or doctrinal shift. Macro-actions are the inputs
+    to the career-MDP solver (one per macro-state per available choice).
+    """
+    id:          str
+    label:       str
+    description: str
+    objective_delta: ObjectiveDelta = Field(
+        ...,
+        description="Expected per-step signed change to the 5d objective vector when this action is taken"
+    )
+    transition_probs: dict[CareerTerminalStatus, float] = Field(
+        default_factory=lambda: {
+            "active": 0.95, "killed": 0.01, "blown": 0.02,
+            "extracted": 0.01, "retired": 0.01,
+        },
+        description="Probability of each terminal-status transition after this action. Sum = 1.0."
+    )
+    requires_status: list[CareerTerminalStatus] = Field(
+        default_factory=lambda: ["active"],
+        description="Action only available when career status is one of these"
+    )
+
+    @model_validator(mode="after")
+    def transitions_sum_to_one(self) -> "MacroAction":
+        s = sum(self.transition_probs.values())
+        if abs(s - 1.0) > 1e-3:
+            raise ValueError(f"MacroAction.transition_probs must sum to 1.0, got {s:.3f}")
+        return self
+
+
+class MacroEvent(BaseModel):
+    """
+    A real-world event the operative must respond to. Anchored to the
+    `data/context/*.json` files. The career-MDP iterates over events in
+    chronological order, choosing a macro-action at each.
+    """
+    id:                str
+    date:              str   # ISO YYYY-MM-DD; events ordered by date
+    label:             str
+    context_ref:       Optional[str] = Field(
+        None, description="Filename in data/context/ this event is anchored to (without .json)"
+    )
+    description:       str
+    available_actions: list[str]   # MacroAction IDs
+
+
+class MacroArc(BaseModel):
+    """
+    The post-D2 forward career arc for one operative. Authored as JSON
+    under data/post_d2_arc/<operative>.json and validated on load.
+    """
+    operative:           str
+    arc_start:           str = Field(..., description="ISO date; usually post-D2 release / film-canon end")
+    description:         str
+    actions:             list[MacroAction]
+    events:              list[MacroEvent]
+    initial_status:      CareerTerminalStatus = "active"
+    initial_objective:   LongHorizonObjective
+    notes:               Optional[str] = None
+    is_speculative_real_figure: bool = Field(
+        False,
+        description="If True, narrative renders with [speculative] banner."
+    )
+
+
+# ── Career-arc solver outputs ──────────────────────────────────────────────────
+
+class CareerStep(BaseModel):
+    """A single (event, chosen action, resulting objective) tuple in a trajectory."""
+    event_id:        str
+    event_date:      str
+    event_label:     str
+    chosen_action:   str
+    action_label:    str
+    status_after:    CareerTerminalStatus
+    objective_after: LongHorizonObjective
+    objective_lower: Optional[LongHorizonObjective] = None  # MC CI low
+    objective_upper: Optional[LongHorizonObjective] = None  # MC CI high
+    rationale:       Optional[str] = None
+
+
+class CareerTrajectory(BaseModel):
+    """A full forward trajectory — predicted (baseline) or prescribed (optimal)."""
+    label:            Literal["predicted", "prescribed"]
+    steps:            list[CareerStep]
+    final_status:     CareerTerminalStatus
+    final_objective:  LongHorizonObjective
+    scalar_score:     float
+    n_rollouts:       int = 0
+
+
+class ForwardProjection(BaseModel):
+    """Output of forward_projection_node."""
+    operative:               str
+    arc_start:               str
+    horizon_until:           str
+    is_speculative_real_figure: bool
+    predicted:               CareerTrajectory
+    prescribed:              CareerTrajectory
+    scalar_score_delta:      float
+    objective_delta:         ObjectiveDelta
+    key_divergence_event:    Optional[str] = Field(
+        None, description="Event ID where prescribed first diverges from predicted"
+    )
+
+
+class ArcStep(BaseModel):
+    """One turning point's slot in a rewrite-arc result."""
+    turning_point_id:    str
+    actual_action:       str
+    prescribed_action:   str
+    actual_q_value:      float
+    prescribed_q_value:  float
+    q_delta:             float
+    state_handoff_after: OperativeState
+    notes:               Optional[str] = None
+
+
+class ArcRewrite(BaseModel):
+    """Output of arc_rewrite_node — counterfactual rewrite of films 1+2."""
+    operative:                 str
+    steps:                     list[ArcStep]
+    cumulative_q_delta:        float
+    final_state_baseline:      OperativeState
+    final_state_prescribed:    OperativeState
+    objective_delta:           ObjectiveDelta

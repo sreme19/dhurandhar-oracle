@@ -45,5 +45,14 @@
     {"film": 1, "act": 3, "action": "extract_dakait_jamali_political_link"},
     {"film": 1, "act": 3, "action": "request_exfil"}
   ],
-  "adversary_model": null
+  "adversary_model": null,
+  "is_real_public_figure": false,
+  "archetype": "fictional_operative",
+  "long_horizon_objective_weights": {
+    "mission_yield":      0.35,
+    "strategic_impact":   0.25,
+    "personal_cost":      0.10,
+    "network_durability": 0.15,
+    "attribution_risk":   0.15
+  }
 }

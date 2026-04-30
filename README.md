@@ -7,7 +7,19 @@
 
 The Dhurandhar Oracle is a decision-support system that computes optimal intelligence strategies using advanced game theory, operations research, and probabilistic reasoning algorithms. Built with [LangGraph](https://langchain-ai.github.io/langgraph/) for agent orchestration.
 
-## What It Computes
+## What It Does
+
+The oracle answers three families of question about Indian-side operatives in the Dhurandhar universe:
+
+| Mode | Question | Command |
+|------|----------|---------|
+| Turning-point | At a single decision point, what is the optimal next action? | `dhurandhar-oracle run <op> <tp>` |
+| Forward projection | If we project this operative forward against real 2025-2026 events (Pahalgam, Sindoor, Khalistan diaspora), what would they be doing — and what could they do better? | `dhurandhar-oracle project-forward <op>` |
+| Arc rewrite | Counterfactually rewrite this operative's films 1+2 arc — at every turning point, what should they have done differently for a better cumulative outcome? | `dhurandhar-oracle rewrite-arc <op>` |
+
+Discover candidate operatives with `dhurandhar-oracle suggest --mode forward` (or `--mode rewrite`).
+
+## What It Computes (turning-point mode)
 
 Given a character and a turning point in their mission, the oracle provides:
 
@@ -39,6 +51,16 @@ dhurandhar-oracle list-characters
 
 # List turning points for an operative
 dhurandhar-oracle list-turning-points hamza
+
+# Forward-project an operative against 2025-2026 real-world events
+dhurandhar-oracle project-forward hamza --until 2026-04-30 --markdown
+
+# Rewrite an operative's films 1+2 arc with the optimal action at every TP
+dhurandhar-oracle rewrite-arc hamza --markdown
+
+# Get a ranked list of operatives suitable for a given mode
+dhurandhar-oracle suggest --mode forward
+dhurandhar-oracle suggest --mode rewrite
 ```
 
 ## Installation
@@ -78,6 +100,27 @@ dhurandhar-oracle list-turning-points <operative>
 
 # List all Indian-side operatives
 dhurandhar-oracle list-characters
+
+# Forward-project an operative against real 2025-2026 events
+# Anchored to data/context/ (Pahalgam, Sindoor, Khalistan diaspora, etc.)
+dhurandhar-oracle project-forward <operative> [OPTIONS]
+
+# Options:
+#   --until YYYY-MM-DD              Horizon (default: today)
+#   --force-event-response evt:act  Override prescribed action at one event
+#   --brief                          Use Haiku (shorter narrative)
+#   --markdown                       LinkedIn-paste-friendly Markdown
+#   --no-narrative                   Skip Claude narrative
+
+# Counterfactually rewrite an operative's D1+D2 arc (per turning point)
+dhurandhar-oracle rewrite-arc <operative> [OPTIONS]
+
+# Options:
+#   --force-tp tp:action             Override prescribed action at one TP
+#   --brief, --markdown, --no-narrative, --json (same as project-forward)
+
+# Suggest candidate operatives for a mode
+dhurandhar-oracle suggest --mode forward|rewrite
 ```
 
 ### Example Output
@@ -264,10 +307,47 @@ In Dhurandhar, the RAW handler *commits* to a strategy before the operative acts
 ### CPM/PERT
 The "what could have been done faster" question is literally a project scheduling problem. PERT three-point estimation (optimistic, most-likely, pessimistic) captures task duration uncertainty.
 
+## Forward-projection and arc-rewrite modes
+
+### Career-arc objective (5d)
+
+The forward and rewrite modes reason about lifetime/strategic outcomes via a 5-dimensional objective:
+
+| Dimension | Direction | Meaning |
+|-----------|-----------|---------|
+| `mission_yield`       | higher = better | cumulative actionable intelligence / operational success |
+| `strategic_impact`    | higher = better | geopolitical / doctrinal effect of the operative's career |
+| `personal_cost`       | lower = better  | psychological / identity / life-risk toll |
+| `network_durability`  | higher = better | how well the handler/asset network survives the career |
+| `attribution_risk`    | lower = better  | risk of operation/operative being attributed to India |
+
+Per-operative weights live on `CharacterProfile.long_horizon_objective_weights` (must sum to 1.0); the solver applies sign convention internally so weights are magnitudes.
+
+### Forward projection (Mode 2)
+
+`project-forward` solves a finite-horizon MDP over events drawn from the operative's `data/post_d2_arc/<id>.json`. Each event is anchored to a real 2025-2026 context file (Pahalgam, Operation Sindoor, mystery killings in Pakistan, Khalistan diaspora dynamics). The solver returns:
+
+- a **predicted** trajectory (canonical "stay the course" extrapolation), and
+- a **prescribed** trajectory (the MDP-optimal policy under per-operative weights),
+
+with a scalar score delta and per-dimension delta summarising the difference. Terminal absorbing states (`killed`, `blown`, `extracted`, `retired`) carry non-trivial transition probabilities — the oracle does not pretend a multi-year deep-cover arc is risk-free.
+
+For real public figures (`is_real_public_figure: true` in the character JSON), the narrative is rendered with a `[SPECULATIVE]` banner.
+
+### Arc rewrite (Mode 3)
+
+`rewrite-arc` runs the existing per-turning-point oracle pipeline once for every authored TP in films 1+2, in chronological order. Per-TP it computes:
+
+- `actual_action` (from outcome JSON) and its POMDP Q-value,
+- `prescribed_action` (POMDP optimal) and its Q-value,
+- `q_delta = Q(prescribed) - Q(actual)`.
+
+Cumulative Q-delta drives a heuristic uplift on the operative's final 5d state and a 5d career-objective delta. This is self-consistent: baseline Q-values come from the same solver that produces the prescribed action.
+
 ## Hard Constraints
 
-- **Indian-side characters only.** The oracle refuses queries for Pakistani adversaries (Rehman Dakait, Jameel Jamali, etc.). Those characters exist only as adversary models in the computation.
-- The `side` field is validated at CLI entry and at `state_node` load time.
+- **Indian-side characters only.** The oracle refuses queries for Pakistani adversaries (Rehman Dakait, Jameel Jamali, etc.) in **all three modes** — turning-point, project-forward, and rewrite-arc. Pakistani actors exist only as adversary models inside the solvers (Stackelberg follower, HMM hidden states, etc.); they are never queryable as protagonists.
+- The `side` field is validated at CLI entry, at `state_node` (turning-point), and at `forward_state_node` / `arc_rewrite_node` (forward / rewrite) load time.
 
 ## License
 

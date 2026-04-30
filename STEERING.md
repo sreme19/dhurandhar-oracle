@@ -3,8 +3,9 @@
 ## Mission
 
 Build a multi-agent AI system for Indian intelligence operatives in the Dhurandhar universe.
-Given a character and a turning point in their mission, the oracle computes:
+The oracle answers three families of question:
 
+**Turning-point mode** (`run`) — given a character and a single turning point:
 1. The **optimal next action** (POMDP policy over belief state)
 2. **What could have been done faster** (CPM/PERT critical path analysis)
 3. **Which intelligence to gather next** (Value of Information ranking)
@@ -13,12 +14,68 @@ Given a character and a turning point in their mission, the oracle computes:
 6. **Who is the most valuable asset** (Shapley values over handler/asset coalition)
 7. **Mission success probability** (Monte Carlo simulation)
 
+**Forward-projection mode** (`project-forward`) — given an Indian operative with an authored
+post-D2 macro-arc:
+8. A multi-year trajectory through real 2025–2026 events (Pahalgam, Operation Sindoor,
+   Khalistan diaspora dynamics) and what they could have done differently for a better
+   outcome on the 5d career-objective vector.
+
+**Arc-rewrite mode** (`rewrite-arc`) — given an Indian operative with authored turning
+points across films 1+2:
+9. A counterfactual rewrite of the entire arc — per-turning-point alternate action with
+   cumulative Q-delta and 5d career-objective delta.
+
 ## Hard Constraints
 
 - **Indian-side characters only.** The oracle refuses queries for Pakistani adversaries
-  (Rehman Dakait, Jameel Jamali, etc.). Those characters exist only as adversary models.
-  Check `character.side == "indian"` before running the pipeline.
-- The `side` field is validated at CLI entry and at `state_node` load time.
+  (Rehman Dakait, Jameel Jamali, etc.) in **all three modes**. Those characters exist only
+  as adversary models inside the solvers. Check `character.side == "indian"` before running
+  any pipeline.
+- The `side` field is validated at CLI entry, at `state_node` (turning-point),
+  `forward_state_node` (forward), and `arc_rewrite_node` (rewrite) load time. There is
+  no `--allow-adversary` escape hatch.
+
+## New mode design decisions
+
+### Why finite-horizon MDP for forward mode (not POMDP)?
+
+The POMDP / PBVI machinery is correct for the single-turning-point question — the operative
+doesn't know the full world state and we plan over a belief state. But for a multi-year
+career arc the right abstraction is coarser: macro-actions (career postures: pivot offshore,
+deep-strike, mentor, extract) chosen in response to macro-events (real-world events the
+operative reacts to). The state space is small (5 absorbing-status values × event-index)
+and the dynamics are well-modelled by `MacroAction.transition_probs`. Backward induction
+over events gives the optimal policy directly. Trying to scale POMDP-PBVI to a decade of
+decisions is computationally infeasible and conceptually mismatched.
+
+### Why per-step cumulative reward (not MC mean) as the headline scalar?
+
+`scalar_score` reports the cumulative scalar reward of the spine trajectory (sum of
+`weights · objective_delta` across chosen actions). This is the MDP's reward function —
+deterministic, monotone with the optimal policy, and not corrupted by the [0, 10] clipping
+that the rendered `final_objective` applies. Monte Carlo rollouts are still used, but only
+to produce per-step CI bands on the rendered objective (`objective_lower` / `objective_upper`
+per step).
+
+### Why a self-consistent baseline for arc-rewrite?
+
+`rewrite-arc` reads the actually-taken action from the outcome JSON, then evaluates *both*
+the actual and the prescribed action against the same POMDP Q-values produced by
+`strategy_node`. This guarantees the comparison is internally consistent — we are not
+comparing one oracle's prescription against another oracle's baseline.
+
+### Career-arc objective vector (5d) — `LongHorizonObjective`
+
+Distinct from the per-turning-point `OperativeState`. Captures lifetime/strategic outcomes:
+- `mission_yield` (↑) — cumulative actionable intelligence / operational success
+- `strategic_impact` (↑) — geopolitical / doctrinal effect of the operative's career
+- `personal_cost` (↓) — psychological / identity / life-risk toll
+- `network_durability` (↑) — handler/asset network durability across the career
+- `attribution_risk` (↓) — risk of operation being attributed to India
+
+Per-operative weights live on `CharacterProfile.long_horizon_objective_weights` (sum = 1.0).
+Sign convention is fixed in the solver (cost and risk are subtracted), so weights are
+magnitudes only.
 
 ## Architecture Decisions
 

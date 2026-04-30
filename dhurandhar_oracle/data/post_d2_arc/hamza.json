@@ -1,0 +1,216 @@
+{
+  "operative": "hamza",
+  "arc_start": "2025-12-15",
+  "description": "Post-Dhurandhar 2 forward arc for Hamza Ali Mazari / Jaskirat Singh Rangi. End of D2 leaves him exposed but operational; the arc projects his career across the 2025-12 → 2026-04 real-world events (Pahalgam aftermath, Operation Sindoor build-up, Khalistan diaspora pressure, ISI counter-intelligence sweeps in Karachi). Real-life inspiration (Mohit Sharma, KIA 2009) means death is a non-trivial absorbing state.",
+  "initial_status": "active",
+  "initial_objective": {
+    "mission_yield":      6.5,
+    "strategic_impact":   5.5,
+    "personal_cost":      6.0,
+    "network_durability": 5.0,
+    "attribution_risk":   4.5
+  },
+  "is_speculative_real_figure": false,
+  "notes": "Macro-actions are coarse career choices, not field tactics. Transition probabilities encode the real risk that a deep-cover operative does not survive a multi-year arc — terminal status 'killed' or 'blown' is always non-zero.",
+
+  "actions": [
+    {
+      "id": "maintain_lyari_cover",
+      "label": "Stay deep in Lyari",
+      "description": "Continue running the Karachi cover, exploit Dakait-successor PAC network, feed routine intel to RAW. Low-volatility default — exposure compounds slowly.",
+      "objective_delta": {
+        "mission_yield":      0.6,
+        "strategic_impact":   0.3,
+        "personal_cost":      0.5,
+        "network_durability": 0.2,
+        "attribution_risk":   0.2
+      },
+      "transition_probs": {"active": 0.92, "killed": 0.02, "blown": 0.04, "extracted": 0.01, "retired": 0.01},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "deep_strike_iqbal_network",
+      "label": "Penetrate Major Iqbal's LeT control node",
+      "description": "Push from Lyari criminal layer into LeT operational layer — high-risk move on the ISI/LeT control structure that ran 26/11. Highest mission-yield action; highest mortality.",
+      "objective_delta": {
+        "mission_yield":      2.0,
+        "strategic_impact":   1.6,
+        "personal_cost":      1.8,
+        "network_durability": -0.4,
+        "attribution_risk":   1.0
+      },
+      "transition_probs": {"active": 0.62, "killed": 0.18, "blown": 0.15, "extracted": 0.04, "retired": 0.01},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "pivot_to_punjab_handler",
+      "label": "Relocate to handle Punjab ops from Dubai/UAE",
+      "description": "Step out of direct cover; run Punjab narco-Khalistan ops as an offshore handler. Trades mission-yield ceiling for survivability and network reach.",
+      "objective_delta": {
+        "mission_yield":      0.8,
+        "strategic_impact":   1.0,
+        "personal_cost":      -0.4,
+        "network_durability": 0.9,
+        "attribution_risk":   0.6
+      },
+      "transition_probs": {"active": 0.97, "killed": 0.005, "blown": 0.01, "extracted": 0.01, "retired": 0.005},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "mentor_rizwan_in_field",
+      "label": "Pair with Rizwan Shah on Punjab ground op",
+      "description": "Stay in-theatre but shift role to operational mentor for the Film-2 successor. Compounds network durability via knowledge transfer; moderate yield.",
+      "objective_delta": {
+        "mission_yield":      0.7,
+        "strategic_impact":   0.6,
+        "personal_cost":      0.3,
+        "network_durability": 1.4,
+        "attribution_risk":   0.3
+      },
+      "transition_probs": {"active": 0.93, "killed": 0.02, "blown": 0.03, "extracted": 0.015, "retired": 0.005},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "run_diaspora_operation_canada",
+      "label": "Lateral move to Canada / UK Khalistan diaspora",
+      "description": "Use established cover to penetrate diaspora Khalistan funding network (SFJ, BKI Canadian chapter). High strategic value but creates Nijjar-style attribution risk for India.",
+      "objective_delta": {
+        "mission_yield":      1.1,
+        "strategic_impact":   1.4,
+        "personal_cost":      0.2,
+        "network_durability": 0.5,
+        "attribution_risk":   2.0
+      },
+      "transition_probs": {"active": 0.94, "killed": 0.01, "blown": 0.03, "extracted": 0.015, "retired": 0.005},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "recruit_pakistani_assets",
+      "label": "Convert Pakistani locals into long-term RAW assets",
+      "description": "Spend 6+ months turning Lyari contacts into recruited assets. Slow yield but builds durable network India can run after Hamza is gone.",
+      "objective_delta": {
+        "mission_yield":      0.4,
+        "strategic_impact":   0.7,
+        "personal_cost":      0.6,
+        "network_durability": 1.8,
+        "attribution_risk":   0.4
+      },
+      "transition_probs": {"active": 0.94, "killed": 0.015, "blown": 0.03, "extracted": 0.01, "retired": 0.005},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "false_flag_disengage",
+      "label": "Stage own death / disappearance",
+      "description": "Engineer a controlled cover-collapse that lets Hamza exit while preserving network. Trades active status for low-attribution exit and protected assets.",
+      "objective_delta": {
+        "mission_yield":      0.2,
+        "strategic_impact":   0.4,
+        "personal_cost":      -0.6,
+        "network_durability": 0.8,
+        "attribution_risk":   -1.2
+      },
+      "transition_probs": {"active": 0.05, "killed": 0.10, "blown": 0.05, "extracted": 0.75, "retired": 0.05},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "accept_extraction_to_india",
+      "label": "Request immediate extraction",
+      "description": "End the field career; return to RAW HQ as analyst / trainer. Caps exposure but ends per-event mission yield.",
+      "objective_delta": {
+        "mission_yield":      0.1,
+        "strategic_impact":   0.3,
+        "personal_cost":      -1.0,
+        "network_durability": 0.3,
+        "attribution_risk":   -0.4
+      },
+      "transition_probs": {"active": 0.0, "killed": 0.0, "blown": 0.02, "extracted": 0.96, "retired": 0.02},
+      "requires_status":  ["active"]
+    },
+    {
+      "id": "doctrine_consolidation",
+      "label": "Author Naya Bharat asymmetric doctrine (post-extraction)",
+      "description": "Available only after extraction/retirement. Hamza becomes doctrinal author — multiplies strategic impact through institutional knowledge transfer.",
+      "objective_delta": {
+        "mission_yield":      0.0,
+        "strategic_impact":   1.5,
+        "personal_cost":      -0.3,
+        "network_durability": 0.6,
+        "attribution_risk":   0.0
+      },
+      "transition_probs": {"active": 0.0, "killed": 0.0, "blown": 0.0, "extracted": 0.5, "retired": 0.5},
+      "requires_status":  ["extracted", "retired"]
+    }
+  ],
+
+  "events": [
+    {
+      "id": "e1_post_d2_canon_close",
+      "date": "2025-12-15",
+      "label": "Post-D2 canon close — operational continuity decision",
+      "context_ref": null,
+      "description": "End of film-2 canon. Hamza is exposed enough that the Punjab-Khanani-FICN operation has visibly disrupted ISI operations, but his Lyari cover is intact. Decision: continue field, pivot, or extract.",
+      "available_actions": [
+        "maintain_lyari_cover",
+        "pivot_to_punjab_handler",
+        "mentor_rizwan_in_field",
+        "accept_extraction_to_india",
+        "recruit_pakistani_assets"
+      ]
+    },
+    {
+      "id": "e2_isi_counterintel_sweep",
+      "date": "2026-01-20",
+      "label": "ISI counter-intelligence sweeps Karachi",
+      "context_ref": "mystery_killings_pakistan",
+      "description": "Pattern of unexplained deaths of ISI-linked figures in Pakistan (real-world 2023-2025) intensifies; ISI runs aggressive CI sweeps through Lyari and PAC networks looking for foreign assets. Hamza must decide whether to harden cover, pivot offshore, or accept extraction.",
+      "available_actions": [
+        "maintain_lyari_cover",
+        "pivot_to_punjab_handler",
+        "false_flag_disengage",
+        "accept_extraction_to_india",
+        "recruit_pakistani_assets"
+      ]
+    },
+    {
+      "id": "e3_khalistan_diaspora_escalation",
+      "date": "2026-02-25",
+      "label": "Khalistan diaspora radicalisation surge",
+      "context_ref": "punjab_khalistan_arc",
+      "description": "Happy PHD network and Canadian SFJ chapter escalate operational tempo — funding, social-media radicalisation, weapon-cache attempts in Punjab. RAW needs in-network eyes; Hamza is one of few operatives with the cover plausibility for Canada lateral.",
+      "available_actions": [
+        "maintain_lyari_cover",
+        "run_diaspora_operation_canada",
+        "pivot_to_punjab_handler",
+        "mentor_rizwan_in_field"
+      ]
+    },
+    {
+      "id": "e4_pahalgam_massacre",
+      "date": "2026-04-22",
+      "label": "Pahalgam attack — TRF kills civilians",
+      "context_ref": "pahalgam_massacre",
+      "description": "TRF (LeT proxy) attacks tourists in Pahalgam, Kashmir. India enters retaliation-planning posture. Demand for in-Pakistan HUMINT on LeT control nodes spikes. High-yield, high-risk window opens for an operative with Lyari/Major Iqbal proximity.",
+      "available_actions": [
+        "deep_strike_iqbal_network",
+        "maintain_lyari_cover",
+        "pivot_to_punjab_handler",
+        "false_flag_disengage",
+        "accept_extraction_to_india"
+      ]
+    },
+    {
+      "id": "e5_sindoor_build_up",
+      "date": "2026-04-29",
+      "label": "Operation Sindoor planning window",
+      "context_ref": "operation_sindoor",
+      "description": "India enters active planning for retaliatory cross-border strikes. Last operational window for in-theatre HUMINT before kinetic phase begins. Whatever Hamza does here is the final career move within the projection horizon.",
+      "available_actions": [
+        "deep_strike_iqbal_network",
+        "false_flag_disengage",
+        "accept_extraction_to_india",
+        "mentor_rizwan_in_field",
+        "doctrine_consolidation"
+      ]
+    }
+  ]
+}
