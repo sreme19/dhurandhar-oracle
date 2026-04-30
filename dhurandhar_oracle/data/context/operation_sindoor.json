@@ -1,0 +1,36 @@
+{
+  "id": "operation_sindoor",
+  "name": "Operation Sindoor (2025)",
+  "type": "strategic_military_operation",
+  "description": "Integrated missile and air strikes on 9 terror sites across Pakistan and Pakistan-Occupied Kashmir. Largest aerial engagement between India and Pakistan in 50+ years. Culmination of punitive deterrence doctrine.",
+  "trigger_event": {
+    "date": "2025-04-22",
+    "event": "Pahalgam massacre — TRF gunmen kill 26 tourists at Baisaran meadow; deadliest civilian attack since 26/11"
+  },
+  "operation_details": {
+    "date": "2025-05-07",
+    "time": "0130-0330 hours",
+    "duration": "25-minute coordinated strikes",
+    "targets": "9 sites: 4 Pakistan (Bahawalpur, Muridke, Sialkot, Markaz-e-Taiba), 5 PoK (Kotli, Gulpur, etc.)",
+    "platforms": "Rafale (Scalp missiles), Su-30MKI (BrahMos), Mirage 2000, Heron drones, submarine-launched missiles",
+    "claim": "100+ terrorists killed; JeM/LeT/Hizbul command centers destroyed"
+  },
+  "pakistani_response": {
+    "operation_bunyan_un_marsoos": "'Wall of Lead' — retaliatory strikes on Indian airbases (ambala, sirsa, pathankot, etc.)",
+    "escalation": "Drone/missile exchanges; 72-hour conflict; US-brokered ceasefire May 10",
+    "casualties": "Limited Indian damage; Pakistani claims disputed"
+  },
+  "key_figures": {
+    "indian": ["narendra_modi", "rajnath_singh", "ajit_doval", "anil_chauhan", "colonel_sofiya_qureshi", "vyomika_singh"],
+    "pakistani": ["asim_munir", "shehbaz_sharif", "dg_ispr"]
+  },
+  "strategic_significance": {
+    "doctrine_maturity": "Full-spectrum retaliation: air, missile, submarine, special forces integration",
+    "target_depth": "Struck Pakistan proper (not just PoK) — Bahawalpur (JeM HQ), Muridke (LeT)",
+    "international": "US mediation; ceasefire within 72 hours; demonstrated escalation control"
+  },
+  "film_relevance": {
+    "part_4": "Climactic set-piece; title-justifying 'revenge'; franchise culmination",
+    "epilogue": "Red Fort bombing (Nov 2025) shows war continues — Part 5 setup"
+  }
+}

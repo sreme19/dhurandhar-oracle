@@ -1,0 +1,29 @@
+{
+  "id": "pahalgam_massacre",
+  "name": "Pahalgam Massacre (April 2025)",
+  "type": "terror_attack",
+  "description": "Five TRF gunmen attacked tourists at Baisaran meadow, Pahalgam. 26 killed in deadliest civilian attack since 26/11. Direct trigger for Operation Sindoor.",
+  "date": "2025-04-22",
+  "time": "1430 hours",
+  "location": "Baisaran Valley, near Pahalgam, J&K",
+  "attack_details": {
+    "perpetrators": "5 TRF (The Resistance Front) gunmen — LeT proxy",
+    "method": "Automatic weapons; segregated victims by religion (asked names/prayers); shot non-Muslims",
+    "casualties": "26 killed; 23 injured",
+    "victims": "Tourists from various Indian states; some international tourists"
+  },
+  "perpetrators": {
+    "trf_claim": "The Resistance Front claimed responsibility — LeT proxy for deniability",
+    "handlers": ["sheikh_sajjad_gul (TRF founder)", "sajid_saifullah_jatt (LeT South Kashmir chief)"],
+    "fate": "All 5 gunmen killed in subsequent operations"
+  },
+  "strategic_impact": {
+    "timing": "JD Vance visiting India; Modi in Saudi Arabia",
+    "indian_response": "Indus Waters Treaty suspended (next day); Operation Sindoor (May 7)",
+    "escalation": "Largest India-Pakistan military engagement since 1971"
+  },
+  "film_relevance": {
+    "part_4": "Opening tragedy; Sindoor catalyst; emotional stakes",
+    "thematic": "TRF 'white-collar terror' — educated recruits vs traditional militants"
+  }
+}

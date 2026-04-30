@@ -1,0 +1,26 @@
+{
+  "id": "article_370_abrogation",
+  "name": "Article 370 Abrogation (2019)",
+  "type": "constitutional_strategic_move",
+  "description": "Revocation of Jammu & Kashmir's special status and bifurcation into two Union Territories. Framed as strategic culmination of counter-terrorism doctrine — integrating Kashmir fully into Indian Union.",
+  "date": "2019-08-05",
+  "actions": {
+    "article_370": "Revoked via Presidential Order; J&K special status ended",
+    "article_35a": "Abrogated — residency rights/property restrictions removed",
+    "bifurcation": "J&K split into Jammu & Kashmir (UT with legislature) and Ladakh (UT without legislature)"
+  },
+  "preparation": {
+    "amarnath_yatra": "Cancelled citing security; troop build-up masked",
+    "political_leaders": "Omar Abdullah, Mehbooba Mufti placed under house arrest",
+    "communications": "Internet, mobile, landline blocked; media restrictions"
+  },
+  "strategic_rationale": {
+    "integration": "Full constitutional integration; uniform application of laws",
+    "counter_terror": "Remove 'special status' ambiguity used by separatists",
+    "demographic": "Open J&K to non-resident investment/settlement (controversial)",
+    "pakistani_response": "Downgraded diplomatic relations; approached UNSC (no action)"
+  },
+  "film_relevance": {
+    "part_3": "Triumphal closer; Sanyal/Doval strategic culmination; 'Naya Bharat' realization"
+  }
+}
