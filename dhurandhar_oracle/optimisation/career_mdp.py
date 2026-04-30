@@ -279,6 +279,8 @@ def project(arc: MacroArc, weights: Optional[LongHorizonWeights] = None,
     predicted_policy  = _make_policy_predicted(arc)
     prescribed_policy = _make_policy_prescribed(solved)
 
+    actions_by_id = {a.id: a for a in arc.actions}
+
     def _trajectory(label, policy_fn) -> CareerTrajectory:
         rng = random.Random(seed)
         # 1) Deterministic mean trajectory: take expected status-after for each step
@@ -286,6 +288,13 @@ def project(arc: MacroArc, weights: Optional[LongHorizonWeights] = None,
         #    augment per-step bands from MC).
         spine_rng = random.Random(seed)
         spine_steps, spine_status, spine_obj = _rollout(arc, policy_fn, w, spine_rng)
+        # Cumulative scalar reward = Σ scalar_delta over each chosen action.
+        # This is the MDP's reward function — independent of [0,10] clipping
+        # on the rendered objective vector — so it is the meaningful headline.
+        cumulative_reward = sum(
+            _scalar_delta(actions_by_id[s.chosen_action].objective_delta, w)
+            for s in spine_steps
+        )
 
         # 2) MC rollouts for per-step CI on objective_after.
         per_step_rollouts: list[list[LongHorizonObjective]] = [[] for _ in spine_steps]
@@ -313,13 +322,15 @@ def project(arc: MacroArc, weights: Optional[LongHorizonWeights] = None,
                 objective_lower = lo,
                 objective_upper = hi,
             ))
-        mean_final, _lo, _hi = _aggregate_objective_bands(final_objs)
+        # Render: spine result is what an executed policy looks like.
+        # Headline scalar score = cumulative per-step reward (MDP convention),
+        # not a function of the [0,10]-clipped final objective.
         return CareerTrajectory(
             label           = label,
             steps           = annotated,
             final_status    = spine_status,
-            final_objective = mean_final,
-            scalar_score    = scalar_score(mean_final, w),
+            final_objective = spine_obj,
+            scalar_score    = cumulative_reward,
             n_rollouts      = n_rollouts,
         )
 

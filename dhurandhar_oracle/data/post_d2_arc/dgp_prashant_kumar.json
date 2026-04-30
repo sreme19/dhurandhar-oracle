@@ -1,0 +1,68 @@
+{
+  "operative": "dgp_prashant_kumar",
+  "arc_start": "2025-12-15",
+  "description": "Post-D2 forward arc for DGP Prashant Kumar — real IPS officer (UP DGP), domestic law-enforcement liaison. SPECULATIVE projection — every prediction is a fictional projection of a real public figure's actions.",
+  "initial_status": "active",
+  "initial_objective": {
+    "mission_yield":      6.5,
+    "strategic_impact":   5.0,
+    "personal_cost":      3.0,
+    "network_durability": 6.5,
+    "attribution_risk":   3.0
+  },
+  "is_speculative_real_figure": true,
+  "notes": "Speculative — Prashant Kumar is a real serving police officer. Macro-actions are projections from his publicly known operational profile (organised crime / encounter operations) onto the post-D2 fictional universe. Narrative output is rendered with [SPECULATIVE] banner.",
+
+  "actions": [
+    {
+      "id": "expand_encounter_doctrine",
+      "label": "Expand encounter-style doctrine to Punjab gangs",
+      "description": "Apply UP-style organised-crime takedown approach to Punjab narco-Khalistan ground operatives. High mission yield, high attribution risk (rights groups).",
+      "objective_delta": {"mission_yield": 1.6, "strategic_impact": 0.6, "personal_cost": 0.2, "network_durability": 0.4, "attribution_risk": 1.4},
+      "transition_probs": {"active": 0.995, "killed": 0.0, "blown": 0.0, "extracted": 0.003, "retired": 0.002}
+    },
+    {
+      "id": "build_inter_state_task_force",
+      "label": "Build UP-Punjab-J&K inter-state task force",
+      "description": "Institutional move — durable, lower risk, slower yield.",
+      "objective_delta": {"mission_yield": 0.6, "strategic_impact": 1.0, "personal_cost": -0.2, "network_durability": 1.6, "attribution_risk": -0.4},
+      "transition_probs": {"active": 0.998, "killed": 0.0, "blown": 0.0, "extracted": 0.001, "retired": 0.001}
+    },
+    {
+      "id": "ib_raw_liaison",
+      "label": "Embed as IB-RAW liaison for domestic CT",
+      "description": "Bridge fed agencies; complement Bansal's Punjab unit.",
+      "objective_delta": {"mission_yield": 0.8, "strategic_impact": 0.8, "personal_cost": 0.0, "network_durability": 1.2, "attribution_risk": 0.2},
+      "transition_probs": {"active": 0.998, "killed": 0.0, "blown": 0.0, "extracted": 0.001, "retired": 0.001}
+    },
+    {
+      "id": "high_profile_arrest",
+      "label": "Lead high-profile arrest of Khalistan operative",
+      "description": "Public win; surge in domestic credibility, but also Pakistan-side propaganda fuel.",
+      "objective_delta": {"mission_yield": 1.2, "strategic_impact": 0.6, "personal_cost": 0.0, "network_durability": 0.4, "attribution_risk": 0.6},
+      "transition_probs": {"active": 0.998, "killed": 0.001, "blown": 0.0, "extracted": 0.001, "retired": 0.0}
+    },
+    {
+      "id": "rotate_to_central_role",
+      "label": "Rotate to central CT role (Director-level)",
+      "description": "End the field-DGP chapter; move to NSCS / IB / NIA at central level.",
+      "objective_delta": {"mission_yield": 0.4, "strategic_impact": 1.4, "personal_cost": -0.4, "network_durability": 1.0, "attribution_risk": -0.4},
+      "transition_probs": {"active": 0.95, "killed": 0.0, "blown": 0.0, "extracted": 0.025, "retired": 0.025}
+    }
+  ],
+
+  "events": [
+    {"id": "p1_post_d2_close", "date": "2025-12-15", "label": "Post-D2 — Punjab op continuity (state liaison)", "context_ref": "punjab_khalistan_arc",
+     "description": "State-level liaison for Punjab operation. Doctrinal posture decision.",
+     "available_actions": ["expand_encounter_doctrine","build_inter_state_task_force","ib_raw_liaison"]},
+    {"id": "p2_diaspora_pressure", "date": "2026-02-25", "label": "Diaspora radicalisation surge", "context_ref": "punjab_khalistan_arc",
+     "description": "Domestic radicalisation wave; choose institutional vs kinetic posture.",
+     "available_actions": ["build_inter_state_task_force","high_profile_arrest","ib_raw_liaison"]},
+    {"id": "p3_pahalgam", "date": "2026-04-22", "label": "Pahalgam attack — domestic posture", "context_ref": "pahalgam_massacre",
+     "description": "Domestic security tightens; visible operations needed.",
+     "available_actions": ["high_profile_arrest","expand_encounter_doctrine","ib_raw_liaison"]},
+    {"id": "p4_sindoor_window", "date": "2026-04-29", "label": "Sindoor planning window", "context_ref": "operation_sindoor",
+     "description": "Domestic-CT alignment with kinetic posture.",
+     "available_actions": ["ib_raw_liaison","rotate_to_central_role","build_inter_state_task_force"]}
+  ]
+}
