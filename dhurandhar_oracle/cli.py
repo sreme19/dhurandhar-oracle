@@ -23,6 +23,7 @@ from rich import print as rprint
 
 from dhurandhar_oracle.graph import oracle_graph
 from dhurandhar_oracle.forward_graph import forward_graph
+from dhurandhar_oracle.rewrite_graph import rewrite_graph
 from dhurandhar_oracle.io.loader import list_turning_points, list_characters, list_macro_arcs
 from dhurandhar_oracle.data_quality import run_data_quality_audit, backfill_missing_outcomes
 
@@ -198,6 +199,59 @@ def project_forward_cmd(
                             border_style="cyan"))
 
 
+@app.command("rewrite-arc")
+def rewrite_arc_cmd(
+    operative:    str  = typer.Argument(..., help="Indian-side operative whose D1+D2 arc to rewrite"),
+    force_tp:     Optional[str] = typer.Option(None, "--force-tp",
+                                               help="Force a (turning_point:action) override"),
+    brief:        bool = typer.Option(False, "--brief",    help="Use Haiku for shorter narrative"),
+    markdown:     bool = typer.Option(False, "--markdown", help="Render as Markdown"),
+    no_narrative: bool = typer.Option(False, "--no-narrative", help="Skip Claude narrative"),
+    output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
+) -> None:
+    """Counterfactually rewrite an Indian operative's arc across films 1+2."""
+    forced = None
+    if force_tp:
+        if ":" not in force_tp:
+            rprint("[red]--force-tp must be turning_point:action[/red]")
+            raise typer.Exit(2)
+        tp, ac = force_tp.split(":", 1)
+        forced = {"turning_point_id": tp.strip(), "action_id": ac.strip()}
+
+    initial_state = {
+        "operative":         operative,
+        "mode":              "rewrite",
+        "forced_tp_action":  forced,
+        "brief":             brief,
+        "markdown":          markdown,
+        "errors":   [], "warnings": [],
+    }
+
+    with console.status(f"[bold green]Rewriting {operative}'s arc — this runs the POMDP per turning point…"):
+        result = rewrite_graph.invoke(initial_state)
+
+    if result.get("errors"):
+        for e in result["errors"]:
+            rprint(f"[bold red]ERROR:[/bold red] {e}")
+        raise typer.Exit(1)
+    for w in result.get("warnings", []):
+        rprint(f"[yellow]WARNING:[/yellow] {w}")
+
+    if output_json:
+        def _default(obj):
+            if hasattr(obj, "model_dump"):
+                return obj.model_dump()
+            return str(obj)
+        typer.echo(json.dumps(result, default=_default, indent=2))
+        return
+
+    _print_rewrite(result)
+    if not no_narrative and result.get("narrative"):
+        console.print(Panel(result["narrative"],
+                            title="Arc Rewrite — Counterfactual Brief",
+                            border_style="cyan"))
+
+
 @app.command("audit-data")
 def audit_data_cmd() -> None:
     """Run data quality audit for turning points/outcomes."""
@@ -369,6 +423,33 @@ def _print_forward(result: dict) -> None:
            f"attribution={od.attribution_risk:+.2f}")
     if fp.key_divergence_event:
         rprint(f"  Key divergence: [cyan]{fp.key_divergence_event}[/cyan]")
+
+
+def _print_rewrite(result: dict) -> None:
+    ar = result.get("arc_rewrite")
+    if not ar:
+        return
+    rprint(f"[bold]Arc rewrite:[/bold] {ar.operative}")
+    t = Table(title="Per-turning-point counterfactual")
+    t.add_column("Turning point")
+    t.add_column("Actual")
+    t.add_column("Prescribed")
+    t.add_column("Q(actual)")
+    t.add_column("Q(prescribed)")
+    t.add_column("ΔQ")
+    for s in ar.steps:
+        marker = " [SAME]" if s.actual_action == s.prescribed_action else ""
+        t.add_row(s.turning_point_id, s.actual_action, s.prescribed_action + marker,
+                  f"{s.actual_q_value:.3f}", f"{s.prescribed_q_value:.3f}",
+                  f"{s.q_delta:+.3f}")
+    console.print(t)
+    rprint(f"  Cumulative ΔQ: [bold green]{ar.cumulative_q_delta:+.3f}[/bold green]")
+    rprint(f"  Final state — baseline:   {ar.final_state_baseline.model_dump()}")
+    rprint(f"  Final state — prescribed: {ar.final_state_prescribed.model_dump()}")
+    od = ar.objective_delta
+    rprint(f"  5d career objective Δ: yield={od.mission_yield:+.2f}  impact={od.strategic_impact:+.2f}  "
+           f"cost={od.personal_cost:+.2f}  network={od.network_durability:+.2f}  "
+           f"attribution={od.attribution_risk:+.2f}")
 
 
 def _print_simulation(result: dict) -> None:
