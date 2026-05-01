@@ -131,7 +131,10 @@ def _claude_narrative(state: DhurandharState, api_key: str, mode: str) -> str:
 
 
 def _template_narrative(state: DhurandharState) -> str:
-    """Rich-formatted template fallback (no LLM required)."""
+    """Template fallback for turning-point mode (no LLM required)."""
+    if state.get("markdown"):
+        return _template_narrative_markdown(state)
+
     lines = [
         f"OPERATIVE: {state.get('operative', 'UNKNOWN').upper()}",
         f"TURNING POINT: {state.get('turning_point', 'UNKNOWN')}",
@@ -200,6 +203,76 @@ def _template_narrative(state: DhurandharState) -> str:
             f"  Optimal action ({sim_opt.action}): P(success)={sim_opt.p_mission_success:.1%}",
             f"  Δ = +{delta:.1%} if optimal path taken",
             "",
+        ]
+
+    return "\n".join(lines)
+
+
+def _template_narrative_markdown(state: DhurandharState) -> str:
+    """LinkedIn-paste-friendly turning-point narrative fallback."""
+    operative = state.get("operative", "UNKNOWN")
+    turning_point = state.get("turning_point", "UNKNOWN")
+    pomdp = state.get("pomdp")
+    cp = state.get("critical_path")
+    voi = state.get("voi_result")
+    sg = state.get("stackelberg")
+    sim_opt = state.get("simulation_optimal")
+    sim_act = state.get("simulation_actual")
+
+    lines = [
+        f"## Dhurandhar Oracle: {operative}",
+        "",
+        f"At the `{turning_point}` turning point, the oracle treats the choice as an intelligence decision under uncertainty: preserve cover, advance the mission, and anticipate the adversary's next move.",
+        "",
+    ]
+
+    if pomdp:
+        lines += [
+            "### Recommended move",
+            "",
+            f"The strongest action is `{pomdp.optimal_action}`.",
+            "",
+            f"The POMDP gives this path a mission-success probability of {pomdp.mission_success_prob:.1%}, while keeping cover integrity at {pomdp.cover_integrity_prob:.1%}.",
+            "",
+        ]
+
+    if cp:
+        lines += [
+            "### What could move faster",
+            "",
+            f"The critical path is `{ ' -> '.join(cp.critical_path) }`.",
+            "",
+            f"The bottleneck is `{cp.bottleneck_task}`. Compressing the plan from {cp.total_duration_days:.0f} days to {cp.optimal_duration_days:.0f} days could save roughly {cp.days_saved:.0f} days.",
+            "",
+        ]
+
+    if voi and voi.rankings:
+        lines += [
+            "### Intelligence priorities",
+            "",
+        ]
+        for entry in voi.rankings[:3]:
+            lines.append(
+                f"- `{entry.intelligence_target}`: VoI {entry.voi_bits:.2f} bits; {entry.recommendation}"
+            )
+        lines.append("")
+
+    if sg:
+        lines += [
+            "### Adversary read",
+            "",
+            f"The Stackelberg model says the handler should commit to `{sg.leader_action}`. The operative's best response is `{sg.operative_best_response}`, while the adversary is expected to counter with `{sg.follower_best_response}`.",
+            "",
+        ]
+
+    if sim_opt and sim_act:
+        delta = sim_opt.p_mission_success - sim_act.p_mission_success
+        lines += [
+            "### Bottom line",
+            "",
+            f"Simulation improves mission success from {sim_act.p_mission_success:.1%} to {sim_opt.p_mission_success:.1%}, a gain of {delta:.1%}.",
+            "",
+            "The larger lesson: in deep-cover operations, speed only matters when it does not burn the network. The optimal path is not the loudest move; it is the move that compounds trust while keeping the adversary one step behind.",
         ]
 
     return "\n".join(lines)

@@ -24,7 +24,7 @@ from rich import print as rprint
 from dhurandhar_oracle.graph import oracle_graph
 from dhurandhar_oracle.forward_graph import forward_graph
 from dhurandhar_oracle.rewrite_graph import rewrite_graph
-from dhurandhar_oracle.io.loader import list_turning_points, list_characters, list_macro_arcs
+from dhurandhar_oracle.io.loader import list_turning_points, list_characters
 from dhurandhar_oracle.data_quality import run_data_quality_audit, backfill_missing_outcomes
 
 app     = typer.Typer(help="Dhurandhar intelligence oracle — POMDP, CPM, VoI, Stackelberg")
@@ -34,17 +34,64 @@ console = Console()
 @app.command()
 def run(
     operative:    str = typer.Argument(..., help="Operative ID (e.g. hamza, rizwan-shah)"),
-    turning_point: str = typer.Argument(..., help="Turning point ID (e.g. dakait-first-meeting)"),
+    turning_point: Optional[str] = typer.Argument(None, help="Turning point ID for turning-point mode"),
+    mode:         Optional[str] = typer.Option(None, "--mode", "-m", help="turning-point | forward | rewrite"),
+    output_format: Optional[str] = typer.Option(None, "--format", "-f", help="narrative | rich | json"),
     action:       Optional[str] = typer.Option(None,  "--action",       help="Force a specific action (counterfactual)"),
+    until:        str           = typer.Option("today", "--until", help="Forward mode horizon (YYYY-MM-DD); default = today"),
+    force_event:  Optional[str] = typer.Option(None, "--force-event-response",
+                                               help="Forward mode override as event_id:action_id"),
+    force_tp:     Optional[str] = typer.Option(None, "--force-tp",
+                                               help="Rewrite mode override as turning_point:action_id"),
+    brief:        bool          = typer.Option(False, "--brief", help="Use Haiku for shorter forward/rewrite narrative"),
+    markdown:     bool          = typer.Option(False, "--markdown", help="Render forward/rewrite narrative as Markdown"),
     no_narrative: bool           = typer.Option(False, "--no-narrative", help="Skip Claude narrative (structured output only)"),
     output_json:  bool           = typer.Option(False, "--json",         help="Emit raw JSON state"),
 ) -> None:
-    """Run the full oracle pipeline for an Indian operative at a turning point."""
+    """Run the oracle, prompting for turning-point, forward, or rewrite mode."""
+    mode = _resolve_run_mode(mode)
+    output_format = _resolve_run_output_format(output_format, output_json)
+    output_json = output_format == "json"
+    narrative_only = output_format == "narrative"
+    if narrative_only:
+        markdown = True
+        no_narrative = False
+
+    if mode == "forward":
+        _run_forward_mode(
+            operative=operative,
+            until=until,
+            force_event=force_event,
+            brief=brief,
+            markdown=markdown,
+            no_narrative=no_narrative,
+            output_json=output_json,
+            narrative_only=narrative_only,
+        )
+        return
+
+    if mode == "rewrite":
+        _run_rewrite_mode(
+            operative=operative,
+            force_tp=force_tp,
+            brief=brief,
+            markdown=markdown,
+            no_narrative=no_narrative,
+            output_json=output_json,
+            narrative_only=narrative_only,
+        )
+        return
+
+    if not turning_point:
+        turning_point = typer.prompt("Turning point ID")
 
     initial_state = {
         "operative":      operative,
         "turning_point":  turning_point,
         "action_override": action,
+        "mode":       "turning_point",
+        "brief":      brief,
+        "markdown":   markdown,
         "errors":   [],
         "warnings": [],
     }
@@ -59,15 +106,16 @@ def run(
         raise typer.Exit(1)
 
     # ── Warnings ────────────────────────────────────────────────────────────
-    for w in result.get("warnings", []):
-        rprint(f"[yellow]WARNING:[/yellow] {w}")
+    if not narrative_only:
+        for w in result.get("warnings", []):
+            rprint(f"[yellow]WARNING:[/yellow] {w}")
 
     if output_json:
-        def _default(obj):
-            if hasattr(obj, "model_dump"):
-                return obj.model_dump()
-            return str(obj)
-        typer.echo(json.dumps(result, default=_default, indent=2))
+        _print_json(result)
+        return
+
+    if narrative_only:
+        _print_narrative(result)
         return
 
     # ── Structured Rich output ───────────────────────────────────────────────
@@ -81,6 +129,78 @@ def run(
 
     if not no_narrative and result.get("narrative"):
         console.print(Panel(result["narrative"], title="War-Room Briefing", border_style="cyan"))
+
+
+def _resolve_run_mode(mode: Optional[str]) -> str:
+    """Return canonical run mode, prompting interactively when omitted."""
+    if mode is None:
+        mode = typer.prompt(
+            "Oracle mode (turning-point, forward, rewrite)",
+            default="turning-point",
+        )
+
+    aliases = {
+        "turning-point": "turning-point",
+        "turning_point": "turning-point",
+        "turning": "turning-point",
+        "tp": "turning-point",
+        "forward": "forward",
+        "project-forward": "forward",
+        "project_forward": "forward",
+        "rewrite": "rewrite",
+        "arc-rewrite": "rewrite",
+        "rewrite-arc": "rewrite",
+        "rewrite_arc": "rewrite",
+    }
+    canonical = aliases.get(mode.strip().lower())
+    if not canonical:
+        rprint("[red]Mode must be one of: turning-point, forward, rewrite[/red]")
+        raise typer.Exit(2)
+    return canonical
+
+
+def _resolve_run_output_format(output_format: Optional[str], output_json: bool) -> str:
+    """Return canonical run output format, prompting interactively when omitted."""
+    if output_json:
+        return "json"
+
+    if output_format is None:
+        output_format = typer.prompt(
+            "Output format (narrative, rich, json)",
+            default="narrative",
+        )
+
+    aliases = {
+        "narrative": "narrative",
+        "story": "narrative",
+        "linkedin": "narrative",
+        "post": "narrative",
+        "rich": "rich",
+        "terminal": "rich",
+        "tables": "rich",
+        "structured": "rich",
+        "json": "json",
+        "raw": "json",
+    }
+    canonical = aliases.get(output_format.strip().lower())
+    if not canonical:
+        rprint("[red]Format must be one of: narrative, rich, json[/red]")
+        raise typer.Exit(2)
+    return canonical
+
+
+def _print_json(result: dict) -> None:
+    def _default(obj):
+        if hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        return str(obj)
+    typer.echo(json.dumps(result, default=_default, indent=2))
+
+
+def _print_narrative(result: dict) -> None:
+    narrative = result.get("narrative")
+    if narrative:
+        typer.echo(narrative)
 
 
 @app.command()
@@ -152,6 +272,27 @@ def project_forward_cmd(
     output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
 ) -> None:
     """Project an Indian-side operative's career forward against real 2025-2026 events."""
+    _run_forward_mode(
+        operative=operative,
+        until=until,
+        force_event=force_event,
+        brief=brief,
+        markdown=markdown,
+        no_narrative=no_narrative,
+        output_json=output_json,
+    )
+
+
+def _run_forward_mode(
+    operative: str,
+    until: str,
+    force_event: Optional[str],
+    brief: bool,
+    markdown: bool,
+    no_narrative: bool,
+    output_json: bool,
+    narrative_only: bool = False,
+) -> None:
     from datetime import date
     if until == "today":
         until = date.today().isoformat()
@@ -181,15 +322,16 @@ def project_forward_cmd(
         for e in result["errors"]:
             rprint(f"[bold red]ERROR:[/bold red] {e}")
         raise typer.Exit(1)
-    for w in result.get("warnings", []):
-        rprint(f"[yellow]WARNING:[/yellow] {w}")
+    if not narrative_only:
+        for w in result.get("warnings", []):
+            rprint(f"[yellow]WARNING:[/yellow] {w}")
 
     if output_json:
-        def _default(obj):
-            if hasattr(obj, "model_dump"):
-                return obj.model_dump()
-            return str(obj)
-        typer.echo(json.dumps(result, default=_default, indent=2))
+        _print_json(result)
+        return
+
+    if narrative_only:
+        _print_narrative(result)
         return
 
     _print_forward(result)
@@ -254,6 +396,25 @@ def rewrite_arc_cmd(
     output_json:  bool = typer.Option(False, "--json",     help="Emit raw JSON state"),
 ) -> None:
     """Counterfactually rewrite an Indian operative's arc across films 1+2."""
+    _run_rewrite_mode(
+        operative=operative,
+        force_tp=force_tp,
+        brief=brief,
+        markdown=markdown,
+        no_narrative=no_narrative,
+        output_json=output_json,
+    )
+
+
+def _run_rewrite_mode(
+    operative: str,
+    force_tp: Optional[str],
+    brief: bool,
+    markdown: bool,
+    no_narrative: bool,
+    output_json: bool,
+    narrative_only: bool = False,
+) -> None:
     forced = None
     if force_tp:
         if ":" not in force_tp:
@@ -278,15 +439,16 @@ def rewrite_arc_cmd(
         for e in result["errors"]:
             rprint(f"[bold red]ERROR:[/bold red] {e}")
         raise typer.Exit(1)
-    for w in result.get("warnings", []):
-        rprint(f"[yellow]WARNING:[/yellow] {w}")
+    if not narrative_only:
+        for w in result.get("warnings", []):
+            rprint(f"[yellow]WARNING:[/yellow] {w}")
 
     if output_json:
-        def _default(obj):
-            if hasattr(obj, "model_dump"):
-                return obj.model_dump()
-            return str(obj)
-        typer.echo(json.dumps(result, default=_default, indent=2))
+        _print_json(result)
+        return
+
+    if narrative_only:
+        _print_narrative(result)
         return
 
     _print_rewrite(result)
@@ -358,7 +520,7 @@ def _print_critical_path(result: dict) -> None:
     cp = result.get("critical_path")
     if not cp:
         return
-    rprint(f"\n[bold]Critical Path (CPM/PERT)[/bold]")
+    rprint("\n[bold]Critical Path (CPM/PERT)[/bold]")
     rprint(f"  {' → '.join(cp.critical_path)}")
     rprint(f"  Total: {cp.total_duration_days:.0f}d  →  Optimal: {cp.optimal_duration_days:.0f}d  "
            f"([green]save {cp.days_saved:.0f}d[/green])")
@@ -393,7 +555,7 @@ def _print_stackelberg(result: dict) -> None:
     sg = result.get("stackelberg")
     if not sg:
         return
-    rprint(f"\n[bold]Stackelberg Equilibrium[/bold]")
+    rprint("\n[bold]Stackelberg Equilibrium[/bold]")
     rprint(f"  Handler commits to:        {sg.leader_action}")
     rprint(f"  Operative best response:   {sg.operative_best_response}")
     rprint(f"  Adversary counter:         {sg.follower_best_response}")

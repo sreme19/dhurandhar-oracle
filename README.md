@@ -14,8 +14,8 @@ The oracle answers three families of question about Indian-side operatives in th
 | Mode | Question | Command |
 |------|----------|---------|
 | Turning-point | At a single decision point, what is the optimal next action? | `dhurandhar-oracle run <op> <tp>` |
-| Forward projection | If we project this operative forward against real 2025-2026 events (Pahalgam, Sindoor, Khalistan diaspora), what would they be doing — and what could they do better? | `dhurandhar-oracle project-forward <op>` |
-| Arc rewrite | Counterfactually rewrite this operative's films 1+2 arc — at every turning point, what should they have done differently for a better cumulative outcome? | `dhurandhar-oracle rewrite-arc <op>` |
+| Forward projection | If we project this operative forward against real 2025-2026 events (Pahalgam, Sindoor, Khalistan diaspora), what would they be doing — and what could they do better? | `dhurandhar-oracle run <op> --mode forward` |
+| Arc rewrite | Counterfactually rewrite this operative's films 1+2 arc — at every turning point, what should they have done differently for a better cumulative outcome? | `dhurandhar-oracle run <op> --mode rewrite` |
 
 Discover candidate operatives with `dhurandhar-oracle suggest --mode forward` (or `--mode rewrite`).
 
@@ -45,6 +45,8 @@ pip install -e ".[dev]"
 
 # Run the oracle
 dhurandhar-oracle run hamza dakait-first-meeting
+dhurandhar-oracle run hamza --mode forward --until 2026-04-30 --markdown
+dhurandhar-oracle run hamza --mode rewrite --markdown
 
 # List available characters
 dhurandhar-oracle list-characters
@@ -85,12 +87,26 @@ pip install -e ".[dev]"
 
 ```bash
 # Run full oracle pipeline for an operative at a turning point
-dhurandhar-oracle run <operative> <turning-point> [OPTIONS]
+dhurandhar-oracle run <operative> [turning-point] [OPTIONS]
 
 # Options:
+#   --mode turning-point|forward|rewrite
+#   --format narrative|rich|json
 #   --action TEXT        Force a specific action (counterfactual)
+#   --until YYYY-MM-DD   Forward mode horizon (default: today)
+#   --force-event-response evt:act
+#   --force-tp tp:action
+#   --brief
+#   --markdown
 #   --no-narrative       Skip Claude narrative (structured output only)
 #   --json               Emit raw JSON state
+
+# If --mode or --format is omitted, run prompts for:
+#   Oracle mode (turning-point, forward, rewrite)
+#   Output format (narrative, rich, json)
+#
+# Default output format is narrative: a clean Markdown-style briefing suitable
+# as draft material for a LinkedIn post.
 
 # Show only the POMDP strategy table (fast)
 dhurandhar-oracle show-strategy <operative> <turning-point>
