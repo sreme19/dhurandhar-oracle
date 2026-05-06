@@ -153,6 +153,181 @@ Includes `real_life_inspiration` for documentary accuracy.
 | got-oracle | CFR, HMM, Prospect Theory, Shapley values, SNA, LangGraph |
 | **dhurandhar-oracle** | **POMDP (PBVI), CPM/PERT, Value of Information, Stackelberg** |
 
+---
+
+## Operational Upgrade Roadmap
+
+### Context: The Protocol Layer Gap
+
+All three oracle projects call the Anthropic SDK directly with no observability, no
+evaluation pipeline, and no model routing. The narrative agent (Claude) is the only
+LLM call in the entire graph — yet it has no guardrails, no tracing, and no way to
+measure output quality over time. This is the gap to close.
+
+---
+
+### Phase 1 — Observability & Tracing (do first)
+
+**Goal:** Visibility into every agent invocation, token spend, and latency.
+
+The 9-agent graph currently runs as a black box. When `rewrite-arc` takes 90 seconds,
+there is no way to know which node is the bottleneck.
+
+**What to add:**
+
+1. **Structured invocation log** — wrap every LangGraph node with a timing decorator
+   that emits a JSON record:
+   ```json
+   {
+     "run_id": "uuid",
+     "mode": "rewrite",
+     "operative": "hamza",
+     "node": "strategy_node",
+     "duration_ms": 142,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "error": null
+   }
+   ```
+   Append to `~/.dhurandhar-oracle/runs.jsonl` (same pattern as ipl-oracle's SQLite).
+
+2. **Narrator-specific token logging** — the Claude call in `narrator_node` is the only
+   LLM invocation; log `input_tokens`, `output_tokens`, `model`, `latency_ms`.
+
+3. **Run summary at CLI exit** — print a compact table after every run:
+   ```
+   Node               Duration   Tokens
+   ──────────────────────────────────────
+   state_node           12ms      —
+   intel_network_node   34ms      —
+   narrator_node       4,210ms   1,847
+   ──────────────────────────────────────
+   Total               4,890ms   1,847
+   ```
+
+**Bedrock path:** Enable Bedrock model invocation logging → CloudWatch. All narrator
+calls flow through one log group; query with CloudWatch Insights for token spend by mode.
+
+---
+
+### Phase 2 — Intelligent Model Routing (narrator)
+
+**Goal:** Use the right model for each run type. Not every call needs Sonnet/Opus.
+
+| Scenario | Current | Should Use |
+|---|---|---|
+| `--brief` flag | Haiku (already implemented) | Haiku |
+| `--mode forward`, no `--brief` | Sonnet | Sonnet |
+| `--mode rewrite` (multi-TP, 90s) | Sonnet × N TPs | Haiku per-TP, Sonnet for summary |
+| Full turning-point narrative | Sonnet | Sonnet |
+
+**What to change in `narrator_node.py`:**
+- Read a `NARRATOR_MODEL` env var (default: `claude-sonnet-4-6`)
+- For rewrite-arc: use Haiku per individual TP call, Sonnet once for the arc summary
+
+**Bedrock path:** Bedrock Intelligent Prompt Routing auto-selects between Haiku and
+Sonnet based on prompt complexity — no application code changes required.
+
+---
+
+### Phase 3 — Evaluation & Hallucination Monitoring
+
+**Goal:** Treat hallucination rate as a KPI, not a guess.
+
+The narrator synthesises POMDP Q-values, Stackelberg outcomes, and CPM schedules into
+prose. It must not invent numbers. Currently there is no check.
+
+**What to build:**
+
+1. **Grounding validator** — after narrator returns, extract all numeric claims from the
+   narrative and verify each appears in `OracleState`. Flag any number not in the state.
+
+2. **Golden dataset** — `tests/golden/` with 3–5 fixed (operative, turning-point) pairs
+   with known-correct numeric outputs. Run on every narrator call.
+
+3. **Hallucination rate metric** — logged per run:
+   ```json
+   { "run_id": "...", "ungrounded_claims": 0, "total_numeric_claims": 7 }
+   ```
+
+**Bedrock path:** Bedrock Guardrails grounding check — verifies output is grounded in
+the provided context. Attach to every narrator `InvokeModel` call.
+
+---
+
+### Phase 4 — Guardrails (side-constraint enforcement)
+
+**Goal:** Enforce Indian-side-only at the model layer, not just the CLI.
+
+1. **Topic block in narrator system prompt** — forbid analysis from the perspective of
+   Pakistani adversaries by name.
+
+2. **Output pattern check** — scan narrator output for adversary names appearing as
+   the *subject* of strategic advice.
+
+3. **Speculative banner enforcement** — if `is_real_public_figure` is true, assert the
+   string `[SPECULATIVE]` appears in the narrative before returning to caller.
+
+**Bedrock path:** Bedrock Guardrails topic blocks configured to deny "Pakistani operative
+strategy". Filters both input and output at the API gateway level.
+
+---
+
+### Phase 5 — Rollback & Recovery (rewrite-arc reliability)
+
+**Goal:** Make the 90-second rewrite-arc resumable after mid-run failure.
+
+1. **LangGraph checkpointing** — use `MemorySaver` for the rewrite-arc graph. Each per-TP
+   run checkpoints before proceeding to the next TP.
+
+2. **`--resume` flag** — if a checkpoint file exists, skip already-completed TPs.
+
+3. **Partial output** — write each completed TP's output to a temp file immediately.
+
+**Bedrock path:** AWS Step Functions outer loop — each TP is a Lambda invocation with
+built-in retry, timeout, and state persistence.
+
+---
+
+### Phase 6 — Bedrock Migration
+
+**Goal:** Route all LLM calls through Bedrock for multi-model access and unified governance.
+
+```python
+# Before (Anthropic SDK)
+import anthropic
+client = anthropic.Anthropic()
+response = client.messages.create(model="claude-sonnet-4-6", ...)
+
+# After (Bedrock)
+import boto3
+client = boto3.client("bedrock-runtime", region_name="us-east-1")
+response = client.converse(
+    modelId="anthropic.claude-sonnet-4-6",
+    messages=[{"role": "user", "content": [{"text": prompt}]}],
+    inferenceConfig={"maxTokens": 2048}
+)
+```
+
+**What Bedrock adds:** Intelligent Prompt Routing, Guardrails, CloudWatch unified
+dashboard across all oracle projects, model agnosticism (swap narrator to Llama 3
+for cost comparison without application code changes).
+
+---
+
+### Priority Order
+
+| Phase | Effort | Value | Do When |
+|---|---|---|---|
+| 1 — Observability | 1 day | High | Now — blind spots are expensive |
+| 2 — Model routing | 2 hours | Medium | After observability baseline |
+| 3 — Evaluation | 2 days | High | Before adding more turning points |
+| 4 — Guardrails | 4 hours | Medium | Before any public deployment |
+| 5 — Rollback | 1 day | Medium | When rewrite-arc corpus grows |
+| 6 — Bedrock migration | 2 days | High | When ready to unify all oracles |
+
+---
+
 ## Open Data Questions (grounding — resolve before implementation)
 
 <!-- TODO: confirm with user after watching both films -->
